@@ -1,0 +1,27 @@
+---
+permalink: linux-installation-7mode/task_verifying_the_installation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, install, check 
+summary: 安裝SnapDrive 完適用於UNIX的功能後、您必須確認安裝是否成功。適用於UNIX的支援在主機上安裝多個檔案、例如執行檔、組態檔、解除安裝檔案、診斷檔案、SnapDrive 和手冊頁。 
+---
+= 驗證安裝
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝SnapDrive 完適用於UNIX的功能後、您必須確認安裝是否成功。適用於UNIX的支援在主機上安裝多個檔案、例如執行檔、組態檔、解除安裝檔案、診斷檔案、SnapDrive 和手冊頁。
+
+.步驟
+. 確認「snapdrive.conf」檔案位於「/opt /NetApp/SnapDrive/」資料夾。
+. 驗證SnapDrive Linux作業系統的UNIX執行檔是否安裝在下列位置：
++
+** 「/opt/NetApp/SnapDrive / BIN/SnapDrive」
+** 「/opt/NetApp/SnapDrive / bin /快照」
+
+
+. 驗證SnapDrive 是否已將適用於UNIX的解決方案檔安裝在「/opt /NetApp/SnapDrive /診斷程式」資料夾中。
+. 驗證SnapDrive 是否已將for UNIX手冊頁安裝在「/opt/NetApp/SnapDrive / DOCS」資料夾中。
+. 驗證/var/log/sdconfine.out檔案中已安裝組態元件的詳細資料。
+

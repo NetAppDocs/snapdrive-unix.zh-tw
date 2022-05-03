@@ -1,0 +1,53 @@
+---
+permalink: aix/task_enabling_and_disabling_log_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, disable, log, file 
+summary: 如果您要啟用記錄檔、請在您要啟用的記錄檔名稱-值配對中指定檔案名稱作為值。如果您要停用檔案、請勿輸入記錄檔名稱參數的值。 
+---
+= 啟用及停用記錄檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您要啟用記錄檔、請在您要啟用的記錄檔名稱-值配對中指定檔案名稱作為值。如果您要停用檔案、請勿輸入記錄檔名稱參數的值。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 在文字編輯器中開啟「snapdrive.conf」檔案。
+. 選擇適當的選項以啟用或停用記錄檔。
++
+|===
+| 如果您想要... | 然後... 
+
+
+ a| 
+*啟用記錄檔*
+ a| 
+在您要啟用的記錄檔名稱-值配對中、指定檔案名稱做為值。僅當UNIX的記錄檔有要寫入的檔案名稱時、才會寫入該記錄檔。SnapDrive記錄檔的預設名稱如下：
+
+** 稽核日誌：「d-Audit .log」
+** 恢復日誌：「d-recovery．log」
+** 追蹤記錄：「d-trace.log」
+
+
+
+NOTE: 這些檔案的路徑可能會因主機作業系統而異。
+
+
+
+ a| 
+*停用記錄檔*
+ a| 
+請勿輸入記錄檔名稱參數的值。如果您沒有提供值、SnapDrive 表示沒有檔案名稱可供UNIX版的哪些文件名稱可以寫入記錄資訊。
+
+*範例*此範例會停用稽核記錄檔。「稽核記錄檔=」
+
+|===
+. 完成所有變更後、請儲存「snapdrive.conf」檔案。
++
+UNIX版的還原功能會在每次啟動時自動檢查此檔案。SnapDrive您必須重新啟動SnapDrive UNIX版的功能、變更才會生效。
+
+

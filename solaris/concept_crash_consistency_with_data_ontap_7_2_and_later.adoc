@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_crash_consistency_with_data_ontap_7_2_and_later.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, crash, consistency, ontap 
+summary: UNIX版支援由支援支援的一致性群組、可讓跨越多個磁碟區的所有Snapshot複本都保持一致的當機狀態。SnapDrive Data ONTAP 
+---
+= 使用NetApp 7.2及更新版本時、當機狀況一致Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版支援由支援支援的一致性群組、可讓跨越多個磁碟區的所有Snapshot複本都保持一致的當機狀態。SnapDrive Data ONTAP
+
+支援一致性群組和儲存系統屏障的版本7.2及更新版本。Data ONTAPUNIX版使用這些功能、確保橫跨多個磁碟區的所有Snapshot複本都能保持當機一致。SnapDrive
+
+為了在多個Volume之間建立一致的當機Snapshot複本、SnapDrive 適用於UNIX的功能如下：
+
+* Fences（凍結）I/O會儲存實體所在的每個磁碟區。
+* 為每個Volume建立Snapshot複本。
+
+
+圍磁碟區和建立Snapshot複本所需的時間有限、且由Data ONTAP NetApp控制。
+
+在「sfapdrive.conf」檔案中的「* snapcreame-Cg -timeout*」參數會指定Data ONTAP 您想要允許儲存系統隔離的時間量（在不受限制的範圍內）。您可以指定緊急、中或休閒的時間間隔。如果儲存系統需要的時間超過完成隔離作業所允許的時間、SnapDrive 則適用於UNIX的功能會使用先前Data ONTAP 版本的一致性方法來建立Snapshot複本。您也可以在建立Snapshot複本時、使用「-nofilerfence」選項來指定此方法。
+
+如果您申請的Snapshot複本適用於橫跨Data ONTAP 含有上述版本的儲存系統的儲存實體Data ONTAP 、SnapDrive 那麼適用於UNIX的版本也會使用7.2 Data ONTAP 之前版本的一致性方法來建立Snapshot複本。

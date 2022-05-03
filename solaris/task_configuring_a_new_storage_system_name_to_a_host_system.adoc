@@ -1,0 +1,38 @@
+---
+permalink: solaris/task_configuring_a_new_storage_system_name_to_a_host_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, name, host, configure 
+summary: 您必須在主機系統中設定新的儲存系統名稱、才能SnapDrive 使用新的儲存系統執行功能。 
+---
+= 在主機系統中設定新的儲存系統名稱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在主機系統中設定新的儲存系統名稱、才能SnapDrive 使用新的儲存系統執行功能。
+
+* 此名稱必須在您網路中的網域名稱系統（DNS）伺服器或是在「/etc/hosts」檔案中註冊。
+* 舊的儲存系統名稱必須使用「SnapDrive Isfconfig DELETE」命令從主機系統中刪除。
+
+
+.步驟
+. 輸入下列命令：
++
+`* SnapDrive 《*組態集_使用者名稱儲存_系統名稱_*》
+
++
+如果您未輸入實際的儲存系統名稱、Oracle的支援功能POST指令碼可能無法建立SnapMirror和相關性。SnapManager SnapVault例如、如果儲存系統的實際名稱為「hostname-3」、而您輸入聯盟名稱「hostname-3-mgmt」、則可能SnapVault 無法建立SnapMirror和SnapMirror關係。
+
++
+[listing]
+----
+snapdrive config set jsmith roaster
+Password for jsmith:
+Retype password:
+----
++
+新的儲存系統已準備好在SnapDrive 主機系統中執行功能不全的作業。
+
+

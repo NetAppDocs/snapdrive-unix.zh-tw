@@ -1,0 +1,24 @@
+---
+permalink: aix/concept_diagnostic_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, diagnostic, file, install 
+summary: UNIX版安裝診斷檔案、可協助偵測UNIX版的問題。SnapDrive SnapDrive 
+---
+= 由適用於UNIX的效能分析所安裝的診斷檔案SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版安裝診斷檔案、可協助偵測UNIX版的問題。SnapDrive SnapDrive
+
+* 「/opt/NetApp/SnapDrive /診斷/SnapDrive。DC」
+* /`opt/NetApp/SnapDrive /診斷/filer_info'
+* 「/opt/NetApp/SnapDrive /診斷/Brocade資訊」
+* 「/opt/NetApp/SnapDrive /診斷/Cisco_info」
+* /`opt/NetApp/SnapDrive /診斷/McData資料
+* 「/opt/NetApp/SnapDrive /診斷/SHsupport.pPM」
+* 「/opt/NetApp/SnapDrive /診斷/ Telnet.pm'」
+* 「/opt/NetApp/SnapDrive /診斷/AIX_info'」
+

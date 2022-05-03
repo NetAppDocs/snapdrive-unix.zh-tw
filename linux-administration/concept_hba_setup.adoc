@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_hba_setup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hba, setup, install 
+summary: HBA設定是在Linux主機上安裝適當的HBA卡和支援的驅動程式的程序。 
+---
+= HBA設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HBA設定是在Linux主機上安裝適當的HBA卡和支援的驅動程式的程序。
+
+以下是Linux MPIO組態支援的HBA卡：
+
+* QLogic
+* Emulex
+
+
+使用RHEL4 Update 6及更新版本的FC主機公用程式Linux附加套件3.0及更新版本可支援這些HBA卡。

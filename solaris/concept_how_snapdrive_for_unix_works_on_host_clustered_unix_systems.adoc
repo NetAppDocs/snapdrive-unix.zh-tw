@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_how_snapdrive_for_unix_works_on_host_clustered_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, host, cluster 
+summary: 適用於UNIX的支援儲存資源配置和Snapshot管理選項、可管理整個叢集的主機儲存設備。SnapDrive主機叢集範圍的共用儲存設備包括位於Solaris主機上SFRAC環境中的磁碟群組和檔案系統。主機叢集中的任何節點均允許執行所有作業。 
+---
+= UNIX版的運作方式SnapDrive 適用於主機叢集式UNIX系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援儲存資源配置和Snapshot管理選項、可管理整個叢集的主機儲存設備。SnapDrive主機叢集範圍的共用儲存設備包括位於Solaris主機上SFRAC環境中的磁碟群組和檔案系統。主機叢集中的任何節點均允許執行所有作業。
+
+您可以SnapDrive 從主節點在Solaris主機上執行UNIX作業的功能。在主機叢集式設定中、命令必須在主機叢集的主節點本機上執行。因此、您必須針對主機叢集中的所有節點、設定root使用者的「rsh」或「shh access-without password-prompt」。
+
+
+NOTE: 如果您在SnapDrive SFRAC環境中使用適用於UNIX的功能、則所有使用者的預設登入Shell應為「bash」。

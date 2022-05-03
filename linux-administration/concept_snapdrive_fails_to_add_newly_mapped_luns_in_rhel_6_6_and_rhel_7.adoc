@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_snapdrive_fails_to_add_newly_mapped_luns_in_rhel_6_6_and_rhel_7.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fails, lun, rhel, rescan, red, hat, enterprise 
+summary: 與SG3_utils套件搭售的重新掃描指令碼/usr/bin/rescan-scsi-bus.sh、無法在SnapDrive 執行Red Hat Enterprise Linux 6.6及更新版本的UNIX上、將新對應的LUN新增到以供UNIX使用。 
+---
+= 無法在RHEL 6.6及更新版本中新增對應的LUN SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+與SG3_utils套件搭售的重新掃描指令碼「usr/bin/resce-scsi-bus.sh」、無法在SnapDrive 執行Red Hat Enterprise Linux 6.6及更新版本的UNIX上、將新對應的LUN新增至「以供UNIX使用」。
+
+
+
+== 因應措施
+
+. 在「/root」目錄中建立名為「動態LUN重新掃描.sh」的檔案、並提供檔案的完整權限。
+. 在「動態LUN重新掃描.sh」檔案中新增指令「usr/bin/rescan-scsi-bus.sh -a -r」。
+

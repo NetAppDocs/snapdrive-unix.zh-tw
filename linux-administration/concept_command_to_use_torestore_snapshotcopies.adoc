@@ -1,0 +1,28 @@
+---
+permalink: linux-administration/concept_command_to_use_torestore_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, snapshot, copy, restore 
+summary: 使用SnapDrive 命令「Snapsnap還原」來還原Snapshot複本。 
+---
+= 用於還原Snapshot複本的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用命令「SnapDrive 還原快照」來還原Snapshot複本。
+
+「還原功能」命令會將您在命令提示字元中指定的Snapshot複本中的資料還原至儲存系統。SnapDrive此作業會以SnapDrive 指定Snapshot複本中的「file_spec」引數內容取代您在「_sfsnap還原」命令中指定的「file_spec」引數內容（例如磁碟群組、NFS檔案、NFS目錄樹狀結構、直接在LUN上建立的檔案系統）。
+
+您也可以針對不存在的「file_spec」引數來還原Snapshot複本。當您指定的值不再存在於主機上、而是在您執行Snapshot複本時存在時、就會發生這種情況。例如、它可能是您現在已卸載的檔案系統、或是您已移除的磁碟群組。
+
+一般而言、您會從執行Snapshot複本的主機還原Snapshot複本（也就是來源主機）。
+
+[NOTE]
+====
+* 在NFS實體中、當同一個磁碟區掛載於兩個不同的IP上時、這些磁碟區一次只能針對一個檔案規格執行SnapRestore作業。
+* 如果您是非root使用者、那麼SnapDrive 從適用於UNIX的Sf24.1起、除了GlobalSDSnapshot功能之外、您還應該具備全域的儲存寫入功能、以便Snapshot還原正常運作。
+
+
+====

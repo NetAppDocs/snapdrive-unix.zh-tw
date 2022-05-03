@@ -1,0 +1,54 @@
+---
+permalink: solaris/task_verifying_the_veritas_stack_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, veritas, stack, configuration 
+summary: 若要驗證Veritas堆疊組態、您必須執行SnapDrive 下列命令：「sci不要 儲存連接」和「vxdisk清單」。 
+---
+= 驗證Veritas堆疊組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要驗證Veritas堆疊組態、您必須執行「SnapDrive vsasstorage connect」和「vxdisk list」命令。
+
+若要驗證Veritas堆疊組態、您必須先確認是否依照下列順序安裝下列項目：
+
+. NTAPasl程式庫
+. Veritas授權
+. Veritas堆疊（儲存基礎）
+. 多重路徑授權
+. 適用於UNIX軟體SnapDrive
+
+
+然後執行下列步驟：
+
+.步驟
+. 輸入下列命令以連線至作業系統專屬的裝置：
++
+hy* SnapDrive 實體儲存設備連接-LUN _long lun_name_*
+
++
+其中long lun_name是LUN名稱。
+
+. 輸入下列命令以取得裝置資訊：
++
+‘* vxdisk list*’
+
+
+
+您可能會得到下列其中一項結果：
+
+* 如果主機上的Veritas組態正確、則裝置狀態的預期輸出為
++
+線上無效
+
+* 如果主機上的Veritas組態不正確、則裝置狀態的預期輸出為
++
+錯誤
+
++
+安裝Veritas堆疊而不安裝NTAPasl程式庫時、會出現此錯誤訊息。若要修正此錯誤訊息、您必須安裝NTAPasl程式庫並執行「vxinstall」命令、使LUN和磁碟群組上線。
+
+

@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_snap_management_operation_fails_in_rhel_or_oel_5.x_due_to_an_issue_with_umount_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fail, rhel, oel, umount, nfs, command 
+summary: 由於umount命令發生問題、因此在RHEL/OEL 5.x中的Snapmanagement作業失敗。若要克服此問題、請確定NFS實體是使用命令列介面中的-o ves=3來掛載。 
+---
+= 由於umount命令發生問題、因此在RHEL/OEL 5.x中的Snapmanagement作業失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+由於「umounts」命令發生問題、因此RHEL/OEL 5.x中的Snapmanagement作業會失敗。若要克服此問題、請確保NFS實體是使用命令列介面中的「-o ves=3」來掛載。

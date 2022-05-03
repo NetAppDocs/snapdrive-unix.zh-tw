@@ -1,0 +1,117 @@
+---
+permalink: linux-administration/task_setting_up_multipathing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipathing, configure 
+summary: 您可以設定多重路徑、在主機與儲存系統之間設定多個網路路徑。UNIX版支援在多重路徑環境中使用別名。SnapDrive您需要確保在/etc/multipath.conf檔案中設定適當的對應裝置別名。 
+---
+= 設定多重路徑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定多重路徑、在主機與儲存系統之間設定多個網路路徑。UNIX版支援在多重路徑環境中使用別名。SnapDrive您需要確定在「/etc/multipath.conf」檔案中已設定適當的對應器裝置別名。
+
+.步驟
+. 主機重新開機之後、多重路徑精靈應該會執行、如下列範例所示：
++
+[listing]
+----
+root@lnx197-123 ~]# ps -ef | grep multipathd
+root      5713     1  0 22:44 ?        00:00:00 /sbin/multipathd
+root      5739  1783  0 22:44 pts/1    00:00:00 grep multipathd
+----
++
+如果多重路徑精靈未執行、請確定在重新開機後重新啟動精靈。您可以執行下列命令來啟動多重路徑精靈：
+
++
+[listing]
+----
+[root@lnx197-123 ~]# chkconfig --level 345 multipathd on
+----
++
+
+NOTE: 下表列出SnapDrive 一些支援在多重路徑環境中使用別名的功能。
+
++
+|===
+| 營運 | 別名支援 | 裝置類型 
+
+
+ a| 
+從主要主機上的主要主機進行SnapCreate and Restore（SFSR和VBRSR）
+ a| 
+是的
+ a| 
+別名裝置
+
+
+
+ a| 
+從一線或二線複製
+ a| 
+是的
+ a| 
+無別名裝置
+
+
+
+ a| 
+還原為替代
+ a| 
+是的
+ a| 
+無別名裝置
+
+
+
+ a| 
+從次要還原
+ a| 
+是的
+ a| 
+無別名裝置
+
+|===
++
+** 如果您使用的是Red Hat Enterprise Linux（RHEL）6.4或更新版本、或是Oracle Linux 6.4或更新版本、則無需在/etc/multipath.conf檔案中設定任何值。
++
+不過、您仍必須保留虛擬的「/etc/multipath.conf」檔案、此檔案可以是空白的、或是包含列入黑名單的資訊和別名（如有需要）。
+
+** 如果您使用的是SUSE Linux Enterprise Server（SLES）11 SP3或更新版本、則不需要維護「/etc/multipath.conf」檔案。
++
+不過、如果需要、您可以使用「/etc/multipath.conf」檔案來包含黑名單資訊和別名。
+
+
+
+. 將字串「Hitachi HUS103073FL3800_V3WTL7XA'」取代為命令「s csi_id -GUS /block/<LD」的輸出、其中「LD」是本機區塊裝置名稱。
++
+
+NOTE: 對於某些本機區塊裝置、「scsi _id」命令可能不會傳回任何字串。在這種情況下、本機區塊裝置必須使用devNode指令列入黑名單。
+
+. 在「etc/security/limits.conf'檔案中附加下列行、以增加處理程序可在主機中開啟的檔案描述元數量：
++
+[listing]
+----
+soft nofile 4096
+       hard nofile 4096
+----
+. 輸入下列命令、確保系統重新開機後一律載入Linux SG驅動程式：
++
+[listing]
+----
+echo "modprobe sg" >> /etc/rc.local
+----
+. 重新啟動主機以確保設定處於作用中狀態。
++
+
+NOTE: LVM2-2.02.17-7.27.8和'_filer_'設定必須指派為='"r|/dev/.\/by-path/.*|"、"r|/dev/.\/by-id/.*|"、"r|/dev/cciss/.\*、"lvm"檔案中的"_conf/"_"_"_"_esm"。
+
+
+
+*相關資訊*
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux Unified Host Utilities 7.1安裝指南》"]

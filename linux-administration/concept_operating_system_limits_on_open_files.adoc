@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_operating_system_limits_on_open_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operating, limits, open, files, system 
+summary: UNIX版可檢查同時開啟的檔案數量。SnapDrive如果超出限制、SnapDrive 則適用於UNIX的功能會拋出錯誤。 
+---
+= 作業系統對開啟檔案的限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版可檢查同時開啟的檔案數量。SnapDrive如果超出限制、SnapDrive 則適用於UNIX的功能會拋出錯誤。
+
+UNIX版檢查程序所開啟檔案數量的作業系統限制。SnapDrive
+
+
+NOTE: 單一處理程序同時開啟的檔案處理數預設限制、會因作業系統而異。請參閱作業系統文件以確定限制。
+
+如果一項作業的開啟LUN數量超過作業系統對單一程序同時開啟之檔案處理數量的限制、SnapDrive 則針對UNIX的版本將會退出、並顯示下列錯誤訊息：
+
+「0001-001管理錯誤：無法開啟裝置路徑至裝置」

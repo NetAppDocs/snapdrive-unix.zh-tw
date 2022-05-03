@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_multipath_configuration_variables.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipath, configuration, variables, file, mpio 
+summary: 您需要在SnapDrive .conf檔案中變更幾個組態變數、以便MPIO與Linux搭配運作。 
+---
+= 多重路徑組態變數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要在「snapdrive.conf」檔案中變更幾個組態變數、以便MPIO與Linux搭配使用。
+
+在SnapDrive 主機上安裝適用於UNIX的功能後、請編輯「/opt / NetApp / SnapDrive / SnapDrive。」檔案、並將下列設定變更為適當的值：
+
+[listing]
+----
+enable-implicit-host-preparation=on  # Enable implicit host preparation for LUN creation
+  default-transport="FCP"  # Transport type to use for storage provisioning, when a decision is needed
+  multipathing-type= "nativempio"  # Multipathing software to use when more than one multipathing solution is available
+----
+重新啟動SnapDrive 支援程式、讓「sfapdrive.conf」檔案變更生效。重新啟動完這個程序後、即可開始使用DM-MP堆疊中的各種指令。SnapDrive SnapDrive

@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_guidelines_for_disconnecting_snapshot_copies_in_a_host_clusterenvironment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, host, cluster 
+summary: 中斷NFS實體的Snapshot複本連線時SnapDrive 、for UNIX會卸載檔案系統、移除檔案系統中的掛載項目、移除掛載點等。 
+---
+= 在主機叢集環境中中斷Snapshot複本連線的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+中斷NFS實體的Snapshot複本連線時SnapDrive 、for UNIX會卸載檔案系統、移除檔案系統中的掛載項目、移除掛載點等。
+
+* 可以從主機叢集中的任何節點執行「SnapDrive 停止連結」命令。
+* 若要讓Snapshot中斷連線作業成功、下列其中一項應為真：
++
+** 儲存實體應在主機叢集中的所有節點之間共享。
+** LUN應對應至主機叢集中的所有節點。
+
+
+* 您可以使用「-DEVICETYPE Dedicated」或「共享」選項、從特定節點中斷儲存實體的連線。如果您要中斷連線處於專屬模式的儲存實體、可以從命令列語法中省略「-DEVICETYPE」選項、因為預設值為專屬。
+* 如果共享儲存實體或LUN與「專用」選項中斷連線、或是專用儲存實體或LUN與共享選項中斷連線、則「停止連結」命令會出現錯誤。SnapDrive
+* UNIX版在主節點上執行「不中斷連線」命令。SnapDrive SnapDrive它會毀損儲存實體、中斷所有非主要節點上的LUN連線、然後中斷LUN與主機叢集中主要節點的連線。如果遇到任何錯誤、Snapshot中斷連線作業就會失敗。
+

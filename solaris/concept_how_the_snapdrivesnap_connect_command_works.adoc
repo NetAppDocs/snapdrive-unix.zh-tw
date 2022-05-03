@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_how_the_snapdrivesnap_connect_command_works.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, connect, command 
+summary: 當您使用SnapDrive flexfSnapconnect命令時、它會複製您指定實體的儲存設備、並將其匯入主機。 
+---
+= 如何使用「SnapSnap Connect」SnapDrive 命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您使用「SnapDrive flexSnapsnap Connect」命令時、它會複製您指定實體的儲存設備、並將其匯入主機：
+
+* 如果您指定的Snapshot複本包含LUN（`-LUN'）、SnapDrive 則適用於UNIX的功能會將LUN的新複本對應至主機。您無法使用「SnapDrive Sfestap Connect」命令、在同一命令列上指定LUN與其他儲存實體（「-vg」、「-dg」、「-fs」、「-lvol'」或「-hostvol'）。
+* 如果您指定直接位於LUN上的檔案系統、SnapDrive 則適用於UNIX的功能會將LUN對應至主機、然後掛載檔案系統。
+* 如果來源掛載點是在「nap connect」命令中指定為相對路徑名稱、SnapDrive 則UNIX版的Sfor UNIX會忽略CLI中指定的目的地掛載點、並使用內部命名慣例格式「source_mount_point_<N>」來命名目的地掛載點。
+* 如果您指定的Snapshot複本包含磁碟群組、或是屬於磁碟群組的主機磁碟區或檔案系統、則「SnapDrive show snap connects」命令會連接整個目標磁碟群組。為了建立連線、SnapDrive UNIX版的Re會重新啟動目標磁碟群組的所有邏輯磁碟區、並將所有檔案系統掛載到邏輯磁碟區上。
+* 如果您使用snap Connect命令指定「autoramename"選項、則主機磁碟區和檔案系統一律會重新命名。磁碟群組只有在主機上已存在時才會重新命名。
+* 如果您指定的Snapshot複本包含NFS目錄樹狀結構、SnapDrive 則適用於UNIX的Sfor UNIX會建立FlexVol 包含NFS目錄樹狀結構的整個Sfor volume複本。接著、for UNIX會將磁碟區連接到主機、然後掛載NFS檔案系統。SnapDrive在目錄樹狀結構中、SnapDrive for UNIX會刪除您在建立Snapshot複本之後所建立的任何新NFS檔案或目錄。如果將「shnapconnect - nf- removeve目錄」組態選項設定為「開啟」、則UNIX版將會從所連線NFS目錄之外的任何文件或目錄刪除。SnapDrive FlexVol
+* 如果您使用「-readonly」選項來連接包含NFS目錄樹狀結構的Snapshot複本、SnapDrive 則UNIX版不會建立複本、直接掛載目錄的Snapshot複本。您無法使用「SnapDrive festrosnap connect」命令、在非NFS實體的同一命令列上指定NFS掛載點、也就是使用「-vg」、「-dg」、「-fs」、「-lvol'」或「-hostvol.」選項。
+
+
+
+NOTE: 支援使用vFiler環境中的「分割」選項來執行「抓取連線」作業、Data ONTAP 但不支援使用版本7.3或更新版本。

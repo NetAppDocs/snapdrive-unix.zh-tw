@@ -1,0 +1,149 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_snaprestore_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, command, information, required 
+summary: 若要還原Snapshot複本、請判斷您要還原的儲存實體、指定Snapshot複本的名稱等。 
+---
+= 使用SnapDrive 「flexfSnap還原」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要還原Snapshot複本、請判斷您要還原的儲存實體、指定Snapshot複本的名稱等。
+
+下表提供使用「SnapDrive 還原功能」命令時所需提供的資訊。
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+決定您要還原的儲存實體類型、並以適當的引數輸入該實體的名稱。
+
+* 如果您指定要還原的主機磁碟區或檔案系統、您提供的引數會轉譯至包含該磁碟區或檔案系統的磁碟群組。然後、針對UNIX還原整個磁碟群組。SnapDriveUNIX版會凍結這些磁碟群組中主機磁碟區中的任何檔案系統、並針對這些磁碟群組中包含LUN的所有儲存系統磁碟區、取得Snapshot複本。SnapDrive
+* 如果指定的檔案規格是NFS掛載點、則引數會轉譯為目錄樹狀結構。適用於UNIX的僅還原NFS目錄樹狀結構或檔案。SnapDrive在目錄樹狀結構中、SnapDrive 針對UNIX的Sfor Sfor會刪除您在建立Snapshot複本之後所建立的任何新NFS檔案或目錄。如此可確保還原目錄樹狀結構的狀態與建立樹狀結構的Snapshot複本時相同。
+* 如果還原LUN、SnapDrive 則適用於UNIX的功能會還原您指定的LUN。
+* 如果您還原直接在LUN上建立的檔案系統、SnapDrive 則適用於UNIX的功能會還原LUN和檔案系統。
+* 如果Snapshot複本包含橫跨多個儲存系統磁碟區的儲存實體、您可以還原該Snapshot複本中的任何實體。
+
+
+
+
+ a| 
+LUN（`-LUN _file_spec_`）
+ a| 
+LUN的名稱（_Name）。您必須包含儲存系統、磁碟區和LUN的名稱。_
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_c`）或磁碟區群組（`-vg _file_spec_`）
+ a| 
+磁碟或磁碟區群組的名稱_
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+檔案系統名稱_
+
+
+
+ a| 
+檔案（文件_file_spec_`）
+ a| 
+NFS檔案的名稱_
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機或邏輯磁碟區的名稱（_Name）。您必須同時提供所要求的磁碟區和包含該磁碟區的磁碟群組、例如- hostvol DG3/acct_volume。_
+
+
+
+ a| 
+指定Snapshot複本的名稱。如果您在命令提示字元中提供的任何「_file_spec_」引數目前存在於本機主機上、您可以使用Snapshot複本名稱的簡短形式。
+
+如果主機上不存在任何「_file_spec_」引數、您必須使用長格式的Snapshot複本名稱、在其中輸入儲存系統名稱、Volume和Snapshot複本名稱。如果您在Snapshot複本中使用長名稱、且路徑名稱與命令提示字元中的儲存系統和/或儲存磁碟區資訊不相符、SnapDrive 則UNIX版的無法使用。以下是一個長Snapshot複本名稱的範例：「Big _filer/vol/account_vol：snap _20031115」
+
+有時候、主機上可能不存在與「_file_spec_」引數一起提供的值。例如、如果您已卸載檔案系統、或是匯出、移除或銷毀磁碟群組、則該檔案系統或磁碟群組仍可能是「_file_spec_」引數的值。不過、這是不存在的價值。UNIX版的支援功能可針對不存在的「_file_spec_」還原Snapshot複本、但您必須使用長Snapshot複本名稱。SnapDrive
+
+當您還原橫跨多個儲存系統和磁碟區的Snapshot複本、並包含不存在的「_file_spec_」引數時、SnapDrive UNIX版的S還原 會在命令列中造成不一致的情況。它不允許現有的`_file_spec_'引數。如果您只想從多個儲存系統Snapshot複本還原一個儲存實體、則您指定的Snapshot複本不需要與包含儲存實體的儲存系統位於同一個儲存系統上。
+
+相同Snapshot複本名稱的簡短形式會省略儲存系統和儲存系統磁碟區名稱、因此會顯示為：「_snap_20031115_」
+
+
+
+ a| 
+Snapshot複本名稱（`-snapname`）
+ a| 
+快照名稱
+
+
+
+ a| 
+它可以是短名稱（例如：「_mysnap1_」）、也可以是包含儲存系統名稱、磁碟區和Snapshot複本名稱的長名稱。
+
+一般而言、NetApp建議您使用簡短名稱。如果不存在「_file_spec_」引數：也就是主機上不再存在；請參閱「_file_spec_」引數的說明。然後您必須使用Snapshot複本的長名稱。
+
+
+
+ a| 
+保留|-noreserve
+ a| 
+
+
+
+ a| 
+選用：SnapDrive 如果您想要讓UNIX版的功能在還原Snapshot複本時建立空間保留。
+
+
+
+ a| 
+「力量」
+ a| 
+~
+
+
+
+ a| 
+noprompt
+ a| 
+~
+
+
+
+ a| 
+選用：決定是否要覆寫現有的Snapshot複本。如果您提供現有Snapshot複本的名稱、如果沒有此選項、此作業將會停止。當您提供此選項並指定現有Snapshot複本的名稱時、系統會提示您確認是否要覆寫Snapshot複本。若要防止SnapDrive UNIX版的for UNIX顯示提示、也請加入「-noprompt」選項。（如果您想使用-noprompt選項、則必須一律包含「-force」選項。）
+
+如果您嘗試還原自上次Snapshot複本以來變更組態的磁碟群組、則必須在命令提示字元中加入「-force」選項。例如、如果您在執行Snapshot複本之後、變更了資料在磁碟上等量分佈的方式、就必須加入「-force」選項。如果沒有「-force」選項、這項作業就會失敗。此選項會要求您確認是否要繼續操作、除非您在其中加入「-noprompt」選項。
+
+
+NOTE: 如果您新增或刪除LUN、即使您包含「-force」選項、還原作業仍會失敗。
+
+
+
+ a| 
+《我的最大目標》
+ a| 
+~
+
+
+
+ a| 
+*選用：*如果您要建立檔案系統、可以指定下列選項：
+
+* 使用「-mnterts」指定您要傳遞至主機掛載命令的選項（例如、指定主機系統記錄行為）。您指定的選項會儲存在主機檔案系統表格檔案中。允許的選項取決於主機檔案系統類型。
+* "_-mnterts_"參數是使用mount命令"-o"旗標指定的檔案系統"-type"選項。請勿在"_-mnterts_"引數中加入-o旗標。例如、sequence -mntops tmplog會將字串「-o tmplog」傳遞到「mounts」命令、然後在新的命令列上插入文字tmplog。
++
+
+NOTE: 如果您將任何無效的「_-mnttops_」選項用於儲存和快照作業、SnapDrive 則適用於UNIX的不能驗證這些無效的掛載選項。
+
+
+
+|===

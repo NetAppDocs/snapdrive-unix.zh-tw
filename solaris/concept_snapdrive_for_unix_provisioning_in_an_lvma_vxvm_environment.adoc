@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html 
+sidebar: sidebar 
+keywords: snapdrive, unix, storage, commands, provision, provisioning, vxvm, entities, objects 
+summary: 適用於UNIX儲存命令、可藉由建立VxVM物件 來配置VxVMEntries。SnapDrive 
+---
+= 適用於在VxVMA環境中進行UNIX資源配置SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+適用於UNIX儲存命令、可藉由建立VxVM物件 來配置VxVMEntries。SnapDrive
+
+如果您要求SnapDrive 提供VxVMent若 實體的UNIX儲存作業執行支援功能（例如、包含主機磁碟區或檔案系統的磁碟群組）、則可使用「SnapDrive fuse storage」命令搭配VxVM來 建立使用該儲存設備的VxVM物件 和檔案系統。
+
+在儲存資源配置作業期間、會執行下列動作：
+
+* 主機VxVMs將儲存系統的LUN合併成磁碟或磁碟區群組。
++
+然後將儲存設備分割成邏輯磁碟區、就像是原始磁碟裝置、用來儲存檔案系統或原始資料一樣。
+
+* 適用於UNIX的支援與主機VxVMTM整合、以判斷每個磁碟群組、主機磁碟區和檔案系統所需的NetApp LUN、以供Snapshot複本使用。SnapDrive
++
+由於任何指定主機磁碟區的資料都可以分散到磁碟群組中的所有磁碟、因此Snapshot複本只能針對整個磁碟群組進行製作和還原。
+
+

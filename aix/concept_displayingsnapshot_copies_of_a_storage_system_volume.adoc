@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_displayingsnapshot_copies_of_a_storage_system_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, display, snapshot, copy, storage, system, volume 
+summary: 您可以使用SnapDrive fisfuse命令、在儲存系統磁碟區上顯示Snapshot複本。 
+---
+= 顯示儲存系統磁碟區的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive fisfuse命令、在儲存系統磁碟區上顯示Snapshot複本。
+
+若要顯示有關儲存系統磁碟區Snapshot複本的資訊、請使用下列語法：
+
+《SnapDrive 不景秀》- Filervol Filervol [filervol...] [-verbos]

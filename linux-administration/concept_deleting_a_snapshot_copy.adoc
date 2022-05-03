@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_deleting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: 您可以使用SnapDrive 「抓取刪除」命令刪除儲存系統上的Snapshot複本。 
+---
+= 刪除Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 「抓取刪除」命令刪除儲存系統上的Snapshot複本。

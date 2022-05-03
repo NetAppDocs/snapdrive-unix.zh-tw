@@ -1,0 +1,64 @@
+---
+permalink: linux-administration/task_configuring_management_and_data_interfaces_for_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, management, configure, data, interface, nfs, traffic 
+summary: 您可以在NFS環境中為單一管理介面設定多個資料介面、以便將管理流量與儲存系統上的資料流量分開。 
+---
+= 設定儲存系統的管理和資料介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在NFS環境中為單一管理介面設定多個資料介面、以便將管理流量與儲存系統上的資料流量分開。
+
+.步驟
+. 設定新管理介面的組態：
++
+「* SnapDrive 組態集root *」
+
++
+[listing]
+----
+# snapdrive config set root f3050-197-91
+Password for root:
+Retype password:
+----
++
+以下是儲存虛擬機器（SVM、先前稱為Vserver）的範例。
+
++
+[listing]
+----
+# snapdrive config set vsadmin clstr-vs2
+Password for vsadmin:
+Retype password:
+----
+. 設定新管理介面的資料介面：
++
+「* SnapDrive 組態集*」
+
++
+[listing]
+----
+# snapdrive config set -mgmtpath f3050-197-91 f3050-220-91#
+----
++
+在前面的命令中、「f3050-191-191」是管理介面、「f3050-220-91」是資料介面。
+
++
+以下是SVM的範例。
+
++
+[listing]
+----
+snapdrive config set -mgmtpath clstr-vs2  clstr-vs2-2
+system name   management interface   datapath interface
+-------------------------------------------------------
+clstr-vs2     10.72.220.203          10.72.221.155
+----
++
+在輸出中、管理介面為「10.72.220.203」、資料介面為「10.72.221.155」。
+
+

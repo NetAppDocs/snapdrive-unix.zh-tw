@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/concept_connecting_to_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, fails 
+summary: 當Linux主機在執行UNIX操作期間重新開機時、UNIX版的支援無法連線至Snapshot複本。SnapDrive SnapDrive 
+---
+= 連線至Snapshot複本失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當Linux主機在執行UNIX操作期間重新開機時、UNIX版的支援無法連線至Snapshot複本。SnapDrive SnapDrive
+
+在Linux LVM2上執行SnapConnect作業時、會在來源主機重新開機SnapDrive 、以利UNIX作業。
+
+[listing]
+----
+Volume manager configuration file has tags that are added by SnapDrive for UNIX. Clean the file manually.
+----
+
+
+== 因應措施
+
+. 確保與磁碟群組相關聯之裝置的LUN複本未對應至主機。如果它們已對應至主機、請取消對應並刪除它們。這些可能是先前失敗SnapDrive 的故障的不穩定作業所造成的。
+. 以下列方式編輯「lvm.configfile」（位於「/etc/lvm/」）：
++
+.. 移除所有字尾為「#SDUTEMP」的行。
+.. 還原所有以留言標籤「#SDUEXISTING」開頭的行。
++
+如果上述任何一項無法運作、請聯絡NetApp技術支援部門。
+
+
+
+

@@ -1,0 +1,31 @@
+---
+permalink: solaris/concept_types_of_logs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, log, type 
+summary: 適用於UNIX的支援多種記錄檔類型、可協助您在無法正常運作的情況下進行疑難排解。SnapDrive SnapDrive 
+---
+= 記錄類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援多種記錄檔類型、可協助您在無法正常運作的情況下進行疑難排解。SnapDrive SnapDrive
+
+* 稽核日誌
++
+適用於UNIX的可將所有命令及其傳回碼記錄在稽核記錄中。SnapDrive當您啟動命令時、UNIX的執行功能會建立一個項目、當命令完成時、則會建立另一個項目。SnapDrive稍後的項目會同時包含命令的狀態和完成時間。
+
+* 恢復日誌
++
+部分SnapDrive 適用於UNIX作業的功能可能會在系統中斷時、使系統處於不一致或不可用的狀態。如果使用者終止程式、或是在作業期間主機當機、就可能發生這種情況。恢復日誌包含Snap還原作業的步驟。它會記錄所採取的步驟和所取得的進展、以便技術支援人員協助您進行手動恢復程序。
+
+* 追蹤記錄
++
+適用於UNIX的報告資訊可用於診斷問題。SnapDrive如果您有任何問題、NetApp技術支援部門可能會要求提供此記錄檔。
+
++
+適用於UNIX的DB2 4.0推出適用於UNIX精靈服務的功能。SnapDrive SnapDrive若要執行UNIX命令、必須執行精靈。SnapDrive每個個別命令都必須執行精靈追蹤、即使命令是平行執行。記錄檔的位置和名稱為/var/log/sd-trace.log'。這些追蹤檔只有命令專屬的追蹤項目。精靈執行的追蹤記錄會記錄在不同的追蹤檔「/var/log/sd-daeme-trace.log」中。
+
+

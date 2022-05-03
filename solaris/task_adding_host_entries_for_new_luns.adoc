@@ -1,0 +1,41 @@
+---
+permalink: solaris/task_adding_host_entries_for_new_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, add, host, lun, entry 
+summary: 您可以使用SnapDrive 適用於UNIX的功能、建立特定數量的新LUN。UNIX版提供特定命令。SnapDrive 
+---
+= 新增新LUN的主機項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 適用於UNIX的功能、建立特定數量的新LUN。UNIX版提供特定命令。SnapDrive
+
+確定主機已準備好建立特定數量的新LUN。這些LUN位於對應至主機的儲存系統上。
+
+.步驟
+. 「SnapDrive 支援組態準備LUN -計數（- DEVICETYPE共享）」
++
+「-count」是您要為主機準備的新LUN數量。在使用SFRAC的Solaris平台上、可支援「DEVICETYPE」共享選項。
+
++
+「DEVICETYPE」是SnapDrive 用於UNIX作業的裝置類型。當指定為「-DEVICETYPE共享」時、「SnapDrive Efconfig prepare LUNs」命令會在主機叢集中的所有節點上執行。
+
++
+
+NOTE: 在SFRAC環境中、此命令會在主機叢集中的所有節點上執行。
+
++
+在Solaris上、如果需要、此命令會針對每個沒有項目的潛在新LUN、將項目新增至檔案「/kernel-drv/sd.conf」。它也會為儲存系統對應的每個SCSI目標產生一個項目。在Solaris 8上、您必須在新增「d.conf'」項目後重新啟動主機。每當需要重新開機時、此命令會顯示警告。
+
++
+[NOTE]
+====
+如果您已手動編輯了「/kernel-drv/lffc.conf」檔案以取得持續的繫結、請確定FC-bind-WWPN項目已完成
+
+「# begin：lputil-managed永久性繫結。
+
+====
+

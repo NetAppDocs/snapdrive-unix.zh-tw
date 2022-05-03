@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_nfs_configuration_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, nfs, configuration, check 
+summary: 對於使用網路檔案系統（NFS）的組態、您必須先檢查NFS用戶端是否正常運作、再設定主機和儲存系統。 
+---
+= NFS組態檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於使用網路檔案系統（NFS）的組態、您必須先檢查NFS用戶端是否正常運作、再設定主機和儲存系統。
+
+如果您的組態使用NFS、則必須完成下列工作：
+
+* 確保NFS用戶端正常運作。
++
+如需管理NFS傳輸協定的詳細資訊、請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["適用於7-Mode的檔案存取與傳輸協定管理指南"] 如果您使用Data ONTAP 的是「功能性」、請參閱 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["檔案存取管理指南：NFS"] 如果您使用叢集Data ONTAP 式的
+
+* 設定主機和儲存系統。
++
+若要在SnapDrive 儲存系統上使用支援NFS的UNIX目錄、您必須確保儲存系統目錄已正確匯出至主機。如果您的主機有多個網際網路傳輸協定（IP）介面、以及儲存系統的資料和管理介面、則您必須確保該目錄正確匯出至資料和管理介面。UNIX版會發出警告、除非所有此類介面都具有讀取或寫入權限、或是在使用-readonly選項的情況下、使用支援僅讀取權限的情況下使用。SnapDrive SnapDrive如果這些介面都沒有存取目錄的權限、則無法使用「SnapSnap還原」和「SnapSNAP連線」命令。SnapDrive SnapDrive
+
+

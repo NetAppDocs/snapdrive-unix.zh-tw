@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_rbac_and_storage_operation_examples.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, storage, operation, example 
+summary: 角色型存取控制可根據指派給您的功能、進行儲存作業。如果您沒有執行儲存作業的適當功能、您會收到錯誤訊息。 
+---
+= RBAC與儲存作業範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+角色型存取控制可根據指派給您的功能、進行儲存作業。如果您沒有執行儲存作業的適當功能、您會收到錯誤訊息。

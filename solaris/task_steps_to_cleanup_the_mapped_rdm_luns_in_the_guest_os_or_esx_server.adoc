@@ -1,0 +1,156 @@
+---
+permalink: solaris/task_steps_to_cleanup_the_mapped_rdm_luns_in_the_guest_os_or_esx_server.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mapped, rdm, lun, guest, esx, server, system 
+summary: 您必須清除來賓作業系統和ESX伺服器中的RDM LUN。 
+---
+= 清除客體作業系統和ESX伺服器中對應的RDM LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須清除來賓作業系統和ESX伺服器中的RDM LUN。
+
+
+
+== 清除客體作業系統中對應的RDM LUN
+
+[role="lead"]
+下列步驟必須在客體作業系統中執行。
+
+.步驟
+. 從* vCenter*導覽窗格中、選取執行RDM對應的虛擬機器。
+. 在虛擬機器上按一下滑鼠右鍵、然後關閉客體作業系統。
+. 在虛擬機器上按一下滑鼠右鍵、然後選取*編輯設定*。
++
+此時將出現*虛擬機器內容*對話方塊。
+
+. 在*虛擬機器內容*對話方塊中、選取*硬體*索引標籤。
++
+您會發現每個RDM項目的整個RDM對應項目都是「_對應原始LUN_」。
+
+. 選取RDM對應項目、然後按一下「*移除*」。
++
+「*移除選項*」會出現在右窗格中。
+
+. 在*移除選項*中、選取*從虛擬機器移除並從磁碟刪除檔案*。
+. 按一下「*確定*」。
++
+所有的RDM對應項目都會從客體作業系統中移除。
+
++
+從客體作業系統移除RDM LUN項目之後、您需要將其從ESX伺服器移除。
+
+
+
+
+
+== 清除ESX伺服器中對應的RDM LUN
+
+[role="lead"]
+下列步驟只能由ESX伺服器管理員執行、才能完整清除ESX伺服器中的所有RDM LUN項目。
+
+在處理虛擬機器目錄之前、請先關閉虛擬機器。
+
+.步驟
+. 移至虛擬機器目錄。
+. 切換到目錄「CD /vmfs/volumes/Data」儲存路徑。
++
+[listing]
+----
+# ls -l
+total 1024
+drwxr-xr-t 1 root root 1540 Apr 19 23:54 4bc702de-fa7ec190-992b-001a6496f353
+lrwxr-xr-x 1 root root   35 May 11 07:56 local_storage (1) -> 4bc702de-fa7ec190-992b-001a6496f353
+----
++
+此處列出所有檔案和目錄。
+
+. 選取虛擬機器所在的適當資料存放區。
+. 將目錄變更為資料儲存區。
++
+此處顯示虛擬機器目錄。
+
+. 將目錄變更為要清除RDM LUN對應的虛擬機器。
++
+所有檔案都會列在虛擬機器目錄中。
+
+. 刪除所有內嵌SMVI字串的「vmdk」檔案。或者、您也可以使用LUN名稱來識別vmdk檔案。
++
+或者、您也可以使用LUN名稱來識別「vmdk」檔案。
+
++
+如果LUN名稱的「vmdk」檔案為「_rdm1_」、請僅刪除「_rhel4u8-141-232_SMVI_vol_esx3u5_rdm1-rdm.vmdk_」和「_rhel4u8-141-232_SMVI_vol_3u5_rdm1_esx1.vmdk檔案。
+
++
+刪除「_vmlnx5U4-197-23_SMVI_10.72.197.93_C4koV4XzK2HT_22-rdmmp.vmdk_'及「_vmlnx5U4-197-23_SMVI_10.72.197.93_C4koV4XzK2HT_22.kvm5nv_4kvm_4kov_4kvm_4kvm_4kov_4kov_4kv_4km_41934_4kov_4kov_4kv_4kv_4kv_4kv41934_4kv_4
+
+. 從虛擬機器組態檔（「vmx」）中移除「vmdk」檔案項目。
++
+以下是從vmx檔案移除vmdk檔案項目的範例。
+
++
+|===
+| *名稱* | *說明* 
+
+
+ a| 
+「_rhel4u8-141-232_」
+ a| 
+虛擬機器名稱
+
+
+
+ a| 
+《SMVi_》
+ a| 
+表示SnapManager 此vmdk檔案是由適用於Virtual Infrastructure伺服器的物件所建立
+
+
+
+ a| 
+"_vol_esx3u5_"
+ a| 
+建立LUN的磁碟區名稱
+
+
+
+ a| 
+”
+ a| 
+LUN名稱
+
+
+
+ a| 
+”
+ a| 
+表示此為實體相容的RDM LUN
+
+
+
+ a| 
+vmdk_'
+ a| 
+虛擬機器磁碟檔案
+
+|===
++
+[listing]
+----
+[root@ rhel4u8-141-232]# vi rhel4u8-141-232.vmx
+		:
+		:
+scsi3:1.fileName = "rhel4u8-141-232_SMVI__vol_esx3u5_rdm1.vmdk"
+scsi3:1.mode = "independent-persistent"
+scsi3:1.ctkEnabled = "FALSE"
+scsi3:1.deviceType = "scsi-hardDisk"
+scsi3:1.present = "TRUE"
+scsi3:1.redo = ""
+----
+. 刪除上述範例中指定的項目、包括引號和逗號、但"_scsi3：1.present_"項目除外、您應該從"_true_"變更為"_false_"。
+. 儲存並結束檔案。
+. 開啟虛擬機器。
+

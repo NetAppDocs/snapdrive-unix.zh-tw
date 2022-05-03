@@ -1,0 +1,14 @@
+---
+permalink: linux-installation-cmode/concept_provisioning_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, provision, storage, system 
+summary: UNIX版的支援功能可讓您使用主機的命令列選項來配置儲存設備、並連線至現有的儲存系統。SnapDrive您也可以使用Data ONTAP 功能不一樣的功能來配置儲存設備。 
+---
+= 資源配置儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您使用主機的命令列選項來配置儲存設備、並連線至現有的儲存系統。SnapDrive您也可以使用Data ONTAP 功能不一樣的功能來配置儲存設備。

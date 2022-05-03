@@ -1,0 +1,56 @@
+---
+permalink: aix/task_stopping_the_clone_and_lun_clone_split.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, volume, clone, split, operation 
+summary: 您可以使用工作ID或檔案規格來停止實體複製或LUN複製的實體複本分割。 
+---
+= 停止Volume Clone或LUN Clone切割作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用工作ID或檔案規格來停止實體複製或LUN複製的實體複本分割。
+
+.步驟
+. 輸入下列命令：
++
+‘* SnapDrive 鏡像複製分割停止[-LUN]_LON_LUN_name_[_LON_LUN_name_...] |[{-dg |-vg |-FS |-hostvol |-lvol}_file_spec_[_file_spec_...] |[-jobid>_]*
+
++
+UNIX版停止進行中的複製切割停止作業。SnapDrive
+
+
+
+下列範例顯示使用檔案規格停止的實體複本分割作業。
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt4" is 0% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt3" is 0% Completed and Stopped.
+----
+以下範例顯示使用工作ID停止的複本分割作業。
+
+[listing]
+----
+# snapdrive clone split stop -job B265Dbv8gh
+Clone-Split for "/mnt/my_mnt3" is 14% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt4" is 17% Completed and Stopped.
+----
+以下範例為典型輸出、顯示已停止之檔案規格的實體複本分割停止作業。
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt3" is not stopped : No split is in progress for this resource
+Clone-Split for "/mnt/my_mnt4" is not stopped : No split is in progress for this resource
+----
+[NOTE]
+====
+* 如果已針對工作ID中的特定檔案規格停止複本分割、且複本分割停止成功、則會從工作中移除檔案規格。
+* 如果某個工作的複本分割已停止、且該工作中所有檔案規格的複本分割停止均已成功、則該工作會從工作集中移除。
+
+
+====

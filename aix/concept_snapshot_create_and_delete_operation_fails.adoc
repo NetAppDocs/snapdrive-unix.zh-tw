@@ -1,0 +1,115 @@
+---
+permalink: aix/concept_snapshot_create_and_delete_operation_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, delete, operation, fail 
+summary: Snapshot建立與刪除作業無法移除儲存系統上的Snapshot複本、因為LUN忙碌中。 
+---
+= Snapshot建立與刪除作業失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot建立與刪除作業無法移除儲存系統上的Snapshot複本、因為LUN忙碌中。
+
+出現下列錯誤訊息：
+
+[listing]
+----
+0001-124 Admin error: Failed to remove snapshot <snap-name> on
+filer <filer-name>: LUN clone
+----
+如果符合下列條件、您可能會遇到此錯誤、而且可能無法直接刪除Snapshot複本：
+
+* 磁碟群組橫跨多個儲存系統。
+* 下列SnapDrive 的支援功能可在迴圈中執行超過50次迭代（迭代次數取決於主機作業系統）：
++
+** 《倉儲創作》SnapDrive
+** 《建立抓取》SnapDrive
+** 《不儲存設備刪除》SnapDrive
+** 《還原快照》SnapDrive
+** 《鏈接》SnapDrive
+** 《不儲存設備刪除》SnapDrive
+** 《抓取刪除》SnapDrive
+
+
+
+
+此時、儲存系統上的Snapshot複本狀態會顯示為「* LUNs-busy*」、此狀態會延長數小時。
+
+
+
+== 因應措施
+
+|===
+| *如果...* | *然後...* 
+
+
+ a| 
+Snapshot複本中有未連線至主機的複製LUN。
+ a| 
+您可以執行下列其中一項來刪除Snapshot複本：
+
+* 使用「檔案管理器分割複製」命令、將複製的LUN從儲存系統分割開來。
+* 刪除複製的LUN。
+
+
+
+
+ a| 
+Snapshot複本中有未連線至主機的複製LUN。
+ a| 
+請執行下列步驟：
+
+. 使用「SnapDrive 停止連結中斷」命令、從主機上中斷複製的LUN連線。
+. 刪除複製的LUN。
+. 刪除Snapshot複本。
+
+
+
+
+ a| 
+以下是其中一項：
+
+* Snapshot複本中的複製LUN、也會出現在其他Snapshot複本中
+* 備份複製的LUN
+
+ a| 
+完成下列步驟：
+
+. 在儲存系統命令提示字元中執行下列命令：「LUN snap usage -s <Volume Name>」
++
+這會列出包含複製LUN Snapshot複本的Snapshot複本名稱、如下列範例所示：
+
++
+[listing]
+----
+tonic*> lun snap usage vol1
+james_lun (filer view)
+mpiotest2:
+LUN:
+/vol/vol1/.snapshot/mpiotest2/d
+hilip_0
+Backed By:
+/vol/vol1/.snapshot/dhilip_lun/
+james
+----
+. 從儲存系統刪除Snapshot複本的順序與LUN Snapusage命令輸出中所列的順序相同、如下列範例所示。
++
+"nap刪除vol1 mpiotest2"
+
++
+
+NOTE: 確保您要刪除的Snapshot複本未被任何其他主機使用。如果正在存取、您將無法刪除。
+
+
+
+
+
+ a| 
+沒有複製的LUN
+ a| 
+等待直到儲存系統上Snapshot複本的「LUN-busy」狀態消失。
+
+|===

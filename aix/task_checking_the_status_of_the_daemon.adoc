@@ -1,0 +1,23 @@
+---
+permalink: aix/task_checking_the_status_of_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, check, daemon, status, command 
+summary: 您可以檢查精靈的狀態、查看精靈是否正在執行。如果精靈已經在執行中、您不需要重新啟動它、直到SnapDrive 更新完for UNIX組態檔為止。 
+---
+= 檢查精靈的狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢查精靈的狀態、查看精靈是否正在執行。如果精靈已經在執行中、您不需要重新啟動它、直到SnapDrive 更新完for UNIX組態檔為止。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 檢查精靈的狀態：
++
+快照狀態*
+
+

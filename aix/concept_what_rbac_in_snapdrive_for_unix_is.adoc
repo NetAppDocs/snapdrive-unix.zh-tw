@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_what_rbac_in_snapdrive_for_unix_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, access, control, role 
+summary: RBAC可讓SnapDrive 管理員限制存取儲存系統以執行各種SnapDrive 不同的動作。儲存作業的這種有限或完整存取取決於指派給使用者的角色。 
+---
+= 什麼是SnapDrive UNIX版的角色型存取控制（RBAC）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC可讓SnapDrive 管理員限制存取儲存系統以執行各種SnapDrive 不同的動作。儲存作業的這種有限或完整存取取決於指派給使用者的角色。
+
+適用於UNIX及更新版本的仰賴RBAC存取檢查、才能執行UNIX作業的所有功能。SnapDrive SnapDrive此行為可讓儲存管理員根據SnapDrive 指派的角色、限制使用者可以執行的作業。RBAC是使用Operations Manager基礎架構來實作。在版本低於SnapDrive 適用於UNIX的版本中、存取控制有限、只有root使用者才能執行SnapDrive UNIX作業的功能。適用於UNIX及更新版本的支援使用Operations Manager主控台的RBAC基礎架構、為非root本機使用者及網路資訊系統（NIS）使用者提供支援。SnapDriveUNIX版不需要儲存系統的root密碼、而是使用SD-<主機名稱>使用者與儲存系統通訊。SnapDrive
+
+根據預設、不會使用Operations Manager主控台RBAC功能。您必須在「snapdrive.conf」檔案中設定變數「_bac-method=dfm_」、然後重新啟動SnapDrive 適用於UNIX精靈的f2、才能開啟RBAC功能。
+
+使用此功能之前、必須符合下列要求：
+
+* Operations Manager主控台3.7或更新版本。
+* Operations Manager主控台伺服器必須存在並在IP網路中設定、其中包含SnapDrive 了各種功能的主機和儲存系統。
+* Operations Manager主控台通訊設定必須在SnapDrive 安裝過程中設定。
+* UNIX精靈應該正在執行。SnapDrive
+

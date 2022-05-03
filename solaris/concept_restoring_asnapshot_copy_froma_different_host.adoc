@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_restoring_asnapshot_copy_froma_different_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy, host 
+summary: 使用SnapDrive 「還原功能」命令、從不同的主機還原Snapshot複本。 
+---
+= 從其他主機還原Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「SnapDrive 還原快照」命令、從不同的主機還原Snapshot複本。
+
+通常、您可以從執行Snapshot複本的主機還原Snapshot複本。有時候、您可能需要使用不同或非來源主機來還原Snapshot複本。若要使用非來源主機還原Snapshot複本、請使用SnapDrive 您通常使用的「還原快照」命令。如果您還原的Snapshot複本包含NFS實體、則非來源主機必須擁有存取NFS目錄的權限。

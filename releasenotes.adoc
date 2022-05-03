@@ -1,0 +1,11 @@
+---
+permalink: releasenotes.html 
+sidebar: sidebar 
+keywords: release, notes, new, features, fixed, issues, known, limitations 
+summary: 說明新功能、升級附註、修正問題、已知限制及已知問題。 
+---
+= 適用於Unix 5.3.2版本說明SnapDrive
+:allow-uri-read: 
+
+
+。 link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2849339["適用於Unix 5.3.2版本說明SnapDrive"] 說明新功能、升級附註、修正問題、已知限制及已知問題。您必須登入NetApp支援網站、才能存取版本資訊。

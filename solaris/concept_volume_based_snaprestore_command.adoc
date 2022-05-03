@@ -1,0 +1,87 @@
+---
+permalink: solaris/concept_volume_based_snaprestore_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore, command 
+summary: 本節說明使用Volume Based SnapRestore 的功能的命令和選項。 
+---
+= Volume型SnapRestore 的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節說明使用Volume Based SnapRestore 的功能的命令和選項。
+
+快照還原CLI中新增了「vbsr」選項、可選擇以Volume為基礎SnapRestore 的功能。使用下列命令語法、使用Volume型SnapRestore 的功能來執行還原：
+
+[listing]
+----
+snapdrive snap restore {-lun | -dg | -vg | -hostvol |
+-lvol | -fs |-file} file_spec [file_spec ...] [{-lun | -dg |
+-vg | -hostvol | -lvol | -fs -file} file_spec [file_spec ...]
+...] -snapname snap_name [-force [-noprompt]][{-reserve |
+-noreserve}] \[-devicetype \{shared \| dedicated\}\]
+[-vbsr [execute | preview]]
+----
+如果未提供任何參數給「-vbsr」、預設輸出將是預覽選項的輸出。使用「-verbose」選項、可針對使用者可能過度使用的所有強制檢查、提供詳細的輸出。未提供-verbose選項時的預設輸出會顯示失敗檢查的結果。
+
+「DEVICETYPE Shared | Dedicated」選項支援「-vbsr」。這可讓全叢集的主機共用主機檔案支援Volume型SnapRestore 的功能。這與支援單一檔案快照還原相同。
+
+如果您不想在執行Volume型SnapRestore 的還原時提示任何確認訊息、您可以使用「naprestore -vbsr execute」命令來使用「-nosprompt」和「-force」選項。下表根據SnapDrive 您提供的選項、說明UNIX的功能。
+
+|===
+| 序列號 | vbsr執行 | 強制 | -noprompt | 結果 
+
+
+ a| 
+1.
+ a| 
+否
+ a| 
+不適用
+ a| 
+不適用
+ a| 
+預覽模式為預設模式。所有檢查都會完成、並產生每項檢查的報告。
+
+
+
+ a| 
+2.
+ a| 
+是的
+ a| 
+否
+ a| 
+否
+ a| 
+所有檢查均已完成。如果使用者可以置換的任何強制檢查失敗、SnapDrive 則適用於UNIX的功能會顯示錯誤訊息。
+
+
+
+ a| 
+3.
+ a| 
+是的
+ a| 
+是的
+ a| 
+否
+ a| 
+所有檢查都會完成。如果任何強制檢查失敗、SnapDrive 則適用於UNIX的功能會顯示錯誤訊息。如果有任何使用者可以覆寫的檢查失敗、SnapDrive 那麼適用於UNIX的功能會提示您。
+
+
+
+ a| 
+4.
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+ a| 
+所有檢查都會完成。如果任何強制檢查失敗、SnapDrive 則適用於UNIX的功能會顯示錯誤訊息。如果有任何使用者可以覆寫的檢查失敗、SnapDrive 則適用於UNIX的驗證不會提示您。
+
+|===

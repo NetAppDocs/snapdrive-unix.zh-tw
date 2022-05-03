@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_lun_names_in_san_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, name, san, environment 
+summary: 在所有的SAN作業中、無論LUN名稱是否解析為IP位址、LUN名稱的格式都應該是主機名稱。在純SAN環境中、沒有資料路徑的概念。管理介面對應必須與資料路徑介面相同。 
+---
+= SAN環境中的LUN名稱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在所有的SAN作業中、無論LUN名稱是否解析為IP位址、LUN名稱的格式都應該是主機名稱。在純SAN環境中、沒有資料路徑的概念。管理介面對應必須與資料路徑介面相同。
+
+
+
+== SAN多個子網路環境中的組態清單輸出
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91
+
+#snapdrive config list -mgmtpath
+system name        management interface   datapath interface
+------------------------------------------------------------
+bart               10.72.197.91           10.72.197.91
+----

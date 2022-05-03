@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_snapdrived_stop_or_snapdrived_start_command_hangs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, start, command, hangs 
+summary: 在某些情況下、快照停止或快照啟動命令可能會掛起。 
+---
+= 快照停止或快照啟動命令掛起
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些情況下、「napdrived stop」或「shapdrived start」命令可能會掛起。
+
+若要解決此問題、請執行「快取狀態」、檢查執行中的命令數量、以及啟動的時間。執行中的所有命令都會等待完成。如果您認為任何命令都會當機、請發出「shnapdrived -force stop」或「shapdrived -force restart」命令。
+
+
+IMPORTANT: 「-force」選項會終止所有執行中的命令、並停止精靈。這可能會對系統狀態造成負面影響、例如過時的裝置項目和未來的精靈啟動。

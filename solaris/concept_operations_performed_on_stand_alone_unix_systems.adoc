@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_operations_performed_on_stand_alone_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, stand, alone 
+summary: 適用於獨立UNIX系統上的UNIX、可讓您建立儲存設備、並管理LUN、檔案系統、邏輯磁碟區和磁碟群組的Snapshot複本。SnapDrive 
+---
+= 在獨立UNIX系統上執行的作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於獨立UNIX系統上的UNIX、可讓您建立儲存設備、並管理LUN、檔案系統、邏輯磁碟區和磁碟群組的Snapshot複本。SnapDrive
+
+* 建立包含LUN、檔案系統、邏輯磁碟區和磁碟群組的儲存設備。
++
+建立儲存設備之後、您可以增加或減少儲存容量、將儲存設備連接至主機或中斷連線、以及顯示儲存設備的組態資訊。
+
+* 在儲存系統上建立一個或多個Volume群組的Snapshot複本。
++
+Snapshot複本可包含檔案系統、邏輯磁碟區、磁碟群組、LUN及NFS目錄樹狀結構。建立Snapshot複本之後、您可以重新命名、還原或刪除Snapshot複本。您也可以將Snapshot複本連接到同一或不同主機上的不同位置。連接Snapshot複本之後、您可以檢視及修改內容、或中斷連線。您也可以顯示所建立之Snapshot複本的相關資訊。
+
+

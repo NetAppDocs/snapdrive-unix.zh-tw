@@ -1,0 +1,88 @@
+---
+permalink: aix/task_disconnectingsnapshot_copy_withstorage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, snapshot, storage 
+summary: 您可以使用SnapDrive 「停止連結」命令來中斷包含儲存實體的Snapshot複本連線。 
+---
+= 中斷與儲存實體的Snapshot複本連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 不中斷連結」命令來中斷包含儲存實體的Snapshot複本。
+
+.步驟
+. 輸入下列命令：
++
+*快照中斷連線（｛-dg |-FS |-hostvol｝_file_spec_[_file_spec..._]｛-dg |-FS |-hostvol｝file_spec [file_spec...]）SnapDrive [-f完整][-fsttype類型][-vmtype類型][-split]*
+
++
+此命令必須始終從儲存實體開始、例如、「-LUN」、「-dg」、「-hostvol'、 或是「-FS」。
+
++
+** 如果指定LUN（`-LUN'）、則必須輸入長LUN名稱。您無法在與其他儲存實體相同的命令列（如「-vg」、「-dg」、「-fs」、「-lvol'」或「-hostvol'」選項）上、使用「-LUN」選項來指定LUN。
+** 如果您指定NFS掛載點、則無法在同一命令列上指定非NFS實體（如「-vg」、「-dg」、「-FS」、「-lvol"或「-hostvol"）。您必須使用個別的命令來指定NFS掛載點。
+
+
+
+
+
+NOTE: 如果主機實體使用的LUN不是Snapshot複本的一部分、則會出現錯誤訊息。如果您指定每個目標磁碟群組所包含的主機磁碟區和/或檔案系統子集、也會發生錯誤。
+
+適用於UNIX的解決方法會移除命令列中指定之儲存實體的對應。SnapDrive
+
+此命令列會移除與主機Volume DG5/myvolume基礎上所有LUN的對應。它會移除任何以Snapshot連線作業建立的暫用LUN：
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+此命令列會移除與主機Volume DG5/myvolume基礎上所有LUN的對應。它會移除任何以Snapshot連線作業建立的暫用LUN：
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+此命令會中斷對應至磁碟群組1（DG1）和基礎LUN的連線。它也會移除任何以Snapshot連線作業所建立的暫用LUN：
+
+[listing]
+----
+# snapdrive snap disconnect -lun toaster:/vol/vol1/luna -dg dg1
+----
+此命令列會移除對應至檔案系統fs1及其所在LUN的功能。它也會移除任何以Snapshot連線作業所建立的暫用LUN：
+
+[listing]
+----
+# snapdrive snap disconnect -fs mnt/fs1
+----
+此命令列會移除磁碟群組DG1、DG2和DG3的對應。它會移除使用Snapshot連線作業所建立的任何暫用LUN：
+
+[listing]
+----
+# snapdrive snap disconnect -dg dg1 dg2 dg3
+----
+此範例會中斷與檔案系統、磁碟群組在Veritas堆疊上的Snapshot複本的連線：
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype vxfs
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol vxvm1_0/fs1_SdHv_0 ... deleted
+- dg vxvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunVxvm1_0 ... deleted
+----
+此範例會中斷快照複本與檔案系統、磁碟群組與LVM堆疊的連線：
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype jfs2
+
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol lvm1_0/fs1_SdHv_0 ... deleted
+- dg lvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunLvm1_0 ... deleted
+----

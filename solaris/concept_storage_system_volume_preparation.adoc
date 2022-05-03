@@ -1,0 +1,34 @@
+---
+permalink: solaris/concept_storage_system_volume_preparation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, volume, prepare 
+summary: 您可以使用儲存系統上的命令提示字元或FilerView選項來建立儲存系統磁碟區、以供UNIX專用SnapDrive 使用。 
+---
+= 儲存系統Volume準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用儲存系統上的命令提示字元或FilerView選項來建立儲存系統磁碟區、以供UNIX專用SnapDrive 使用。
+
+您必須在儲存系統上完成下列工作、才能建立一個能夠容納SnapDrive 連接至單一主機之UNIX邏輯單元號碼（LUN）或網路檔案系統（NFS）實體的磁碟區：
+
+* 建立儲存系統磁碟區。
+* 如果您在光纖通道或網際網路小型電腦系統介面（iSCSI）環境中、請將SnapDrive 儲存系統磁碟區上的「支援快照保留」選項重設為零、以便將所有LUN連接至主機、以進行磁碟區最佳化。
+
+
+當您在儲存系統上建立磁碟區以容納LUN或NFS目錄樹狀結構時、應注意下列事項：
+
+* 您可以在儲存系統磁碟區上建立多個LUN或NFS目錄樹狀結構。
+* 您不應將使用者資料儲存在儲存系統或vFiler單元的根磁碟區中。
+
+
+*相關資訊*
+
+http://mysupport.netapp.com/portal/documentation["NetApp文件"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["S9 NFS參考資料ONTAP"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["《適用於7-Mode的資訊、資料存取與通訊協定管理指南》（英文）Data ONTAP"]

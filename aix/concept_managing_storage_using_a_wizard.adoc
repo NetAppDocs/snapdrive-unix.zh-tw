@@ -1,0 +1,31 @@
+---
+permalink: aix/concept_managing_storage_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, wizard, manage 
+summary: 您可以使用SnapDrive 「適用於UNIX的解決方法」精靈、以互動且有效率的方式建立儲存設備。精靈會引導您完成一組問題、以協助您建立儲存設備。 
+---
+= 使用精靈管理儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 「適用於UNIX的解決方法」精靈、以互動且有效率的方式建立儲存設備。精靈會引導您完成一組問題、以協助您建立儲存設備。
+
+您可以使用「SnapDrive flexunstorage wizard creation」命令啟動精靈。
+
+您可以執行下列儲存管理作業：
+
+* 建立LUN
+* 建立磁碟群組並自動設定LUN
+* 建立磁碟群組並指定LUN。
+* 建立主機磁碟區並自動設定LUN
+* 建立主機磁碟區並指定LUN
+* 在LUN上建立檔案系統、並自動設定LUN
+* 在LUN上建立檔案系統並指定LUN。
+* 在LUN上建立檔案系統、並使用指定的邏輯Volume Manager（LVM）和磁碟群組自動設定LUN
+* 在LUN上建立檔案系統、並使用指定的LVM和磁碟群組來指定LUN
+* 在LUN上建立檔案系統、並使用指定的LVM和主機Volume自動設定LUN
+* 在LUN上建立檔案系統、並使用指定的LVM和主機Volume來指定LUN
+

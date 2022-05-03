@@ -1,0 +1,31 @@
+---
+permalink: solaris/concept_guidelines_for_connecting_snapshot_copies_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guideline, connect, copy, host, cluster, snapshot 
+summary: 您可以從主機叢集中的任何節點連線Snapshot複本。在連線至Snapshot複本時、請遵循這些準則。 
+---
+= 在主機叢集環境中連接Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從主機叢集中的任何節點連線Snapshot複本。在連線至Snapshot複本時、請遵循這些準則。
+
+* 可以從主機叢集中的任何節點執行「SnapDrive 支援快照連線」命令。如果您從SnapDrive 主機叢集中的任何非主要節點、使用「-DEVICETYPE共享」選項來起始「Sflexfsnap Connect」命令、該命令會傳送至主要節點並執行。為達成此目的、請確保所有主機叢集節點均允許「rsh」或「sh」存取、且不需密碼提示。
+* 在此作業中指定的多個檔案系統和磁碟群組應具有相同的裝置類型範圍、也就是所有的都應共用、或全部都應專屬。
+* 不支援使用NFS或原始LUN上的儲存實體執行「SnapDrive 支援鏈接」命令。
+* 「-igroup」選項支援「-DEVICETYPE」專屬選項、而非SnapDrive 「支援」指令中的「-DEVICETYPE」共享選項。
+* UNIX版在主節點上執行「funsnap Connect」命令。SnapDrive SnapDrive在建立共用儲存實體之前、它會在主節點上建立及對應LUN、然後對應所有非主節點上的LUN。也會建立及管理主機叢集中所有節點的igroup。如果在此順序期間出現任何錯誤訊息、則Snapshot連線作業會失敗。
+* 使用「SnapDrive flexsnap Connect（鏈接）”命令可連接下列儲存實體：
++
+** 已在主機叢集中以共用或專用模式存在的共用檔案系統或磁碟群組。
+** 即使檔案系統或磁碟群組已在主機叢集中的共用模式中存在、也會將專用檔案系統或磁碟群組移至主機叢集中的單一節點。
+** 在主機叢集外部節點上建立的檔案系統或磁碟群組Snapshot複本。
+
+
+* 如果主機叢集中沒有磁碟群組的「-destdg」選項和檔案系統的「-autorename"選項、則非主節點中已存在的專屬檔案系統或磁碟群組將無法在共用模式中再次連線。
+
+
+也就是、如果檔案系統已在主機叢集中某個非主要節點的專屬模式中存在、您必須使用SnapDrive 「-destdg」和「-autorename」選項來指定「orfsnap connect」命令、或在命令中明確指定目的地檔案系統。

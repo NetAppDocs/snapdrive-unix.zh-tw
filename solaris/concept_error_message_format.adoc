@@ -1,0 +1,31 @@
+---
+permalink: solaris/concept_error_message_format.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message 
+summary: 錯誤訊息的格式可協助您判斷錯誤的原因。 
+---
+= 錯誤訊息格式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+錯誤訊息的格式可協助您判斷錯誤的原因。
+
+UNIX版會傳回標準錯誤代碼資訊、提供更具體的說明、說明導致初始錯誤情況的原因。SnapDrive適用於UNIX的錯誤訊息符合下列格式：SnapDrive
+
+「RETurn Code message-ID錯誤類型：Message text」
+
+* 「_return code_」- SnapDrive 鏈接到退出狀態值的UNIX錯誤訊息ID、指出錯誤狀況的基本原因。
+* "_message-ID_"是NetApp技術支援人員用來找出產生錯誤的特定程式碼的唯一識別碼。如果您需要致電NetApp技術支援、NetApp建議您記錄錯誤訊息所伴隨的訊息ID。
+* "_error type_"（錯誤類型_）-指定SnapDrive UNIX遇到的錯誤類型。傳回值包括下列項目：
++
+** 「_warning_」- SnapDrive UNIX版執行命令、但發出可能需要您注意的情況警告。
+** `_Command_'—SnapDrive UNIX的Sf不能 執行命令、因為命令列中有錯誤。檢查命令列格式和變數、確保它們正確無誤。
+** `_admin_`-- SnapDrive 由於系統組態不相容、UNIX版的Sfor UNIX無法執行命令。請聯絡您的系統管理員以檢閱您的組態參數。
+** fatatal _（_致命_）- SnapDrive 由於發生非預期的情況、UNIX版的無法執行命令。極少發生致命錯誤。如果發生嚴重錯誤、且您無法解決問題、請聯絡NetApp技術支援部門以尋求協助。
+
+
+* "_Message text_"--Information（解釋錯誤的信息）。此文字可能包含其他元件的資訊、以提供更多有關錯誤的詳細資訊。例如、如果缺少命令列引數（例如磁碟群組）、則錯誤訊息會告訴您缺少什麼。或者ONTAP 、針對UNIX使用的管理支援API SnapDrive 來控制儲存系統、可能會提供額外的文字來協助說明錯誤。在這種情況下、文字會跟隨基本SnapDrive 的UNIX功能錯誤訊息。
+

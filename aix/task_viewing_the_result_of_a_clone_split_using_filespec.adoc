@@ -1,0 +1,72 @@
+---
+permalink: aix/task_viewing_the_result_of_a_clone_split_using_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, result, clone, split, job, id, filespec, operation 
+summary: 您可以使用工作ID或檔案規格來檢視完整複本分割作業的結果。 
+---
+= 使用工作ID或檔案規格來檢視複本分割作業的結果
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用工作ID或檔案規格來檢視完整複本分割作業的結果。
+
+.步驟
+. 輸入下列命令、以使用檔案規格檢視複本分割結果：
++
+‘* SnapDrive 鏡像複製分割結果[-LUN]_LON_LUN_name_[_LON_LUN_name_...] |[{-dg |-vg |-FS |-hostvol |-lvol} file_spec [file_spec...] |[-jobid>_]*
+
++
+UNIX版顯示完成或失敗的複製分割結果、以取得檔案規格、然後從工作中移除檔案規格、並從工作佇列中移除工作。SnapDrive
+
+
+
+以下範例顯示成功完成工作ID的複本分割結果。
+
+[listing]
+----
+# snapdrive clone split result -job VT1ov6Q8vU
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+如果有兩個檔案規格、其中一個檔案規格因儲存系統空間不足而失敗、則複製分割作業的結果會顯示一個檔案規格失敗、另一個檔案規格已成功完成。
+
+下列範例顯示成功完成檔案規格的複本分割結果。
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt3 /mnt/my_mnt4
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+以下範例顯示複本分割作業仍在進行中且尚未完成時的複本分割結果。
+
+[listing]
+----
+# snapdrive clone split result -job R57aCzUaeG
+Clone-Split for "/mnt/my_mnt3" is 0% completed and Split in progress
+----
+以下範例顯示從工作集永久移除的工作、當您嘗試使用檔案規格檢視結果時SnapDrive 、UNIX版的DB2會遇到錯誤訊息「不屬於任何工作」。
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt2
+Storage resource /mnt/my_mnt2 does not belong to any job
+----
+以下範例顯示已從工作集永久移除的工作、當您嘗試使用工作ID檢視結果時SnapDrive 、UNIX版的DB2會遇到錯誤訊息「工作ID無效」。
+
+[listing]
+----
+# snapdrive clone split result -job T59aCzUaeG
+Job ID is not valid
+----
+下列範例顯示複本分割結果、其中一個複本分割正在進行中、另一個則失敗。
+
+[listing]
+----
+# snapdrive clone split result -job qJrG8U59mg
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt5" is 0% completed and split failed
+----

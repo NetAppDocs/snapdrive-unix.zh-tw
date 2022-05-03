@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_guidelines_fordisconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, lun, storage, nfs 
+summary: 以下是中斷LUN、儲存實體或NFS目錄Snapshot複本連線的準則。 
+---
+= 中斷Snapshot複本連線的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下是中斷LUN、儲存實體或NFS目錄Snapshot複本連線的準則。
+
+* 當您中斷檔案系統連線時、SnapDrive 適用於UNIX的解決方法一律會移除掛載點。
+* Linux主機可讓您將多個檔案系統附加至單一掛載點。不過SnapDrive 、for UNIX需要每個檔案系統都有一個獨特的掛載點。如果您使用「SnapDrive 停止連結」命令來中斷連接附加至單一掛載點的檔案系統、則「停止連結」命令會失敗。
+* 若要復原Snapshot連線作業的效果、請使用Snapshot Disconnect命令。
+* 如果在Snapshot連線作業期間將「啟用-分割-複製」組態變數值設定為「開啟」或「同步」、在Snapshot中斷作業期間將「關閉」、SnapDrive 則UNIX版的DB2不會刪除Snapshot複本中的原始Volume或LUN。
+

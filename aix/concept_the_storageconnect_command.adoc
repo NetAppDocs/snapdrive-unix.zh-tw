@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_the_storageconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, command 
+summary: 透過使用支援功能、將儲存實體連接至主機。SnapDrive您可以使用此命令將LUN和儲存實體連線至主機 
+---
+= storage connect命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「不支援儲存設備連線」命令可將儲存實體連線至主機。SnapDrive您可以使用此命令將LUN和儲存實體連線至主機
+
+使用「SnapDrive flexstorage connect（不需儲存設備連線）”命令來連線至：
+
+* LUN
+* 直接在LUN上建立的檔案系統
+* 在LUN上建立磁碟群組、主機磁碟區和檔案系統
+
+
+當您輸入「SnapDrive flexestorage connect」命令將LUN連線至主機時、SnapDrive 適用於UNIX的支援中心會執行必要的探索和對應。它不會修改LUN內容。

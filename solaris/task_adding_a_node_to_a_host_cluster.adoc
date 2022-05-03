@@ -1,0 +1,28 @@
+---
+permalink: solaris/task_adding_a_node_to_a_host_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, node, host, cluster 
+summary: 若要將新節點新增至主機叢集、請遵循《Veritas Cluster Server Installation Guide for Solaris》（適用於Solaris的Veritas叢集伺服器安裝指南）中的指示。設定低延遲傳輸（LLT）和全域原子廣播（GAB\）之後、您必須完成一些額外步驟。為確保主機叢集設定正確、您應該先使用SnapDrive 「支援SnapDrive UNIX的任何一個功能」命令之前、先使用「支援組態檢查叢集」選項。 
+---
+= 將節點新增至主機叢集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要將新節點新增至主機叢集、請遵循_Veritas Cluster Server Installation Guide for Solaris中的指示。設定低延遲傳輸（LLT）和全域原子廣播（GAB）之後、您必須完成一些額外步驟。為確保主機叢集設定正確、您應該先使用「SnapDrive 支援SnapDrive UNIX的任何一個指令集」選項「支援組態檢查叢集」。
+
+.步驟
+. 使用下列命令來對應主機叢集中所有共用磁碟群組的所有LUN：
++
+《* SnapDrive 》*《*儲存設備連線*》
+
+. 在新節點上啟動叢集Volume Manager（CVM）。
++
+如需相關指示、請參閱_ Veritas Cluster Server Installation Guide for Solaris _（_ Veritas叢集伺服器安裝指南for Solaris _）。
+
++
+共享磁碟群組和檔案系統可在新節點上自動顯示。
+
+

@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/task_receiving_error_iscsi64_snapdrive_0001_666_fatal_error.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, connect, command, fatal, iscsi64 
+summary: 如果SnapDrive 您的SSnapSnap Connect命令失敗、並顯示iscsi64 SnapDrive Sir0001-666嚴重錯誤、請遵循以下說明的因應措施。 
+---
+= 收到錯誤iscsi64 SnapDrive ：0001-666致命錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您SnapDrive 的「支援鏈接」命令失敗、並顯示「iscsi64 SnapDrive 支援：0001-666 fatal錯誤」、請參閱以下說明的因應措施。
+
+.步驟
+. 如果尚未指定篩選器、請將「filter =[r|/dev/cciss/.*|」]新增為第一個篩選器至「/etc/lvm/lvm.conf」檔案。
+. 移除「/etc/lvm/.cache」並發出「pvscan」、確認「dev/cciss/*」項目均未顯示。
+

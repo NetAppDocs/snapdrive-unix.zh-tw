@@ -1,0 +1,60 @@
+---
+permalink: solaris/task_verifying_the_supported_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, configuration 
+summary: 您可以SnapDrive 檢查主機系統中的元件（例如作業系統、安裝在主機上的軟體版本、傳輸協定、主機上的檔案系統等）、以及SnapDrive .conf檔案中每個組態參數所指定的值、以驗證支援的UNIX組態。 
+---
+= 驗證支援的組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以SnapDrive 檢查主機系統中的元件（例如作業系統、安裝在主機上的軟體版本、傳輸協定、主機上的檔案系統等）、以及在「sfapdrive.conf」檔案中為每個組態參數指定的值、以驗證支援的UNIX組態。
+
+.步驟
+. 驗證支援的組態：
++
+’* sdconfcheck檢查*
+
++
+[listing]
+----
+[root@scspr0023764001 bin]# sdconfcheck check
+
+NOTE: SnapDrive Configuration Checker is using the data file version  v12052013
+  Please make sure that you are using the latest version.
+  Refer to the SnapDrive for Unix Installation and Administration Guide for more details.
+
+Detected Intel/AMD x64 Architecture
+Detected Linux OS
+Detected sg3_utils 1.28
+Detected Kernel Version 2.6.32-358.el6.x86_64
+Detected LVM_SUPPRESS_FD_WARNINGS has not set
+Detected Multipathing version 0.4.9
+Detected /etc/multipath.conf file not found
+Detected Host OS Red Hat Enterprise Linux 6.0 Update 4
+Detected NFSv3 FileSystem on Linux
+Detected Software iSCSI on Linux
+Detected NFSv4 Filesystem on Linux
+Detected   Ext4 File System
+Detected   Linux Native LVM2
+Detected   Linux Native MPIO
+
+Did not find any supported cluster solutions.
+
+Did not find any supported HU tool kits.
+
+Trace-Enabled: on
+Trace-Level: 7
+
+Supported Configurations on this host by SDU Version 5.2.2
+-------------------------------------------------------------
+Linux NFS Configuration
+[root@scspr0023764001 bin]#
+----
++
+檢查輸出中列出的元件、然後安裝或設定遺失的元件。
+
+

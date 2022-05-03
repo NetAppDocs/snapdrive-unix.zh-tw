@@ -1,0 +1,97 @@
+---
+permalink: linux-administration/task_verifying_the_status_of_clone_split.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, status, clone, split, specification 
+summary: 您可以使用工作ID或檔案規格來查詢複本分割狀態。UNIX版的還原功能會將實體複本分割的目前狀態顯示為「進行中」、「失敗」或「完成」SnapDrive 。 
+---
+= 檢視磁碟區複製或LUN複製分割的狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用工作ID或檔案規格來查詢複本分割狀態。UNIX版的還原功能會將實體複本分割的目前狀態顯示為「進行中」、「失敗」或「完成」SnapDrive 。
+
+.步驟
+. 輸入下列命令、以使用工作ID或檔案規格查詢複本分割狀態。
++
+「SnapDrive *」-實體複製分割狀態[-LUN]_long_lun_name_[_long_lun_name..._][{-dg |-vg |-fs |-hostvol |-lvol}_file_spec_[_file_spec..._]-jobid>_][-all]*
+
+
+
+以下範例顯示使用工作ID的複本分割狀態。
+
+[listing]
+----
+# snapdrive clone split status -job SVE2oxKXzH
+Clone-Split-Status for /fs1-1_3 is 1% Complete
+Clone-Split-Status for /fs1_0 is 73% Complete
+Clone-Split-Status for /fs1_1 is 73% Complete
+Clone-Split-Status for /fs1_2 is 74% Complete
+Clone-Split-Status for /fs1_3 is 1% Complete
+----
+[NOTE]
+====
+您可以使用下列任一方法檢查實體複本分割進度的狀態：
+
+* 您可以使用驗證實體複本
++
+’* SnapDrive 《*》儲存展示-FS /mnt/my_mnt*》
+
++
+或
+
++
+「* SnapDrive 」指儲存設備show -LUN _long lun_pathName_*
+
++
+命令。無論是哪種情況、如果分割尚未完成、複製類型都會顯示為FlexClone或LUN複製。
+
+* 您可以登入儲存系統、並在儲存系統CLI中使用下列命令來驗證實體複本分割進度狀態：
++
+「* vol clone」分割狀態_vol_name_*
+
++
+’* LUN Clone分割狀態_LUN_name_*
+
+
+
+====
+下列範例顯示使用檔案規格所進行的複本分割狀態查詢：
+
+[listing]
+----
+# snapdrive clone split status -fs /mnt/my_mnt3 -fs /mnt/my_mnt4
+Clone-Split-Status for /mnt/my_mnt3 is 14% Complete
+Clone-Split-Status for /mnt/my_mnt4 is 17% Complete
+----
+下列範例顯示正在執行的實體複本分割狀態查詢：
+
+[listing]
+----
+# snapdrive clone split status -all
+Job ID: SVE2oxKXzH:
+Clone-Split-Status for /fs1-1_3 is 100% Complete
+Clone-Split-Status for /fs1_0 is 100% Complete
+Clone-Split-Status for /fs1_1 is 100% Complete
+Clone-Split-Status for /fs1_2 is 100% Complete
+Clone-Split-Status for /fs1_3 is 100% Complete
+----
+* 當工作從工作集移除、且您使用檔案規格查詢複製分割狀態時、SnapDrive 適用於UNIX的整套功能會將錯誤訊息顯示為
++
+「目前沒有任何資源分割正在進行中。
+
+* 當工作從工作集移除、並使用工作ID查詢複製分割的狀態時SnapDrive 、適用於UNIX的整套功能會將錯誤訊息顯示為
++
+「工作ID無效。
+
+* 當所有檔案規格都從工作中移除、且您使用工作ID查詢複製分割的狀態時、SnapDrive 適用於UNIX的功能將顯示為
++
+「工作ID無效」
+
++
+因為工作已從工作集移除。
+
+* 如果任何檔案規格因儲存系統空間不足而失敗、則工作仍會繼續分割以符合其餘的檔案規格。這表示工作不會從工作佇列中刪除、而且工作狀態會保留、直到您查詢整體工作結果為止。
+

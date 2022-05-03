@@ -1,0 +1,18 @@
+---
+permalink: aix/task_verifying_supported_configurations_using_configuration_checker_tool.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, supported, configuration 
+summary: 適用於UNIX的支援功能組態檢查工具可協助您識別及驗證支援執行適用於UNIX的支援組態。SnapDrive SnapDrive 
+---
+= 驗證支援的組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能組態檢查工具可協助您識別及驗證支援執行適用於UNIX的支援組態。SnapDrive SnapDrive
+
+含更新資料檔案的組態檢查工具會檢查SnapDrive 支援的UNIX組態、並列出系統中所有支援和不支援的元件。
+
+此工具有助於確認主機上所有必要的元件和正確版本、然後再使用SnapDrive 適用於UNIX的版本。

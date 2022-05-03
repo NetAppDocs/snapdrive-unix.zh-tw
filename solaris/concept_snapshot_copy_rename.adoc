@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_snapshot_copy_rename.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, rename 
+summary: 您可以使用Snapshot Snaprame命令來變更Snapshot複本的名稱。也可以重新命名跨多個儲存系統或儲存系統磁碟區的Snapshot複本。 
+---
+= Snapshot複本重新命名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「snapshot snapshot rame」命令來變更Snapshot複本的名稱。也可以重新命名跨多個儲存系統或儲存系統磁碟區的Snapshot複本。

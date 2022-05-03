@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_fc_and_iscsi_host_utilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, host, utilities 
+summary: 如果您的組態需要AIX主機公用程式、則必須安裝這些公用程式、並確保系統設定正確。 
+---
+= 安裝AIX主機公用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您的組態需要AIX主機公用程式、則必須安裝這些公用程式、並確保系統設定正確。
+
+您應該使用AIX主機公用程式隨附的文件。其中包含有關Volume Manager、多重路徑及其他功能的資訊、您必須先設定這些功能、才能安裝SnapDrive 適用於UNIX的版本。

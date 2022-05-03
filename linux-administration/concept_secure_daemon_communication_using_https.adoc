@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_secure_daemon_communication_using_https.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, secure, daemon, https, communication, install, variables, configuration 
+summary: 您可以使用HTTPS進行安全的Web服務和監控程式通訊。安全通訊是透過在SnapDrive .conf檔案中設定一些組態變數、以及產生和安裝自我簽署或CA簽署的憑證來啟用的。 
+---
+= 使用HTTPS進行安全監控通訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用HTTPS進行安全的Web服務和監控程式通訊。安全通訊是透過在「snapdrive.conf」檔案中設定一些組態變數、以及產生和安裝自我簽署或CA簽署的憑證來啟用的。
+
+您必須在「snapdrive.conf」檔案中指定的路徑提供自我簽署或CA簽署的憑證。若要使用HTTPS進行通訊、您必須在「snapdrive.conf」檔案中設定下列參數：
+
+* 「use-https-to -SDU-daemon=on」
+* 「contact-https-port-sdU-daemon=4095」
+* 「du-daem-Certificate path=/opt/NetApp/SnapDrive / SnapDrive。pem」
+
+
+
+NOTE: 適用於UNIX及更新版本的支援HTTPS以進行精靈通訊。SnapDrive依預設、此選項設為「關」。

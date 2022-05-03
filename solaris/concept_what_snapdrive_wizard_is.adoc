@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_what_snapdrive_wizard_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizard 
+summary: 包含不同的精靈、可協助您以互動的方式執行特定的功能。SnapDrive SnapDrive 
+---
+= 什麼是資訊精靈SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+包含不同的精靈、可協助您以互動的方式執行特定的功能。SnapDrive SnapDrive

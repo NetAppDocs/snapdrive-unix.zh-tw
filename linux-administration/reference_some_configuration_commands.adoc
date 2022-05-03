@@ -1,0 +1,118 @@
+---
+permalink: linux-administration/reference_some_configuration_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, configuration, config 
+summary: 有幾個命令可協助您設定SnapDrive 適用於UNIX的功能。 
+---
+= 部分組態命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有幾個命令可協助您設定SnapDrive 適用於UNIX的功能。
+
+下表摘要說明有助於設定SnapDrive 適用於UNIX的功能的其他命令：
+
+|===
+| 命令或行動 | 說明 
+
+
+ a| 
+設定及驗證SnapDrive 您的UNIX版軟體
+
+
+
+ a| 
+「* SnapDrive 效能展示*」
+ a| 
+檢查「shnapdrive.conf」檔案中的值。
+
+
+
+ a| 
+《*》*《*》*《*》SnapDrive
+ a| 
+請查看SnapDrive 適用於UNIX的版本。
+
+
+
+ a| 
+快照的start*
+ a| 
+啟動SnapDrive 適用於UNIX精靈的功能。
+
+
+
+ a| 
+《SnapDrive *》指的是準備LUN -count count_value*
+ a| 
+準備主機以建立特定數量的LUN、並決定您可以建立多少LUN。
+
+
+
+ a| 
+`* SnapDrive 《*》組態集-viadmin <user><viadmin_name>*》
+ a| 
+準備客體、以便在Linux客體作業系統上建立RDM LUN。
+
+
+NOTE: 您只能在Linux主機上使用這些命令、方法是使用FCP傳輸協定、而不使用主機公用程式。
+
+
+
+ a| 
+《*》*《*實體複製分割*》SnapDrive
+ a| 
+預估、啟動、停止及查詢分割區的狀態、以取得磁碟區複製或LUN複製。
+
+
+
+ a| 
+編輯「sfapdrive.conf」檔案中的變數。
+ a| 
+變更記錄檔的路徑名稱和選項。適用於UNIX的將資訊記錄到三個檔案：SnapDrive
+
+* 稽核檔案
+* 恢復檔案
+* 追蹤檔
+
+
+
+
+ a| 
+設定及顯示主機與儲存系統之間的存取控制權限。
+
+
+
+ a| 
+在與該主機相關的儲存系統上編輯存取控制權限檔案（SD、hostname_.prbac）。
+ a| 
+指定主機在儲存系統上擁有的存取控制權限。您可以為儲存系統上的主機設定下列存取層級：
+
+* 無-無存取權。
+* Snapcreate -建立Snapshot複本。
+* SnapUse（快照使用）-刪除並重新命名Snapshot複本。
+* 抓取全部-建立、還原、刪除及重新命名Snapshot複本。
+* 儲存設備會建立刪除功能、包括建立、調整大小及刪除儲存設備。
+* 儲存設備用途：連接並中斷儲存設備連線。
+* 儲存全部-建立、刪除、連線及中斷儲存設備連線。
+* 所有存取-所有作業。
+
+
+
+
+ a| 
+「* SnapDrive 」「*」組態存取顯示<filer_name>*
+ a| 
+顯示主機對儲存系統的存取控制權限相關資訊。
+
+
+
+ a| 
+hy*fesconfig SnapDrive 刪除<filername>[<filername>。。.]*
+ a| 
+從SnapDrive 適用於UNIX的功能中移除指定的使用者名稱密碼配對。
+
+|===

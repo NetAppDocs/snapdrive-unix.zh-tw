@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, vserver, security 
+summary: 使用者名稱和密碼SnapDrive 可讓UNIX的支援人員存取Vserver。它也提供安全性、因為除了以vsadmin身分登入之外、您還必須執行SnapDrive 適用於UNIX的版本、並在出現提示時提供正確的使用者名稱和密碼。 
+---
+= Vserver的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用者名稱和密碼SnapDrive 可讓UNIX的支援人員存取Vserver。它也提供安全性、因為除了以vsadmin身分登入之外、您還必須執行SnapDrive 適用於UNIX的版本、並在出現提示時提供正確的使用者名稱和密碼。

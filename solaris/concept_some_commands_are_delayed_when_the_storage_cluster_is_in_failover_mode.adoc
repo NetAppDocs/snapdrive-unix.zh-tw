@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_some_commands_are_delayed_when_the_storage_cluster_is_in_failover_mode.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, delay, failover, storage, cluster 
+summary: 當其中一個叢集式儲存系統當機時、在Solaris主機上建立、連線、刪除或中斷LUN連線的UNIX命令需要數分鐘才能完成。SnapDrive 
+---
+= 當儲存叢集處於容錯移轉模式時、部分命令會延遲
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當其中一個叢集式儲存系統當機時、在Solaris主機上建立、連線、刪除或中斷LUN連線的UNIX命令需要數分鐘才能完成。SnapDrive
+
+這些命令包括：「SnapDrive 不支援的儲存設備」、SnapDrive 「不支援的儲存設備」、SnapDrive 「不SnapDrive 支援的儲存設備」、SnapDrive 「不支援的儲存設備」、「不支援的連線功能」、 「不中斷連線」、有時是「不穩定恢復」SnapDrive SnapDrive 。
+
+僅SnapDrive 當UNIX版的解決方案需要還原刪除或中斷連線的LUN時、此問題才會影響「還原功能」SnapDrive 。

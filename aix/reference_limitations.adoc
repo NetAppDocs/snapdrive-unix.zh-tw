@@ -1,0 +1,56 @@
+---
+permalink: aix/reference_limitations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitation, aix, 
+summary: 使用SnapDrive 適用於UNIX的功能時、您必須注意可能影響環境的某些限制。 
+---
+= 限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用SnapDrive 適用於UNIX的功能時、您必須注意可能影響環境的某些限制。
+
+
+
+== 一般限制
+
+* UNIX版的支援功能需要VM在開機時使用BIOS、才能支援VMware View（SMVI）SnapDrive SnapManager 。不支援使用統一化可延伸韌體介面（UEFI）。
+* 由於虛擬儲存主控台（VSC）不支援此BIOS組態、因此UNIX版不支援在客體作業系統中的RDM（原始裝置對應）環境中進行此功能。SnapDrive MetroCluster MetroCluster
+* 當使用Kerberos安全驗證類型krb5、krb5i或krb5p匯出磁碟區時、適用於UNIX的支援在NFS掛載點上執行Snapshot作業。SnapDrive
+* 如果您在掛載點上執行SnapRestore作業、而不是在掛載Snapshot複本中建立的實體、則Snapshot作業可能會不一致。
+* 如果位於7-Mode和叢集式VMware儲存系統中、則適用於UNIX的支援不支援在檔案規格或LUN上執行作業。SnapDrive Data ONTAP Data ONTAP
+* 如果您使用叢集Data ONTAP 式的效能分析來設定儲存虛擬機器（SVM）搭配SnapDrive 適用於UNIX的功能、請檢查SVM LIF的IP位址是否對應至DNS或/etc/hosts檔案中的SVM名稱。
++
+您也必須使用SnapDrive 「SnapDrive vsconfig set _vsadmin vserver name_」命令、檢查SVM名稱是否在適用於UNIX的SVM中設定。
+
+* UNIX版可在VBRSR作業後、將非root使用者的掛載點權限修改為qtree的root使用者。SnapDrive
+* 適用於UNIX的不支援非英文語言環境。SnapDrive
+* 如果快照還原作業是從LUN移至其他磁碟區之前所建立的Snapshot複本還原、則快照還原作業會失敗。
+* 如果您使用ONTAP 的是S還原8.2或更新版本、如果進行中的複製作業使用相同的Snapshot複本、則Snapshot複本上的Snapshot作業可能會失敗。
++
+您必須稍後再重試此作業。
+
+* 不支援叢集式的Protection Manager、不支援使用支援統一化管理程式6.0或更新版本。OnCommand Data ONTAP因此OnCommand 、不SnapDrive 支援將統一化管理器6.0或更新版本與UNIX版的支援整合、SnapDrive 也不支援下列UNIX版的支援功能：
++
+** 角色型存取控制（RBAC）整合OnCommand 功能可與ONTAP 位於更新版本的NetApp上的NetApp整合
+** Protection Manager整合OnCommand 了功能更新於功能完善的功能ONTAP 、可在功能完善的基礎上使用
+
+
+* 您必須將包含SVM磁碟區的集合體指派至SVM的集合體清單、以設定SVM並執行SnapDrive UNIX作業的SVM。
+* 適用於UNIX的支援不支援自動掛載、使用任何類型的自動掛載都可能導致UNIX作業失敗。SnapDrive SnapDrive
+
+
+
+
+== 對AIX的限制
+
+* 如果一個或多個FC連接埠連結中斷或無法使用、則UNIX版的這個程序需要較長時間才能重新啟動。SnapDrive
++
+不過SnapDrive 、無論FC連接埠的狀態為何、UNIX版的程式檔都能啟動。
+
+* 根據預設、SnapDrive UNIX版的功能會建立非並行設定的磁碟群組、您必須手動變更或提供儲存資源配置作業。
+* UNIX版不支援AIX上的iSCSI傳輸傳輸傳輸傳輸協定。SnapDrive
+

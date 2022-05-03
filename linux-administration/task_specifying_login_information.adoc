@@ -1,0 +1,58 @@
+---
+permalink: linux-administration/task_specifying_login_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, user, password 
+summary: 您必須指定儲存系統的使用者登入資訊。視您設定儲存系統時所指定的內容而定、每個儲存系統可使用相同的使用者名稱或密碼、或是唯一的使用者名稱或密碼。如果所有儲存系統都使用相同的使用者名稱或密碼資訊、您必須執行下列步驟一次。如果儲存系統使用獨特的使用者名稱或密碼、您必須針對每個儲存系統重複下列步驟。 
+---
+= 指定登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須指定儲存系統的使用者登入資訊。視您設定儲存系統時所指定的內容而定、每個儲存系統可使用相同的使用者名稱或密碼、或是唯一的使用者名稱或密碼。如果所有儲存系統都使用相同的使用者名稱或密碼資訊、您必須執行下列步驟一次。如果儲存系統使用獨特的使用者名稱或密碼、您必須針對每個儲存系統重複下列步驟。
+
+請確定您以root使用者身分登入。
+
+.步驟
+. 輸入下列命令：
++
+「* SnapDrive 組態集_user_name filername_[_filername..._]*」
+
++
+「_user_name_」是您第一次設定儲存系統時所指定的使用者名稱。
+
++
+「_filername_」是儲存系統的名稱。
+
++
+「_[filername...]_」定義如果所有儲存系統名稱都有相同的使用者登入或密碼、您可以在單一命令列上輸入多個儲存系統名稱。您必須輸入至少一個儲存系統的名稱。
+
+. 出現提示時、輸入密碼（如果有）。
++
+
+NOTE: 如果未設定密碼、請在提示輸入密碼時按Enter（null值）。
+
++
+此範例為名為「root」的儲存系統設定使用者名稱、稱為「快顯通知」：
+
++
+[listing]
+----
+# snapdrive config set root toaster
+Password for root:
+Retype Password:
+----
++
+本範例針對三個儲存系統設定一個名為「root」的使用者：
+
++
+[listing]
+----
+# snapdrive config set root toaster oven broiler
+Password for root:
+Retype Password:
+----
+. 如果您有另一個儲存系統的使用者名稱或密碼不同、請重複這些步驟。
+

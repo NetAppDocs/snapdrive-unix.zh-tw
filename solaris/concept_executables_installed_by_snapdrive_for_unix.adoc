@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_executables_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, executable, install, unix 
+summary: 適用於UNIX的可執行檔可安裝於Solaris作業系統。SnapDrive 
+---
+= 由適用於UNIX的執行檔安裝SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的可執行檔可安裝於Solaris作業系統。SnapDrive
+
+這些可執行檔安裝於下列位置：
+
+* /`opt/NTAPsnapdrive/bin/SnapDrive'
+* /`opt/NTAPsnapdrive/bin/snapdrive'
+

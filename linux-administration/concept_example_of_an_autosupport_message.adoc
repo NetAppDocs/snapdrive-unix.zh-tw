@@ -1,0 +1,85 @@
+---
+permalink: linux-administration/concept_example_of_an_autosupport_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, message, example 
+summary: UNIX版提供不同情境的範例。SnapDrive在所有範例中、任何作業系統的資訊內容基本上都相同。AutoSupport 
+---
+= 範例AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供不同情境的範例。SnapDrive在所有範例中、任何作業系統的資訊內容基本上都相同。AutoSupport
+
+範例：新增儲存系統
+
+下列範例是從名為「_x336-207-58_」的主機傳送的訊息：
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="3"
+        category="sduvs2 configured"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp
+----
+範例：重新啟動Daemon
+
+當您重新啟動精靈時、適用於UNIX的功能可將下列資訊傳送至儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp
+----
+如果配置了「dFM」、「RBAC方法」設為「dFM」、UNIX版將傳送下列資訊給儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=dfm, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=Yes, Protocol=fcp"
+----
+如果設定「dFM」、並將「RBAC方法」設定為原生、UNIX版的將會傳送下列資訊給儲存系統。SnapDrive AutoSupport
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=Yes, Protocol=fcp"
+----
+當「建立抓取」作業成功時、適用於UNIX的範圍會傳送下列資訊給儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="5"
+        category="snap create successful"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=3, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=iscsi, snapshot_name=dg_snap"
+----
+當儲存設備顯示所有作業均成功時、適用於UNIX的範圍會傳送下列資訊給儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="3"
+        category="general"
+        subject="protos=fcp, Connect Luns=8, dgs=4, hvs=3, fs=3, host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp"
+----

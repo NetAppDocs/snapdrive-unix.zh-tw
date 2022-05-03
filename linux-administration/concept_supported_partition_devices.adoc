@@ -1,0 +1,181 @@
+---
+permalink: linux-administration/concept_supported_partition_devices.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, storage, partitioning, multipathing 
+summary: 適用於UNIX 5.0或更新版本的解決方案可在Linux中提供多重路徑和非多重路徑環境的儲存分割功能。SnapDrive 
+---
+= 支援的分割裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX 5.0或更新版本的解決方案可在Linux中提供多重路徑和非多重路徑環境的儲存分割功能。SnapDrive
+
+您必須遵循以下準則、以SnapDrive 適用於UNIX的功能來分割儲存裝置。
+
+在Linux上使用「邏輯Volume Manager」時、您必須使用非分割的LUN。
+
+下表提供分割區資訊、以及如何在不同的作業系統上啟用分割區資訊：
+
+|===
+| 作業系統 | 單一分割區 | 多個分割區 | 非磁碟分割裝置 | 檔案系統或原始裝置 
+
+
+ a| 
+Red Hat Enterprise Linux 5倍
+
+或
+
+Oracle Enterprise Linux 5倍
+ a| 
+是的
+ a| 
+否
+ a| 
+否
+ a| 
+ext3*
+
+
+
+ a| 
+Red Hat Enterprise Linux 6x
+
+或
+
+Oracle Enterprise Linux 6x
+ a| 
+是的
+ a| 
+否
+ a| 
+否
+ a| 
+ext3或ext4*
+
+
+
+ a| 
+SUSE Linux Enterprise Server 11
+ a| 
+是的
+ a| 
+否
+ a| 
+否
+ a| 
+ext3*
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10
+ a| 
+否
+ a| 
+否
+ a| 
+是的
+ a| 
+ext3***
+
+
+
+ a| 
+Red Hat Enterprise Linux 5倍或更新版本
+
+或
+
+Oracle Enterprise Linux 5倍或更新版本
+ a| 
+是的
+ a| 
+否
+ a| 
+是的
+ a| 
+使用ASMLib的ASM
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10 SP4
+
+或
+
+SUSE Linux Enterprise Server 11
+ a| 
+是的
+ a| 
+否
+ a| 
+是的
+ a| 
+使用ASMLib的ASM
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10 SP4或更新版本
+
+或
+
+SUSE Linux Enterprise Server 11
+ a| 
+是的
+ a| 
+否
+ a| 
+否
+ a| 
+不含ASMLib的ASM
+
+
+
+ a| 
+*
+
+對於非MPIO環境、請輸入下列命令：「* sfdisk -us -f -L -q dev/_device_name_*」
+
+若為MPIO環境、請輸入下列命令：
+
+* Check Alignment of PHs>"* sfdisk -us -f -L -q dev/_device_name_*
+* "* kpartx -A -p p /dev/mapper/_device_name_*
+
+
+
+
+ a| 
+。
+
+對於非MPIO環境、請輸入下列命令：「* fdisk /dev/_device_name_*」
+
+若為MPIO環境、請輸入下列命令：
+
+* "* fdisk /dev/mapper/_DEV_name_*
+* "* kpartx -A -p p /dev/mapper/_device_name_*
+
+
+
+
+ a| 
+\***
+
+不適用。
+
+
+
+ a| 
+\****
+
+若為MPIO環境、請輸入下列命令：
+
+* "* kpartx -A -p p /dev/$kernel-"
+
+
+|===
+*一般考量*
+
+在UNIX 4.2中建立的Snapshot複本SnapDrive 是以分割區的裝置為基礎。這些Snapshot複本可還原、連線SnapDrive 、並在適用於UNIX 5.0及更新版本的支援中提供支援。

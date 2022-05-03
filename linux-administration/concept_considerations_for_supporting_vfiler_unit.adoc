@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_considerations_for_supporting_vfiler_unit.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vfiler, support, issues, unit 
+summary: 適用於UNIX的支援在以某個版本為基礎的VFiler裝置上執行的功能。SnapDrive SnapDrive FlexVol不過SnapDrive 、如果您使用的是光纖通道（FC）、則UNIX版的支援不支援VFiler裝置。 
+---
+= vFiler單元支援問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援在以某個版本為基礎的VFiler裝置上執行的功能。SnapDrive SnapDrive FlexVol不過SnapDrive 、如果您使用的是光纖通道（FC）、UNIX版的支援不支援VFiler裝置。
+
+您必須瞭SnapDrive 解一些有關支援VFiler裝置的UNIX之功能的考量事項：
+
+* 在qtree上建立的vFiler單元不支援執行支援的動作。SnapDrive
++
+如果vFiler單元擁有整個儲存磁碟區、則允許執行這些作業。
+
+* 設定SnapDrive 支援vFiler單元的功能時、您必須確保未針對vFiler0上的介面設定管理和資料路徑。
+* 在以7-Mode運作的過程中、您必須確保將支援此功能的組態變數「vFiler.vol_clone _ZAPI_allow」設定為「On」、以連線至VFiler裝置中的Volume或LUN的Snapshot複本。Data ONTAP Data ONTAP
+

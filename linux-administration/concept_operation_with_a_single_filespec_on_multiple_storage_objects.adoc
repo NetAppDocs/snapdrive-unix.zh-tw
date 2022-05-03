@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_operation_with_a_single_filespec_on_multiple_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, filespec, storage, objects, single, operation 
+summary: 當系統管理員對多個儲存物件沒有執行儲存作業所需的權限時、適用於UNIX會顯示錯誤訊息。SnapDrive 
+---
+= 在多個儲存物件上使用單一檔案總管進行作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當系統管理員對多個儲存物件沒有執行儲存作業所需的權限時、適用於UNIX會顯示錯誤訊息。SnapDrive
+
+filespec：filespec可以是檔案系統、主機磁碟區、磁碟群組或LUN_的任何人
+
+[listing]
+----
+[root]# snapdrive storage create -fs /mnt/testfs -lun storage_array1:/vol/vol1/lun2 -lun storage_array1:/vol/vol2/lun2  -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user unix_host\root on Operations Manager server ops_mngr_server
+SD.Storage.Write access denied on volume storage_array1:/vol/vol2 for user unix_host\root on Operations Manager server ops_mngr_server
+----
+在此範例中、filespec跨越兩個儲存系統磁碟區、即vol1和vol2。UNIUNIX主機的管理員（root）對這兩個磁碟區都沒有「.Storage.Write」存取權。因此SnapDrive 、針對UNIX的功能、每個Volume都會顯示一則錯誤訊息。若要繼續「建立磁碟區」、系統管理員（root）必須要求Operations Manager主控台管理員授予兩個磁碟區的「.Storage.Write」存取權。

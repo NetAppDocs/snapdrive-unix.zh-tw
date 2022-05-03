@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_guidelines_for_thesnapdrive_storagedisconnectcommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command, guidelines 
+summary: 使用SnapDrive 「停止儲存」命令時、請遵循下列準則。 
+---
+= 關於停止儲存指令的準則SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「SnapDrive 停止儲存設備連線」命令時、請遵循下列準則：
+
+* 當您中斷檔案系統連線時、SnapDrive 適用於UNIX的解決方法一律會移除掛載點。
++
+Linux主機可讓您將多個檔案系統附加至單一掛載點。不過SnapDrive 、for UNIX需要每個檔案系統都有一個獨特的掛載點。如果您使用「SnapDrive 停止儲存設備連線」命令來中斷連接單一掛載點上的檔案系統、則「停止儲存設備連線」命令會失敗。
+
+* 如果您使用「-LUN」選項來指定LUN的名稱、而該LUN是主機磁碟群組或檔案系統的成員、SnapDrive 則「停止儲存」命令會失敗。
+* 如果您使用「-LUN」選項來指定主機上多重路徑軟體未發現的LUN名稱、SnapDrive 則「show storage disconnects」命令會失敗。
+
+
+
+NOTE: 使用RDM LUN時、如果SnapDrive 對應igroup在SnapDrive UNIX版本不超過2個的版本中、有兩個以上的World Wide Port名稱（WWPN）、則「無法中斷實體儲存設備的連線」命令會失敗。

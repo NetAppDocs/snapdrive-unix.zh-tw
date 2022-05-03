@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_user_name_formats_for_access_check_with_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, user, name, manger, access, check, operations, nis, network, information 
+summary: UNIX版使用使用者名稱格式來執行Operations Manager主控台的存取檢查。SnapDrive這些格式取決於您是網路資訊系統（NIS）或本機使用者。 
+---
+= 使用Operations Manager主控台執行存取檢查的使用者名稱格式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版使用使用者名稱格式來執行Operations Manager主控台的存取檢查。SnapDrive這些格式取決於您是網路資訊系統（NIS）或本機使用者。
+
+UNIX版使用下列格式來檢查使用者是否有權執行特定工作：SnapDrive
+
+* 如果您是NIS使用者、執行「SnapDrive 樣」命令、SnapDrive 則UNIX版的用例格式為「<nisdomain>\<使用者名稱>」（例如、「netapp.com\marc`」）。
+* 如果您是UNIX主機（例如lnx197/141）的本機使用者、SnapDrive 則適用於UNIX的支援中心會使用「<主機名稱>\<使用者名稱>'格式（例如、「lnx197/141\john」）。
+* 如果您是UNIX主機的系統管理員（root）、SnapDrive 那麼適用於UNIX的支援將管理員視為本機使用者、並使用「lnx197/141\root」格式。
+

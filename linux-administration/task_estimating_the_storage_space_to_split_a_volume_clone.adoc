@@ -1,0 +1,62 @@
+---
+permalink: linux-administration/task_estimating_the_storage_space_to_split_a_volume_clone.html 
+sidebar: sidebar 
+keywords: clone, split, snap, snapdrive, volume, estimate 
+summary: 複本分割預估有助於預估分割磁碟區複製所需的儲存空間（以MB為單位）。根據SnapDrive UNIX版的Clone分割預估、您可以決定分割Volume Clone的可用空間。 
+---
+= 預估儲存空間以分割磁碟區複製
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複本切割預估有助於預估分割Volume複製所需的儲存空間（MB）。根據SnapDrive UNIX版的Clone分割預估、您可以決定分割Volume Clone的可用空間。
+
+.步驟
+. 輸入下列命令以預估分割磁碟區複製所需的儲存空間。
++
+「* SnapDrive 實體複製切割預估值[-LUN]_LON_LUN_name_[Long __LUN_name__...] |[{-dg |-vg |-FS |-hostvol |-lvol}_file_SPE _[_file_spec_...] |[-snapname _long_snap_name_]{-volclone|-lunclone｝][-v |-verbose][-dump |-dumpall]*
+
++
+此作業會顯示下列資訊：
+
++
+** 資源名稱
+** Container - FlexClone的Aggregate
+** 必要空間：分割磁碟區複製所需的空間
+** 可用空間：容器上的可用空間
+** 儲存狀態：指出磁碟區複製分割的可用空間
+** 自有空間-由Volume Clone佔用的空間
+** 共享空間：由Volume Clone和父實體佔用的空間
+
+
++
+當您使用「-verbose」選項時、會顯示「自有空間」和「共享空間」。
+
+
+
+以下範例預估分割Volume Clone的儲存空間。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -fs /mnt/my_mnt2
+Resource     Container  Required Available  Storage
+                        Space(MB) Space(MB) Status
+/mnt/my_mnt1  f3050-220  400      61500    AVAILABLE
+              -111:aggr0
+/mnt/my_mnt2  f3050-220  3292     1129     NOT AVAILABLE
+              -112:aggr1
+----
+針對每個檔案規格、SnapDrive UNIX版的支援功能都會決定儲存系統中分割Volume Clone所需的空間。在此處、「/mnt/my_mnt1」檔案規格有分割所需的空間、因此儲存狀態會顯示為可用。然而、「/mnt/my_mnt2」檔案規格沒有分割所需的空間、因此儲存狀態顯示為「不可用」。
+
+以下是使用「-verbose」選項的範例。或者、您也可以使用「-v」選項。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -verbose
+Resource    Container Owned    Shared   Required Available Storage
+                      Space(MB)Space(MB)Space(MB)Space(MB) Status
+/mnt/my_mnt1 f3050-220 32365  403      403     55875 AVAILABLE
+             -111:aggr0
+----

@@ -1,0 +1,42 @@
+---
+permalink: linux-administration/task_creating_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, create, command 
+summary: 若要建立Snapshot複本、請執行SnapDrive 「flexfsnap create」命令。 
+---
+= 建立Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要建立Snapshot複本、請執行「SnapDrive flexfsnap create」命令。
+
+在執行此語法之前、您必須先瞭解此命令中提及的選項、關鍵字和引數。
+
+.步驟
+. 輸入下列命令語法以建立Snapshot複本：
++
+fs-fs-snap create {-lun |-dg |-fs |-hostvol }_file_spec[file_spec...]_[{-lun |-dg |-fs |-hostvol } file_spec [file_spec...] SnapDrive -snapname _snap_name_[-force [-nosup][-inofed][-nofilerfest][-fstype_type_][-vmtype _type_]*
+
+
+
+「file_spec」引數代表一或多個儲存系統上的一組儲存實體。Snapshot create作業會取得儲存系統磁碟區的Snapshot複本、其中包含這些實體、並將其命名為在「午睡名稱」引數中指定的名稱。
+
+此範例為Linux主機建立多個Volume Snapshot複本。Snapshot複本包含磁碟群組vgMultivol、其中包括主機磁碟區lvol1和lvol2：
+
+[listing]
+----
+# snapdrive snap create -vg vgmultivol -snapname snapmultivol
+Successfully created snapshot snapmultivol on 2 filer volumes:
+toaster:/vol/vol1
+toaster:/vol/vol2
+snapshot snapmultivol contains:
+disk group vgmultivol containing host volumes
+lvol1
+lvol2
+----
+*相關資訊*
+
+xref:concept_creating_snapshotcopies_of_unrelatedentities.adoc[建立不相關實體的Snapshot複本]

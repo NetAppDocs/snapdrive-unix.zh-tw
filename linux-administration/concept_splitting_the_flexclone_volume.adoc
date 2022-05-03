@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_splitting_the_flexclone_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume, splitting, command 
+summary: 您可以使用SnapDrive UNIX版的《適用於UNIX的資訊分享技術」命令來分割現有的FlexClone Volume。 
+---
+= 分割FlexClone Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive UNIX版的《適用於UNIX的資訊分享技術」命令來分割現有的FlexClone Volume。
+
+若要分割FlexClone Volume、您還需要使用「nap Connect」命令來指定「-spli」CLI選項。若要中斷連線、您應該使用「disconnect」命令提供「分割」選項、以中斷分離FlexClone Volume的連線。在此處、啟動「分割」作業的封鎖和非封鎖模式均有效。
+
+*相關資訊*
+
+xref:concept_splitting_the_volume_or_lun_clone_operations.adoc[分割磁碟區複製或LUN複製]

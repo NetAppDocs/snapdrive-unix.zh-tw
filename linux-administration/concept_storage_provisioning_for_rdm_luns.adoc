@@ -1,0 +1,40 @@
+---
+permalink: linux-administration/concept_storage_provisioning_for_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vmware, vmotion, connect, lun, rdm, storage 
+summary: 適用於UNIX的支援功能可讓您在VMware VMotion前後中斷連線並連接RDM LUN。SnapDrive在VMotion作業完成後、您可以執行儲存系統所需的儲存作業。 
+---
+= VMware VMotion支援SnapDrive UNIX版
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您在VMware VMotion前後中斷連線並連接RDM LUN。SnapDrive在VMotion作業完成後、您可以執行儲存系統所需的儲存作業。
+
+*關於VMware vMotion：*
+
+VMware VMotion可讓您將來賓系統從一部ESX伺服器移至另一部ESX伺服器。
+
+必須執行下列作業、才能中斷連接SnapDrive 以供UNIX使用的RDM LUN。
+
+*在vMotion之前*
+
+您需要使用「SnapDrive 不中斷儲存」命令來移除RDM LUN的對應。下列語法：
+
+「* SnapDrive 」- LUN _long LUN名稱[LUN_name...]_*
+
+*在vMotion之後*
+
+在vMotion完成後、您必須使用SnapDrive 「flexvport storage connect」命令來連接RDM LUN。下列語法：
+
+hy* SnapDrive 實體儲存設備連接-LUN _long LUN名稱[LUN_name...]_*
+
+*相關資訊*
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[受由功能不完善管理的RDM LUN限制SnapDrive]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[設定適用於SnapDrive UNIX的虛擬儲存主控台]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[配置RDM LUN的考量]

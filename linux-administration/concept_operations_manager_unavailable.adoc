@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_operations_manager_unavailable.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operations, manager, access, check, console, unavailable 
+summary: 適用於UNIX需要Operations Manager主控台進行存取檢查。SnapDrive有時候Operations Manager主控台伺服器可能因為各種原因而無法使用。 
+---
+= Operations Manager主控台無法使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX需要Operations Manager主控台進行存取檢查。SnapDrive有時候Operations Manager主控台伺服器可能因為各種原因而無法使用。
+
+如果設定RBAC方法「RBAC方法= DFM」且Operations Manager主控台無法使用、SnapDrive 則適用於UNIX的效益分析會顯示下列錯誤訊息：
+
+[listing]
+----
+[root]# snapdrive storage delete -lun storage_array1:/vol/vol2/qtree1/lun1
+0002-333 Admin error: Unable to connect to the DFM ops_mngr_server
+----
+UNIX版的程式也能保留Operations Manager主控台傳回之使用者存取檢查結果的快取。SnapDrive此快取的有效時間為24小時、無法設定。如果Operations Manager主控台無法使用SnapDrive 、則UNIX版的功能就是使用快取來判斷存取權。只有在所有已設定的Operations Manager主控台伺服器都沒有回應時、才會使用此快取。
+
+若要讓UNIX使用快取進行存取檢查、您必須開啟「_RBAC快取」組態變數、才能維護存取結果的快取。SnapDrive預設會關閉「_RBAC快取」組態變數。
+
+若要在SnapDrive Operations Manager主控台無法使用的情況下使用UNIX版的功能、伺服器管理員必須將SnapDrive .conf檔案中的角色型存取控制（RBAC）方法重設為「_RBAC方法= nNative」。變更SnapDrive檔案之後、您必須重新啟動SnapDrive UNIX精靈的功能。設定「_RBAC方法= nody_」時、只有root使用者才能使用SnapDrive 適用於UNIX的功能。

@@ -1,0 +1,163 @@
+---
+permalink: aix/reference_storage_provisioning_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provisioning, command, line 
+summary: 有些SnapDrive 適用於UNIX的指令可用於儲存資源配置。 
+---
+= 儲存資源配置命令列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有些SnapDrive 適用於UNIX的指令可用於儲存資源配置。
+
+下列命令列選項可用於儲存資源配置作業：
+
+|===
+| 營運 | 命令列選項 
+
+
+ a| 
+建立
+ a| 
+「SnapDrive 實體儲存設備cree-LUN _long lun_name_[_lun_name ..._]-lunsize _size_[{-dg |-vg }_dg/name_][-igroup _ig_name_[_ig_name ..._][{-Reserve |-noreserve }][-fstype_][-type_][-type _]
+
+
+
+ a| 
+「SnapDrive 資料儲存區建立｛-lvolvol |-hostvol｝_file_spec_[{-dg |-vg}_dg名稱_]｛-dgsize |-vgsize｝_size_filervol _long_filer_path_[{-noreserveeeee|-reserve}][-fstype_type_][-vmtype _typ_]
+
+
+
+ a| 
+「實體儲存設備create -FS _file_spec_-nolvm [-fsopts options ][-mntopts options][-nopersist]｛-LUN _long lun_name_|-filervol _long filer_path_｝-lunsize _size_[-igroup _name_[_ig_name_name_-name_-nol_name_]-[-vmor_typ_][-vest_][-ve_保留類型_ SnapDrive
+
+
+
+ a| 
+《SnapDrive 支援儲存設備：create _host_lvm_fspec_-filervol _long filer_path_-DGESITY _Size_[-igroup _ig_name_[_ig_name ..._][{-Reserve |-noreserve }]》
+
+
+
+ a| 
+《SnapDrive 支援儲存設備建立_host_lvm_fspec_-lun _long lun_name_[_lun_name ..._]-lunsize _size_[-igroup _ig_name_[_ig_name ..._]][{-Reserve |-noreserve }]
+
+[NOTE]
+====
+您可以根據想要建立的儲存類型、使用任何形式的「-file_spec]」引數。（請記住、「-dg」是「-vg」的同義詞、而「-hostvol」則是「-lvol'」的同義詞。）
+
+若要直接在LUN上建立檔案系統、請使用此格式：「-FS _file_spec_（-nolvm -FS _type_][-fsops _options_][-mntops _options_][-vmtype _type_]」
+
+若要建立使用磁碟群組或主機磁碟區的檔案系統、請使用下列格式：「-FS _file_spec_（-fstype_type_][-fsopts _options_][-mntops_options_][-hostvol_file_spec_][-dg _dg名稱_][-vmtype _type_]
+
+若要建立邏輯或主機磁碟區、請使用下列格式：「[-hostvol_file_spec_][-dg _dg名稱_][-fstype_type_][-vmtype _type_]
+
+若要建立磁碟群組、請使用以下格式：「-dg _dg名稱_（-fstype_type_][-vmtype _type_]）」
+
+====
+
+
+ a| 
+連線
+ a| 
+「SnapDrive 實體儲存設備連接-FS _file_spec -nolvm_-LUN _long lun_name_[-igroup _ig_name_[_ig_name ..._][-nopersist][-mntets選項][-fstype_][-vmtype _typ_]
+
+
+
+ a| 
+「SnapDrive 實體儲存設備連接-FS _file_spec_-hostvol_file_spec_-LUN _long LUN名稱_[_lun_name ..._][-igroup _ig_name_[_ig_name ..._]][-nopersist][-mntets選項][-fstype_][-vmtype _]
+
+
+
+ a| 
+「SnapDrive 功能性儲存設備連接-LUN _long lun_name_[_lun_name ..._][-igroup _ig_name_[_ig_name ..._]-vmtype _type_]
+
+
+
+ a| 
+「SnapDrive 功能性儲存設備連接-LUN _long lun_name_[_lun_name..._][-vmtype _type_]」
+
+
+
+ a| 
+「SnapDrive 實體儲存設備連線-fs_file_spec_｛-hostvol |-lvol｝_file_spec_-LUN _long_lun_name_[_lun_name..._][-nopersist][-mnttops選項][-fstype_][-vmtype _type_]
+
+
+
+ a| 
+中斷連線
+ a| 
+「SnapDrive 停止儲存設備- LUN _long lun_name_[_lun_name..._][-vmtype _type_]」
+
+
+
+ a| 
+「SnapDrive 停止儲存設備連線：｛-vg |-dg |-FS |-lvol |-hostvol｝_file_spec_[_file_spec..._][{-vg |-dg |-fs |-lvolvol |-hostvol}_file_spec_...」 ...] [-f完整][-fstype_type_][-vmtype _type_]
+
+
+
+ a| 
+調整大小
+ a| 
+「SnapDrive 功能變數儲存區大小：｛-dg |-vg｝_file_spec_[_file_spec_...]｛-roadby |-roadto｝_size_[_-addlun_[-igroup _ig_name_[_ig_name ..._]][{-reseserve |-noreserve}][-fstype__type _vm_type_類型]
+
+
+
+ a| 
+顯示/列出
+ a| 
+「SnapDrive 本產品的功能包括：儲存功能{ show | list }-filername_[_filername ..._][-verbose][-quidle][-Capabilities ]
+
+
+
+ a| 
+「SnapDrive 功能性儲存設備：{ show | list }-filervol _long filer_path_[_filer_path..._][-verbose][-quidle][-Capabilities ]
+
+
+
+ a| 
+「SnapDrive 本產品的儲存功能｛show | list｝｛-all | device｝[-Capabilities｝」
+
+
+
+ a| 
+「SnapDrive 不完整的儲存設備顯示[-verbose]{-filername_[_filername..._]|-filervol _volname_[_volname..._]｝[-Capabilities ]」
+
+
+
+ a| 
+「SnapDrive 功能性儲存功能｛show| list｝-LUN _long lun_name_[_lun_name ..._][-verbose][-quidle][-STATUS][-Capabilities ]
+
+
+
+ a| 
+「SnapDrive 僅供參考」｛show | list｝｛-vg |-dg |-fs |-lvolvol |-hostvol｝_file_spec_[_file_spec..._][{-vg |-fs |-lvolvol |-hostvolvol｝_file_spec_[_file_spec..._][-verbose][-quid][-quid][-quide"[-quide"[-questy_][-stypest_]功能[_
+
+
+
+ a| 
+《SnapDrive 不儲存區：{ show | list }{-filer_filer_name_[_filer_name_...] |-filervol _long檔案管理器路徑_[_filer_path ..._]}[-verbose][-Capabilities ][-quidle]
+
+
+
+ a| 
+「SnapDrive 功能性儲存設備{ show | list }-lun _long lun_name_[_lun_name ..._][-verbose][-stestype_type_][-vmtype _type_][-Capabilities ][-quality]
+
+
+
+ a| 
+刪除
+ a| 
+「SnapDrive 實體儲存設備刪除[-LUN]_LON_LUN_name_[LUN_name...] [-fstyp類型][-vmtype類型]
+
+
+
+ a| 
+「SnapDrive 功能區刪除[-vg |-dg |-FS |-lvol |-hostvol]_file_spec_[_file_spec..._][{-vg |-dg |-fs |-lvolvol |-hostvol}_file_spec_[_file_spec..._]...]...」 [-f完整]][-fstype][-vmtype類型]
+
+|===
+*相關資訊*
+
+xref:reference_command_line_arguments.adoc[命令列引數]

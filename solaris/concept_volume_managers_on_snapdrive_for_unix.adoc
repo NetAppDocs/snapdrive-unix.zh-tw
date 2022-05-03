@@ -1,0 +1,44 @@
+---
+permalink: solaris/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager, unix 
+summary: 在Solaris平台上、您可以使用VxVm或Solaris Volume Manager（SVM\）。SVM隨附於Solaris OS中。 
+---
+= 適用於SnapDrive UNIX的Volume Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Solaris平台上、您可以使用VxVM或Solaris Volume Manager（SVM）。SVM隨附於Solaris OS中。
+
+下表說明主機平台上的Volume Manager：
+
+|===
+| 主機 | Volume管理程式 | 磁碟區或磁碟群組 | 邏輯磁碟區的位置 | 多重路徑裝置的位置 
+
+
+ a| 
+Solaris
+ a| 
+VxVM
+ a| 
+磁碟群組（「dg」
+ a| 
+開發/ vx/dsk/ds/lvol'
+ a| 
+開發/ vx/dmP/15t0d2
+
+
+
+ a| 
+SVM
+ a| 
+磁碟群組（「dg」
+ a| 
+dev/md/fs1_SdDg/dsk/vol0 fs1_SdDg是磁碟群組、vol0是邏輯磁碟區名稱
+ a| 
+"dev/rdsk/c4t60A98000686F65 36526B302777653350s2"
+
+|===

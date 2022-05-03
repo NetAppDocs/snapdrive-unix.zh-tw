@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_operation_with_multiple_filespec_and_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, filspec, storage, object, multiple 
+summary: 下列範例顯示當您不是執行特定作業的授權使用者時、會收到的錯誤訊息。 
+---
+= 使用多個檔案和儲存物件進行作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下列範例顯示當您不是執行特定作業的授權使用者時、會收到的錯誤訊息。
+
+[listing]
+----
+[marc]$ snapdrive storage create -lun storage_array1:/vol/vol1/lun5 lun6 -lun storage_array1:/vol/vol2/lun2 -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user nis_domain\marc on Operations Manager server ops_mngr_server
+SD.Storage.Write access denied on volume storage_array1:/vol/vol2 for user nis_domain\marc on Operations Manager server ops_mngr_server
+----
+在此範例中、有三個LUN位於兩個儲存系統磁碟區（vol1和vol2）上。使用者MARC屬於NIS網域、無權在vol1和vol2上建立檔案支援。UNIX版顯示上述範例中的兩個錯誤訊息。SnapDrive錯誤訊息顯示使用者必須對vol1和vol2具有「.Storage.Write」存取權。

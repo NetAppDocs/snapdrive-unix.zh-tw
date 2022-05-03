@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_snapshot_connectand_snapshotrestore_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, restore, clones, copy, snapshot 
+summary: 當您連線至Snapshot複本時、Snapshot複本會複製資訊。 
+---
+= Snapshot連線與Snapshot還原作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您連線至Snapshot複本時、Snapshot複本會複製資訊。
+
+與Snapshot還原作業不同的是、Snapshot連線作業不會以Snapshot複本內容取代組成主機實體的LUN現有內容。它會複製資訊。
+
+建立連線之後、Snapshot連線和Snapshot還原作業都會執行類似的活動：
+
+* Snapshot連線作業會啟動儲存實體的邏輯磁碟區、掛載檔案系統、並選擇性地將項目新增至主機檔案系統表格。
+* Snapshot還原作業會啟動儲存實體的邏輯磁碟區、掛載檔案系統、並套用保留在Snapshot複本中的主機檔案系統掛載項目。
+

@@ -1,0 +1,74 @@
+---
+permalink: aix/concept_managing_snapshot_copy_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, wizard, manage 
+summary: 您可以使用精靈來管理Snapshot複本。此精靈會引導您完成一組問題、協助您執行快照連線、快照還原及快照中斷作業。 
+---
+= 使用精靈管理Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用精靈來管理Snapshot複本。此精靈會引導您完成一組問題、協助您執行快照連線、快照還原及快照中斷作業。
+
+您可以使用「SnapDrive flexfsnap精靈」命令來執行精靈。
+
+下表列出執行精靈所需的不同作業和對應命令。啟動精靈之後、請依照應用程式視窗中的步驟進行。
+
+|===
+| 營運 | 命令 
+
+
+ a| 
+Snapshot還原
+ a| 
+《抓取精靈還原》SnapDrive
+
+
+
+ a| 
+Snapshot連線
+ a| 
+《鏈接精靈》SnapDrive
+
+
+
+ a| 
+快照連線作業適用於具有儲存系統Volume的檔案系統
+
+
+
+ a| 
+磁碟群組的Snapshot連線
+
+
+
+ a| 
+LUN的Snapshot中斷連線
+ a| 
+《不中斷精靈連線》SnapDrive
+
+
+
+ a| 
+磁碟群組的Snapshot中斷連線
+
+
+
+ a| 
+主機磁碟區的Snapshot中斷連線
+
+
+
+ a| 
+檔案系統的Snapshot中斷連線
+
+|===
+*限制：* SnapDrive 在適用於UNIX 4.1及更新版本的功能中、「SnapDrive 用作參考精靈」命令具有下列限制：
+
+* Volume型SnapRestore 的功能不支援使用「nap精靈還原」命令。
+* FlexClone®Volume不支援「nap精靈連線」命令。
+* 「快照精靈」命令不支援對無回應檔案規格的作業。
+

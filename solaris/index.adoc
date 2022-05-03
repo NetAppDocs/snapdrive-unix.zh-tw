@@ -1,0 +1,14 @@
+---
+permalink: solaris/index.html 
+sidebar: sidebar 
+keywords: documentation, guide, installation, administration, solaris 
+summary: 說明如何在SnapDrive Solaris平台上安裝、設定及使用適用於UNIX的功能。 
+---
+= Solaris安裝與管理指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南說明如何在SnapDrive Solaris平台上安裝、設定及使用適用於UNIX的《》。

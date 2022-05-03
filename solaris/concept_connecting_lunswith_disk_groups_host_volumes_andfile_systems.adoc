@@ -1,0 +1,43 @@
+---
+permalink: solaris/concept_connecting_lunswith_disk_groups_host_volumes_andfile_systems.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, connect, lun, disk group, host, volume, file, system 
+summary: 若要使用SnapDrive fuse storage connect命令來連接具有磁碟群組、主機磁碟區和檔案系統的LUN、您必須遵循下列語法。 
+---
+= 連接LUN與磁碟群組、主機磁碟區和檔案系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用「SnapDrive 支援資料的儲存設備連線」命令來連接具有磁碟群組、主機磁碟區和檔案系統的LUN、您必須遵循下列語法。
+
+輸入下列命令：
+
+hy* SnapDrive fssstorage assite-FS _file_spec_-hostvol_file_spec_-lun _long lun_name_[_lun_name..._][-igroup _ig_name_[_ig_name..._][-nopersist][-mnterts _options_][-fstype_type_][-vmtype _]
+
+
+
+== 範例：連接在LUN上建立的檔案系統
+
+[listing]
+----
+# snapdrive storage connect -fs /mnt/fs -lun f270-221-189:/vol/vol0/lun111 -nolvm
+mapping lun(s) ... done
+discovering lun(s) ... done
+LUN f270-221-189:/vol/vol0/lun111 connected
+- device filename(s): /dev/vx/dmp/fas2700_939
+----
+
+
+== 範例：連接在RDM LUN上建立的檔案系統
+
+[listing]
+----
+# snapdrive storage connect -fs /mnt/fs -lun lech:/vol/vol1/lun1 -nolvm
+exporting new lun(s) to Guest OS ... done
+discovering lun(s) ... done
+LUN lech:/vol/vol1/lun1 connected
+- device filename(s): /dev/sdb
+----

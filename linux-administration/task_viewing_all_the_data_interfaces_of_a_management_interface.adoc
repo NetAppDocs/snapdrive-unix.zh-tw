@@ -1,0 +1,39 @@
+---
+permalink: linux-administration/task_viewing_all_the_data_interfaces_of_a_management_interface.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, interface, management, config, nfs 
+summary: 您可以在SnapDrive NFS環境中使用下列命令來檢視管理介面的所有資料介面： 
+---
+= 檢視管理介面的所有資料介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在SnapDrive NFS環境中使用「FSconfig list」命令來檢視管理介面的所有資料介面。
+
+. 在CLI中輸入下列命令：
++
+`* SnapDrive 《*組態清單-mgmtpath*》
+
++
+[listing]
+----
+#snapdrive config list -mgmtpath
+system name        management interface   datapath interface
+-------------------------------------------------------------------------------
+f3050-197-91        10.72.197.91           10.72.220.91|10.72.168.91
+----
++
+以下是Vserver的範例。
+
++
+[listing]
+----
+#snapdrive config list -mgmtpath
+system name   management interface   datapath interface
+-------------------------------------------------------
+clstr-vs2     10.72.220.203          10.72.221.155
+----
+

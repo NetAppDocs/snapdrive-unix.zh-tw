@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_managing_volume_migration_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, migration 
+summary: 您可以SnapDrive 在Volume移轉期間執行功能不全的作業。 
+---
+= 適用於UNIX的SnapDrive 大量移轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以SnapDrive 在Volume移轉期間執行功能不全的作業。
+
+Volume移轉包含下列三個階段：
+
+* 設定
+* 移動
+* 轉換
+
+
+適用於UNIX的作業系統可在設定和移動階段順暢運作。SnapDrive
+
+在轉換階段執行SnapDrive 任何支援功能指令時、SnapDrive UNIX版的支援功能可依照「snapdrive.conf」檔案中變數「_volmove-cutover-retry」和「_volmove-cutover-retry sleep_」所定義的方式、重試該作業。
+
+
+NOTE: 如果SnapDrive 在Volume移轉期間、UNIX的執行功能失敗、則SnapDrive 必須在Volume移轉作業完成後、執行UNIX的執行功能。

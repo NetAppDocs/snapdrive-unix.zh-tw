@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/reference_examples_of_using_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, example, data, collection 
+summary: 這是資料收集命令的範例。 
+---
+= 使用SnapDrive。DC的範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這是資料收集命令的範例。
+
+此範例使用命令列選項來指定產生檔案的目錄和名稱。
+
+[listing]
+----
+# snapdrive.dc -d . -n mysystem
+...
+     Compressed file is ./ntap_snapdrive_mysystem.tar.Z.
+     Please send this file to technical support for analysis.
+----

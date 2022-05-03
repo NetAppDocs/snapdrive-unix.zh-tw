@@ -1,0 +1,84 @@
+---
+permalink: solaris/task_generating_self_signed_certificates.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, certificate, generate, self, signed 
+summary: for UNIX精靈服務需要您產生自我簽署的憑證來進行驗證。SnapDrive與CLI進行通訊時、必須進行此驗證。 
+---
+= 產生自我簽署的憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+for UNIX精靈服務需要您產生自我簽署的憑證來進行驗證。SnapDrive與CLI進行通訊時、必須進行此驗證。
+
+.步驟
+. 產生RSA金鑰：
++
+「$openssl genrsa 1024 > host.key $ chmod400 host.key*」
+
++
+[listing]
+----
+# openssl genrsa 1024 > host.key Generating
+RSA private key, 1024 bit long modulus
+...............................++++++ ...++++++ e is 65537(0x10001)
+# chmod 400 host.key
+----
+. 建立憑證：
++
+「$openssl req - new -x509 -nodes -sha1 -days 365」-鍵host.key > host.cert *
+
++
+「-new」、「-x509」及「-nodes」選項可用來建立未加密的憑證。"-days（天數）"選項指定證書保持有效的天數。
+
+. 當系統要求您填寫憑證的x509資料時、請輸入您的本機資料：
++
+[listing]
+----
+# openssl req -new -x509 -nodes -sha1 -days 365 -key host.key > host.cert
+You are about to be asked to enter information that will be incorporated into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN. There are quite a few fields
+but you can leave some blank For some fields there will be a default value, If you enter '.', the field will be left blank.
+
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:California
+Locality Name (eg, city) []:Sunnyvale
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:abc.com
+Organizational Unit Name (eg, section) []:
+Common Name (eg, YOUR name) []:localhost
+Email Address []:postmaster@example.org
+----
++
+
+NOTE: 「Common Name（一般名稱）」值必須是_localhost_。
+
+. 擷取中繼資料（選用）。
++
+ $ openssl x509 -noout -fingerprint -text < host.cert > host.info
++
+您可以儲存憑證中繼資料、以便稍後快速參考。
+
+. 結合金鑰與憑證資料。
++
+UNIX版要求金鑰和憑證資料必須位於同一個檔案中。SnapDrive組合檔案必須以金鑰檔案的形式加以保護。
+
++
+「*$ CAT host.cert host.key > host.pem \*」
+
++
+"&&rm host.key*
+
++
+「$chmod400 host.pem*」
+
++
+[listing]
+----
+# cat host.cert host.key >   \# /opt/NTAPsnapdrive/snapdrive.pem
+# rm host.key rm: remove regular file `host.key'? y
+# chmod 400  /opt/NTAPsnapdrive/snapdrive.pem
+----
+. 將精靈憑證的完整路徑新增至「snapdrive.conf」檔案的「_SDU-daeme-Certificate path_」變數。
+

@@ -1,0 +1,38 @@
+---
+permalink: linux-administration/concept_storageprovisioning_withsnapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provision, lvm, logical, manager 
+summary: 適用於UNIX的支援提供端點對端點儲存管理。SnapDrive您可以將儲存設備從主機配置至儲存系統、並使用或不使用主機邏輯Volume Manager（LVM\）來管理儲存設備。 
+---
+= 適用於UNIX的儲存作業SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援提供端點對端點儲存管理。SnapDrive您可以將儲存設備從主機配置至儲存系統、並使用或不使用主機邏輯Volume Manager（LVM）來管理儲存設備。
+
+適用於UNIX的支援功能可讓您執行下列儲存作業：SnapDrive
+
+* 建立LUN、檔案系統、邏輯磁碟區和磁碟群組、以建立儲存設備。
+* 顯示儲存設備的相關資訊。
+* 連線至儲存設備。
+* 調整儲存空間大小。
+* 中斷與儲存設備的連線。
+* 刪除儲存設備。
+
+
+當您使用「SnapDrive flexunstorage creation」命令建立儲存設備時、SnapDrive 適用於UNIX的解決方案會自動執行設定LUN所需的所有工作、包括準備主機、執行探索對應、以及連線至您所建立的每個LUN。您可以使用「SnapDrive fetlisstorage show」命令來顯示您所建立的NetApp LUN、磁碟群組、主機磁碟區、檔案系統或NFS目錄樹狀結構的相關資訊。
+
+您可以使用「SnapDrive fuse storage connect」命令、將儲存設備對應至新位置。此命令可讓您從不同於用來建立現有儲存設備的主機存取現有儲存設備。「支援不支援儲存設備連線」命令可讓您在新主機上存取現有的LUN、檔案系統、磁碟群組和邏輯磁碟區。SnapDrive如果您想要將儲存實體從新主機備份到其他主機、這可能很有用。
+
+使用SnapDrive 「物件儲存區大小調整」命令、您可以透過下列方式來增加儲存區的大小：
+
+* 指定要讓主機實體達到的目標大小
+* 輸入您要增加儲存空間的設定位元組數
+
+
+如果您不想再將儲存設備對應至目前位置、可以使用「SnapDrive 停止儲存設備連線」命令。此命令會移除從一或多個主機位置到LUN的對應、以建立該位置的儲存設備。
+
+如果您想要刪除儲存設備、可以使用「SnapDrive 不願刪除儲存設備」命令。適用於UNIX的支援會刪除您指定的所有主機端實體、以及其所有基礎實體和與其相關聯的LUN。SnapDrive

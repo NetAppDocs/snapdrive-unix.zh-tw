@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_support_for_volume_migration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, volume, migration, san, flexvol, lun 
+summary: 適用於UNIX的支援Volume移轉、可讓您在不中斷營運的情況下、在同一個控制器內、將磁碟區從一個集合體移至另一個集合體、藉此提高容量使用率、提升效能、並達成服務層級協議。SnapDrive在SAN環境中、FlexVol 不會中斷地將各個磁碟區中的各個磁碟區和LUN從一個集合體移至另一個集合體。 
+---
+= 支援Volume移轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援Volume移轉、可讓您在不中斷營運的情況下、在同一個控制器內、將磁碟區從一個集合體移至另一個集合體、藉此提高容量使用率、提升效能、並達成服務層級協議。SnapDrive在SAN環境中、FlexVol 不會中斷地將各個磁碟區中的各個磁碟區和LUN從一個集合體移至另一個集合體。
+
+您必須在「snapdrive.conf」檔案中設定「_volmove-cutover-reterte-retle_"和「_volmove-cutover-retle-tep_」變數、才能執行SnapDrive 各種動作。
+
+*相關資訊*
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"]

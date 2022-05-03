@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_reasons_to_deletesnapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: 刪除舊的Snapshot複本、以釋放儲存系統磁碟區上的空間、或減少Snapshot複本。 
+---
+= 刪除Snapshot複本的理由
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+刪除舊的Snapshot複本、以釋放儲存系統磁碟區上的空間、或減少Snapshot複本。
+
+您可能會因為下列原因而刪除舊的Snapshot複本：
+
+* 以減少儲存的Snapshot複本數量、使儲存系統磁碟區的硬限制低於255。一旦達到限制、建立新Snapshot複本的嘗試就會失敗。
+* 以釋放儲存系統磁碟區上的空間。即使在Snapshot複本達到限制之前、如果磁碟沒有足夠的保留空間、Snapshot複本也會失敗。
+* 您也可以在Snapshot複本名稱中使用萬用字元（*）。Snapshot show作業可讓您使用萬用字元來顯示符合特定模式的所有Snapshot複本名稱。下列規則適用於在Snapshot複本名稱中使用萬用字元：
++
+** 您只能在名稱結尾使用萬用字元。您無法在Snapshot複本名稱的開頭或中間使用萬用字元。
+** 您無法在Snapshot複本名稱的儲存系統或儲存系統Volume欄位中使用萬用字元。
+
+
+

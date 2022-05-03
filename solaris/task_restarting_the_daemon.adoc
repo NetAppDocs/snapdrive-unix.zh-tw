@@ -1,0 +1,25 @@
+---
+permalink: solaris/task_restarting_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restart, daemon 
+summary: 您必須在停止後重新啟動精靈、如此您對組態檔或其他模組所做的變更才會生效。僅在完成執行中和佇列中的所有命令後、才能重新啟動for UNIX精靈。SnapDrive收到重新啟動要求後、不會執行任何新命令。 
+---
+= 重新啟動精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在停止後重新啟動精靈、如此您對組態檔或其他模組所做的變更才會生效。僅在完成執行中和佇列中的所有命令後、才能重新啟動for UNIX精靈。SnapDrive收到重新啟動要求後、不會執行任何新命令。
+
+* 請確定您以root使用者身分登入。
+* 確保同一主機上沒有其他工作階段同時執行。在這種情況下、「磁碟重新啟動」命令會使系統當機。
+
+
+.步驟
+. 輸入下列命令以重新啟動精靈：
++
+快照重新啟動*
+
+

@@ -1,0 +1,16 @@
+---
+permalink: solaris/task_recieving_error_does_not_look_snapdrive_generated.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, disconnect, clone, volume 
+summary: 在某些情況SnapDrive 下、無法刪除複製的磁碟區、並顯示錯誤訊息「Not R」（看不到SnapDrive產生）。 
+---
+= SnapDisconnects作業無法刪除複製的Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些情況SnapDrive 下、「不中斷連結」作業無法刪除複製的磁碟區、並顯示錯誤訊息「請勿查看SnapDrive產生的內容」。
+
+此問題的因應措施是還原為Snapshot複本的原始名稱、並確保在「snapdrive.conf」檔案中將「_bypass SnapDrive-clon-generated -Check」設為「On」（開啟）。

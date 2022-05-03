@@ -1,0 +1,59 @@
+---
+permalink: linux-installation-cmode/reference_linux_host_requirements.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, linux, host, requirements 
+summary: 您必須先準備好Linux主機、才能安裝SnapDrive 適用於UNIX的功能。 
+---
+= Linux 主機需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先準備好Linux主機、才能安裝SnapDrive 適用於UNIX的功能。
+
+* 如果您使用FC或iSCSI傳輸協定、則必須從NetApp支援網站下載並安裝Linux主機公用程式。
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["NetApp下載：軟體"]
+
++
+您必須使用「sanlun version」命令來驗證Linux主機公用程式是否已成功安裝。
+
+* 您必須在所有Linux系統中安裝「sg3_utils」套件、SnapDrive 才能使適用於UNIX的支援功能正常運作。
++
+
+NOTE: 您必須確保Red Hat Enterprise Linux（RHEL）和Oracle Enterprise Linux（OEL）均可使用「sg3_utils」和「sg3_utils-libs」程式庫。「sg3_utils」程式庫可在適用於SUSE Linux Enterprise Server（SLES）10及更早版本的「scsi*」套件、以及適用於SLES 11及更新版本的「sg3_utils *」套件中找到。
+
+* 如果您的主機是64位元Linux作業系統、而且您嘗試安裝32位元SnapDrive 的UNIX版、則必須下載並安裝這些程式庫或二進位套件。
++
+** 32位元版本的「glibc」、「libnl」、「libhba」、「libgccs」套件（來自Red Hat Enterprise Linux網站）。
++
+http://www.redhat.com["Red Hat Enterprise Linux網站"]
+
++
+如果主機系統中缺少32位元版本的'glibc'套件、則無法安裝for UNIX。SnapDrive
+
+** 從_QLogic站台_取得的「QConvertgeConsole CLI（QConvertgeConsole CLI）套件32位元二進位檔。如果您的主機是64位元Linux作業系統、並且安裝OnCommand Emulex HBA的32位元二進位檔、則您也必須將QLogic HBA的「/etc/HBA .conf」檔案中的「qla2xxx /usr/libqlsdm.so'」變更為「qla2xxx /usr/libqlsdm.so」。
++
+http://support.qlogic.com/["QLogic站台"]
+
+** 如果傳輸傳輸傳輸傳輸傳輸協定為SnapDrive FC for UNIX、您必須安裝「libHBAAPI」套件或廠商專屬套件、才能在主機上運作。
+
+
+* 在安裝SnapDrive 適用於UNIX的支援主機Service Pack之前、您必須先在主機上安裝支援的主機Service Pack。
++
+_Interoperability Matrix工具_有更多關於支援的Service Pack的資訊。
+
++
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+
+
+
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux Unified Host Utilities 7.1安裝指南》"]

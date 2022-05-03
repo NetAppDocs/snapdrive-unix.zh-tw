@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/task_setting_up_hba_driver_parameter.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hba, driver, parameter, mpio 
+summary: 若要為Linux MPIO設定HBA驅動程式、所需的確切步驟順序取決於所使用的作業系統。設定也取決於使用的HBA卡。 
+---
+= 設定HBA驅動程式參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要為Linux MPIO設定HBA驅動程式、所需的確切步驟順序取決於所使用的作業系統。設定也取決於使用的HBA卡。
+
+若要設定Linux MPIO的HBA驅動程式參數、必須執行下列步驟：
+
+.步驟
+. 解除安裝內建驅動程式。
+. 從廠商的網站安裝最新的驅動程式。
+. 使用廠商的CLI組態工具設定驅動程式參數。
+. 編輯「/etc/modprobe.conf'檔案、以設定HBA驅動程式的預設參數。
+. 使用HBA驅動程式參數重新產生initrd-（RAM磁碟映像）。
+. 重新啟動主機、讓新的HBA驅動程式設定生效。
+
+
+*相關資訊*
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux Unified Host Utilities 7.1安裝指南》"]

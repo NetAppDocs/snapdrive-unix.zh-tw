@@ -1,0 +1,26 @@
+---
+permalink: aix/task_forcing_daemon_restart.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, force, daemon, restart, command 
+summary: 您可以強制精靈重新啟動。強制重新啟動精靈會停止執行所有執行中的命令。 
+---
+= 強制重新啟動精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以強制精靈重新啟動。強制重新啟動精靈會停止執行所有執行中的命令。
+
+請確定您以root使用者身分登入。
+
+.步驟
+. 輸入下列命令以強制重新啟動精靈：
++
+快照-強制重新啟動*
+
++
+收到強制重新啟動要求之後、精靈會停止執行中和佇列中的所有命令。只有在取消執行所有執行中的命令之後、精靈才會重新啟動。
+
+

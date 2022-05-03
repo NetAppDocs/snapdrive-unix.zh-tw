@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_options_keywords_and_arguments.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, keywords, arguments, options 
+summary: 適用於UNIX的指令具有相關選項、關鍵字及引數。SnapDrive 
+---
+= 適用於UNIX選項、關鍵字及引數SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的指令具有相關選項、關鍵字及引數。SnapDrive

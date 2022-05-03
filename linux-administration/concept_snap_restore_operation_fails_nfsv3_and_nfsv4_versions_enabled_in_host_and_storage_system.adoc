@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_snap_restore_operation_fails_nfsv3_and_nfsv4_versions_enabled_in_host_and_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, fail, nfsv3, nfsv4, host, storage, operation 
+summary: 當主機和儲存系統中啟用NFSv3和NFSv4版本時、SnapRestore作業會失敗。 
+---
+= 在主機和儲存系統中啟用NFSv3和NFSv4版本時、SnapRestore作業會失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當主機和儲存系統中啟用NFSv3和NFSv4版本時、SnapRestore作業會失敗。
+
+如果您在主機和儲存系統中啟用NFSv3和NFSv4版本、並在主機上掛載磁碟區而不使用「-o vers」選項、則會為檔案和目錄設定「nobnan:nobnoban'」擁有權。
+
+
+
+== 因應措施
+
+建議在掛載NFS磁碟區時使用「-o vers」選項、或在主機上檢查NFS預設選項的適當值。

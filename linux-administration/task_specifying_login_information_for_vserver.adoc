@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/task_specifying_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, vserver, 
+summary: 您必須指定Vserver的使用者登入資訊。視您在設定Vserver時所指定的內容而定、每個Vserver都必須使用設定的Vserver使用者名稱。如果您的Vserver名稱有變更、您必須確定新的Vserver名稱已在SnapDrive 適用於UNIX的介紹中設定。 
+---
+= 指定Vserver的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須指定Vserver的使用者登入資訊。視您在設定Vserver時所指定的內容而定、每個Vserver都必須使用設定的Vserver使用者名稱。如果您的Vserver名稱有變更、您必須確定新的Vserver名稱已在SnapDrive 適用於UNIX的介紹中設定。
+
+. 輸入下列命令：
++
+「* SnapDrive 組態集_user_name filername_[_filername..._]*」
+
++
+** 「_user_name_」是您第一次設定Vserver時所指定的使用者名稱。預設使用者為vsadmin。「_filername_」是Vserver名稱。
+** 如果所有Vserver都具有相同的使用者登入或密碼、則可使用「_filer_name_」在單一命令列輸入多個Vserver。您必須輸入至少一個Vserver名稱。
+
+
++
+[listing]
+----
+# snapdrive config set vsadmin clstr-vs2
+Password for vsadmin:
+Retype password:
+----
+

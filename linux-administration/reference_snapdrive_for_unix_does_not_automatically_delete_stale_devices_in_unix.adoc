@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/reference_snapdrive_for_unix_does_not_automatically_delete_stale_devices_in_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, stale, device 
+summary: 當由於組態問題而導致UNIX的執行失敗時、舊裝置可能會留在乙太網路光纖通道（FCoE）環境SnapDrive 中。這些過時的裝置不會自動刪除、因此您需要知道因應措施。 
+---
+= UNIX版不會自動刪除UNIX中的過時裝置SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當由於組態問題導致UNIX操作失敗時、老舊的裝置可能會留在乙太網路光纖通道（FCoE）環境SnapDrive 中。這些過時的裝置不會自動刪除、因此您需要知道因應措施。
+
+
+
+== 因應措施
+
+執行廠商提供的原生重新掃描指令碼、以移除所有舊項目、或使用SG3套件隨附的「REscan-scsibus.sh -r」命令來重新掃描指令碼。

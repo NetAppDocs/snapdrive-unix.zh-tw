@@ -1,0 +1,74 @@
+---
+permalink: solaris/concept_volume_based_snaprestore_for_space_reservation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, colume, snaprestore, space, reservation 
+summary: 若要使用磁碟區型SnapReserve保留空間、您必須在SnapDrive .conf檔案中設定啟用空間保留磁碟區的選項。 
+---
+= Volume型SnapRestore 的空間保留功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用磁碟區型快照保留空間、您需要在「snapdrive.conf」檔案中設定「_space-reservations - volume enabled_」選項。
+
+「_space-Reservations：Volume enabled_」選項可用於設定磁碟區的空間保證原則、並可採用下列三個值。
+
+* * Snapshot *：這是預設值。磁碟區上的空間保證不會變更。
+* * Volume *：磁碟區上的空間保證是在磁碟區層級。
+* *無*：空間保證設為無。
+
+
+下表說明磁碟區型快照保留空間的行為。
+
+|===
+| 未使用空間保留CLI選項；指定「-vbsr執行」 | space-Reservations：Volume已啟用= | 結果 
+
+
+ a| 
+無
+ a| 
+Snapshot
+ a| 
+磁碟區上的空間保證不會變更。
+
+
+
+ a| 
+無
+ a| 
+無
+ a| 
+嘗試將磁碟區的空間保證設為「無」。
+
+
+
+ a| 
+保留
+ a| 
+組態值已被取代
+ a| 
+嘗試將磁碟區的空間保證設為「Volume」
+
+
+
+ a| 
+「北電」
+ a| 
+組態值已被取代
+ a| 
+嘗試將磁碟區的空間保證設為「無」
+
+
+
+ a| 
+無
+ a| 
+Volume
+ a| 
+嘗試將磁碟區的空間保證設為「Volume」
+
+|===
+
+NOTE: vbsr預覽不會檢查任何空間保留選項。

@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_guidelines_for_using_the_disconnect_command_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, host, cluster 
+summary: 以下是SnapDrive 在主機叢集環境中使用flexfstorage disconnect.命令的準則。 
+---
+= 在主機叢集環境中使用Disconnect"命令的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下是SnapDrive 在主機叢集環境中使用「停止儲存設備中斷連線（flexstorage disconnect'）命令的準則：
+
+* 可以從主機叢集中的任何節點執行「SnapDrive 停止儲存」命令。
+* 若要成功執行儲存中斷連線作業、下列任一項應為真：
++
+** 儲存實體應在主機叢集中的所有節點之間共享。
+** LUN應對應至主機叢集中的所有節點。
+
+
+* 您可以使用「-DEVICETYPE Dedicated」選項、或是在命令中省略「-DEVICETYPE」選項、將儲存實體從特定節點中斷開連線、因為預設值是專屬的。
+* 如果共享儲存實體或LUN與「專用」選項中斷連線、或是專用儲存實體或LUN與「共享」選項中斷連線、則SnapDrive 「停止儲存」命令會出現錯誤。
+* UNIX版在主節點上執行「不中斷儲存」命令。SnapDrive SnapDrive它會毀損儲存實體、中斷所有非主要節點上的LUN連線、然後中斷LUN與主機叢集中主要節點的連線。如果在此順序期間出現任何錯誤訊息、儲存設備中斷連線作業將會失敗。
+

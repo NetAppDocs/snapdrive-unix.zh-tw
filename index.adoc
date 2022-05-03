@@ -1,0 +1,11 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+---
+= 適用於UNIX 5.3.2文件SnapDrive
+:allow-uri-read: 
+
+
+歡迎使用SnapDrive 適用於UNIX資訊庫的功能。您可在此找到適用於SnapDrive UNIX軟體的5.3.2版文件、包括如何安裝、設定、使用及管理SnapDrive 適用於Linux、Solaris及AIX的功能。
+
+如需SnapDrive 舊版的適用於Unix的文件、請參閱 link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050["NetApp 支援網站"]。

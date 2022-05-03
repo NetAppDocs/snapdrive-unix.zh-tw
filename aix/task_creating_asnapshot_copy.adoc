@@ -1,0 +1,29 @@
+---
+permalink: aix/task_creating_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: 若要建立Snapshot複本、請執行SnapDrive 「flexfsnap create」命令。 
+---
+= 建立Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要建立Snapshot複本、請執行「SnapDrive flexfsnap create」命令。
+
+在執行此語法之前、您必須先瞭解此命令中提及的選項、關鍵字和引數。
+
+.步驟
+. 輸入下列命令語法以建立Snapshot複本：
++
+fs-fs-vol快照建立｛-LUN |-dg |-fs |-hostvol｝_file_spec[file_spec...]_[｛-LUN |-dg |-fs |-hostvol｝_file_spec_[_file_spec_...] SnapDrive -snapname _snap_name_[-force [-nosup][-inofed][-nofilerfest][-fstype_type_][-vmtype _type_]*
+
+
+
+「_file_spec_」引數代表一或多個儲存系統上的一組儲存實體。Snapshot create作業會取得儲存系統磁碟區的Snapshot複本、其中包含這些實體、並將其命名為在「午睡名稱」引數中指定的名稱。
+
+*相關資訊*
+
+xref:concept_creating_snapshotcopies_of_unrelatedentities.adoc[建立不相關實體的Snapshot複本]

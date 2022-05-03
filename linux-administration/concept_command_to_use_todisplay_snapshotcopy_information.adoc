@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_command_to_use_todisplay_snapshotcopy_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, snapshot, copy, list 
+summary: 使用SnapDrive 「flexsnap show（or list\）」命令來顯示Snapshot複本的相關資訊。 
+---
+= 用於顯示Snapshot複本資訊的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「SnapDrive flexsnap show」（或「list」（清單））命令來顯示Snapshot複本的相關資訊。
+
+您可以使用「SnapDrive funfsnap show」（或「list」）命令來顯示SnapDrive 有關由針對UNIX建立的每個Snapshot複本的資訊。您可以使用此命令來顯示下列項目的相關資訊：
+
+* 儲存系統
+* 儲存系統上的磁碟區
+* 儲存實體、例如NFS檔案和目錄樹狀結構、磁碟群組、磁碟群組、檔案系統、邏輯磁碟區、 和主機磁碟區
+* Snapshot複本
+
+
+
+NOTE: 此命令的「顯示」和「清單」形式是同義詞。對於UNIX及更新版本的版本、當您顯示Snapshot複本的相關資訊時、必須使用Snapshot複本名稱的長格式。SnapDrive

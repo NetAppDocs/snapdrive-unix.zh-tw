@@ -1,0 +1,268 @@
+---
+permalink: aix/reference_command_line_options.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, line, option 
+summary: 有多種選項可搭配SnapDrive 使用以執行UNIX命令。 
+---
+= 命令列選項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有多種選項可搭配SnapDrive 使用以執行UNIX命令。
+
+UNIX版的支援功能可讓您在命令中適當地加入下列選項。SnapDrive在某些情況下、您可以縮寫這些選項。例如、您可以使用「-h」而非「-help」。
+
+|===
+| 選項 | 說明 
+
+
+ a| 
+「-addlun」
+ a| 
+告訴SnapDrive UNIX將新的內部產生LUN新增至儲存實體、以增加其大小。
+
+
+
+ a| 
+「-all」
+ a| 
+搭配SnapDrive 使用Resfstorage｛「show | list'｝命令、可顯示主機已知的所有裝置和LVM實體。
+
+
+
+ a| 
+「自動擴充」
+ a| 
+與「SnapDrive flexfsnap Connect」命令搭配使用、可讓您在提供磁碟群組中邏輯磁碟區或檔案系統的子集時、要求連線磁碟群組。
+
+
+
+ a| 
+-`-autorenamen'
+ a| 
+與「SnapDrive Isfsnap Connect」命令搭配使用、可讓命令重新命名任何新連線的LVM實體、而這些實體的預設名稱已在使用中。
+
+
+
+ a| 
+「複製類型」
+ a| 
+複製方法、在「網路快照連線」作業期間使用。此處類型指的是lunclone（建立LUN實體複本）、Optimal（SnapDrive 最佳）（根據儲存組態、在受限的FlexClone與LUN實體複本之間自動選擇）和Unre受 限（建立FlexClone、可用於資源配置與Snapshot作業、如同一般彈性磁碟區）。
+
+
+
+ a| 
+「功能」
+ a| 
+與「SnapDrive 支援儲存的show」命令搭配使用、可得知主機檔案規格允許的作業。
+
+
+
+ a| 
+設備或設備
+ a| 
+與storage｛show | list｝命令搭配使用、可顯示主機已知的所有裝置。
+
+
+
+ a| 
+「-gsize」或「-vgsize」
+ a| 
+與「SnapDrive esflex止storage create」命令搭配使用、可指定您要建立的磁碟群組大小（以位元組為單位）。
+
+
+
+ a| 
+「-force」（或「-f」）
+ a| 
+導致SnapDrive 嘗試執行UNIX版的作業時、通常無法執行。UNIX版在執行作業之前、會提示您要求確認。SnapDrive
+
+
+
+ a| 
+「-fsopts」
+ a| 
+您要傳遞給建立新檔案系統之主機作業的選項。視您的主機作業系統而定、此主機作業可能是mkfs命令之類的命令。
+
+您使用此選項所提供的引數通常需要指定為引號字串、而且必須包含要傳遞給命令的確切文字。
+
+例如、您可以輸入「-o largefiles」作為您要傳遞給主機作業的選項。
+
+
+
+ a| 
+「-fstype-
+ a| 
+您要用於SnapDrive UNIX作業的檔案系統類型。檔案系統必須是SnapDrive UNIX版支援的作業系統類型。您可為此變數設定的目前值為「jfs」、「'Jfs2'」或「'VxFS」
+
+您也可以使用'-fstype-'組態變數來指定要使用的檔案系統類型。
+
+
+
+ a| 
+「-full」
+ a| 
+即使實體不是空的、也允許在指定的主機端實體上執行作業（例如、實體可能是包含一個或多個邏輯磁碟區的磁碟區群組）。
+
+
+
+ a| 
+「成長者」
+ a| 
+您要新增至LUN或磁碟群組以增加其大小的位元組數。
+
+
+
+ a| 
+「-w成長」
+ a| 
+LUN、磁碟群組或磁碟區群組的目標大小（以位元組為單位）。UNIX版的適用範圍會自動計算達到目標大小所需的位元組數、並將物件大小增加該位元組數。SnapDrive
+
+
+
+ a| 
+「-help'」
+ a| 
+輸出命令和作業的使用訊息。請自行輸入此選項、不需使用其他選項。以下是可能的命令列範例。
+
+
+
+ a| 
+「午餐大小」
+ a| 
+要由指定命令建立的LUN大小（以位元組為單位）。
+
+
+
+ a| 
+「mnttops」
+ a| 
+指定您要傳遞至主機掛載命令的選項（例如、指定檔案系統記錄行為）。選項也儲存在主機檔案系統表格檔案中。允許的選項取決於主機檔案系統類型。
+
+您提供的"-mnttops "引數是使用mount命令"`-o"旗標指定的檔案系統類型選項。請勿在'-mnterts '引數中加入'`'-o'旗標。例如，順序'_-mnttops tmplo_g'將字串'_-o tmplg_'傳遞到mount命令列，然後在新的命令列上插入文字"'tmplg'。
+
+
+
+ a| 
+「noFilerfence」
+ a| 
+在Data ONTAP 建立橫跨多個檔案管理器磁碟區的Snapshot複本時、不需要使用「還原一致性」群組功能。
+
+在更新版本的版本中、您可以暫停存取整個檔案管理器磁碟區。Data ONTAP您可以使用「-nofilerfence」選項來凍結對個別LUN的存取。
+
+
+
+ a| 
+「-nolvm」
+ a| 
+直接在LUN上連接或建立檔案系統、而不需涉及主機LVM。
+
+使用此選項直接在LUN上連線或建立檔案系統的所有命令、將不會接受主機叢集或共用資源的命令。此選項僅允許用於本機資源。
+
+
+
+ a| 
+《業者》
+ a| 
+連線或建立檔案系統、或具有檔案系統的Snapshot複本、而不需在主機的持續掛載項目檔案中新增項目。
+
+
+
+ a| 
+-`-prefisfv
+ a| 
+產生複製的Volume名稱時使用的前置碼。新磁碟區名稱的格式為<pre-'fied>_<reent_volume名稱>'。
+
+
+
+ a| 
+保留- noreserve
+ a| 
+搭配「SnapDrive 還原」SnapDrive 、「還原連結」或「SnapDrive 還原功能」命令使用、可指定SnapDrive 用作UNIX的版塊是否建立空間保留。根據預設、SnapDrive 適用於UNIX的功能會建立保留區、以供建立、調整儲存空間大小及建立Snapshot作業、而且不會建立Snapshot連線作業的保留區。
+
+
+
+ a| 
+noprompt
+ a| 
+在命令執行期間禁止提示。根據預設、任何可能具有危險或非直覺性副作用的作業、都會提示您確認SnapDrive 應該嘗試使用for UNIX。此選項會覆寫該提示、SnapDrive 搭配「-force」選項、UNIX版的執行作業時不會要求確認。
+
+
+
+ a| 
+「-Quiet」（或「-q」）
+ a| 
+不報告錯誤和警告、無論它們是正常的還是診斷性的。它會傳回零（成功）或非零狀態。「-quiet」選項會覆寫「-verbose」選項。
+
+這個選項將被忽略、如「SnapDrive 靜態儲存展示」、SnapDrive 「靜態展示」和「SnapDrive 靜態組態展示」命令。
+
+
+
+ a| 
+「唯讀」
+ a| 
+適用於使用NetApp 7.1或Data ONTAP 任何使用傳統Volume組態的組態。以唯讀存取權連接NFS檔案或目錄。
+
+選用功能、適用於Data ONTAP 使用FlexVol 不完整資料的使用者。以唯讀存取權連接NFS檔案或目錄樹狀結構。（預設為讀取/寫入）。
+
+
+
+ a| 
+「分割」
+ a| 
+可在Snapshot連線和Snapshot中斷作業期間分割複製的磁碟區或LUN。
+
+您也可以使用「啟用分割複製」組態變數來分割複製的磁碟區或LUN。
+
+
+
+ a| 
+狀態
+ a| 
+與「SnapDrive flexunstorage show」命令搭配使用、以瞭解磁碟區或LUN是否已複製。
+
+
+
+ a| 
+「不相關」
+ a| 
+在拍攝Snapshot複本時、建立「file_spec」實體的Snapshot複本、而這些實體沒有相依寫入的資料。由於實體沒有相依寫入、SnapDrive 所以UNIX版的Eshot會建立個別儲存實體的損毀一致Snapshot複本、但不會採取步驟使實體彼此一致。
+
+
+
+ a| 
+verbose（或「-v」）
+ a| 
+視情況顯示詳細輸出。所有命令和作業都會接受此選項、但有些可能會忽略此選項。
+
+
+
+ a| 
+「-vgsize」或「-DGSITY」
+ a| 
+與"shorage cree"命令一起使用，以指定要建立的Volume群組大小（以位元組為單位）。
+
+
+
+ a| 
+vmtype
+ a| 
+您要用於SnapDrive UNIX作業的Volume Manager類型。
+
+如果使用者在命令列中明確指定「-vmtype」選項、SnapDrive 則無論在「vmtype」組態變數中指定的值為何、UNIX版的資訊都會使用在選項中指定的值。如果命令列選項中未指定「-vmtype」選項、SnapDrive 則適用於UNIX的現象是使用組態檔中的Volume Manager。
+
+Volume Manager必須是SnapDrive UNIX支援的作業系統類型。您可以為此變數設定的目前值為VxVM或LVM。
+
+您也可以使用「vmtype」組態變數來指定要使用的Volume Manager類型。
+
+
+
+ a| 
+-`-vbsr｛preview|execute｝'
+ a| 
+「preview」（預覽）選項會針對SnapRestore 指定的主機檔案、啟動以Volume為基礎的等量預覽機制。利用「EXECUTE」選項、SnapDrive UNIX版的功能將以Volume為基礎SnapRestore 的樣式、針對指定的檔案技術進行轉換。
+
+|===

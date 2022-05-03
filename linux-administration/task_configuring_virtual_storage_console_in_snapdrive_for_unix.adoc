@@ -1,0 +1,42 @@
+---
+permalink: linux-administration/task_configuring_virtual_storage_console_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, storage, virtual, console 
+summary: 您必須設定虛擬儲存主控台以存取儲存系統、並使用指派給儲存系統的登入名稱和密碼。 
+---
+= 設定適用於SnapDrive UNIX的虛擬儲存主控台
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須設定虛擬儲存主控台以存取儲存系統、並使用指派給儲存系統的登入名稱和密碼。
+
+確保Virtual Storage Console安裝在VMware vCenter所在的Windows系統中。
+
+. 在* vCenter主頁*視圖中的*解決方案和應用程序*下，單擊* NetApp Virtual Console *（* NetApp虛擬控制檯*）屏幕中的* NetApp*。
+. 按一下*備份與恢復*、然後按一下*設定*以檢視儲存系統項目。
+. 如果沒有儲存系統項目、請按一下「*新增*」、在虛擬儲存主控台中新增所需的儲存系統。
++
+「*新增儲存系統*」對話方塊隨即出現。
+
+. 在「*新增儲存系統*」視窗中、輸入儲存系統的IP位址、使用者名稱和密碼。然後單擊*確定*。
++
+儲存系統現在已準備好與虛擬儲存主控台通訊。
+
+
+
+*相關資訊*
+
+xref:task_verifying_virtual_storage_console.adoc[驗證虛擬儲存主控台的登入資訊]
+
+xref:task_deleting_a_user_login_for_a_virtual_storage_console.adoc[刪除虛擬儲存主控台的使用者登入]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[VMware VMotion支援SnapDrive UNIX版]
+
+xref:concept_configuration_options_and_their_default_values.adoc[組態選項及其預設值]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[配置RDM LUN的考量]
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[受由功能不完善管理的RDM LUN限制SnapDrive]

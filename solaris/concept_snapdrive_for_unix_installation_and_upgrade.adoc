@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_installation_and_upgrade.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, upgrade, unix 
+summary: 若要在SnapDrive 主機系統上安裝適用於UNIX的功能、您必須執行某些工作。在開始安裝之前、您應該瞭解各種系統需求和組態考量。 
+---
+= 安裝或升級SnapDrive 適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要在SnapDrive 主機系統上安裝適用於UNIX的功能、您必須執行某些工作。在開始安裝之前、您應該瞭解各種系統需求和組態考量。

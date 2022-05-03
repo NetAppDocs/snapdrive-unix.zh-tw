@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_snapdrive_for_unix_security.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security, feature 
+summary: 在使用SnapDrive 適用於UNIX的功能之前、您必須先瞭解其安全功能、並瞭解如何存取這些功能。 
+---
+= UNIX的安全功能SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用SnapDrive 適用於UNIX的功能之前、您必須先瞭解其安全功能、並瞭解如何存取這些功能。

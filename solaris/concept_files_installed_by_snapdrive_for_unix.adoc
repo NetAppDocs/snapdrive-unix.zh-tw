@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, file, unix 
+summary: 適用於UNIX的支援安裝多個檔案、例如執行檔、組態檔、解除安裝檔案、診斷檔案和手冊頁、SnapDrive 在主機上。透過這些檔案、您可以偵測問題、將產品目前版本的組態資訊等資訊儲存在SnapDrive 適用於UNIX的支援程式庫中。 
+---
+= 由適用於UNIX的文件SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援安裝多個檔案、例如執行檔、組態檔、解除安裝檔案、診斷檔案和手冊頁、SnapDrive 在主機上。透過這些檔案、您可以偵測問題、將產品目前版本的組態資訊等資訊儲存在SnapDrive 適用於UNIX的支援程式庫中。
+
+*相關資訊*
+
+xref:concept_types_of_logs.adoc[記錄類型]

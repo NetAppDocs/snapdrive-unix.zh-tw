@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_using_port_set_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, port, set, san, data, interface, control, host 
+summary: 連接埠集是一組SAN資料連接埠或介面、用於透過將一組SAN資料連接埠或介面分組來控制主機可用的路徑。 
+---
+= 使用SnapDrive UNIX版的連接埠集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+連接埠集是一組SAN資料連接埠或介面、用於透過將一組SAN資料連接埠或介面分組來控制主機可用的路徑。
+
+連接埠集組態是由儲存系統上的儲存管理員所建立、這是一項選擇性的工作。當主機上未設定連接埠集時、主機可以檢視所有路徑、視主機SCSI組態限制而定。適用於UNIX的支援、可讓儲存管理員針對每個Vserver指定單一連接埠集。SnapDrive因此、主機可透過Vserver檢視的路徑數量有限制。

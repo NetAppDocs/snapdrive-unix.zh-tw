@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snapdrive_errors_out_if_libgcc_s_so_1_is_not_properly_installed.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, install, red, enterprise, oracle 
+summary: 如果64位元Red Hat Enterprise Linux 4和Oracle Enterprise Linux 4主機上未安裝/lib/libgcc_s.so.1路徑、表示UNIX錯誤。SnapDrive 
+---
+= 如果未安裝libgcc_s.so.1、就會出現無法識別的錯誤SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果64位元Red Hat Enterprise Linux 4和Oracle Enterprise Linux 4主機上未安裝「/lib/libgcc_s.so.1path'」、表示UNIX錯誤。SnapDrive
+
+如果64位元Red Hat Enterprise Linux 4和Oracle Enterprise Linux 4主機上未安裝路徑「/lib/libgcc_s.so.1」、SnapDrive 則適用於UNIX的現象會顯示下列錯誤訊息：
+
+[listing]
+----
+libgcc_s.so.1 must be installed for pthread_cancel to work
+----

@@ -1,0 +1,43 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_reports_an_error_if_iscsi_is_not_running.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, error, iscsi, takeover, giveback 
+summary: 在Linux主機上執行的UNIX將傳回錯誤訊息「找不到HBA助理」SnapDrive 。 
+---
+= 若iSCSI未執行、UNIX版的支援報告錯誤SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Linux主機上執行的UNIX將傳回錯誤訊息「找不到HBA助理」SnapDrive 。
+
+發生下列其中一種情況時、就會發生這種情況：
+
+* 已發出iSCSI停止。
+* 發生接管事件、iSCSI服務尚未啟動。
+* 正在進行恢復、而且iSCSI服務尚未啟動。
+
+
+若要讓UNIX執行、必須執行iSCSI服務。SnapDrive如果服務停止、SnapDrive 則適用於UNIX的停止功能會傳回錯誤訊息。例如、如果SnapDrive 您在iSCSI服務未執行時執行SHISHU儲存show命令、您可能會看到類似以下的輸出：「# SnapDrive 」、「#」、「#」、「#」、「#」、「g」、「tostures1 0001-877」、「管理錯誤：找不到HBA助理」。涉及LUN的命令應該會失敗
+
+
+
+== 因應措施
+
+確保iSCSI服務正在執行。如果儲存系統正在進行接管或恢復、請等待其啟動iSCSI服務。如果儲存系統處於正常執行模式、請重新啟動iSCSI服務、SnapDrive 然後執行「磁碟重新啟動」命令、重新啟動支援UNIX的程式。服務執行後、重新發出「SnapDrive flexfstorage show」命令。這次您應該會看到類似下列的輸出：
+
+[listing]
+----
+# snapdrive storage show -dg toaster1
+dg: toaster1 dgtype lvm
+hostvol: /dev/mapper/toaster1-lvol1 state: AVAIL
+hostvol: /dev/mapper/toaster1-lvol2 state: AVAIL
+fs: /dev/mapper/toaster1-lvol1 mount point: /mnt/um1 (nonpersistent)
+fstype ext3
+fs: /dev/mapper/toaster1-lvol2 mount point: NOT MOUNTED
+device filename adapter path size proto state clone lun path backing snapshot
+/dev/sde - P 64m iscsi online No gin:/vol/vol1/Lun1
+/dev/sdf - P 64m iscsi online No gin:/vol/vol1/Lun2
+----

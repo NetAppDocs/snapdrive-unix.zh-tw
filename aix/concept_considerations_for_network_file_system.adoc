@@ -1,0 +1,30 @@
+---
+permalink: aix/concept_considerations_for_network_file_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, nfs, configuration 
+summary: 在安裝SnapDrive 適用於UNIX的版本之前、您應該考慮網路檔案系統（NFS）服務的執行位置、以及儲存系統目錄的匯出位置。您應該檢查NFS用戶端權限和介面讀寫權限。 
+---
+= NFS組態準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝SnapDrive 適用於UNIX的版本之前、您應該先考量網路檔案系統（NFS）服務的執行位置、以及儲存系統目錄的匯出位置。您應該檢查NFS用戶端權限和介面讀寫權限。
+
+當您使用SnapDrive for UNIX還原或連線至NFS掛載目錄時、必須確保儲存系統目錄已正確匯出至主機。如果您的主機有多個IP介面可存取儲存系統、您必須確保將目錄正確匯出至每個介面。
+
+UNIX版會發出警告、除非所有此類介面都具有讀寫權限、或是使用「唯讀」選項的「支援鏈接」、或至少具有唯讀權限。SnapDrive SnapDrive如果這些介面都沒有存取目錄的權限、則「還原功能」和「還原功能」命令會失敗。SnapDrive SnapDrive
+
+當您以root使用者身分執行單一檔案SnapRestore 功能（SFSR）時、必須確保儲存系統目錄是以主機的讀寫權限匯出、且必須設定下列匯出規則：
+
+* 「rw=<主機名稱>、root=<主機名稱>」Data ONTAP 在7-Mode中運作
+* 「rwrRule = sys、ror規則= sys、usemopy= sys」、位於叢集Data ONTAP 式的esk
+
+
+*相關資訊*
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["S9 NFS參考資料ONTAP"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["《適用於7-Mode的資訊、資料存取與通訊協定管理指南》（英文）Data ONTAP"]

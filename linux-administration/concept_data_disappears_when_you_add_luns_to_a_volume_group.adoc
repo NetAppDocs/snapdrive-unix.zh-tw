@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_data_disappears_when_you_add_luns_to_a_volume_group.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, lun, volume, group, disappear 
+summary: 當您將現有LUN新增至Volume群組時、LUN上的資料會消失。 
+---
+= 當您將LUN新增至磁碟區群組時、資料會消失
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您將現有LUN新增至Volume群組時、LUN上的資料會消失。
+
+如果您將現有LUN新增至由LVM管理的Volume群組、然後執行「pvcreate」命令、資料就會被覆寫。
+
+
+
+== 因應措施
+
+如果您需要現有LUN上的資料、則必須將該資料移轉至使用LVM建立的LUN。完成下列步驟。
+
+. 建立新的LUN。
+. 使用「pvcreate」、「vgcreate」和「vcreate」命令、將LUN置於LVM控制之下。
+. 將資料從現有LUN複製到您建立並置於LVM控制之下的LUN。
+

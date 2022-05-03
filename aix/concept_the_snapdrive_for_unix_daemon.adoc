@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_the_snapdrive_for_unix_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, daemon 
+summary: 在執行SnapDrive 任何適用於UNIX的功能之前、您必須先瞭解Web服務和精靈、以及如何使用它們。所有SnapDrive 的UNIX指令都能使用精靈服務來運作。在SnapDrive AIX主機上使用適用於UNIX的功能之前、您必須先啟動此精靈、使SnapDrive UNIX版的支援功能能與其他NetApp和非NetApp產品無縫且安全地整合。 
+---
+= 瞭SnapDrive 解適用於UNIX精靈的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行SnapDrive 任何適用於UNIX的功能之前、您必須先瞭解Web服務和精靈、以及如何使用它們。所有SnapDrive 的UNIX指令都能使用精靈服務來運作。在SnapDrive AIX主機上使用適用於UNIX的功能之前、您必須先啟動此精靈、使SnapDrive UNIX版的支援功能能與其他NetApp和非NetApp產品無縫且安全地整合。

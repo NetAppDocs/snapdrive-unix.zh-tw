@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_increase_in_storage_size_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, unix, increase, size 
+summary: UNIX版的支援功能可讓您增加儲存系統磁碟區群組或磁碟群組的大小。SnapDrive您可以使用SnapDrive 「物件儲存區調整大小」命令來執行此動作。 
+---
+= 利用UNIX版的功能提升儲存規模SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您增加儲存系統磁碟區群組或磁碟群組的大小。SnapDrive您可以使用「SnapDrive 物件儲存區大小調整」命令來執行此動作。
+
+
+NOTE: 此命令不允許您調整主機磁碟區或檔案系統的大小。例如、您無法使用resize命令來變更LUN上的檔案系統大小。調整基礎磁碟群組的大小之後、您需要使用LVM命令來調整主機磁碟區和檔案系統的大小。
+
+您可以將儲存設備的大小調整作業分為下列一般類別：
+
+* 設定您要增加儲存空間的目標大小（以位元組為單位）
+* 指定要增加儲存空間的位元組數
+
+
+UNIX版可新增系統產生的LUN。SnapDrive如果您指定要增加儲存空間的數量（例如50 MB）、則會使LUN變為50 MB。如果您指定儲存設備的目標大小、則會計算目前大小與目標大小之間的差異。兩者的差異會變成LUN的大小、然後再建立LUN。

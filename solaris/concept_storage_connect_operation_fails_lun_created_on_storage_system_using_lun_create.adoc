@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_storage_connect_operation_fails_lun_created_on_storage_system_using_lun_create.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, storage, fail, lun, create, command 
+summary: 如果使用LUN create命令或System Manager在儲存系統上建立LUN、則無法連接至LUN。SnapDrive 
+---
+= 儲存設備連線作業無法使用LUN create命令連線至儲存系統上建立的LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果使用「LUN create」命令或使用System Manager在儲存系統上建立LUN、則「無法連接至LUN」命令。SnapDrive
+
+下列錯誤訊息會出現、因為LUN未格式化、Solaris無法辨識、而LUN會被探索並對應至主機。
+
+
+
+== 因應措施
+
+請勿手動建立LUN。使用SnapDrive 帶有"-LUN"選項的"fuse storage cree"命令來建立LUN。如果您在執行「SnapDrive show storage connect」命令後必須使用現有的LUN、請完成下列步驟。
+
+. 手動格式化LUN。
+. 使用原生Volume Manager和作業系統命令、在其中建立檔案系統。
++
+建立檔案系統之後、您可以使用SnapDrive 此LUN的UNIX作業功能。
+
+

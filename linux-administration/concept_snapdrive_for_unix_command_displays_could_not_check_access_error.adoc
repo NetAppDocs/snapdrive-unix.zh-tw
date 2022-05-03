@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_command_displays_could_not_check_access_error.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, display, access, error, object 
+summary: 當UNIX對儲存物件擁有適當的寫入存取權限時、可能會顯示錯誤。SnapDrive 
+---
+= 適用於UNIX的命令顯示無法檢查存取錯誤SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當UNIX對儲存物件擁有適當的寫入存取權限時、可能會顯示錯誤。SnapDrive
+
+顯示下列錯誤訊息：
+
+[listing]
+----
+0002-332 Admin error: Could not check SD.Storage.Write access on LUN storage_array1:/vol/vol1/lun1for user unix-host\root
+ on Operations Manager server(s) ops-mngr-server1 reason: Invalid resource specified.  Unable to find its Id on Operations Manager server ops-mngr-server1
+----
+此問題的解決方案是：
+
+. 確認Operations Manager上的儲存資源已重新整理。如果Operations Manager上的儲存資源未重新整理、則
++
+** 手動執行「dFM主機探索<media-system>」。
+** 將｛Global、Dfm.Database.Write｝功能指派給「shd-admin」
++
+在這種情況下SnapDrive 、UNIX版的解決方法會自動重新整理Operations Manager並重新核發存取檢查。
+
+
+
+
+
+UNIX使用的預設重新整理時間間隔SnapDrive 為15秒（`_DFM-RBAC重試睡眠秒_）、SnapDrive 而UNIX使用的預設重試次數為12次（`_DFM-RBAC重試次數_）。如果您仍收到上述錯誤訊息、請將「_DFM-RBAC重試次數」組態變數的值增加至14、16、18 ...等、以符合您的環境。Operations Manager所需的重新整理時間間隔取決於儲存系統中的LUN和磁碟區數目。

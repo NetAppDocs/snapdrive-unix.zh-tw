@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_security_featuresprovided_bysnapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security, control, user, storage, permission, login 
+summary: 適用於UNIX的支援功能可讓您更安全地使用。SnapDrive這些功能可讓您更有效地控制哪些使用者可以在儲存系統上執行作業、以及從哪個主機執行作業。 
+---
+= 什麼是安全功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您更安全地使用。SnapDrive這些功能可讓您更有效地控制哪些使用者可以在儲存系統上執行作業、以及從哪個主機執行作業。
+
+安全功能可讓您執行下列工作：
+
+* 設定存取控制權限
+* 指定儲存系統的登入資訊
+* 指定SnapDrive UNIX版的支援使用HTTPS
+
+
+存取控制功能可讓您指定執行SnapDrive 支援UNIX的主機可在儲存系統上執行哪些作業。您可以分別為每個主機設定這些權限。此外、為了讓SnapDrive UNIX的功能能夠存取儲存系統、您必須提供該儲存系統的登入名稱和密碼。
+
+HTTPS功能可讓您透過管理ONTAP 支援介面、指定所有與儲存系統互動的SSL加密、包括傳送密碼。此行為在SnapDrive UNIX版本中為預設、而Linux主機版本則為更新版本；不過、您可以將「use－https－to－filer」組態變數的值變更為「Off」、以停用SSL加密。

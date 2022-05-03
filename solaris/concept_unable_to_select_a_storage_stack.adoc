@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_unable_to_select_a_storage_stack.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, select, storage, stack 
+summary: 您無法選取儲存堆疊、因為SnapDrive .conf檔案中指定的值不適當。 
+---
+= 無法選取儲存堆疊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您無法選取儲存堆疊、因為在「snapdrive.conf」檔案中指定不適當的值。
+
+此時會出現下列警告訊息。
+
+[listing]
+----
+WARNING!!! Unable to find a SAN storage stack. Please verify that the appropriate transport protocol, volume manager, file system and multipathing type are installed and configured in the system. If NFS is being used, this warning message can be ignored.
+----
+* 如果您使用的是NFS環境、請忽略警告訊息、繼續在SnapDrive 主機系統上使用支援功能。
+* 如果您使用SAN環境、請確保在Solaris對照表堆疊中所提供的「snapdrive.conf」檔案中指定適當的可接受值。然後重新啟動精靈。
+
+
+*相關資訊*
+
+xref:reference_stack_requirements.adoc[堆疊需求]

@@ -1,0 +1,76 @@
+---
+permalink: aix/task_viewing_the_access_control_permission.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, access, control, permission 
+summary: 您可以執行SnapDrive 下列命令來檢視存取控制權限：flexconfig access show命令。 
+---
+= 檢視存取控制權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行「SnapDrive View config access show」命令來檢視存取控制權限。
+
+.步驟
+. 執行「SnapDrive 效能分析存取show」命令。
++
+此命令的格式如下：SnapDrive 「不完整組態存取｛show | list｝filername」
+
++
+無論您輸入命令的「顯示」或「清單」版本、都可以使用相同的參數。
+
++
+此命令列會檢查儲存系統快顯通知、以判斷主機擁有哪些權限。根據輸出結果、此儲存系統上主機的權限會全部快照。
+
++
+[listing]
+----
+# snapdrive config access show toaster
+This host has the following access permission to filer, toaster:
+SNAP ALL
+Commands allowed:
+snap create
+snap restore
+snap delete
+snap rename
+#
+----
++
+在此範例中、權限檔案不在儲存系統上、SnapDrive 所以針對UNIX而言、將檢查「snapdrive.conf」檔案中的變數「_all-access-if-RBAC未指定」、以判斷主機擁有哪些權限。此變數設為「開啟」、相當於建立權限檔案、並將存取層級設為「所有存取」。
+
++
+[listing]
+----
+# snapdrive config access list toaster
+This host has the following access permission to filer, toaster:
+ALL ACCESS
+Commands allowed:
+snap create
+snap restore
+snap delete
+snap rename
+storage create
+storage resize
+snap connect
+storage connect
+storage delete
+snap disconnect
+storage disconnect
+clone split estimate
+clone split start
+#
+----
++
+此範例顯示如果儲存系統快顯通知中沒有權限檔案、您會收到的訊息類型、而在「snapdrive.conf」檔案中的變數「_all-access-if-RBAC未指定」會設為「Off」。
+
++
+[listing]
+----
+# snapdrive config access list toaster
+Unable to read the access permission file on filer, toaster. Verify that the
+file is present.
+Granting no permissions to filer, toaster.
+----
+

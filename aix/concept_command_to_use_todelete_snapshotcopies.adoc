@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_command_to_use_todelete_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, delete, snapshot, copy 
+summary: 使用SnapDrive 「Shapshot DELETE」命令刪除Snapshot複本。 
+---
+= 用於刪除Snapshot複本的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「SnapDrive Snapshot DELETE」命令刪除Snapshot複本。
+
+「不執行快照刪除」命令會從儲存系統中移除您指定的Snapshot複本。SnapDrive此命令不會在主機上執行任何作業。如果您有權限、它只會從儲存系統移除Snapshot複本。（如果您想保留LUN和對應。）

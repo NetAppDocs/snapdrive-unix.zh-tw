@@ -1,0 +1,59 @@
+---
+permalink: linux-administration/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager, native, lvm2 
+summary: 在Linux上、Volume Manager是原生LVM2。 
+---
+= 適用於SnapDrive UNIX的Volume Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Linux上、Volume Manager是原生LVM2。
+
+下表說明主機平台上的Volume Manager：
+
+|===
+| 主機 | Volume管理程式 | 磁碟區或磁碟群組 | 邏輯磁碟區的位置 | 多重路徑裝置的位置 
+
+
+ a| 
+RHEL 4與RHEL 5
+ a| 
+原生LVM2
+ a| 
+Volume Groups（磁碟區群組
+ a| 
+開發/繪圖器/DGNAME - lvolname'
+ a| 
+dev/mpath /dev/mapper /dm
+
+
+
+ a| 
+RHEL 6
+ a| 
+原生LVM2
+ a| 
+Volume群組為"vg」
+ a| 
+開發/繪圖器/DGNAME - lvolname'
+ a| 
+dev/mapper /dm
+
+
+
+ a| 
+SLES 10和SLES 11
+ a| 
+原生LVM2
+ a| 
+Volume群組為"vg」
+ a| 
+開發/繪圖器/DGNAME - volname'
+ a| 
+dev/mapper /dm
+
+|===

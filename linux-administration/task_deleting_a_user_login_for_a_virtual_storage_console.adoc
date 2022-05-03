@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/task_deleting_a_user_login_for_a_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, login, user, virtual, console, storage 
+summary: 您可以執行SnapDrive 下列命令、刪除虛擬介面的使用者登入資訊： 
+---
+= 刪除虛擬儲存主控台的使用者登入
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行「SnapDrive show config DELETE」命令、刪除使用者登入虛擬介面。
+
+請確定您已在vCenter中設定虛擬儲存主控台。
+
+.步驟
+. 輸入下列命令：
++
+《* SnapDrive 》鏡像刪除applie_name*
+
++
+「_apple_name_」是虛擬介面系統的名稱或IP位址。
+
++
+適用於UNIX的解決方法會移除您所指定虛擬介面的使用者名稱或密碼登入資訊。SnapDrive
+
++
+
+NOTE: 若要讓SnapDrive UNIX版的支援功能存取虛擬介面、您必須指定新的使用者登入。
+
+

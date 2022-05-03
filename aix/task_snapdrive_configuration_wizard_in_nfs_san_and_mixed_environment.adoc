@@ -1,0 +1,168 @@
+---
+permalink: aix/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, wizard 
+summary: 組態精靈可讓您在NFS、SAN或混合式環境中進行設定。 
+---
+= 使用SnapDrive 「功能組態精靈」
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+組態精靈可讓您在NFS、SAN或混合式環境中進行設定。
+
+
+
+== 在NFS環境中設定的步驟
+
+以下是在NFS環境中設定的步驟。
+
+.步驟
+. 選取* NFS*設定檔。
+. 啟用Protection Manager整合。
++
+** 選取「Yes（是）」以使用DataFabric Manager啟用存取權限檢查。
++
+*** 輸入DataFabric Manager伺服器名稱或IP位址、然後輸入使用者名稱和密碼。
+*** 輸入「http / https」連接埠以與DataFabric Manager通訊。預設值為「8088」。
+*** 輸入SSL伺服器連接埠以存取DataFabric Manager。預設值為「8488」。
+*** 啟用已啟用的HTTPS、以便與DataFabric Manager通訊。
+
+
+** 選取「No」（否）以使用RBAC來啟用存取權限檢查。
+
+
+. 指定角色型存取控制方法。可能的值包括「原生」和「dFM」。
++
+** 選取「原生」、使用儲存在「/vol/vol0/sdprbac/sdhost-name.prbac'」或「/vol/vol0/sdprbac/sdgenericname.prbac"中的控制檔來檢查主機的存取權限。
+** 選取「dFM」以使用Operations Manager主控台檢查存取權限。
+
+
++
+
+NOTE: 如果您在未設定DataFabric Manager的情況下、選取「dFM」作為「RBAC方法」、則會顯示一則警告訊息、指出在未啟用Protection Manager整合的情況下、RBAC方法會被選取為「dFM」。
+
+. 指定「https」或「http」來與儲存系統通訊。
+. 最後一步是將組態變更儲存在「snapdrive.conf」檔案中、然後重新啟動精靈。
++
+** 如果您選取「Yes」（是）、SnapDrive 則會重新啟動此程式、並反映組態變更。
+** 如果您選取「否」、變數值會在「snapdrive.conf」檔案中變更、但變更不會反映出來。
+
+
+
+
+
+
+== 在SAN環境中設定的步驟
+
+以下是在SAN環境中進行設定的步驟。
+
+.步驟
+. 選取SAN設定檔。
+. 選取所需的傳輸傳輸協定。
++
+** 選取「FCP」以設定預設傳輸。
+** 選取「iSCSI」以設定預設傳輸。
+
+
+. 選取SAN儲存堆疊（結合MPIO解決方案、Volume Manager和檔案系統）。選項包括「原生」、「甚者」及「無」。
++
+不支援Veritas for iSCSI傳輸傳輸協定。SnapDrive
+
+. 啟用Protection Manager整合。
++
+** 選取「Yes（是）」以使用DataFabric Manager啟用存取權限檢查。
++
+*** 輸入DataFabric Manager伺服器名稱或IP位址、然後輸入使用者名稱和密碼。
+*** 輸入「http / https」連接埠以與DataFabric Manager通訊。預設值為「8088」。
+*** 輸入SSL伺服器連接埠以存取DataFabric Manager。預設值為「8488」。
+*** 啟用已啟用的HTTPS、以便與DataFabric Manager通訊
+
+
+** 選取「No」（否）以使用RBAC來啟用存取權限檢查。
+
+
+. 指定角色型存取控制方法。可能的值包括「原生」和「dFM」。
++
+** 選取「原生」以使用儲存在「/vol/vol0/sdprbac/sdhost-name.prbac」或「/vol/vol0/sdprbac/ssdgenericname.prbac」中的控制檔來檢查主機的存取權限。
+** 選取「dFM」以使用Operations Manager檢查存取權限。
+
+
++
+
+NOTE: 如果您在未設定DataFabric Manager的情況下、選取「dFM」作為「RBAC方法」、則會顯示一則警告訊息、指出在未啟用Protection Manager整合的情況下、RBAC方法會被選取為「dFM」。
+
+. 指定「https」或「http」來與儲存系統通訊。
+. 最後一步是將組態變更儲存在「snapdrive.conf」檔案中、然後重新啟動精靈。
++
+** 如果您選取「Yes」（是）、SnapDrive 則會重新啟動此程式、並反映組態變更。
+** 如果您選取「否」、變數值會在「snapdrive.conf」檔案中變更、但變更不會反映出來。
+
+
+
+
+
+
+== 在混合SAN和NFS環境中設定的步驟
+
+以下是在混合SAN和NFS環境中進行設定的步驟。
+
+.步驟
+. 選取「混合」設定檔。
+. 選取所需的傳輸傳輸協定。
++
+** 選取「FCP」以設定預設傳輸。
+** 選取「iSCSI」以設定預設傳輸。
+
+
+. 選取SAN儲存堆疊（結合MPIO解決方案、Volume Manager、檔案系統）。選項包括「原生」、「甚者」及「無」。
++
+不支援Veritas for iSCSI傳輸傳輸協定。SnapDrive
+
+. 啟用Protection Manager整合。
++
+** 選取「Yes（是）」以使用DataFabric Manager啟用存取權限檢查
++
+*** 輸入DataFabric Manager伺服器名稱或IP位址、然後輸入使用者名稱和密碼。
+*** 輸入「http / https」連接埠以與DataFabric Manager通訊。預設值為「8088」。
+*** 輸入SSL伺服器連接埠以存取DataFabric Manager。預設值為8488。
+*** 啟用已啟用的HTTPS、以便與DataFabric Manager通訊。
+
+
+** 選取「No」（否）以使用RBAC來啟用存取權限檢查。
+
+
+. 指定角色型存取控制方法。可能的值包括「原生」和「dFM」。
++
+** 選取「原生」、使用儲存在「/vol/vol0/sdprbac/sdhost-name.prbac'」或「/vol/vol0/sdprbac/sdgenericname.prbac"中的控制檔來檢查主機的存取權限
+** 選取「dFM」以使用Operations Manager主控台檢查存取權限。
+
+
++
+
+NOTE: 如果您在未設定DataFabric Manager的情況下、選取「dFM」作為「RBAC方法」、則會顯示一則警告訊息、指出在未啟用Protection Manager整合的情況下、RBAC方法會被選取為「dFM」。
+
+. 指定「https」或「http」來與儲存系統通訊。
+. 最後一步是將組態變更儲存在「snapdrive.conf」檔案中、然後重新啟動精靈。
++
+** 如果您選取「Yes」（是）、SnapDrive 則會重新啟動此程式、並反映組態變更。
+** 如果您選取「否」、變數值會在「snapdrive.conf」檔案中變更、但變更不會反映出來。
+
+
+
+
+可修改「snapdrive.conf」檔案中的下列變數。SnapDrive
+
+* 「contact-http-dfm-port_」
+* 「contact-SSL-DFM-port_」
+* 「_US-https-to - dfm_」
+* 缺省傳輸
+* 「_US-https-to -filer_」
+* fstype_'
+* 多重路徑類型_
+* vmtype_'
+* 「_RBAC方法」
+* 「_RBAC快取」
+

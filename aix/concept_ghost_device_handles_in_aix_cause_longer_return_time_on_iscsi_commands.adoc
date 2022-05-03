@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_ghost_device_handles_in_aix_cause_longer_return_time_on_iscsi_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, ghost, device, aix, handle, iscsi, command, return 
+summary: 透過iSCSI或具有Ghost裝置處理\（裝置在已定義或故障狀態中處理\）的FC查詢AIX裝置、可能會導致SCSI命令等待AIX預設逾時（約30秒）。 
+---
+= AIX中的Ghost裝置處理會導致iSCSI命令的傳回時間延長
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過iSCSI或FC查詢具有Ghost裝置控點（裝置處理在已定義或故障狀態）的AIX裝置、可能會導致SCSI命令等待約30秒的AIX預設逾時時間。
+
+如果FC子裝置控點未清理、或FC HBA未連接至交換器、您可以在將AIX系統從使用FC切換為使用iSCSI之後看到此問題。
+
+*因應措施：*
+
+* 如果光纖通道HBA未連接至交換器、請在所有未連接至光纖通道交換器的光纖通道啟動器上安裝光纖通道IOA包覆式插件。
+* 如果光纖通道HBA連接到交換器、但有故障或已定義為子裝置的裝置處理、請使用「rmmev'命令移除過時的GhostDevice處理。
+

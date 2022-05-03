@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_storageoperations_acrossmultiple_storagesystem_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, volume, operation, multiple 
+summary: 只要作業不處理邏輯Volume Manager（LVM\）、UNIX版的支援功能就能在多個儲存系統磁碟區上執行許多儲存作業。SnapDrive這可讓您處理多個儲存系統磁碟區中的LUN清單。 
+---
+= 跨多個儲存系統磁碟區的儲存作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您在多個儲存系統磁碟區上執行許多儲存作業、只要作業不處理邏輯Volume Manager（LVM）即可。SnapDrive這可讓您處理多個儲存系統磁碟區中的LUN清單。

@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_aix_mpio_cfmode_support_limited_sdu.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, aix, mpio, support, limited 
+summary: FC IBM AIX主機公用程式的MPIO環境對cfmodes的支援有限。如果您執行Data ONTAP 的是隻支援單一映像或cfmode的支援。使用支援的是僅有單一映像cfmode和合作夥伴cfmode的支援版本。Data ONTAP 
+---
+= （AIX）MPIO模式支援有限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC IBM AIX主機公用程式的MPIO環境對cfmodes的支援有限。如果您執行Data ONTAP 的是隻支援單一映像或cfmode的支援。使用支援的是僅有單一映像cfmode和合作夥伴cfmode的支援版本。Data ONTAP

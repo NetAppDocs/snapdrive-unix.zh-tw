@@ -1,0 +1,33 @@
+---
+permalink: solaris/reference_configuration_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, line, command 
+summary: UNIX指令的適用功能可用於組態作業。SnapDrive 
+---
+= 組態命令列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX指令的適用功能可用於組態作業。SnapDrive
+
+下列命令列選項可用於組態作業。
+
+* 「SnapDrive 此功能可存取｛show | list｝_filername_」
+* 《核對LUN的組態》SnapDrive
+* 「SnapDrive 此功能可刪除_apply_name [apply_name...]_]
+* 《組態清單》SnapDrive
+* 「SnapDrive 組態集（-DFM）_user_name_ applet_name [apply_name...]」
+* 「SnapDrive 此組態集[-viadmin]_user_name viadmin_name_'
+* 「SnapDrive 支援組態顯示_[host_file_name]_」
+* 《不確定組態檢查叢集》SnapDrive
+* 「SnapDrive 支援組態：準備LUN -計數[-DEVICETYPE｛shared| Dedicated｝]」
+* 「SnapDrive 此功能可協助您移轉設定_storage、system、name new_storage、system、name_
+* 「SnapDrive Singconfig移轉刪除_new_storage系統名稱[new_storage系統名稱...]_'
+* 《不保存組態移轉清單》SnapDrive
+* 「SnapDrive 功能組新增igroup_name檔案名稱[filername...]」
+* 《SnapDrive 由零件組刪除檔案名稱[filername...]》
+* 《路由清單》SnapDrive
+

@@ -1,0 +1,32 @@
+---
+permalink: solaris/concept_unable_to_start_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, daemon, error 
+summary: 精靈在SnapDrive 執行過程中發現少數過時項目時、就無法啟動精靈。 
+---
+= 無法啟動精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+精靈在SnapDrive 執行過程中發現少數過時項目時、就無法啟動精靈。
+
+當精靈啟動或重新啟動時、會出現下列錯誤訊息。
+
+[listing]
+----
+Starting snapdrive daemon: snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+Unable to start daemon...check daemon log file for more details
+----
+在精靈重新啟動/啟動作業期間、您可能會遇到韌的SnapDrive 停止程序項目、導致精靈失敗。
+
+此問題的因應措施是執行下列動作：
+
+* 手動刪除SnapDrive 整個過程中的過時項目。
+* 尋找主機可用的可用連接埠。然後在「sfapdrive.conf」檔案中、在選項「_contact-http-port-sdU-daemon_」中指定連接埠。
+

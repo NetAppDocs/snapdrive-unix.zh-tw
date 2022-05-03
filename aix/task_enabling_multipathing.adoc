@@ -1,0 +1,164 @@
+---
+permalink: aix/task_enabling_multipathing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, multipathing, hba 
+summary: 若要在SnapDrive UNIX中使用多重路徑、您必須完成安裝和啟動HBA的步驟。如果您使用的是非NetApp多重路徑解決方案、則必須從HBA廠商的網站下載軟體與應用程式套件。 
+---
+= 啟用多重路徑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要在SnapDrive UNIX中使用多重路徑、您必須完成安裝和啟動HBA的步驟。如果您使用的是非NetApp多重路徑解決方案、則必須從HBA廠商的網站下載軟體與應用程式套件。
+
+您的系統必須執行目前版本的FC和iSCSI系統元件。
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]
+
+.步驟
+. 安裝適當的主機公用程式軟體之前、請先安裝支援的HBA。
++
+
+NOTE: 適用於UNIX的支援多廠商HBA。SnapDrive
+
+. 啟動HBA服務。
++
+如果HBA服務未執行、當您執行SnapDrive 支援UNIX的指令時、會顯示下列錯誤訊息、例如「SnapDrive 不支援儲存的建立」和SnapDrive 「不支援的組態準備LUN」：
+
++
+[listing]
+----
+0001-876 Admin error: HBA assistant not found
+----
++
+您必須驗證所需的路徑數目是否已啟動並正在執行。您可以使用主機公用程式軟體隨附的sanlun公用程式來驗證路徑。例如、在FC多重路徑組態中、您可以使用「暫停FCP show介面卡-v」命令。
+
++
+在下列範例中、有兩個HBA連接埠（fcd0和fcd1）連接至運作中的主機（連接埠狀態）。您只能擁有一個HBA或iSCSI啟動器、而且必須提供多個路徑來設定多重路徑、才能通往目標LUN。
+
++
+[listing]
+----
+# sanlun fcp show adapter -v
+adapter name: fcd0
+WWPN: 50060b000038c428
+WWNN: 50060b000038c429
+driver name: fcd
+model: A6826A
+model description: Fibre Channel Mass Storage Adapter
+(PCI/PCI-X)
+serial number: Not Available
+hardware version: 3
+driver version: @(#) libfcd.a HP Fibre Channel
+ISP 23xx & 24xx Driver B.11.23.04
+/ux/core/isu/FCD/kern/src/common/wsio/fcd_init.c:Oct 18
+2005,08:19:50
+firmware version: 3.3.18
+Number of ports: 1 of 2
+port type: Fabric
+port state: Operational
+supported speed: 2 GBit/sec
+negotiated speed: 2 GBit/sec
+OS device name: /dev/fcd0
+adapter name: fcd1
+WWPN: 50060b000038c42a
+WWNN: 50060b000038c42b
+driver name: fcd
+model: A6826A
+model description: Fibre Channel Mass Storage Adapter
+(PCI/PCI-X)
+serial number: Not Available
+hardware version: 3
+driver version: @(#) libfcd.a HP Fibre Channel
+ISP 23xx & 24xx Driver B.11.23.04
+/ux/core/isu/FCD/kern/src/common/wsio/fcd_init.c:Oct 18
+2005,08:19:50
+firmware version: 3.3.18
+Number of ports: 2 of 2 port type: Fabric
+port state: Operational
+supported speed: 2 GBit/sec
+negotiated speed: 2 GBit/sec
+OS device name: /dev/fcd1
+----
++
+如果在主機上啟用多重路徑、則相同LUN的多個路徑會顯示出來。您可以使用「左LUN show all」命令來驗證路徑。在下列範例中、您可以找到多個路徑、指向同一個LUN（「fish：/vol/vol1/LUN」）：
+
++
+[listing]
+----
+filer:         lun-pathname        device filename  adapter    protocol   lun size              lun state
+    filer_1:        fish/vol/vol1/l1      hdisk36          fcs0       FCP       5m   (5242880)        GOOD
+    filer_2:        fish/vol/vol0/lunKr   hdisk39          fcs0       FCP       100m (104857600)      GOOD
+    filer_3:        fish/vol/vol0/testaix hdisk2           fcs0       FCP       200m (209715200)      GOOD
+    filer_4:        fish/vol/vol1/l1      hdisk45          fcs1       FCP       5m   (5242880)        GOOD
+----
+. 在FC組態中、使用交換器分區組態來分區主機HBA連接埠和目標連接埠。
+. 安裝並設定適當的FC或iSCSI交換器。
+. 檢查SnapDrive UNIX堆疊需求的功能。
+. 安裝或升級SnapDrive 適用於UNIX的功能。
+. 驗SnapDrive 證UNIX版的安裝過程。
+. 找到「snapdrive.conf」檔案路徑。
+. 在「snapdrive.conf（檔案）”中設定下列組態變數：
++
+** 多重路徑類型_
+** 缺省傳輸
+** fstype_'
+** vmtype_'
++
+對於每個主機、多重路徑類型、傳輸類型、檔案系統和Volume Manager類型彼此相依。下表說明所有可能的組合：
+
+
+
++
+|===
+| 主機平台 | 預設傳輸類型 | 多重路徑類型 | FSType | vmtype 
+
+
+ a| 
+AIX
+ a| 
+FCP
+ a| 
+絕對
+ a| 
+JFS2或jfs
+ a| 
+LVM
+
+
+
+ a| 
+nativempio
+ a| 
+JFS2或jfs
+ a| 
+LVM
+
+
+
+ a| 
+DMP
+ a| 
+VxFS
+ a| 
+VxVM
+
+|===
++
+上表提供了所支援的「多重路徑類型」、「預設傳輸」、「_fstype_」及「_vmtype_」組態變數值。
+
+. 儲存「snapdrive.conf」檔案。
++
+UNIX版的還原功能會在每次啟動時自動檢查此檔案。SnapDrive您必須重新啟動SnapDrive UNIX版的功能、變更才會生效。
+
+
+
+*相關資訊*
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《AIX Host Utilities 6.0安裝與設定指南》"]

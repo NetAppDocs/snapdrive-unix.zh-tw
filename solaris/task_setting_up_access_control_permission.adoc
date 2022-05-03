@@ -1,0 +1,65 @@
+---
+permalink: solaris/task_setting_up_access_control_permission.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, access, control, permission 
+summary: 您可以SnapDrive 在儲存系統的根Volume中建立特殊目錄和檔案、以設定UNIX版的存取控制權限。 
+---
+= 設定存取控制權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以SnapDrive 在儲存系統的根Volume中建立特殊目錄和檔案、以設定UNIX版的存取控制權限。
+
+請確定您以root使用者身分登入。
+
+.步驟
+. 在目標儲存系統的根磁碟區中建立目錄「shdprbac」。
++
+讓根磁碟區存取的方法之一、是使用NFS掛載磁碟區。
+
+. 在「shdprbac」目錄中建立權限檔案。請確認下列陳述正確無誤：
++
+** 檔案必須命名為「shDhost-name.prbac」、其中host-name是您指定存取權限的主機名稱。
+** 檔案必須是唯讀的、才能確保SnapDrive UNIX版的功能能夠讀取、但無法修改。
+
+
++
+若要授予名稱為dev-sun1的主機存取權限、您可以在儲存系統上建立下列檔案：「/vol/vol1/sdprbac/sddev-sun1.prbac'
+
+. 在該主機的檔案中設定權限。
++
+您必須針對檔案使用下列格式：
+
++
+** 您只能指定一層權限。若要讓主機完整存取所有作業、請輸入字串all存取。
+** 權限字串必須是檔案中的第一件事。如果權限字串不在第一行中、則檔案格式無效。
+** 權限字串不區分大小寫。
+** 權限字串前面不得有空格。
+** 不允許任何意見。
++
+這些有效的權限字串允許下列存取層級：
+
+** 無：主機無法存取儲存系統。
+** Snapcreate：主機可以建立Snapshot複本。
+** SnapUse（快照使用）-主機可以刪除並重新命名Snapshot複本。
+** Snapall：主機可以建立、還原、刪除及重新命名Snapshot複本。
+** Storage create DELETE（儲存設備建立刪除）：主機可以建立、調整大小及刪除儲存設備。
+** 儲存設備用途：主機可連接和中斷儲存設備連線、也可在儲存設備上執行實體複本分割預估和實體複本分割。
+** 儲存設備：主機可建立、刪除、連線及中斷儲存設備連線、也可在儲存設備上執行實體複本分割預估和實體複本分割。
+** All access-主機可存取上述SnapDrive 所有的UNIX作業。
++
+每個權限字串都是獨立的。如果您指定SnapUse、主機可以刪除或重新命名Snapshot複本、但無法建立Snapshot複本、或還原或執行任何儲存資源配置作業。
+
++
+無論您設定的權限為何、主機都能執行show和list作業。
+
+
+
+. 輸入下列命令來驗證存取權限：
++
+「* SnapDrive 」此功能可存取show _filer_name_*
+
+

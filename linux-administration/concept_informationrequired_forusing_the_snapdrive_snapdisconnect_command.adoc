@@ -1,0 +1,98 @@
+---
+permalink: linux-administration/concept_informationrequired_forusing_the_snapdrive_snapdisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, disconnect, lun, disk, file 
+summary: 若要中斷Snapshot複本的連線、請指定要使用的儲存實體類型、例如LUN、磁碟群組、檔案系統、 或主機磁碟區。 
+---
+= 使用SnapDrive 「停止連結」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要中斷Snapshot複本的連線、請指定要使用的儲存實體類型、例如LUN、磁碟群組、檔案系統、 或主機磁碟區。
+
+下表提供使用「SnapDrive 中斷連結」命令時所需提供的資訊。
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+LUN（`-LUN _file_spec_`）
+ a| 
+LUN的名稱（_Name）。包括檔案管理器、磁碟區和LUN的名稱。_
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_`）或磁碟區群組（`-vg _file_spec_`）
+ a| 
+磁碟或磁碟區群組的名稱_
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+文件系統名稱
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機或邏輯Volume的名稱_
+
+
+
+ a| 
+指定要用來中斷Snapshot複本連線的儲存實體類型、並以適當的引數提供該實體的名稱。
+
+這是「_file_spec_」引數的值。
+
+
+
+ a| 
+「-full」
+ a| 
+~
+
+
+
+ a| 
+如果您想SnapDrive 讓UNIX從Snapshot複本中斷物件的連線、即使命令列上的主機端實體有其他實體（例如具有一或多個主機磁碟區的磁碟群組）、請在命令列中加入-full選項。如果不包含此選項、則只能指定空白的主機端實體。
+
+
+
+ a| 
+「-fstype-
+ a| 
+`_type_'
+
+
+
+ a| 
+vmtype
+ a| 
+`_type_'
+
+
+
+ a| 
+選用：指定要使用的檔案系統和Volume Manager類型。
+
+
+
+ a| 
+「分割」
+ a| 
+~
+
+
+
+ a| 
+可在Snapshot連線和Snapshot中斷作業期間分割複製的磁碟區或LUN。
+
+|===

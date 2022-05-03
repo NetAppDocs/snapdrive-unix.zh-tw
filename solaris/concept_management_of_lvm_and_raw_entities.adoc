@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_management_of_lvm_and_raw_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vxvm, raw, entity, manage 
+summary: UNIX版的支援功能可讓您管理VxVM\（Veritas Volume Manager）和原始實體。SnapDrive適用於UNIX的支援也提供命令、協助您在建立儲存實體時配置及管理儲存設備。SnapDrive 
+---
+= 管理VxVM/原始實體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您管理VxVM(VVeritas Volume Manager）和原始實體。SnapDrive適用於UNIX的支援也提供命令、協助您在建立儲存實體時配置及管理儲存設備。SnapDrive

@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume, restore, storage 
+summary: 適用於UNIX及更新版本的支援功能、可在磁碟區層級提供Snapshot還原功能。SnapDrive這將說明您可以使用磁碟區型Snapshot還原來執行的各種儲存作業。 
+---
+= Volume型SnapRestore 的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX及更新版本的支援功能、可在磁碟區層級提供Snapshot還原功能。SnapDrive這將說明您可以使用磁碟區型Snapshot還原來執行的各種儲存作業。

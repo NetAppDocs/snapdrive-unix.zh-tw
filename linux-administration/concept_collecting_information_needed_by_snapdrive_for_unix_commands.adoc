@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_collecting_information_needed_by_snapdrive_for_unix_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, collect 
+summary: 本章提供SnapDrive 有關UNIX版指令的資訊、格式、選項、關鍵字和範例。 
+---
+= 收集SnapDrive UNIX命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本章提供SnapDrive 有關UNIX版指令的資訊、格式、選項、關鍵字和範例。

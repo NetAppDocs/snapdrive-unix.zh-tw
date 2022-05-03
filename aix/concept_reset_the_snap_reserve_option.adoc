@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_reset_the_snap_reserve_option.html 
+sidebar: sidebar 
+keywords: reset, snap, snapdrive, reserve, option 
+summary: 在光纖通道（FC）或網際網路小型電腦系統介面（iSCSI）環境中使用Data ONTAP 時、您應該將包含SnapDrive UNIX LUN之用的所有儲存系統磁碟區的SnapReserve選項重設為零。 
+---
+= 重設SnapReserve選項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在光纖通道（FC）或網際網路小型電腦系統介面（iSCSI）環境中使用Data ONTAP 時、您應該將包含SnapDrive UNIX LUN之用的所有儲存系統磁碟區的「nap Reserve」（快照保留）選項重設為零。
+
+根據預設Data ONTAP 、適用於歇歇歇的選項是20%。

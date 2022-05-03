@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_volume_based_snap_restore_operation_fails_in_slave_node.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore, fail, slave, mode 
+summary: 在Solaris上使用SFRAC時、從磁碟區型SnapRestore（vbsr\）作業會在從節點中失敗。 
+---
+= 從屬節點中的Volume型SnapRestore作業失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Solaris上使用SFRAC時、從磁碟區型快照還原（vbsr）作業會在從節點中失敗。
+
+UNIX版顯示下列錯誤訊息。SnapDrive
+
+[listing]
+----
+Status call to SDU daemon failed
+----
+
+
+== 因應措施
+
+在使用"-vbsr"選項運行"nap還原"命令時，必須確保在從屬節點上使用"-force"和"-nopromp"選項。

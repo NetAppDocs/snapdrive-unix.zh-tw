@@ -1,0 +1,37 @@
+---
+permalink: solaris/concept_features_supported_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, feature, support, unix 
+summary: 您可以在SnapDrive 適用於UNIX的支援功能和組態中找到相關資訊。 
+---
+= 支援UNIX的功能SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在SnapDrive 適用於UNIX的支援功能和組態中找到相關資訊。
+
+適用於Unix的支援功能如下：SnapDrive
+
+* 適用於UNIX組態檢查程式SnapDrive
+* 角色型存取控制（RBAC）權限
+* UNIX適用精靈SnapDrive
+* 增強的複製分割作業
+* 建立及使用Snapshot複本
+* Volume型SnapRestore 的功能（VBRSR）
+* 命令列介面（CLI）選項
+* 資料收集公用程式
+* 已修改SnapDrive 支援儲存系統的系統名稱、以利執行各種操作
+* 透明處理磁碟區移轉和適用於VFiler的NetAppDataMotion所造成的錯誤；使用適當的組態變數來控制相同的錯誤
+* 支援Linux和Solaris x86客體作業系統中的Fibre Channel RDM LUN
+* 支援SnapDrive Solaris x86架構中原始LUN和原始檔案系統上的支援
+
+
+
+NOTE: 有關UNIX版的最新SnapDrive 資訊及其需求、請參閱互通性對照表。
+
+*相關資訊*
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

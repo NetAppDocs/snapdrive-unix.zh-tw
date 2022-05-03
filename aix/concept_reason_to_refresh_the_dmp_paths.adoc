@@ -1,0 +1,36 @@
+---
+permalink: aix/concept_reason_to_refresh_the_dmp_paths.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, dmp, path, refresh 
+summary: 在具有FC和DMP組態的主機上、SnapDrive 可以暫停使用「flex不要 儲存設備刪除- LUN」命令。 
+---
+= 重新整理DMP路徑的理由
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在具有FC和DMP組態的主機上、「SnapDrive 停止儲存刪除- LUN」命令可能會掛起。
+
+由於下列元件的安裝或組態不當、命令可能會當機：
+
+* NTAPasl
+* Veritas堆疊（儲存基礎）
+* 多重路徑授權
+
+
+啟用、停用或新增任何FC路徑之後、您必須正確重新整理DMP路徑資訊。若要重新整理DMP路徑、請依照下列順序執行下列命令。
+
+|===
+| *平台* | *命令* 
+
+
+ a| 
+AIX
+ a| 
+* 《cfgmg
+* "vxdisk scandon"
+
+
+|===

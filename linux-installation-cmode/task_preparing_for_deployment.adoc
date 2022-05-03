@@ -1,0 +1,29 @@
+---
+permalink: linux-installation-cmode/task_preparing_for_deployment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, prepare, deployment, host, requirements 
+summary: 安裝SnapDrive 適用於UNIX的主機必須符合特定的軟體、硬體、瀏覽器、資料庫和作業系統需求。如需有關需求的詳細資訊、請參閱互通性對照表工具。 
+---
+= 準備部署
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝SnapDrive 適用於UNIX的主機必須符合特定的軟體、硬體、瀏覽器、資料庫和作業系統需求。如需有關需求的詳細資訊、請參閱互通性對照表工具。
+
+. 確認您擁有所需的授權。
+. 驗SnapDrive 證您的組態是否支援此功能。
+. 驗證您的Linux主機是否符合SnapDrive 需求。
+
+
+*相關資訊*
+
+xref:reference_snapdrive_licensing.adoc[適用於UNIX授權需求SnapDrive]
+
+xref:reference_supported_configurations.adoc[支援的組態]
+
+xref:reference_linux_host_requirements.adoc[Linux 主機需求]
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]

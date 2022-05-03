@@ -1,0 +1,144 @@
+---
+permalink: aix/reference_command_line_keywords.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, line, keyword 
+summary: UNIX版的支援使用關鍵字來指定主機磁碟群組、目的地群組、Volume或FlexClone、NFS檔案、SnapDrive 儲存系統等。 
+---
+= 命令列關鍵字
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援使用關鍵字來指定主機磁碟群組、目的地群組、Volume或FlexClone、NFS檔案、SnapDrive 儲存系統等。
+
+以下是SnapDrive 您可以搭配使用for UNIX命令的關鍵字。您可以使用它們來指定SnapDrive 適用於UNIX作業的目標。這些關鍵字可以採用一或多個引數。
+
+
+NOTE: 有些LVM是指磁碟群組、有些則是指磁碟區群組。在UNIX版中、這些詞彙被視為同義字。SnapDrive此外、有些LVM是指邏輯磁碟區、有些則是指磁碟區。UNIX版將「主機Volume」一詞視為同義詞（這是為了避免主機邏輯Volume與儲存系統磁碟區混淆而建立的）、而「邏輯Volume」一詞則視為同義詞。SnapDrive
+
+|===
+| 關鍵字 | 此關鍵字使用的引數 
+
+
+ a| 
+「-dg」（相當於「-vg」）
+ a| 
+主機磁碟群組的名稱。您可以使用此選項輸入磁碟群組或磁碟區群組的名稱。
+
+
+
+ a| 
+destdg
+
+「-desthv」
+
+destlv
+
+destvg
+ a| 
+目的地群組或Volume。
+
+
+
+ a| 
+destfv
+ a| 
+在SnapDrive NFS Snapshot連線作業期間、針對以供UNIX使用的功能所建立的Volume Clone、在命令列上指定的FlexClone Volume名稱。
+
+
+NOTE: 此引數僅支援NFS磁碟區、不支援NFS目錄。
+
+
+
+ a| 
+文件
+ a| 
+NFS檔案的名稱。
+
+
+
+ a| 
+文件管理器
+ a| 
+儲存系統的名稱。
+
+
+
+ a| 
+「Filervol」
+ a| 
+儲存系統名稱及其上的磁碟區。
+
+
+
+ a| 
+fs-fs-fs-
+ a| 
+主機上的檔案系統名稱。使用的名稱是目前掛載或掛載檔案系統的目錄（掛載點）。
+
+
+
+ a| 
+「hostvol.」或「-lvol.」
+ a| 
+主機磁碟區名稱、包括內含該磁碟區的磁碟群組。例如、您可以輸入「llarge _vg/accounting_lvol.」。
+
+
+
+ a| 
+「igroup」
+ a| 
+啟動器群組的名稱（igroup）。
+
+NetApp強烈建議您使用SnapDrive 由UNIX所建立的預設igroup、而非在目標儲存系統上指定igroup。預設的igroup是hostname_protocol_Sdig。
+
+* 「_hostname_」是目前主機的本機（非網域限定）名稱。
+* 根據主機使用的傳輸協定、「_PROA__」可以是「FCP」或「iSCSI」。
+
+
+如果igroup hostname_protocol_Sdig不存在、SnapDrive 則UNIX版的支援功能會建立它、並將主機的所有啟動器置於其中。
+
+如果存在且具有正確的啟動器、SnapDrive 則適用於UNIX的功能會使用現有的igroup。
+
+如果igroup存在、但不包含此主機的啟動器、SnapDrive 則適用於UNIX的現象會以不同的名稱建立新的igroup、並在目前的作業中使用該igroup。為了避免使用相同的名稱、SnapDrive 當建立新名稱時、適用於UNIX的功能會包含一個唯一的編號。在此情況下、名稱格式為hostname-number_protocol_Sdig。
+
+如果您提供自己的igroup名稱、SnapDrive 則適用於UNIX的功能無法驗證igroup的內容。這是因為它無法永遠判斷儲存系統上有哪些對應於主機的igroup。
+
+使用此選項來指定啟動器群組的所有命令、都無法接受共用磁碟群組和檔案系統。此選項僅允許用於本機資源。
+
+如果命令列中包含任何外部igroup、則無法執行UNIX版的指令。SnapDrive確保命令列中指定的所有igroup都包含來自本機主機的啟動器。
+
+
+
+ a| 
+LUN
+ a| 
+儲存系統上LUN的名稱。對於使用此關鍵字提供的第一個LUN名稱、您必須提供完整路徑名稱（儲存系統名稱、磁碟區名稱和LUN名稱）。對於其他LUN名稱、您可以只指定其磁碟區內的名稱（如果磁碟區保持不變）、或指定新儲存系統名稱的路徑、或是新的磁碟區名稱（如果您只想切換磁碟區）。
+
+
+NOTE: 在「SnapDrive Sfsnap Connect」命令中、「_LUN_name_」應為「LUN_NAME」或「tree _name/LUN_name」格式。
+
+
+
+ a| 
+"-lvol"或"-hostvol"
+ a| 
+邏輯磁碟區名稱、包括包含它的磁碟區群組。例如、您可以輸入「llarge _vg/accounting_lvol'」作為邏輯Volume名稱。
+
+
+
+ a| 
+快照名稱
+ a| 
+Snapshot複本的名稱。
+
+
+
+ a| 
+「-vg」或「-dg」
+ a| 
+Volume群組的名稱。您可以使用此選項輸入磁碟群組或磁碟區群組的名稱。
+
+|===

@@ -1,0 +1,30 @@
+---
+permalink: aix/task_decompressing_the_downloaded_software.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, decompress, download, software 
+summary: 從SnapDrive NetApp支援網站下載適用於UNIX的解決方案套件之後、您應該解壓縮檔案、將軟體解壓縮以供安裝。 
+---
+= 解壓縮下載的軟體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從SnapDrive NetApp支援網站下載適用於UNIX的解決方案套件之後、您應該解壓縮檔案、將軟體解壓縮以供安裝。
+
+.步驟
+. 在命令列介面（CLI）提示字元中、輸入下列命令：
++
+「*解壓縮NetApp.SnapDrive _AIX_5_2.Z*」
+
++
+如需下載軟體、請參閱NetApp支援網站。
+
+
+
+*相關資訊*
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

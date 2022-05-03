@@ -1,0 +1,18 @@
+---
+permalink: linux-installation-7mode/reference_supported_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, supported, configurations, interoperability 
+summary: 在安裝適用於UNIX的支援功能之前、您應該使用NetApp互通性對照表工具（IMT EDB2）來驗證SnapDrive 支援您的組態。SnapDrive 
+---
+= 支援的組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝適用於UNIX的支援之前、您應該使用NetApp互通性對照表工具IMT （NetApp Interoperability Matrix Tool、簡稱「參考資訊」）來驗證SnapDrive 支援您的組態。SnapDrive
+
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]

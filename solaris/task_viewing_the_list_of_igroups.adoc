@@ -1,0 +1,29 @@
+---
+permalink: solaris/task_viewing_the_list_of_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, list, igroup 
+summary: 您可以檢視主機上設定的所有igroup。 
+---
+= 檢視igroup清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢視主機上設定的所有igroup。
+
+.步驟
+. 在主機系統上輸入下列命令：
++
+《* SnapDrive 》《*路由清單*》
+
++
+[listing]
+----
+snapdrive igroup list
+appliance name   igroup name
+-----------------------------
+toaster        ig
+----
+

@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration 
+summary: 您必須瞭解SnapDrive UNIX版的功能、並瞭解SnapDrive 如何使用適用於UNIX的功能。 
+---
+= 適用於UNIX組態SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解SnapDrive UNIX版的功能、並瞭解SnapDrive 如何使用適用於UNIX的功能。

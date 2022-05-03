@@ -1,0 +1,35 @@
+---
+permalink: linux-installation-cmode/reference_where_to_go_next.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, after, configure, create, copy 
+summary: 設定SnapDrive UNIX版的功能並建立Snapshot複本之後、您可以執行還原作業、連接Snapshot複本、以及建立實體複本。您也可以探索SnapDrive 其他重要的功能、例如角色型存取控制（RBAC）、增強型複製分割、以及Volume型SnapRestore 的功能。 
+---
+= 下一步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定SnapDrive UNIX版的功能並建立Snapshot複本之後、您可以執行還原作業、連接Snapshot複本、以及建立實體複本。您也可以探索SnapDrive 其他重要的功能、例如角色型存取控制（RBAC）、增強型複製分割、以及Volume型SnapRestore 的功能。
+
+如需這些功能的詳細資訊SnapDrive 、以及有關適用於UNIX的版本特定資訊、請參閱NetApp支援網站上的下列文件：
+
+* link:../linux-administration/index.html["適用於Linux *的《UNIX系統管理指南》SnapDrive"]
++
+說明如何在SnapDrive 部署完成後、在UNIX上設定各種功能。主題包括如何設定igroup、為SnapDrive UNIX設定fuse、設定RBAC、以及使用資料收集公用程式來診斷SnapDrive 有關UNIX的問題。
+
+* 連結：../
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2849339["適用於UNIX的發行說明（AIX、Linux和Solaris）SnapDrive"]
++
+說明SnapDrive 適用於UNIX的全新功能、重要注意事項、已知問題及限制。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12471543["適用於Oracle的《適用於UNIX的Oracle安裝與設定指南》（英文）、適用於叢集式的BIOS SnapManager Data ONTAP"]
++
+說明在SnapManager UNIX環境中部署採用叢集模式之Oracle的支援功能時、必須執行的初始工作。主題包括如何安裝及設定產品、以及如何備份資料庫。
+
+* link:https://www.netapp.com/pdf.html?item=/media/16322-tr-4212.pdf["NetApp技術報告4212：SnapDrive 適用於UNIX的最佳實務指南"]
++
+介紹SnapDrive UNIX最佳實務做法的功能。
+
+

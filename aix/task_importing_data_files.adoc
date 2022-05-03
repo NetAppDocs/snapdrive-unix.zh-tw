@@ -1,0 +1,22 @@
+---
+permalink: aix/task_importing_data_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, import, data, file 
+summary: 您可以先下載最新的支援對照表資料、並在執行工具之前更新組態檢查工具、以便工具列出支援SnapDrive 的最新UNIX組態。含更新資料檔案的組態檢查工具會檢查SnapDrive 支援的UNIX組態、並列出系統中所有支援的元件。 
+---
+= 匯入資料檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以先下載最新的支援對照表資料、並在執行工具之前更新組態檢查工具、以便工具列出支援SnapDrive 的最新UNIX組態。含更新資料檔案的組態檢查工具會檢查SnapDrive 支援的UNIX組態、並列出系統中所有支援的元件。
+
+.步驟
+. 從工具箱下載最新的資料檔案。
+. 匯入最新的資料檔案：
++
+"*sdconfcheck import -file ./confine_data.tar.gz*
+
+

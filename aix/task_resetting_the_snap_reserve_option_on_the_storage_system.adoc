@@ -1,0 +1,25 @@
+---
+permalink: aix/task_resetting_the_snap_reserve_option_on_the_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reset, reserve, storage, system 
+summary: 在光纖通道或網際網路小型電腦系統介面（iSCSI\）環境中使用Data ONTAP 時、您應該將儲存系統上的SnapReserve選項重設為零、以便進行磁碟區最佳化。 
+---
+= 重設儲存系統上的SnapReserve選項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在光纖通道或網際網路小型電腦系統介面（iSCSI）環境中使用Data ONTAP 時、您應該將儲存系統的「nap Reserve」（快照保留）選項重設為零、以便進行磁碟區最佳化。
+
+.步驟
+. 從主機或儲存系統主控台執行「telnet」命令、即可存取儲存系統。
+. 輸入下列命令：
++
+'快照保留_vol_name 0_*
+
++
+「vol_name_」是您要設定「nap Reserve」選項的磁碟區名稱。
+
+

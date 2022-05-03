@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_application_consistentsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, application, snapshot, copy 
+summary: 若要建立應用程式一致的Snapshot複本、您應該在Snapshot作業之前停止應用程式。 
+---
+= 應用程式一致的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要建立應用程式一致的Snapshot複本、您應該在Snapshot作業之前停止應用程式。
+
+為了確保Snapshot複本與應用程式一致、您可能需要先停止或執行必要的步驟、以便在執行Snapshot複本之前停止應用程式。請注意、資料庫熱備份功能取決於資料庫管理系統所使用的方法、而且不一定會停止資料庫檔案的I/O。
+
+如果應用程式尚未完成交易並將資料寫入儲存系統、則產生的Snapshot複本可能不符合應用程式的要求。
+
+
+NOTE: 如果您的應用程式可以從損毀一致的Snapshot複本中還原、您就不需要停止它。請參閱應用程式的說明文件。如需取得應用程式一致Snapshot複本的詳細資訊、
+
+每當您新增或移除主機磁碟區、LUN或NFS目錄樹狀結構、或是調整主機磁碟區或檔案系統的大小時、都應該建立新的Snapshot複本。如此可確保您擁有新設定磁碟群組的一致複本、以便在需要還原磁碟群組時使用。

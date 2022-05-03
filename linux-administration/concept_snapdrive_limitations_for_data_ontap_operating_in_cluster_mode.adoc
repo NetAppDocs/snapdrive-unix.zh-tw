@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_snapdrive_limitations_for_data_ontap_operating_in_cluster_mode.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clustered, ontap, limitations, operations 
+summary: 叢集式的不支援某些功能和作業。SnapDrive Data ONTAP 
+---
+= 叢集式的不受限SnapDrive Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+叢集式的不支援某些功能和作業。SnapDrive Data ONTAP
+
+* Vserver的根磁碟區不支援儲存資源配置和Snapshot管理作業。
+* 不支援對檔案規格或LUN執行橫跨Data ONTAP 7-Mode的功能、Data ONTAP 以及在叢集式VMware上執行的儲存系統。
+* 不支援位於掛載點內的符號連結。
+* 必須將包含Vserver Volume的集合體指派給Vserver的Aggregate清單、以設定Vserver並執行SnapDrive 效益測試作業。
+* 適用於UNIX的支援不支援移轉vserver、因為叢集式的無法支援它。SnapDrive Data ONTAP
+* 使用「-readonly」選項的SnapConnect作業只會在主機上掛載「.snapshot」目錄、而不會建立實體複本磁碟區。
++
+在叢集Data ONTAP 式的流通環境中、匯出原則只會在磁碟區層級定義、而不會在目錄層級定義。因此、無法將「.snapshot」目錄匯出至次要主機（父磁碟區上沒有匯出權限的主機）。
+
+* UNIX版不支援從Snapshot複本之前建立的Snapshot複本（當磁碟區處於SnapMirror或SnapMirror作業中時）進行Volume型的功能（VBRSR）作業。SnapDrive SnapRestore SnapVault
+* UNIX版不支援在更新之前建立Snapshot複本的「快照刪除」作業、因為該複本與更新前建立的磁碟區是彼此關聯的（XDP）SnapDrive SnapVault SnapVault 。
+

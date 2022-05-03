@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_methods_fordisplaying_storageinformation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, information, display 
+summary: 為了讓儲存設備的資訊更容易顯示、SnapDrive 適用於UNIX的解決方案提供SnapDrive 多種格式供使用者使用。 
+---
+= 顯示儲存資訊的方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+為了讓儲存設備的資訊更容易顯示、SnapDrive UNIX版的解決方案提供多種格式的「SnapDrive show storage show」命令。
+
+儲存展示作業分為下列一般類別：
+
+* 顯示特定LUN的相關資訊。
+* 列出特定儲存系統或儲存系統磁碟區可用LUN的相關資訊。
+* 顯示與您指定之引數相關聯的LUN相關資訊。
++
+這些引數可以包括NFS實體、檔案系統、主機磁碟區或磁碟群組。如果您在命令提示字元中使用「-verbose」選項、SnapDrive 則適用於UNIX的功能會提供詳細的輸出、例如顯示儲存階層、包括備份LUN。
+
+* 顯示主機已知裝置的相關資訊。
+* 顯示主機已知的所有裝置和LVM實體的相關資訊。
+* 將資源的狀態顯示為「共享」或「專用」。
+

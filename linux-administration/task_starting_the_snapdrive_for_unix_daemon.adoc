@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/task_starting_the_snapdrive_for_unix_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, daemon, unix, start 
+summary: 您必須先啟動並執行SnapDrive for UNIX精靈、才能使用SnapDrive 任何適用於UNIX的指令。 
+---
+= 啟動SnapDrive UNIX精靈的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先啟動並執行SnapDrive for UNIX精靈、才能使用SnapDrive 任何適用於UNIX的指令。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 啟動精靈：
++
+快照的start*
+
+

@@ -1,0 +1,28 @@
+---
+permalink: solaris/task_verifying_that_the_guest_is_ready.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, guest 
+summary: UNIX版的支援必須確保客體已準備好與儲存系統通訊。SnapDrive 
+---
+= 驗證guest虛擬機是否就緒
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援必須確保客體已準備好與儲存系統通訊。SnapDrive
+
+確保適用於VMware vSphere的NetApp虛擬儲存主控台的備份與還原功能已安裝在Windows系統中、並已向vCenter註冊。
+
+NetApp虛擬儲存主控台組態僅適用於RDM FC LUN。
+
+.步驟
+. 輸入下列命令：
++
+`* SnapDrive 《*》組態集-viadmin使用者viadmin_name*》
+
++
+命令完成後、您可以執行「SnapDrive show -all」命令、確認來賓可以與儲存系統通訊。
+
+

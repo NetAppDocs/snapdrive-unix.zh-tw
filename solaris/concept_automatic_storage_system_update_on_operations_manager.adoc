@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_automatic_storage_system_update_on_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, update, operations, manager, console 
+summary: Operations Manager主控台會探索網路上支援的儲存系統。它會定期監控從探索到的儲存系統收集的資料。資料會以設定的時間間隔重新整理。Operations Manager主控台管理員可設定重新整理時間間隔。 
+---
+= Operations Manager主控台上的自動儲存系統更新
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager主控台會探索網路上支援的儲存系統。它會定期監控從探索到的儲存系統收集的資料。資料會以設定的時間間隔重新整理。Operations Manager主控台管理員可設定重新整理時間間隔。
+
+LUN監控時間間隔、qtree監控時間間隔和vFiler監控時間間隔是決定LUN、qtree和vFiler更新頻率的重要欄位。例如、如果在儲存系統上建立新的LUN、則Operations Manager主控台不會立即更新新的LUN。因此、針對該LUN、對Operations Manager主控台的Operations Manager主控台發出存取檢查失敗。為了避免這種情況、您可以修改LUN監控時間間隔、以符合您的需求。
+
+. 在Operations Manager主控台中選取*設定*>*選項*以變更監控時間間隔。
+. Operations Manager主控台管理員也可以在命令列介面中執行「dFM主機探索檔案名稱」、以強制重新整理Operations Manager主控台。
+. Operations Manager主控台管理員也可以將全域群組的「DFM資料庫。Write」功能授予SD-admin、讓SnapDrive UNIX的支援功能在Operations Manager主控台上重新整理儲存系統實體。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+

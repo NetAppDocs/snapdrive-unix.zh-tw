@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_what_flexclone_volumes_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexcone, volume, parent, clone 
+summary: 彈性Volume Clone（FlexClone）是父彈性Volume的時間點複本。FlexClone Volume不會在建立複本之後繼承對父彈性磁碟區所做的變更。 
+---
+= 什麼是FlexClone Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+彈性Volume Clone（FlexClone）是父彈性Volume的時間點複本。FlexClone Volume不會在建立複本之後繼承對父彈性磁碟區所做的變更。
+
+利用NetApp FlexClone技術可即時複寫資料磁碟區、而不需要在建立時額外的儲存空間。Data ONTAP每個複製磁碟區都是透明的虛擬複本、可用於各種作業、例如產品或系統開發測試、錯誤修正、升級檢查等。
+
+FlexClone技術可大幅節省空間、並將成本降至最低。使用這項技術、您可以在較短時間內管理更多資料集組合、同時降低風險。FlexClone Volume預設不會有寫入保留。適用於UNIX的S24.1在NFS和SAN環境中使用FlexClone技術。SnapDrive
+
+
+NOTE: FlexClone Volume可在Data ONTAP 支援的更新版本中使用、但Data ONTAP 不支援在執行支援版本7.2或更新版本的儲存系統上使用vFiler單元。

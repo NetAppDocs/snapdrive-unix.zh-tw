@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_command_syntax_for_disconnectingluns_from_the_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, lun, disconnect, host 
+summary: 若要使用SnapDrive 「停止儲存」命令來移除指定LUN的對應、請使用下列語法。 
+---
+= 用於中斷LUN與主機連線的命令語法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用「SnapDrive 停止儲存設備連線」命令來移除指定LUN的對應、請使用下列語法：
+
+「SnapDrive 停止儲存設備- LUN Long LUN名稱[LUN_name...]」

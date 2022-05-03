@@ -1,0 +1,43 @@
+---
+permalink: linux-installation-cmode/reference_product_overview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, product, overview, summary, unix 
+summary: 適用於UNIX的解決方案是適用於UNIX環境的主機型儲存與資料管理解決方案。SnapDrive適用於UNIX的功能可簡化資料管理、改善資料可用度、並透過簡化的儲存資源配置和檔案系統一致的Snapshot複本來提升應用程式資料的可靠性。SnapDrive 
+---
+= 產品總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的解決方案是適用於UNIX環境的主機型儲存與資料管理解決方案。SnapDrive適用於UNIX的功能可簡化資料管理、改善資料可用度、並透過簡化的儲存資源配置和檔案系統一致的Snapshot複本來提升應用程式資料的可靠性。SnapDrive
+
+您可以將SnapDrive UNIX用作獨立產品、或搭配SnapManager 其他在UNIX上執行的產品。搭配使用支援支援功能的支援功能、可讓您建立應用程式一致的資料備份。SnapDrive SnapManager
+
+
+
+== 重點摘要SnapDrive
+
+適用於UNIX的支援功能可讓您簡化儲存管理工作。SnapDrive您可以使用SnapDrive UNIX版執行的部分工作包括：
+
+* 使用叢集Data ONTAP 式的「Snapshot Snapshot」技術建立Snapshot複本。
++
+適用於UNIX的支援功能可讓您建立及刪除檔案系統、Volume群組、主機Volume或LUN的Snapshot複本、並從Snapshot複本複本複製儲存實體。SnapDrive
+
+* 只需極少或完全不需停機的應用程式或主機、即可配置及管理儲存設備。
++
+UNIX版的支援功能可讓您在主機叢集環境中建立及刪除儲存元件、包括磁碟群組、主機磁碟區、檔案系統及LUN。SnapDrive適用於UNIX的支援也可讓您擴充儲存設備、將儲存設備連接至主機、以及中斷儲存設備與主機的連線。SnapDrive
+
+* 提供角色型存取控制、讓儲存管理員根據SnapDrive 指派的角色、限制使用者可以執行的作業。
+
+
+除了這些主要功能之外SnapDrive 、下列功能還具備下列優勢：
+
+* 增強的複製分割作業
+* Volume型SnapRestore 的功能（VBRSR）
+* 命令列介面（CLI）選項
+* 資料收集公用程式
+* 支援儲存系統重新命名
+* 支援Linux客體作業系統中的Fibre Channel RDM LUN
+

@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, objects, storage, commands 
+summary: 適用於UNIX儲存命令、可透過建立LVM物件來配置LVM實體。SnapDrive 
+---
+= 適用於LVM環境中的UNIX資源配置SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+適用於UNIX儲存命令、可透過建立LVM物件來配置LVM實體。SnapDrive
+
+如果您要求SnapDrive 提供LVM實體的UNIX儲存作業的支援功能（例如、包含主機磁碟區或檔案系統的磁碟群組）、則可使用「SnapDrive fuse storage」命令與LVM搭配使用、以建立使用儲存設備的LVM物件和檔案系統。
+
+在儲存資源配置作業期間、會執行下列動作：
+
+* 主機LVM將儲存系統中的LUN合併成磁碟或磁碟區群組。
++
+然後將儲存設備分割成邏輯磁碟區、就像是原始磁碟裝置、用來儲存檔案系統或原始資料一樣。
+
+* 適用於UNIX的支援功能可與主機LVM整合、以判斷每個磁碟群組、主機磁碟區和檔案系統中、哪些NetApp LUN是Snapshot複本的要求。SnapDrive
++
+由於任何指定主機磁碟區的資料都可以分散到磁碟群組中的所有磁碟、因此Snapshot複本只能針對整個磁碟群組進行製作和還原。
+
+

@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_snap_restore_command_fails_to_mount_the_file_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, command, fail, mount, file 
+summary: 在Solaris上使用SFRAC 5.0時、SnapRestore和SnapConnect命令無法掛載檔案系統。 
+---
+= SnapRestore命令無法掛載檔案系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Solaris上使用SFRAC 5.0時、「nap還原」和「nap Connect」命令無法掛載檔案系統。
+
+在執行Snapshot複本之前、使用者必須在叢集節點上執行下列命令、使用者將在叢集節點上發出「SnapDrive 指令集快照建立」命令：
+
+/`opt/VRTS / bin/fsclusstadm setprimary mount_point'

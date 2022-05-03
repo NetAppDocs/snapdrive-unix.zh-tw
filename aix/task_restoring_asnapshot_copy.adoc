@@ -1,0 +1,46 @@
+---
+permalink: aix/task_restoring_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: 您可以使用SnapDrive 「還原快照」命令來還原Snapshot複本。還原作業可能需要數分鐘的時間、視還原資料的類型和數量而定。 
+---
+= 還原Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 還原快照」命令來還原Snapshot複本。還原作業可能需要數分鐘的時間、視還原資料的類型和數量而定。
+
+.步驟
+. 輸入下列命令以還原Snapshot複本：
++
+hy* SnapDrive 快照還原-snapname _snap_name_｛-LUN |-dg |-FS |- hostvol |-file }檔案_spec [file_spec...] [｛-LUN |-dg |-FS |-hostvol |-file｝_file_spec_[_file_spec_...] [-force [-nodprompel][-mnterts _options_]][{-Reserve |-noreserve}]*
+
+
+
+適用於UNIX的功能可將您在「還原快照還原」命令列中指定的LUN內容、替換為您指定的Snapshot複本中的LUN內容。SnapDrive SnapDrive此作業可能需要數分鐘的時間。當作業完成時SnapDrive 、適用於UNIX的功能將會顯示類似以下訊息：「nap還原<filespec list> sunsed'（nap還原<filespec list>成功）」
+
+在下列範例中、檔案系統1（fs1）位於儲存系統1、而檔案系統2（fs2）位於儲存系統1、也位於合作夥伴儲存系統2上。檔案系統3（FS3）位於儲存系統1、合作夥伴儲存系統2和儲存系統3、而非HA配對的一部分。另一個檔案系統fs4完全位於儲存系統4。
+
+下列命令會建立「fs1」、「fs2」、「FS3」及「fs4」的Snapshot複本：
+
+[listing]
+----
+# snapdrive snap create -fs /mnt/fs1 /mnt/fs2 /mnt/fs3 /mnt/fs4
+-snapname fs_all_snap
+----
+下一個命令會還原目的地儲存系統上的fs1和fs2。fs1和fs2都位於HA配對上、因此您可以使用一個命令來還原它們：
+
+[listing]
+----
+# snapdrive snap restore -fs /mnt/fs1 /mt/fs2 -snapname fs_all_snap
+----
+下列命令可還原fs4：
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/fs4 -snapname fs_all_snap
+----
+UNIX版無法還原目的地儲存系統上的FS3、因為此檔案系統位於儲存系統1、儲存系統2和儲存系統3。SnapDrive

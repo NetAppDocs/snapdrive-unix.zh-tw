@@ -1,0 +1,28 @@
+---
+permalink: solaris/task_identifying_the_installed_components.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, components, identify 
+summary: 您可以使用SnapDrive 支援UNIX組態檢查工具來識別主機平台上安裝的元件。 
+---
+= 識別已安裝的元件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 支援UNIX組態檢查工具來識別主機平台上安裝的元件。
+
+.步驟
+. 識別已安裝的元件：
++
+Check DETECT（檢測）*
+
++
+「shdconfine.out」記錄檔用於識別「/var/log/log」檔案中安裝的元件。記錄檔會以遞增方式重新命名為「shdconfine.out」、「shdconfine.out」等。
+
++
+在Red Hat Enterprise Linux 6環境中、for UNIX組態檢查工具無法偵測Ext3檔案系統。SnapDrive您應該執行「modf探測-v ext3」命令來載入Ext3檔案系統。
+
+. 您可能必須在執行「shdconfcheck detect」命令之後、安裝或設定列出的元件。
+

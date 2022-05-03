@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_volume_based_snaprestore_check_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore, check, fail, nfs, vbsr, host, export 
+summary: Volume型SnapRestore 的更新功能（Vbsr\）檢查失敗、（NFS嘗試匯出不含外部主機的清單時）位於用戶端機器（SLES 11\）、該用戶端機器在/etc/hosts檔案中有兩個不同的主機名稱IP。 
+---
+= Volume型SnapRestore 的功能無法檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Volume型SnapRestore 的功能驗證（Vbsr）失敗、（當NFS嘗試匯出沒有外部主機的清單時）位於用戶端機器（SLES 11）、該機器在「/etc/hosts」檔案中有兩個不同的主機名稱IP。
+
+若要解決此問題、您必須確保在「/etc/hosts」檔案中、主機名稱只有一個IP位址。

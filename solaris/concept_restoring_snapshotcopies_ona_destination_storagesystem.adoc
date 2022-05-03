@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_restoring_snapshotcopies_ona_destination_storagesystem.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, storage, copy, destination 
+summary: 您可以在建立Snapshot複本的儲存系統上還原Snapshot複本。 
+---
+= 在目的地儲存系統上還原Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在建立Snapshot複本的儲存系統上還原Snapshot複本。
+
+當您在目的地儲存系統上建立Snapshot複本時、Snapshot複本會自動從來源系統複寫、並將其建立至目的地儲存系統。適用於UNIX的支援功能可讓您還原來源儲存系統上的Snapshot複本。SnapDrive您也可以在目的地儲存系統上還原Snapshot複本。
+
+如果您是在SnapMirror關係中執行單一檔案嵌入式管理單元還原、則來源與目的地Volume名稱不應相同。如果來源與目的地Volume名稱相同、UNIX版的顯示下列錯誤訊息：SnapDrive
+
+[listing]
+----
+0001-636 Command error: Snapdrive cannot restore LUNs on SnapMirror
+destination filer volumes: <filer-vol-name>
+----
+在適用於UNIX及更新版本的版本中、如果啟用角色型存取控制、則只有在VFiler裝置具備Snapshot還原功能時、您才能在VFiler裝置上執行SnapRestore。SnapDrive
+
+*相關資訊*
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[以角色為基礎的UNIX存取控制SnapDrive]

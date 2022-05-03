@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_information_about_luns_mapped_to_local_or_remote_hosts.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, local, remote, host, snaprestore, initiator 
+summary: 在Volume型的供應過程中、從Volume到SnapDrive UNIX的唯一對應資訊SnapRestore 是LUN的啟動器群組資訊。如果SnapDrive 您所使用的啟動器群組永遠是由UNIX的支援所建立、則主機的完整網域名稱是啟動器群組名稱的一部分。 
+---
+= 有關對應至本機或遠端主機的LUN資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Volume型的供應過程中、從Volume到SnapDrive UNIX的唯一對應資訊SnapRestore 是LUN的啟動器群組資訊。如果SnapDrive 您所使用的啟動器群組永遠是由UNIX的支援所建立、則主機的完整網域名稱是啟動器群組名稱的一部分。
+
+如果SnapDrive UNIX管理員指定了「-igroup」CLI選項、或是您使用手動建立的啟動器群組、則igroup名稱不一定要有主機名稱。基於上述所有理由、SnapDrive UNIX版的功能無法可靠地偵測LUN的本機或遠端繫結。因此SnapDrive 、適用於UNIX的功能可將完整的LUN啟動器群組和啟動器資訊顯示為Volume Based SnapRestore 的部分。

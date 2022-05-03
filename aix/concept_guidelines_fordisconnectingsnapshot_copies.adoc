@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_guidelines_fordisconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, disconnect, snapshot, copy 
+summary: 以下是中斷LUN、儲存實體或NFS目錄Snapshot複本連線的準則。 
+---
+= 中斷Snapshot複本連線的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下是中斷LUN、儲存實體或NFS目錄Snapshot複本連線的準則。
+
+* 當您中斷檔案系統連線時、SnapDrive 適用於UNIX的解決方法一律會移除掛載點。
+* 若要復原Snapshot連線作業的效果、請使用Snapshot Disconnect命令。
+* 如果在Snapshot連線作業期間將「啟用-分割-複製_」組態變數值設定為「開啟」或「同步」、在Snapshot中斷作業期間將SnapDrive 「關閉」、則UNIX版的Sfor UNIX不會刪除Snapshot複本中的原始Volume或LUN。
+

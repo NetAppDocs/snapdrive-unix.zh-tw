@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_clustering_message_appears_during_snap.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, cluster, message, snaprestore, restore 
+summary: 有一則一般訊息適用於SnapDrive 任何具備主機叢集監控功能的UNIX主機作業系統。即使您的系統未提供主機叢集監控功能、或您已關閉主機叢集監控功能、仍會出現此問題。 
+---
+= 叢集訊息會在SnapRestore 執行過程中出現
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有一則一般訊息適用於SnapDrive 任何具備主機叢集監控功能的UNIX主機作業系統。即使您的系統未提供主機叢集監控功能、或您已關閉主機叢集監控功能、仍會出現此問題。
+
+當您執行SnapRestore命令時、會出現下列訊息：「#sfsnap SnapDrive reest-vg clusstervg -snapname mysnap'
+
+「您似乎正在使用高可用度主機叢集軟體。若要避免可能的叢集容錯移轉、請在還原資源之前、先停用要還原的資源叢集監控功能。您要繼續嗎？（y/n）（是/否））：問題發生在「SnapDrive 還原快照」命令會暫時關閉Volume群組。如果此時正在執行叢集監控程序、執行SnapDrive SnapRestore 此動作可能會導致叢集容錯移轉。
+
+
+
+== 因應措施
+
+在執行HACMP的AIX主機上、這不應該是個問題、因為HACMP不提供預設的磁碟區群組和應用程式資源監控功能。
+
+如果您自訂應用程式以在HACMP下提供儲存監控功能、則必須先停用應用程式和監控功能、再執行「SnapDrive 還原功能」命令

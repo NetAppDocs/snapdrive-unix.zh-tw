@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_considerations_for_using_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume 
+summary: 您可以在SnapRestore 考量幾點的情況下、使用Volume型的功能（VBRSR）。請記住這些要點、以協助您安全地使用VBRSR功能。 
+---
+= 使用Volume型SnapRestore 的功能的考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Volume型SnapRestore 的功能（VBRSR）、但要注意幾點。請記住這些要點、以協助您安全地使用VBRSR功能。
+
+您必須謹記以下幾點：
+
+* VBRSR會將整個磁碟區還原為建立Snapshot複本（用於VBRSR）的時間狀態。VBRSR包括下列項目：
++
+** 指定主機檔案的所有檔案和LUN、在「建立小午」作業期間執行。
+** 在「建立快照」作業期間、屬於應用程式一致Snapshot複本一部分的所有檔案和LUN。
+
+
+* VBRSR會在用於還原的Snapshot複本之後、移除目前磁碟區上所建立的所有較新檔案和LUN。
+* VBRSR會移除在用於還原的Snapshot複本之後所取得的所有較新Snapshot複本。
+* 建議您在使用「-vbsr execute」命令之前先執行「-vbsr preview」命令。
+

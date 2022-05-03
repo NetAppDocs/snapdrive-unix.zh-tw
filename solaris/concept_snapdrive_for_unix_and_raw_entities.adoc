@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_and_raw_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, raw, entity 
+summary: UNIX版支援原始實體（例如LUN）或檔案系統（可直接在LUN上建立）的儲存作業、無需使用主機系統VxVM.即可執行儲存作業。SnapDrive 
+---
+= 適用於UNIX和原始實體SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版支援原始實體（例如LUN）或檔案系統（可直接在LUN上建立）的儲存作業、無需使用主機系統VxVM.即可執行儲存作業。SnapDrive
+
+UNIX版的支援功能可在不啟動VxVM.SnapDrive for UNIX的情況下、管理原始實體（例如LUN）、而不需啟動VxVM.SnapDrive for UNIX、即可建立、刪除、連線及中斷LUN及其所包含的檔案系統的連線、而不需啟動它。SnapDrive

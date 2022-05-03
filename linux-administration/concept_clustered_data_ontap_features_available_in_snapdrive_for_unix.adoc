@@ -1,0 +1,72 @@
+---
+permalink: linux-administration/concept_clustered_data_ontap_features_available_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, ontap, clustered 
+summary: 適用於UNIX 5.0及更新版本的支援部分叢集式的功能。SnapDrive Data ONTAP 
+---
+= 適用於UNIX的叢集Data ONTAP 式功能SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX 5.0及更新版本的支援部分叢集式的功能。SnapDrive Data ONTAP
+
+支援下列功能：
+
+* 連接埠集
+* Vserver
+* 使用適當的組態變數處理Volume移轉所造成的錯誤
+* 損毀一致（一致性群組）Snapshot複本
+* AutoSupport
+* 虛擬伺服器的原始裝置對應（RDM）邏輯單元編號（LUN）
+* 使用Operations Manager主控台進行角色型存取控制（RBAC）
+* 負載共用鏡像（LSM）
++
+負載共享鏡像FlexVol 可提供額外的唯讀存取權限給用戶端、藉此減少網路流量至某個供應區。您可以建立和管理負載共享鏡像、將唯讀流量從FlexVol 一個穩定區分散出來。負載共享鏡像不支援無限磁碟區。一組負載共用鏡像是由來源磁碟區所組成、可與一或多個目的地磁碟區連線。集合中的每個負載共用鏡像都必須屬於與集合來源Volume相同的儲存虛擬機器（SVM）。負載共用鏡像也應建立在不同的集合體上、並由叢集中的不同節點存取、以達到適當的用戶端要求負載平衡。如需詳細資訊、請參閱 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["叢集Data ONTAP 式《叢集式《邏輯儲存管理指南》"]。
+
++
+[NOTE]
+====
+** LSM支援叢集Data ONTAP 式的更新版本ONTAP 的功能。但是如果您使用叢集Data ONTAP 式的版本更新為「SnapDrive 版本不低於版本的版本」、則必須使用「版本資訊」命令來設定叢集管理員。
+** 即使ONTAP 已設定叢集管理員、任何版本的LSM都不受支援。
+
+
+====
+* IPspaces
++
+IPspace定義了一個獨特的IP位址空間、可在其中建立儲存虛擬機器（SVM）。每個SVM都會在IPspace內維護一個路由表、不會發生跨SVM或跨IPspace流量路由傳送。如需詳細資訊、請參閱 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/home.html["叢集Data ONTAP 式《叢集式網路管理指南》"]。
+
++
+
+NOTE: 僅當您使用叢集Data ONTAP 式的版本不支援此功能。
+
+* 系統設定MetroCluster
++
+僅當您使用叢集Data ONTAP 式的版本不支援此功能。如需MetroCluster 有關功能的資訊、請參閱 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mcc-inst-cnfg-fabric/home.html["叢集Data ONTAP MetroCluster 式《安裝與組態指南》"]。
+
+* 用於保留節點空間以建立FlexClone檔案和FlexClone LUN的權杖
++
+若要使用此功能、您必須擁有FlexClone授權。如需詳細資訊、請參閱 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["叢集Data ONTAP 式《叢集式《邏輯儲存管理指南》"]。
+
+* 自訂qtree匯出
++
+qtree的匯出fs原則可能與父Volume不同。
+
++
+
+NOTE: 僅當您使用叢集Data ONTAP 式的更新版本時、才支援此功能。
+
+* 聯邦資訊處理標準（FIPS）法規遵循
+
+
+*相關資訊*
+
+link:concept_support_for_storage_system_rename.adoc["支援儲存系統重新命名"]
+
+link:concept_using_port_set_in_snapdrive_for_unix.adoc["使用SnapDrive UNIX版的連接埠集"]
+
+link:concept_managing_volume_migration_using_snapdrive_for_unix.adoc["適用於UNIX的SnapDrive 大量移轉"]
+
+link:concept_support_for_vserver.adoc["支援Vserver"]

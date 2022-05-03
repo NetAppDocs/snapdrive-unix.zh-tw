@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_snapshot_copy_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, copy, create, command 
+summary: 您可以使用SnapDrive 「flexfap create」命令來建立Snapshot複本。 
+---
+= Snapshot複製作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive flexSnapcreate命令」來建立Snapshot複本。

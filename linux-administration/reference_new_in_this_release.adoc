@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/reference_new_in_this_release.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, release, update, bug, fix 
+summary: 適用於UNIX的32個5.3.2僅包含錯誤修復。SnapDrive此版本沒有新功能。 
+---
+= 此版本的新功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的32個5.3.2僅包含錯誤修復。SnapDrive此版本沒有新功能。
+
+*相關資訊*
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

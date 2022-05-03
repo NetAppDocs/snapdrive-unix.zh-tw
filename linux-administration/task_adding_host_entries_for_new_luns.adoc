@@ -1,0 +1,34 @@
+---
+permalink: linux-administration/task_adding_host_entries_for_new_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, entries, lun, command 
+summary: 您可以使用SnapDrive 適用於UNIX的功能、建立特定數量的新LUN。UNIX版提供特定命令。SnapDrive 
+---
+= 新增新LUN的主機項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 適用於UNIX的功能、建立特定數量的新LUN。UNIX版提供特定命令。SnapDrive
+
+確定主機已準備好建立特定數量的新LUN。這些LUN位於對應至主機的儲存系統上。
+
+.步驟
+. 《發揮作用準備LUN -計數》SnapDrive
++
+「-count」是您要為主機準備的新LUN數量。
+
++
+在Linux上、此命令會針對目前無法使用裝置檔案的每個潛在LUN、新增一個新的「/sg」裝置檔案。
+
++
+[NOTE]
+====
+如果您已手動編輯了「/kernel-drv/lffc.conf」檔案以取得持續的繫結、請確定FC-bind-WWPN項目已完成
+
+「# begin：lputil-managed永久性繫結」。
+
+====
+

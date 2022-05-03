@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/task_viewing_the_list_of_port_set.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, port, set, portset, configure 
+summary: 您可以使用SnapDrive 「flexportset list」命令來檢視在SnapDrive 主機上設定的所有連接埠集。 
+---
+= 檢視連接埠集清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 支援埠集清單」命令、在SnapDrive 主機上檢視所有在「支援」中設定的連接埠集。
+
+.步驟
+. 在主機系統上輸入下列命令：
++
+《* SnapDrive 》*《*》*《*》
+
++
+[listing]
+----
+snapdrive portset list
+appliance name   Portset name
+-----------------------------
+vs91        ps2
+----
+

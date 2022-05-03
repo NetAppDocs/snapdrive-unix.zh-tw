@@ -1,0 +1,20 @@
+---
+permalink: aix/concept_crash_consistent_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, crash, consistent, snapshot, copy 
+summary: 您可能必須為檔案系統或磁碟群組建立與當機狀況一致的Snapshot複本。UNIX版建立Snapshot複本、其中包含實體中指定之所有儲存系統磁碟區的映像。SnapDrive 
+---
+= 損毀一致的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能必須為檔案系統或磁碟群組建立與當機狀況一致的Snapshot複本。UNIX版建立Snapshot複本、其中包含實體中指定之所有儲存系統磁碟區的映像。SnapDrive
+
+當您建立儲存實體（例如檔案系統或磁碟群組）的Snapshot複本時、SnapDrive 適用於UNIX的會建立Snapshot複本、其中包含組成您使用「file_spec」引數所指定實體的所有儲存系統磁碟區映像。「file_spec」引數指定SnapDrive 儲存實體、例如供UNIX使用的檔案系統、LUN或NFS目錄樹狀結構、以建立Snapshot複本。
+
+適用於UNIX的可提供一致的儲存元件、以構成您在Snapshot複本中要求的實體。SnapDrive這表示在使用「SnapDrive _sfsnap create」命令「file_spec」引數指定的LUN或目錄、在Snapshot複本中可能沒有一致的影像。UNIX版的支援功能可讓您僅還原Snapshot複本中「file_spec」引數所指定的一致實體。SnapDrive
+
+單一儲存系統磁碟區中所含實體的Snapshot複本、永遠保持損毀一致。適用於UNIX的執行特殊步驟、以確保橫跨多個儲存系統或儲存系統磁碟區的Snapshot複本也能保持當機一致。SnapDriveUNIX使用的方法可確保當機一致性、取決於Snapshot複本中儲存實體所在的版本。SnapDrive Data ONTAP

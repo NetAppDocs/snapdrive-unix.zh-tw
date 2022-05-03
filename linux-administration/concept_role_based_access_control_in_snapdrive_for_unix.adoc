@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_role_based_access_control_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, role, access, control, permission, login, user 
+summary: 角色型存取控制（RBAC）用於使用者登入和角色權限。RBAC可讓系統管理員透過定義角色來管理使用者群組。如果您需要限制特定系統管理員存取資料庫、則必須為其設定系統管理員帳戶。此外、如果您想要限制資訊、這些系統管理員可以檢視及執行作業、您必須將角色套用至您建立的系統管理員帳戶。 
+---
+= 以角色為基礎的UNIX存取控制SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+角色型存取控制（RBAC）用於使用者登入和角色權限。RBAC可讓系統管理員透過定義角色來管理使用者群組。如果您需要限制特定系統管理員存取資料庫、則必須為其設定系統管理員帳戶。此外、如果您想要限制資訊、這些系統管理員可以檢視及執行作業、您必須將角色套用至您建立的系統管理員帳戶。
+
+RBAC可在SnapDrive Operations Manager主控台的協助下用於UNIX的支援。Operations Manager主控台可提供對儲存物件的精細存取、例如LUN、qtree、Volume、Aggregate及vFiler裝置。
+
+*相關資訊*
+
+xref:concept_mandatory_checks_for_volume_based_snaprestore.adoc[強制檢查Volume型SnapRestore 的不全]
+
+xref:concept_restoring_snapshotcopies_ona_destination_storagesystem.adoc[在目的地儲存系統上還原Snapshot複本]
+
+xref:concept_snap_disconnect_procedure.adoc[SnapDisconnecture程序]

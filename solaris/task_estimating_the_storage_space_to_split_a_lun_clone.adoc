@@ -1,0 +1,58 @@
+---
+permalink: solaris/task_estimating_the_storage_space_to_split_a_lun_clone.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, estimate, storage, split, lun, clone 
+summary: 複製分割預估有助於預估分割LUN複製所需的儲存空間（以MB為單位）。根據SnapDrive UNIX版的Clone分割預估、您可以決定分割LUN實體複製的可用空間。 
+---
+= 預估要分割LUN實體複本的儲存空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複本切割預估有助於預估分割LUN複製所需的儲存空間（以MB為單位）。根據SnapDrive UNIX版的Clone分割預估、您可以決定分割LUN實體複製的可用空間。
+
+.步驟
+. 輸入下列命令以預估分割LUN實體複本所需的儲存空間。
++
+*《*》實體複製切割預估值[-LUN]_long_lun_name_[_long_lun_name..._]|[{-dg |-vg |-fs |-hostvol |-lvolvo}_file_spec_[_file_spec...___]|[-snapname _long_snap_name_]{-volclone|-lunclony} SnapDrive
+
++
+此作業會顯示下列資訊：
+
++
+** 資源名稱
+** Container：LUN複製的Volume
+** 必要空間：分割LUN複製所需的空間
+** 可用空間：容器上的可用空間
+** Storage Status（儲存狀態）-指示LUN複製分割的可用空間
+** 擁有空間- LUN實體複本佔用的空間
+** 共享空間：LUN複製與父實體複本一起佔用的空間
+
+
++
+當您使用「-verbose」選項時、會顯示「自有空間」和「共享空間」。
+
+
+
+以下範例預估分割LUN實體複本的儲存空間。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1
+Resource     Container Required Available Storage
+                       Space(MB)Space(MB) Status
+/mnt/my_mnt1 f3050-220  5120    9986    AVAILABLE
+             -112:/vol/vol_1
+----
+以下是使用「-verbose」選項的範例。或者、您也可以使用「-v」選項。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -verbose
+Resource    Container  Owned    Shared   Required Available Storage
+                       Space(MB)Space(MB)Space(MB)Space(MB) Status
+/mnt/my_mnt1 f3050-220  365   403      5120     9986 AVAILABLE
+             -112:/vol/vol_1
+----

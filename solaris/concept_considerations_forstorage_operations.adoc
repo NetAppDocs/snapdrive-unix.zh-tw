@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_considerations_forstorage_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, operation 
+summary: 您必須謹記與各種儲存命令相關的幾個考量事項。 
+---
+= 儲存作業考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須謹記與各種儲存命令相關的幾個考量事項。
+
+* 對於橫跨多個儲存系統磁碟區或多個儲存系統的磁碟區群組、支援有限。您無法使用「SnapDrive fuse storage create」命令來建立橫跨儲存系統的Volume群組。
++
+在這種情況SnapDrive 下、UNIX版的支援下列主要命令：
+
++
+** 《建立抓取》SnapDrive
+** 《還原快照》SnapDrive
+** 《鏈接》SnapDrive
+** 《不中斷連線》SnapDrive
+
+
+* 「物件儲存設備大小調整」命令無法搭配直接對應至主機或其所含檔案系統的LUN使用。SnapDrive
+* UNIX版不提供任何選項來控制其所建立之主機Volume的格式化。SnapDriveUNIX版的支援僅會建立串聯的主機磁碟區。SnapDrive它在使用其他應用程式建立的其他格式（例如等量分佈磁碟區）主機磁碟區上運作正常。
+* 您無法還原磁碟群組的一部分。適用於UNIX的僅備份及還原整個磁碟群組。SnapDrive
+
+
+
+NOTE: 從非Linux作業系統到Linux作業系統、即使是NFS的mnterts命令、也會在Red Hat Enterprise Linux 6之前的所有版本中執行的功能不正常。SnapDrive

@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/concept_hostvolumes_and_filesystem_resize_operation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, file, resize, operation, storage, command, volume 
+summary: 「物件儲存區大小調整」命令僅適用於儲存系統磁碟群組和Volume群組。SnapDrive如果您想要增加主機Volume或檔案系統的大小、則必須使用LVM命令。 
+---
+= 主機磁碟區和檔案系統調整大小作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「物件儲存設備大小調整」命令僅適用於儲存系統磁碟群組和磁碟區群組。SnapDrive如果您想要增加主機Volume或檔案系統的大小、則必須使用LVM命令。
+
+下表摘要說明您可以在不同平台上使用的LVM命令。如需這些命令的詳細資訊、請參閱其手冊頁。
+
+|===
+| *主機* | * Volume manager* | *主機Volume * | *檔案系統* 
+
+
+ a| 
+Linux
+ a| 
+LVM
+ a| 
+"lvextend"
+ a| 
+"refiz2fs"
+
+|===

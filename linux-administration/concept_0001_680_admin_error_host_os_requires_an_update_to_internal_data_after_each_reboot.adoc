@@ -1,0 +1,39 @@
+---
+permalink: linux-administration/concept_0001_680_admin_error_host_os_requires_an_update_to_internal_data_after_each_reboot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reboot, error, update, connect, admin, administration 
+summary: 在Red Hat Enterprise Linux 4和Oracle Enterprise Linux 4主機上、每次重新開機之後、Snapshot連線和儲存設備建立作業都會遇到錯誤訊息。 
+---
+= 每次重新開機SnapConnect後、會產生「0001-680管理錯誤：主機作業系統需要更新內部資料」
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Red Hat Enterprise Linux 4和Oracle Enterprise Linux 4主機上、每次重新開機之後、Snapshot連線和儲存設備建立作業都會遇到錯誤訊息。
+
+發生下列錯誤訊息、是因為「sg驅動程式」會在重新開機後刪除「/dev/sgXX」檔案中的所有非使用中裝置。
+
+
+
+== 因應措施
+
+. 檢查'/opt/NetApp/SnapDrive /SnapDrive．conf'檔案中的組態變數'_enable-implicitier-Prepared_'值。應設為「開啟」。
++
+重新啟動主機之後、在使用SnapDrive 適用於UNIX的支援之前、請先完成下列步驟。
+
+. 輸入下列命令、確認已載入sg和iSCSI服務：
++
+《lsmod》
+
+. 如果未載入sg和iSCSI（如果使用iSCSI設定）服務、請輸入下列命令：
++
+** 《MoodProbe sg》
+** '服務iSCSI啟動'
+
+
+
+
+
+NOTE: 如果您不想手動執行步驟2和3、請在主機啟動指令碼中新增「mod探測sg」和「服務iSCSI start」命令。

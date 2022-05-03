@@ -1,0 +1,40 @@
+---
+permalink: solaris/task_configuring_management_and_data_interfaces_for_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, management, data, interface, storage 
+summary: 您可以在NFS環境中為單一管理介面設定多個資料介面、以便將管理流量與儲存系統上的資料流量分開。 
+---
+= 設定儲存系統的管理和資料介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在NFS環境中為單一管理介面設定多個資料介面、以便將管理流量與儲存系統上的資料流量分開。
+
+.步驟
+. 設定新管理介面的組態：
++
+「* SnapDrive 組態集root *」
+
++
+[listing]
+----
+# snapdrive config set root f3050-197-91
+Password for root:
+Retype password:
+----
+. 設定新管理介面的資料介面：
++
+「* SnapDrive 組態集*」
+
++
+[listing]
+----
+# snapdrive config set -mgmtpath f3050-197-91 f3050-220-91#
+----
++
+在前面的命令中、「f3050-191-191」是管理介面、「f3050-220-91」是資料介面。
+
+

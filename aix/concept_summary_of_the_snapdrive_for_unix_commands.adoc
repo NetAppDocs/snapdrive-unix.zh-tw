@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_summary_of_the_snapdrive_for_unix_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command 
+summary: UNIX版的指令可用於組態設定、儲存資源配置、主機端管理及Snapshot作業。SnapDrive 
+---
+= UNIX命令的摘要SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的指令可用於組態設定、儲存資源配置、主機端管理及Snapshot作業。SnapDrive

@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/task_deleting_a_storage_system_entry.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, host, map 
+summary: 您可以從主機系統刪除儲存系統對應資訊。 
+---
+= 從主機系統刪除儲存系統對應資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從主機系統刪除儲存系統對應資訊。
+
+.步驟
+. 輸入下列命令：
++
+hy* SnapDrive 《*更新移轉刪除_new_storage系統名稱_》[_new_storage系統名稱..._]*》
+
++
+** 「_new_storage系統名稱_」是新儲存系統的名稱。
+** 「_[new_storage系統名稱...]_'定義您可以在單一命令列上刪除多個儲存系統名稱。
++
+[listing]
+----
+snapdrive config migrate delete roaster
+Deleted entry for appliance: roaster
+----
+
+
+

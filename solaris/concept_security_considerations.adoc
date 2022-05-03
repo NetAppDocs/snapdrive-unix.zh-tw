@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_security_considerations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security 
+summary: 您可以啟用SnapDrive UNIX版的支援功能來存取連線至主機的儲存系統、而且必須將主機設定為使用指派給儲存系統的登入名稱和密碼。如果您未提供此資訊、SnapDrive UNIX版的功能無法與儲存系統通訊。 
+---
+= 安全考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟用SnapDrive UNIX版的支援功能來存取連線至主機的儲存系統、而且必須將主機設定為使用指派給儲存系統的登入名稱和密碼。如果您未提供此資訊、SnapDrive UNIX版的功能無法與儲存系統通訊。
+
+根使用者可以根據指派給其他使用者的角色、允許其他使用者執行特定命令。您不需要成為root使用者、就能執行儲存和Snapmanagement作業。
+
+在Solaris SFRAC 4.1主機叢集環境中、您必須為主機叢集中的所有節點設定「rsh」或「shin access-without password-prompe-for root」。

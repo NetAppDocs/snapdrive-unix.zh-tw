@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_what_configuration_checker_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, checker 
+summary: 「支援此功能的支援功能」可協助您識別及驗證支援UNIX的組態。SnapDrive SnapDrive 
+---
+= 什麼是組態檢查程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「支援此功能的支援功能」可協助您識別及驗證支援UNIX的組態。SnapDrive SnapDrive
+
+組態檢查工具可驗證NAS和SAN環境中的使用者組態、藉此解決多種支援組態的問題。
+
+支援下列UNIX組態檢查工具的下列組態檢查功能：SnapDrive SnapDrive
+
+* 檢查在預設位置的「snapdrive.conf」檔案中指定的組態。
+* 檢查使用CLI指定的組態。
+

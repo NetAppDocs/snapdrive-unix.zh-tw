@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_support_for_partitioned_or_non_partitioned_devices_in_rhel_and_suse.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, suse, server, sles, partitioning, scheme, rhel, red, enterprise 
+summary: 在RHEL上SnapDrive 、適用於UNIX的功能可將磁碟分割成多個磁碟、以配置主機儲存實體。不過SnapDrive 、UNIX版的支援功能可為SnapDrive SLES 11上的分割區和非分割區裝置、以及僅在SLES 10上配置和管理非分割區裝置的功能。 
+---
+= Red Hat Enterprise Linux（RHEL）和SUSE Linux Enterprise Server（SLES）中的儲存分割配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在RHEL上SnapDrive 、適用於UNIX的功能可將磁碟分割成多個磁碟、以配置主機儲存實體。不過SnapDrive 、UNIX版的支援功能可為SnapDrive SLES 11上的分割區和非分割區裝置、以及僅在SLES 10上配置和管理非分割區裝置的功能。
+
+Linux 2.2和2.4核心版本無法使用原始磁碟來建立檔案系統、因為在過去所有的Microsoft x86系統架構都使用Windows作業系統、而且總是分割硬碟。由於初始核心是寫入以在Windows作業系統上運作、因此核心也會以預期磁碟上有分割區的方式寫入。為了在原始裝置上建立檔案系統、我們一律會進一步進行分割。對於磁碟群組中的LUN和/或原始LUN、永遠不會進行分割。因此、對於分割配置的任何變更、僅限於原始裝置上的檔案系統行為。

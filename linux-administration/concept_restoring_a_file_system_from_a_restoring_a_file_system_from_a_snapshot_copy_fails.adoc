@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_restoring_a_file_system_from_a_restoring_a_file_system_from_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, file, snapshot, copy, fail, error 
+summary: 從Red Hat Enterprise Linux 3更新移轉至Red Hat Enterprise Linux 4更新後、即從LVM1移轉至LVM2後、從Snapshot複本還原檔案系統將會失敗。 
+---
+= 從Snapshot複本還原檔案系統失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從Red Hat Enterprise Linux 3更新移轉至Red Hat Enterprise Linux 4更新後、即從LVM1移轉至LVM2後、從Snapshot複本還原檔案系統將會失敗。
+
+在使用LVM2從Snapshot複本還原檔案系統（在LVM1上執行）期間、「SnapDrive VMware Snapshot還原-FS」命令不會掛載檔案系統。不過、它能成功還原與其相關的磁碟群組和主機磁碟區。
+
+例如、LVM1所建立的主機磁碟區在「/dev/Mydg/SDDg/Mydg/Sdhv」中有一個裝置檔案、而LVM2所建立的主機磁碟區在「/dev/mapper/Mydg/SdDg-Mydg_Sdov」中有一個裝置檔案
+
+這是因為Red Hat Enterprise Linux 4 update 3主機使用LVM2、使用裝置對應器來與核心介面、而Red Hat Enterprise Linux 3 update 5主機則使用LVM1、而LVM1不使用裝置對應程式。

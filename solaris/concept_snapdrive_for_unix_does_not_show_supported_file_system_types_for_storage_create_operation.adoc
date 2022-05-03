@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_does_not_show_supported_file_system_types_for_storage_create_operation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, file, supported 
+summary: UNIX版的支援檔案系統類型無法顯示、無法執行儲存建立作業。SnapDrive 
+---
+= UNIX版的支援檔案系統類型無法顯示、無法執行儲存建立作業SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援檔案系統類型無法顯示、無法執行儲存建立作業。SnapDrive
+
+如果下列情況屬實、則無法透過原始LUN（不含任何Volume Manager元件的LUN）、使用「-fstype,」選項和iSCSI傳輸來建立ufs檔案系統：SnapDrive
+
+* 存在ufs檔案系統
+* 未安裝VxVM-元件（VxVM, VxFS和DMP）
+* 已載入Emulex適用的HBA驅動程式
+
+
+如果作業失敗、則會顯示下列錯誤訊息。
+
+[listing]
+----
+0001-539 Command error: Snapdrive cannot create a file system of type ufs Supported types for storage create are:
+----
+
+
+== 因應措施
+
+使用「modunload」命令、在主機上卸載Emulex驅動程式（lffc）。

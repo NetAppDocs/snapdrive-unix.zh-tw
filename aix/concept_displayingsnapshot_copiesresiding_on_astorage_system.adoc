@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_displayingsnapshot_copiesresiding_on_astorage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, display, snapshot, copy, storage, system 
+summary: 您可以使用SnapDrive fisfuse命令在儲存系統上顯示Snapshot複本。 
+---
+= 顯示位於儲存系統上的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive fisfuse命令在儲存系統上顯示Snapshot複本。
+
+若要顯示存放在儲存系統上的Snapshot複本相關資訊、請使用下列語法：
+
+「SnapDrive Snapsnap show -filername [filername...] [-verbos]

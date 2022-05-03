@@ -1,0 +1,34 @@
+---
+permalink: linux-administration/task_changing_asnapshot_copyname.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, rename, command, source, name 
+summary: 您可以使用SnapDrive 「抓取重新命名」命令來變更Snapshot複本的名稱。Snapshot重新命名作業會將來源Snapshot複本的名稱變更為目標引數指定的名稱。 
+---
+= 變更Snapshot複本名稱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 抓取重新命名」命令來變更Snapshot複本的名稱。Snapshot重新命名作業會將來源Snapshot複本的名稱變更為目標引數指定的名稱。
+
+在執行此語法之前、您必須先瞭解此命令中提及的選項、關鍵字和引數。
+
+.步驟
+. 輸入下列命令以變更Snapshot複本名稱：
++
+hy* SnapDrive 快照重新命名[-snapname]_old_long快照名稱new_snap名稱_[-force [-nos提示]]]*
+
+
+
+以下是「SnapDrive 不重命名」指令的範例。第一個命令列包含「-force」選項、因為名為「new snapshot」複本的Snapshot複本已經存在。在第二個範例中、兩個Snapshot複本名稱都使用名稱的長格式、但兩者都會解析為相同的儲存系統磁碟區。
+
+[listing]
+----
+snapdrive snap rename -force filer1:/vol/vol1:oldsnap new snapshot
+----
+[listing]
+----
+snapdrive snap rename filer1:/vol/vol1:FridaySnap filer1:/vol/vol1:Snap040130
+----

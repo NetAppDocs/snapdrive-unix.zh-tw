@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_configuration_information_in_snapdrive_for_unix_for_guest_os.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, guest, lun, operating 
+summary: 您必須在客體作業系統中設定儲存系統和虛擬儲存主控台、以配置RDM LUN。 
+---
+= UNIX for來賓作業系統的組態資訊SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在客體作業系統中設定儲存系統和虛擬儲存主控台、以配置RDM LUN。
+
+需要登入資訊才能與虛擬儲存主控台進行通訊、以配置RDM LUN。一旦組態完成、SnapDrive 適用於UNIX的整套功能可讓您在客體作業系統中建立RDM LUN。

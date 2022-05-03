@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_operations_on_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volumes, unix, operations 
+summary: 您可以使用SnapDrive 適用於UNIX的解決方法、在FlexClone Volume上執行各種作業。 
+---
+= 適用於FlexClone磁碟區上的UNIX作業SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 適用於UNIX的解決方法、在FlexClone Volume上執行各種作業。

@@ -1,0 +1,40 @@
+---
+permalink: linux-administration/reference_snapdrive_for_unix_operations_fails_improper_multipath_settings_aliased_devices_used.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, fail, multipath, settings, device, error, sdu, rhel, command 
+summary: 在RHEL 5.11中執行儲存設備show或snap create命令時、命令會顯示下列錯誤訊息。對SDU精靈的狀態呼叫失敗、且在不涉及主機LVM的情況下、使用–nolvm選項的SLES11SP3主機中呼叫狀態。 
+---
+= 使用別名裝置時、由於多重路徑設定不正確、導致UNIX作業失敗。SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在RHEL 5.11中執行「儲存顯示」或「建立抓取」命令時、命令會顯示下列錯誤訊息：
+
+「無法呼叫SDU精靈、且在不涉及主機LVM的情況下、使用-nolvm選項的sles11SP3主機中呼叫SDU精靈。」
+
+* * SnapDrive 「-all」命令無法顯示正確的別名*
++
+UNIX版不顯示對應器裝置的適當別名。SnapDrive當多路徑{}區段在「多路徑.conf」檔案中不正確時、就會發生此問題。
+
+* *因應措施*
++
+您必須確保在多重路徑設定中輸入右大括弧。
+
+* * SnapDrive 當地圖裝置的別名已設定*時、無法執行下列錯誤操作
++
+[listing]
+----
+Snapdrive could not import /dev/mapper/lvm_fs_SdDg:   device-mapper: resume ioctl failed: Invalid argument
+  Unable to resume lvm_fs_SdDg-lvm_fs_SdHv (252:4)   1 logical volume(s) in volume group "lvm_fs_SdDg" now active”
+----
++
+當與裝置的別名名稱對應不正確時、就會發生此問題。
+
+* *因應措施*
++
+執行「ultiPath-ll」、並確定與裝置對應的別名名稱正確無誤、然後執行SnapDrive 「針對UNIX執行的DB2」作業。
+
+

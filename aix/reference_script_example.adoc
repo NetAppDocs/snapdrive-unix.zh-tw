@@ -1,0 +1,68 @@
+---
+permalink: aix/reference_script_example.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, script, example 
+summary: 這是使用結束狀態值的指令碼範例。 
+---
+= 指令碼範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這是使用結束狀態值的指令碼範例。
+
+下列指令碼使用SnapDrive 適用於UNIX的程式碼結束狀態值：
+
+[listing]
+----
+
+	#!/bin/sh
+	# This script demonstrates a SnapDrive
+	# script that uses exit codes.
+
+	RET=0;
+	#The above statement initializes RET and sets it to 0
+
+	snapdrive snap create -dg vg22 -snapname vg22_snap1;
+	# The above statement executes the snapdrive command
+
+	RET=$?;
+	#The above statement captures the return code.
+	#If the operation worked, print
+	#success message. If the operation failed, print
+	#failure message and exit.
+
+	if [ $RET -eq 0 ]; then
+	echo "snapshot created successfully"
+	else
+	echo "snapshot creation failed, snapdrive exit code was $RET"
+	exit 1
+	fi
+	exit 0;
+----
+如果REET=0、命令會成功執行、指令碼會輸出下列項目：
+
+[listing]
+----
+
+
+	# ./tst_script
+	snap create: snapshot vg22_snap1 contains:
+	disk group vg22 containing host volumes
+	lvol1
+	snap create: created snapshot betty:/vol/vol2:vg22_snap1
+	snapshot created successfully
+----
+如果RET =非零值、則命令未成功執行。以下範例顯示一般輸出：
+
+[listing]
+----
+
+	# ./tst_script
+	0001-185 Command error: snapshot betty:/vol/vol2:vg22_snap1 already
+	exists on betty:/vol/vol2.
+	Please use -f (force) flag to overwrite existing snapshot
+	snapshot creation failed, snapdrive exit code was 4
+----

@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_connecting_to_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, copy, snapshot, host 
+summary: 您可以將Snapshot複本從一部主機連線至另一部主機。 
+---
+= 連線至Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將Snapshot複本從一部主機連線至另一部主機。
+
+UNIX版可讓您從主機上的不同位置、將主機連線至Snapshot複本。SnapDrive此新位置可以位於您取得Snapshot複本（來源主機）的主機上、也可以位於其他主機（非來源主機）上。
+
+若要在新位置設定Snapshot複本、您可以將Snapshot複本備份到其他媒體、對磁碟群組執行維護、或存取Snapshot複本資料、而不中斷資料的原始複本。
+
+使用此命令、您可以將主機連線至包含下列任一項目的Snapshot複本：
+
+* LUN
+* 直接在LUN上建立的檔案系統
+* 在LUN上建立磁碟群組、主機磁碟區和檔案系統
+* NFS目錄樹狀結構
+* 共享儲存系統上的磁碟群組、主機磁碟區和檔案系統
+

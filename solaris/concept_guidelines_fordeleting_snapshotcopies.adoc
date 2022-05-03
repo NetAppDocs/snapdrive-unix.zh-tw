@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_guidelines_fordeleting_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: 您無法刪除使用中的Snapshot複本、或是Snapshot複本橫跨多個儲存系統磁碟區。 
+---
+= 刪除Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您無法刪除使用中的Snapshot複本、或是Snapshot複本橫跨多個儲存系統磁碟區。
+
+當您使用「SnapDrive flexfsnap刪除」命令時、請遵循下列準則：
+
+* 如果您要刪除的任何Snapshot複本正在使用中、SnapDrive 或不是由針對UNIX的效益管理系統所建立、Snapshot刪除作業就會失敗。您可以將「-force」選項加入「SnapDrive flexSnap DELETE」命令、以取代此行為。
+* 如果您的Snapshot複本橫跨多個儲存系統磁碟區、則必須手動刪除每個磁碟區上的Snapshot複本。
+

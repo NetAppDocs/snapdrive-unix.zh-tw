@@ -1,0 +1,14 @@
+---
+permalink: aix/reference_command_summary.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, summary 
+summary: 適用於UNIX的支援不同的命令列、例如組態、儲存資源配置、主機端管理、SnapDrive 和Snapshot作業。 
+---
+= 命令摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援不同的命令列、例如組態、儲存資源配置、主機端管理、SnapDrive 和Snapshot作業。

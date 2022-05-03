@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_default_vaules_for_the_trace_log_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, default, value, trace, log, file 
+summary: 追蹤記錄檔可讓您設定各種參數、並加以變更。這些參數必須在SnapDrive．.conf檔案中設定。 
+---
+= 追蹤記錄檔的預設值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+追蹤記錄檔可讓您設定各種參數、並加以變更。這些參數必須在「snapdrive.conf」檔案中設定。
+
+必須在「snapdrive.conf」檔案中設定下列值：
+
+* 包含追蹤記錄檔的檔案名稱。
+* 追蹤記錄檔的最大大小。預設大小為「0」位元組。此值可確保每個追蹤記錄檔只包含一個SnapDrive 適用於UNIX的支援功能命令。
++
+如果您將預設大小重設為0以外的值、當檔案達到您指定的大小時、SnapDrive UNIX版的停止功能會將任意編號新增至名稱、以重新命名目前的追蹤記錄檔。然後、它會使用「追蹤記錄檔」值指定的名稱來啟動新的追蹤記錄檔。
+
+* 適用於UNIX的舊追蹤檔SnapDrive 數量上限。預設值為100。
+* UNIX所需的訊息類型SnapDrive 會寫入追蹤記錄檔。依預設、追蹤記錄檔包含嚴重錯誤、管理錯誤、命令錯誤、警告及資訊訊息。
+

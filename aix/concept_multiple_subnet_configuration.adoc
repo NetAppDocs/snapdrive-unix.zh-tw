@@ -1,0 +1,24 @@
+---
+permalink: aix/concept_multiple_subnet_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, subnet, configuration 
+summary: 在您想要分隔管理流量和資料流量的環境中、多個子網路非常實用。這種分隔方式可建立更安全的環境來管理網路流量。在這類環境中、伺服器上執行的適用於UNIX及更新版本支援所有可在獨立環境、主機與HA配對環境中執行的功能。SnapDrive SnapDrive 
+---
+= 多個子網路組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您想要分隔管理流量和資料流量的環境中、多個子網路非常實用。這種分隔方式可建立更安全的環境來管理網路流量。在這類環境中、伺服器上執行的適用於UNIX及更新版本支援所有可在獨立環境、主機與HA配對環境中執行的功能。SnapDrive SnapDrive
+
+與儲存系統管理相關的資料會透過管理介面傳輸。DataFabric Manager、Protection Manager和SnapDrive UNIX版的功能可作為管理介面的一部分。資料介面用於儲存系統之間的資料流量。
+
+若要在環境中設定多個子網路、您應該使用「mgmtpath」選項搭配「SnapDrive show config set」命令。
+
+UNIX版不支援SAN環境中的作業、因為SAN環境中的儲存系統主機名稱與公用名稱不同、但兩個名稱都會解析為相同的IP位址。SnapDrive若要解決此情況、您可以執行下列其中一項：
+
+* 為系統名稱指派不同的IP位址。
+* 設定系統、使其在您嘗試連線時不會回覆。
+

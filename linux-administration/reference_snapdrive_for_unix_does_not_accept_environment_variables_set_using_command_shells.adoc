@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/reference_snapdrive_for_unix_does_not_accept_environment_variables_set_using_command_shells.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, commands, fail, shell, snapcreate 
+summary: 您無法執行SnapDrive UNIX指令方面的支援、這是因為SnapDrive 透過命令Shell所設定的環境變數在UNIX方面不被接受、且$LD_LIBRARY_PATH_PATH_snapcree-check非永續性NFS參數設定為Off時。 
+---
+= 當使用命令Shell設定環境變數時、UNIX命令的執行效能無法正常運作SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您無法執行SnapDrive UNIX指令方面的指令、這是因為SnapDrive 透過命令Shell所設定的環境變數在UNIX上不被接受、而當「$LD_LIBRARID_PATH*」和「* snapcree-check非永久性NFS*」參數設定為「關」時。
+
+
+
+== 因應措施
+
+使用包裹程序指令碼作為SnapDrive UNIX二進位檔的參考、並將環境變數設定為二進位檔的可見值。

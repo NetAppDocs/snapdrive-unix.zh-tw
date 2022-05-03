@@ -1,0 +1,44 @@
+---
+permalink: aix/task_creating_an_lvm_a_vxvm_entity_and_settingup_the_lunautomatically.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lv, lun, create, automatically 
+summary: 您可以在主機上建立檔案系統、邏輯磁碟區或磁碟群組等實體、SnapDrive 並讓適用於UNIX的支援功能自動建立相關的LUN。 
+---
+= 建立LVM實體並自動設定LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在主機上建立檔案系統、邏輯磁碟區或磁碟群組等實體、SnapDrive 並讓適用於UNIX的支援功能自動建立相關的LUN。
+
+* 「host_lvm_fspec」引數可讓您指定要建立檔案系統、邏輯磁碟區或磁碟群組。此引數有三種一般格式。您使用的格式取決於您要建立的實體。
++
+若要建立檔案系統、請使用此格式：「-FS file_spec [-fstype][-fsopts選項][-mntopts選項][-nopersist][-hostvol file_spec][-dg dg_name]
+
++
+若要建立邏輯或主機磁碟區、請使用下列格式：
+
++
+「*」[-hostvol file_spec]_file_spec_[-dg _dg_name_]*
+
++
+若要建立磁碟或磁碟區群組、請使用下列格式：
+
++
+「*」、「_dg」、「_*」
+
+* 如果您建立檔案系統、也可以納入主機磁碟區規格、磁碟群組規格、或同時包含兩種規格、以指出檔案系統所在的主機磁碟區和磁碟群組。如果您不包含這些規格、SnapDrive 則UNIX版的支援功能會自動產生主機磁碟區和磁碟群組的名稱、或兩者的名稱。
+* 當您指定主機Volume時、SnapDrive 適用於UNIX的功能會建立一個串聯的主機Volume。雖然這是SnapDrive UNIX唯一支援的格式、但在建立主機磁碟區時、仍可讓您操作現有的等量分佈主機磁碟區。
+
+
+.步驟
+. 在命令列輸入下列命令：
++
+hy* SnapDrive 鏡像儲存設備create _host_xvm_fspec_-filervol _long filer_path_-DG大小[-igroup _ig_name [ig_name ...]_[{-Reserve |-noreserve]*
+
++
+適用於UNIX的支援會建立您指定的主機實體、並在您指定的儲存系統上為其建立LUN。SnapDrive它會針對每個LUN執行與主機準備和探索相關的所有工作、以及對應LUN並將其連接至主機實體。
+
+

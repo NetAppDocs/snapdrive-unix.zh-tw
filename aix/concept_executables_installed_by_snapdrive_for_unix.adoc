@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_executables_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, executables, install, unix 
+summary: 適用於UNIX的可執行檔會安裝適用於AIX作業系統的執行檔。SnapDrive 
+---
+= 由適用於UNIX的執行檔安裝SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的可執行檔會安裝適用於AIX作業系統的執行檔。SnapDrive
+
+這些可執行檔安裝於「/opt /NetApp/SnapDrive / bin / SnapDrive」。

@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/task_creating_a_filesystem_on_a_lunand_specifying_thelun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, file, create 
+summary: 您可以在LUN上建立檔案系統、並指定作為其中一部分建立的LUN。 
+---
+= 在LUN上建立檔案系統並指定LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在LUN上建立檔案系統、並指定作為其中一部分建立的LUN。
+
+.步驟
+. 請使用下列命令格式來完成此作業：
++
+h.* SnapDrive feststorage create __ fssfile_spec_-nolvm [-fstype][-vmtype _type_][-fsopts _options_][-mntopts _options_][-nopersist]-LUN _long lun_name_-lun _size sizeig_name_[_ig_name________[_nor_name___________[_nor__-nor_use__-neg_name_
+
++
+適用於UNIX的系統可在您指定的儲存系統、磁碟區和LUN上建立檔案系統。SnapDrive它會執行與主機準備和探索LUN相關的所有工作、以及對應LUN並將其連接至主機實體。
+
+
+
+
+
+== 範例：在ACctfiler/vol/vol1中的lona上建立100 MB檔案系統
+
+`# SnapDrive esvasport create -FS /mnt/acct1 -LUN acctfiler:/vol/vol1/luna-lunsize 100m -nolvm'

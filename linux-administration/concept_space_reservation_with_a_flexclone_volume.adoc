@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_space_reservation_with_a_flexclone_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, space, flexclone, restricted, unrestricted, reservation, operation 
+summary: 您可以在受限和不受限類型的FlexClone Volume上執行空間保留作業。根據預設、FlexClone Volume沒有寫入保留。 
+---
+= 使用FlexClone Volume保留空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在受限和不受限類型的FlexClone Volume上執行空間保留作業。根據預設、FlexClone Volume沒有寫入保留。
+
+以下是FlexClone的空間保留設定、適用於不受限制及受限的FlexClone磁碟區：
+
+*不受限的FlexClone Volume：*如果在CLI中提供了「-Reserve」選項、或在「snapdrive.conf」中提供「FlexClone - writereserve-ened = on」、則空間保留會設定為FlexClone上的Volume、否則不會。如果Aggregate上的可用空間不足以符合此設定、UNIX版的顯示錯誤訊息。SnapDrive
+
+*受限的FlexClone磁碟區：*
+
+* Volume層級的空間保留設定一律會停用、也就是空間保留設為無。
+* 如果在CLI中提供了"-reserved"或"-noreserv"選項、則屬於主機檔案規格的LUN上會分別啟用或停用空間保留。否則、FlexClone中的主機檔案規格相關LUN會繼承父Volume LUN的空間保留。
+

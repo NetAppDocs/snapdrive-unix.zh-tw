@@ -1,0 +1,117 @@
+---
+permalink: linux-administration/reference_informationrequired_forusing_the_snapdrive_storagedelete_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command 
+summary: 您需要先提供一些資訊、才能使用SnapDrive 「介紹儲存設備刪除」命令。此資訊可協助您正確使用命令。 
+---
+= 使用SnapDrive 「flexfstorage DELETE」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要提供一些資訊、才能使用「SnapDrive 介紹儲存設備刪除」命令。此資訊可協助您正確使用命令。
+
+|===
+| 需求 | 引數 
+
+
+ a| 
+根據您輸入的命令、您可以刪除下列任一類型的儲存設備：
+
+* LUN
++
+指定要從儲存系統刪除的一或多個LUN。
+
++
+如果刪除一個或多個LUN、第一個引數必須使用長格式的LUN名稱、以指定儲存系統名稱、磁碟區名稱及磁碟區內LUN的名稱。
+
++
+若要指定其他LUN、如果新LUN與先前LUN位於相同的儲存系統和磁碟區、則可以單獨使用LUN名稱。否則、您可以指定新的儲存系統名稱和磁碟區名稱（或僅指定磁碟區名稱）來取代先前的值。
+
+* 直接在LUN上建立的檔案系統
+* 磁碟或磁碟區群組
+* 磁碟或磁碟區群組上的檔案系統
+* 主機或邏輯磁碟區
+
+
+您為file_spec引數輸入的值必須識別您要刪除的儲存實體。
+
+
+
+ a| 
+LUN（`-LUN'）
+ a| 
+h_long lun_name_'
+
+
+
+ a| 
+其他LUN
+ a| 
+「LUN名稱」（長格式或短格式）
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_`）或磁碟區群組（`- vg _file_spec_`）
+ a| 
+磁碟群組或磁碟區群組的名稱
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+文件系統名稱
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機磁碟區或邏輯磁碟區的名稱
+
+
+NOTE: 您必須同時提供所要求的磁碟區和包含該磁碟區的磁碟群組、例如：「- hostvol DG3/acct_volume」。
+
+
+
+ a| 
+如果您想SnapDrive 讓UNIX版的支援刪除指定的儲存設備、即使您在命令提示字元中加入其他實體的主機端實體（例如具有一或多個主機磁碟區的磁碟群組）、請在命令提示字元中加入「-full」（全滿）選項。
+
+如果不包含此選項、則只能指定空白的主機端實體。
+
+
+
+ a| 
+「-full」
+ a| 
+~
+
+
+
+ a| 
+可指定要刪除儲存設備的共享主機實體。
+
+
+
+ a| 
+「-fstype-
+ a| 
+`_type_'
+
+
+
+ a| 
+vmtype
+ a| 
+`_type_'
+
+
+
+ a| 
+*選用：*指定用於SnapDrive UNIX作業的檔案系統和Volume Manager類型。
+
+|===

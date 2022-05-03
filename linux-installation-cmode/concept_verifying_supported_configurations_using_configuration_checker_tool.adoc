@@ -1,0 +1,14 @@
+---
+permalink: linux-installation-cmode/concept_verifying_supported_configurations_using_configuration_checker_tool.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verfiy, host, configuration, checker, tool 
+summary: 組態檢查工具可協助您確認Linux主機上所有必要的元件和正確版本、然後再使用SnapDrive 適用於UNIX的支援功能。 
+---
+= 使用組態檢查工具來驗證Linux主機組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+組態檢查工具可協助您確認Linux主機上所有必要的元件和正確版本、然後再使用SnapDrive 適用於UNIX的支援功能。

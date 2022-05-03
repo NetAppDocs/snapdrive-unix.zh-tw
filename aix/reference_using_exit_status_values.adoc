@@ -1,0 +1,18 @@
+---
+permalink: aix/reference_using_exit_status_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, exit, status, value 
+summary: 指令碼會使用結束狀態值來判斷SnapDrive UNIX版的指令是否成功。 
+---
+= 使用結束狀態值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+指令碼會使用結束狀態值來判斷SnapDrive UNIX版的指令是否成功。
+
+* 值為零表示命令已成功完成。
+* 非零值表示命令未完成、並提供錯誤狀況原因和嚴重性的相關資訊。
+

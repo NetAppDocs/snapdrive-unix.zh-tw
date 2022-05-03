@@ -1,0 +1,53 @@
+---
+permalink: linux-installation-cmode/task_connecting_linux_host_to_the_storage_system.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, connect, hosts, storage, system 
+summary: 若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vservers\） 
+---
+= 將Linux主機連線至儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）
+
+* 您必須將包含磁碟區的集合體指派給SVM Aggregate清單、才能執行SnapDrive 適用於UNIX作業的功能。
+* 您必須建立一或多個SVM、才能從叢集提供資料。
++
+SVM管理邏輯介面（LIF）的IP位址必須與SVM名稱對應、無論是在網域名稱服務（DNS）或是在「/etc/hosts」檔案中。
+
+
+
+.步驟
+. 如果您執行ONTAP 的是版本不含更新版本的版本、請在叢集管理伺服器上建立使用者、也稱為adminSVM：+
++
+hy* SnapDrive fssconfig set -cserver _csadmin_name cserver_name_*
+
++
+如果您執行ONTAP 的是版本不含更新版本的版本、請跳過此步驟。
+
+. 在資料SVM上建立使用者：
++
+「* SnapDrive 組態集*」
+
++
+vsadmin_name vserver_name_`
+
+. 驗證SVM是否已在SnapDrive 適用於UNIX的SVM中設定：
++
+‘* SnapDrive 組態清單*’
+
++
+命令會列出叢集管理伺服器和資料SVM的使用者名稱和IP位址。
+
+. 修改SVM資料介面路徑的管理介面路徑：
++
+「* SnapDrive 」- mgmtpath _management介面路徑data_interface_path_*
+
+. 確認所有資料與管理介面均已正確設定：
++
+`* SnapDrive 《*組態清單-mgmtpath*》
+
+

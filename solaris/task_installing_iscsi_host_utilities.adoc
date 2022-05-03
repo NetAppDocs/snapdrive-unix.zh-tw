@@ -1,0 +1,21 @@
+---
+permalink: solaris/task_installing_iscsi_host_utilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, solaris, host, utility 
+summary: 在安裝SnapDrive 適用於UNIX的版本之前、您必須先安裝Solaris Host Utilities。 
+---
+= 安裝Solaris主機公用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝SnapDrive 適用於UNIX的版本之前、您必須先安裝Solaris Host Utilities。
+
+.步驟
+. 若要安裝Solaris主機公用程式、請參閱Solaris主機公用程式文件、以確保系統設定正確。
++
+其中包含Volume Manager、多重路徑及其他功能的相關資訊、您必須先設定這些功能、才能安裝SnapDrive 適用於UNIX的整套功能。
+
+

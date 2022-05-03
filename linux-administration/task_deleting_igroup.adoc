@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/task_deleting_igroup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, igroup 
+summary: 您可以刪除已設定為儲存系統但不再需要的任何igroup。 
+---
+= 刪除igroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除已設定為儲存系統但不再需要的任何igroup。
+
+.步驟
+. 在主機上輸入下列命令：
++
+hy* SnapDrive 《*鏡像群組刪除_filer_name_*》
+
++
+[listing]
+----
+snapdrive igroup delete toaster
+Deleted igroup configuration for appliance: toaster
+----
++
+已成功移除儲存系統快顯功能所設定的igroup「ig」。
+
+

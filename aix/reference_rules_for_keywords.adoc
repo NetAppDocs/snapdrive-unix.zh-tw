@@ -1,0 +1,21 @@
+---
+permalink: aix/reference_rules_for_keywords.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rule, keyword 
+summary: UNIX版使用關鍵字指定適用於UNIX作業的目標。SnapDrive SnapDrive 
+---
+= 關鍵字規則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版使用關鍵字指定適用於UNIX作業的目標。SnapDrive SnapDrive
+
+UNIX版使用關鍵字來指定對應於您正在使用之主機和儲存系統物件的字串順序。SnapDrive下列規則適用於SnapDrive UNIX關鍵字的for UNIX：
+
+* 在每個關鍵字前面加上連字號（-）。
+* 請勿串連關鍵字。
+* 輸入完整的關鍵字和連字號、而非縮寫。
+

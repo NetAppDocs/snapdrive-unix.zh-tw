@@ -1,0 +1,16 @@
+---
+permalink: linux-installation-7mode/reference_deployment_workflow.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, deployment, workflow, instal, configure, create, copy 
+summary: 在您使用SnapDrive 支援的功能建立Snapshot複本之前、您必須先安裝Linux主機公用程式（如果使用FC或iSCSI傳輸協定）、安裝SnapDrive 適用於UNIX的支援功能、檢查SnapDrive 支援的組態是否有支援的功能、配置儲存設備、然後設定從Linux主機到NetApp儲存系統的連線。 
+---
+= 部署工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您建立Snapshot複本搭配SnapDrive 使用效益技術之前、您必須先安裝Linux主機公用程式（如果使用FC或iSCSI傳輸協定）、安裝SnapDrive 適用於UNIX的版本、檢查支援SnapDrive 的組態以供使用、配置儲存設備、然後設定從Linux主機連線至NetApp儲存系統的連線。
+
+image::../media/sdu_deployment_workflow_7mode.gif[SDU部署工作流程7模式]

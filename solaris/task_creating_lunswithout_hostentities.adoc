@@ -1,0 +1,30 @@
+---
+permalink: solaris/task_creating_lunswithout_hostentities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, lun, host, entity 
+summary: 您可以在SnapDrive 儲存系統上建立LUN、以使用UNIX指令來配置儲存設備。 
+---
+= 建立不含主機實體的LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在SnapDrive 儲存系統上建立LUN、以使用UNIX指令來配置儲存設備。
+
+.步驟
+. 在命令列介面中輸入下列命令：
++
+hy* SnapDrive 實體儲存設備create -lun _long_lun_name_-lunsize _[lun_name ...]_-lunsize_Size__[{-Reserve |-noreserveoe}]-igroup ig_name [ig_name ...]_ig_name [ig名稱...]_*
+
++
+適用於UNIX的可建立您指定的LUN。SnapDrive
+
+
+
+
+
+== 範例：在儲存系統上建立三個10 GB LUN
+
+《SnapDrive 支援儲存設備創造-LUN acctfiler/vol/vol1/lunb lunc - lunsize 10g'》

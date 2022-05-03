@@ -1,0 +1,99 @@
+---
+permalink: solaris/concept_informationrequired_forusing_the_snapdrive_storageresize_command.html 
+sidebar: sidebar 
+keywords: storage, resize, command, snap, snapdrive 
+summary: 您需要提供一些資訊、才能使用SnapDrive 「物件儲存區調整大小」命令。此資訊可協助您正確使用命令。 
+---
+= 使用SnapDrive 「fresize storage resize」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要提供一些資訊、才能使用「SnapDrive 物件儲存設備大小調整」命令。此資訊可協助您正確使用命令。
+
+|===
+| 需求 | 引數 
+
+
+ a| 
+決定是否要增加磁碟或磁碟區群組的大小、然後使用適當的引數輸入該實體的名稱。
+
+
+
+ a| 
+磁碟群組（-dg file_spec）或磁碟區群組（-vg file_spec）
+ a| 
+磁碟或磁碟區群組的名稱_
+
+
+
+ a| 
+決定您要如何增加儲存容量。使用此命令時請記住下列事項：
+
+* 使用「-growby」選項、將實體大小增加至「大小」引數中指定的位元組。
+* 使用「-growto」選項來增加實體大小、使新的總大小為「size」引數中指定的位元組數。
+* 使用'-addlun'選項、將新的內部產生LUN新增至基礎磁碟群組、以增加實體大小。如果您不使用此參數、SnapDrive 則UNIX版的現象會增加磁碟群組中最後一個LUN的大小、以符合「-growby」選項或「-walwto」選項中所指定的位元組大小。
+
+
+
+
+ a| 
+指定要增加儲存空間的位元組數（`-growby _Sizes__）
+ a| 
+`_number_of_bytes__
+
+
+
+ a| 
+指定您希望儲存設備達到的位元組大小（`-growto _sizes__）
+ a| 
+`_number_of_bytes__
+
+
+
+ a| 
+告訴SnapDrive UNIX將新的LUN新增至磁碟群組（'-addlun'）以增加大小
+
+=
+ a| 
+
+
+
+ a| 
+告訴SnapDrive UNIX使用者、無論是否建立保留空間、都要增加大小。「-Reserve |-noreserve」
+ a| 
+
+
+
+ a| 
+*選用：*建議您使用主機的預設igroup、而不要提供igroup名稱。
+
+
+
+ a| 
+igroup名稱（`-igroup'）
+ a| 
+h_ig名稱_
+
+
+
+ a| 
+「-fstyp__」
+ a| 
+`_type_'
+
+
+
+ a| 
+vmtype
+ a| 
+`_type_'
+
+
+
+ a| 
+*選用：*指定用於SnapDrive UNIX作業的檔案系統和Volume Manager類型。
+
+|===

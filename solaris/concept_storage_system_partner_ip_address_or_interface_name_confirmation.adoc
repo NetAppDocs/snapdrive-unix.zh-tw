@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_storage_system_partner_ip_address_or_interface_name_confirmation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, partner, ip, address, interface, name 
+summary: 當您在儲存系統上執行設定程式時、系統會提示您提供IP位址或介面名稱、以便在發生容錯移轉時使用合作夥伴儲存系統。如果您未提供此功能、SnapDrive 則UNIX版的介紹無法在其接管的儲存系統上搜尋儲存實體。 
+---
+= 儲存系統合作夥伴IP位址或介面名稱確認
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在儲存系統上執行設定程式時、系統會提示您提供IP位址或介面名稱、以便在發生容錯移轉時使用合作夥伴儲存系統。如果您未提供此功能、SnapDrive 則UNIX版的介紹無法在其接管的儲存系統上搜尋儲存實體。
+
+合作夥伴IP位址或介面名稱是HA配對設定中合作夥伴儲存系統的IP位址或介面名稱。如果主儲存系統故障、合作夥伴儲存系統就會接管主儲存系統的功能。
+
+
+
+== 範例：儲存系統設定指令碼
+
+儲存系統設定指令碼的下列範例輸出會要求IP位址：
+
+[listing]
+----
+storage_system_A> setup...
+Should interface e0 take over a partner IP address during failover?
+[n]: y
+Please enter the IP address or interface name to be taken over by e0
+[]: 10.2.21.35
+storage_system_A> reboot -t 0
+----
+此範例使用IP位址10.2.21.35。

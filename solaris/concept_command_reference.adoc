@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_command_reference.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, refernce 
+summary: 適用於UNIX的支援多種命令。SnapDrive這些命令參照可協助您瞭解命令、命令選項、關鍵字及引數。 
+---
+= 命令參考資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援多種命令。SnapDrive這些命令參照可協助您瞭解命令、命令選項、關鍵字及引數。

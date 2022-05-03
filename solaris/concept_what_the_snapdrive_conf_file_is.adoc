@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_what_the_snapdrive_conf_file_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, file, config, command 
+summary: SnapDrive .conf檔案包含每個可設定變數的名稱值配對、SnapDrive 供UNIX使用。UNIX版可在每次啟動時自動檢查此檔案中的資訊。SnapDrive您可以使用文字編輯器來修改此檔案。 
+---
+= 什麼是SnapDrive．conf檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「snapdrive.conf」檔案包含每個可設定變數的名稱值配對、SnapDrive 供UNIX使用。UNIX版可在每次啟動時自動檢查此檔案中的資訊。SnapDrive您可以使用文字編輯器來修改此檔案。
+
+「snapdrive.conf」檔案位於SnapDrive 安裝目錄中。「vesconfigshow」命令會顯示「snapdrive.conf」檔案的目前和作用中內容。SnapDrive

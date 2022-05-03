@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/concept_command_syntax_for_disconnecting_a_filesystem_created_on_alun_from_the_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, file, disconnect, syntax, lun 
+summary: 若要使用SnapDrive 「停止儲存」命令來移除直接在LUN上建立的檔案系統、請使用下列語法。 
+---
+= 用於從主機中斷開在LUN上建立的檔案系統的命令語法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用「SnapDrive 停止儲存設備連線」命令移除直接在LUN上建立的檔案系統、請使用下列語法：
+
+「SnapDrive 停止儲存- FS file_spec [-fstype][-vmtype類型]」
+
+
+
+== 範例：中斷在RDM LUN上建立的檔案系統連線
+
+[listing]
+----
+
+#snapdrive storage disconnect -fs /mnt/fs
+disconnect file system /mnt/fs
+  - fs /mnt/fs ... disconnected
+  deporting lun(s) from Guest OS ... done
+   - LUN lech:/vol/vol1/lun1 ... disconnected
+0001-669 Warning:
+      Please save information provided by this command.
+      You will need it to re-connect disconnected filespecs.
+----

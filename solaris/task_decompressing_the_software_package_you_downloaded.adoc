@@ -1,0 +1,51 @@
+---
+permalink: solaris/task_decompressing_the_software_package_you_downloaded.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, download, decompress, software, package 
+summary: 您必須下載並解壓縮NTAPsnapdrive_sun_x86_64 5.2.tar .Z或NTAPsnapdrive_sun_SPAR_5.2.tar .Z套件、才能在SnapDrive Solaris主機上安裝。軟體套件取決於您是在x86或SPARC平台上使用Solaris。 
+---
+= 下載及解壓縮軟體套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須下載並解壓縮NTAPsnapdrive_sun_x86_64 5.2.tar .Z或NTAPsnapdrive_sun_SPAR_5.2.tar .Z套件、才能在SnapDrive Solaris主機上安裝。軟體套件取決於您是在x86或SPARC平台上使用Solaris。
+
+.步驟
+. 視您使用的是x86或SPARC上的Solaris、從NetApp支援網站下載NTAPsnapdrive_sun_x86_64 x86_64 5.2.tar .Z或NTAPsnapdrive_sun_SPAR_5.2.tar .Z軟體套件。
+. 存取您下載壓縮檔案的目錄。
++
+例如、若要存取/tmp目錄、請輸入下列命令：
+
++
+「*# CD /tmp*」
+
+. 若要解壓縮x86上的Solaris軟體套件、請輸入下列命令：
++
+？？"##解壓縮NTAPsnapdrive_sun_x86_64 5.2.tar.Z*
+
++
+對於SPARC上的Solaris、請輸入下列命令：
+
++
+"* NTAPsnapdrive_sun_SPAR_5.2.tar.Z*
+
+. 若要擷取x86上的Solaris檔案、請輸入下列命令：
++
+？？"#tar -xvf NTAPsnapdrive_sun_x86_64 5.2.tar *
+
++
+對於SPARC上的Solaris、請輸入下列命令：
+
++
+"* tar -xvf NTAPsnapdrive_sun_SPAR_5.2.tar*（）"
+
+
+
+*相關資訊*
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

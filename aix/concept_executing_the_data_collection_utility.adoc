@@ -1,0 +1,34 @@
+---
+permalink: aix/concept_executing_the_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, collection, utility, executing 
+summary: 您需要完成幾個步驟、才能執行資料收集公用程式。 
+---
+= 執行資料收集公用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要完成幾個步驟、才能執行資料收集公用程式。
+
+請確定您以root使用者身分登入。
+
+.步驟
+. 變更SnapDrive 為適用於UNIX診斷目錄的功能。路徑為：「install_ddirectory/diag」
++
+「install目錄」是SnapDrive 適用於UNIX的主機作業系統安裝目錄。此目錄可能因主機作業系統而異。
+
+. 在命令提示字元中輸入下列命令：
++
+「* SnapDrive.DC [-d directory][-n file_name][-f]*」
+
++
+d目錄指定此公用程式所建立壓縮檔案的位置。預設位置為「/tmp/NetApp」。
+
++
+「-n file_name'」指定要包含在目錄名稱和壓縮輸出檔案名稱中的字串。如果您提供此引數的值、則「snapdrive.DC」公用程式會建立一個名為「nTAP SnapDrive_name」的目錄、並建立一個名為「nTAP SnapDrive_name.tar.Z」的檔案名稱、預設路徑名稱為「/tmp/NetApp/ntip_SnapDrive_info.tar.Z」
+
+. 將「目錄/ntap_SnapDrive_name.tar.Z」檔案傳送給NetApp技術支援部門進行分析。
+

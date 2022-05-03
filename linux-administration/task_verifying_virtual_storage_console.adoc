@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/task_verifying_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, verify, virtual, console, storage 
+summary: 您可以使用SnapDrive 下列命令來驗證虛擬介面是否在適用於UNIX的方面進行設定SnapDrive ： 
+---
+= 驗證虛擬儲存主控台的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 「SnapDrive 效能分析清單」命令、驗證虛擬介面是否設定在適用於UNIX的功能中。
+
+. 輸入下列命令：「SnapDrive flexconfig list」
++
+此命令會顯示SnapDrive 在適用於UNIX的使用者名稱或虛擬介面。這不會顯示虛擬介面系統的密碼。
+
++
+下列範例顯示與名為ruffleskin的虛擬介面相對應的使用者。
+
++
+[listing]
+----
+# snapdrive config list
+user name    appliance name   appliance type
+------------------------------------------------
+root       rumplestiltskins   StorageSystem
+sdadmin    ruffleskin	     VirtualInterface
+----
+

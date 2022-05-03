@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_storagecreation_with_snapdrive_forunix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create 
+summary: 您可以使用SnapDrive UNIX版的支援功能來建立LUN、直接在LUN上建立的檔案系統、磁碟群組、主機磁碟區和LUN上建立的檔案系統。 
+---
+= 利用UNIX的解決方法建立儲存設備SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive UNIX版的支援功能來建立LUN、直接在LUN上建立的檔案系統、磁碟群組、主機磁碟區和LUN上建立的檔案系統。
+
+UNIX版的支援功能可自動處理設定與這些實體相關的LUN所需的所有工作、包括準備主機、執行探索對應、建立實體、以及連線至您所建立的實體。SnapDrive您也可以指定哪些LUN SnapDrive 適用於UNIX、用來為您要求的實體提供儲存設備。
+
+您不需要同時建立LUN和儲存實體。如果您單獨建立LUN、則稍後可以使用現有的LUN來建立儲存實體。

@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_how_to_configure_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, configure 
+summary: 您可以編輯SnapDrive.conf檔案、其中包含SnapDrive 所有用於UNIX的組態變數和選項、以根據您的需求啟用或停用選項。您也可以新增變數來建立主機專屬的使用量。 
+---
+= 設定SnapDrive 適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯包含SnapDrive 所有用於UNIX的組態變數和選項的「snapdrive.conf」檔案、根據您的需求來啟用或停用選項。您也可以新增變數來建立主機專屬的使用量。

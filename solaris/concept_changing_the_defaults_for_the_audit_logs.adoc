@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_changing_the_defaults_for_the_audit_logs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, audit, log, default 
+summary: 您可以使用SnapDrive .conf檔案來變更稽核記錄檔的記錄參數、例如稽核記錄檔的最大大小、以及舊稽核檔案的最大數量。 
+---
+= 變更稽核記錄的預設值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「snapdrive.conf」檔案來變更稽核記錄檔的記錄參數、例如稽核記錄檔的最大大小、以及舊稽核檔案的最大數量。
+
+您可以使用「sfapdrive.conf」檔案來設定稽核記錄的下列值：
+
+* 稽核記錄檔的最大大小。預設大小為20K。當檔案大小達到「snapdrive.conf」檔案中指定的值後、SnapDrive UNIX版的支援將任意數字新增到名稱中、即可重新命名目前的稽核記錄檔。然後、使用「稽核記錄檔」值指定的名稱來啟動新的稽核檔案。
+* 適用於UNIX的舊稽核檔案SnapDrive 數量上限。預設值為2。
+
+
+*稽核記錄檔範例：*
+
+[listing]
+----
+2501: Begin uid=0 gid=1 15:35:02 03/12/04 snapdrv snap create -dg
+rdg -snapname snap_rdg1
+2501: Status=0 15:35:07 03/12/04
+2562: Begin uid=0 gid=1 15:35:16 03/12/04 snapdrv snap create -dg
+rdg -snapname snap_rdg1
+2562: FAILED Status=4 15:35:19 03/12/04
+----
+本範例中的第一對行顯示成功的作業、如「Status =0」行所示。
+
+第二對線路表示作業失敗。傳回代碼「4」表示「已經存在」。 如果您查看這兩個命令列、就會發現第一個建立的Snapshot複本稱為「shnap_rdg1」。第二行嘗試執行相同的作業、但名稱已經存在、因此作業失敗。

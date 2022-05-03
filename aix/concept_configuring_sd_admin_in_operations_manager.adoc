@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_configuring_sd_admin_in_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, sd, admin, operations, manager, console 
+summary: Operations Manager主控台管理員可建立SD-admin使用者。 
+---
+= 在Operations Manager主控台設定SD-admin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager主控台管理員可建立SD-admin使用者。
+
+Operations Manager主控台管理員會建立名為SD-admin的使用者、並能在全域群組（全域「Dfm.Core.AccessCheck」）上執行核心存取檢查。Operations Manager主控台管理員設定SD-admin使用者之後、您必須手動將認證資訊傳送SnapDrive 給UNIX管理員的地方。如需使用Operations Manager主控台設定使用者和角色的詳細資訊、請參閱_Operations Manager主控台管理指南_和線上說明。
+
+
+NOTE: 您可以使用任何名稱來取代SD-admin、不過最好使用SD-admin。
+
+若要在Operations Manager主控台中建立角色、請選取*設定*>*角色*。在SD-admin組態頁面中、Operations Manager主控台管理員必須將全域群組上的「Dfm.Database.Write」功能指派給SD-admin-role、SnapDrive 以便UNIX版的Sfor UNIX能在Operations Manager主控台中重新整理儲存實體。

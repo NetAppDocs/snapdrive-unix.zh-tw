@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_volume_optimization_in_an_fc_or_iscsi_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, colume, fc, iscsi, optimization 
+summary: 您可以在同一個磁碟區上使用主機專屬的邏輯單元編號（LUNs）、以最佳化FC和網際網路小型電腦系統介面（iSCSI）環境中的磁碟區使用量。 
+---
+= FC或iSCSI環境中的Volume最佳化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在同一個磁碟區上使用主機專屬的邏輯單元編號（LUN）、以最佳化FC和網際網路小型電腦系統介面（iSCSI）環境中的Volume使用量。
+
+此外、您也可以執行其他幾項工作來最佳化磁碟區：
+
+* 當多個主機共用相同的儲存系統時、每個主機都應該擁有自己專屬的儲存系統磁碟區、以容納連接至該主機的所有LUN。
+* 當儲存系統磁碟區上存在多個LUN時、最適合用於專屬磁碟區、LUN所在的磁碟區僅包含單一主機的LUN。不得包含任何其他檔案或目錄。
+

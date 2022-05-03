@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_flexclone_volumes_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume 
+summary: UNIX版支援FlexClone Volume、以FlexClone技術為基礎。SnapDrive Data ONTAPFlexClone Volume是父彈性Volume的時間點複本。FlexClone磁碟區的速度比LUN複製快、而且能讓您靈活地建立多個資料複本。 
+---
+= 適用於UNIX的FlexClone Volume SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版支援FlexClone Volume、以FlexClone技術為基礎。SnapDrive Data ONTAPFlexClone Volume是父彈性Volume的時間點複本。FlexClone磁碟區的速度比LUN複製快、而且能讓您靈活地建立多個資料複本。

@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_disconnecting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, disconnect 
+summary: 您可以從LUN、LUN上的檔案系統、磁碟群組、NFS目錄或LUN上的共用磁碟群組、主機磁碟區和檔案系統中斷Snapshot複本的連線。 
+---
+= 中斷Snapshot複本的連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從LUN、LUN上的檔案系統、磁碟群組、NFS目錄或LUN上的共用磁碟群組、主機磁碟區和檔案系統中斷Snapshot複本的連線。
+
+
+NOTE: 您可以從SnapDrive 適用於UNIX 4.2及更新版本的停止分割複製磁碟區。

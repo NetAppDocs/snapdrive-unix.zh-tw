@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_command_to_use_torename_a_snapshotcopy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, rename, snapshot, copy 
+summary: 使用Snapshot snap rame命令重新命名Snapshot複本。 
+---
+= 用於重新命名Snapshot複本的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「snapshot snapshot rame」命令重新命名Snapshot複本。

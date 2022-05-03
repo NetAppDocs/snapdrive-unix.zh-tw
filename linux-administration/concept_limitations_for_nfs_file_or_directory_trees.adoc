@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_limitations_for_nfs_file_or_directory_trees.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, nfs, directory, file, limitations 
+summary: 不提供NFS檔案或目錄樹狀結構的儲存資源配置命令。SnapDrive僅當您使用的是隻支援使用VMware 7.3.5及更新版本時、才能支援使用支援「抓取建立」和「抓取還原」命令。SnapDrive SnapDrive SnapDrive Data ONTAP 
+---
+= NFS檔案或目錄樹狀結構的限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不提供NFS檔案或目錄樹狀結構的儲存資源配置命令。SnapDrive僅當您使用VMware 7.3.5及更新版本時、才能支援「建立支援功能」和「還原功能」命令。SnapDrive SnapDrive SnapDrive Data ONTAP
+
+「鏈接」和「鏈接中斷」指令涉及NFS、並使用「鏈接」功能進行讀取和寫入存取。SnapDrive SnapDrive Data ONTAP FlexVol因此、您只能在使用Data ONTAP VMware版7.3.5或更新版本時執行這些命令。使用支援VMware版7.3.5或更新版本及傳統Volume的組態Data ONTAP 、可讓您建立及還原Snapshot複本、但Snapshot連線作業僅限唯讀存取。

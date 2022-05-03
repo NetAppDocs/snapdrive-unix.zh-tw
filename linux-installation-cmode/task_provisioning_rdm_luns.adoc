@@ -1,0 +1,56 @@
+---
+permalink: linux-installation-cmode/task_provisioning_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, provision, rdm, lun, create, fc 
+summary: 適用於UNIX的支援功能可讓您在VMware虛擬環境中的客體作業系統上啟用FC傳輸協定、以建立及配置RDM LUN。SnapDrive您也可以使用ONTAP 功能不實的功能來配置RDM LUN。 
+---
+= 配置RDM LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您在VMware虛擬環境中的客體作業系統上啟用FC傳輸協定、以建立及配置RDM LUN。SnapDrive您也可以使用ONTAP 功能不實的功能來配置RDM LUN。
+
+* NetApp虛擬儲存主控台（VSC）必須安裝並設定VMware vCenter™。
+* 適用於VMware vSphere™的NetApp Virtual Storage Console的備份與還原功能必須安裝在向vCenter™註冊的Windows作業系統中。
+* 在「snapdrive.conf」檔案中、「Default transport」必須設為「FCP」、SnapDrive 且必須重新啟動UNIX版的支援。
+
+
+.步驟
+. 設定客體作業系統以建立RDM LUN：
++
+`* SnapDrive 《*》組態集-viadmin _userviadmin_name_*》
+
++
+** 「_user_」是虛擬介面系統的名稱。
+** "_viadmin_name_"是虛擬介面系統的IP位址名稱。
+
+
+. 驗證虛擬儲存主控台的登入資訊：
++
+‘* SnapDrive 組態清單*’
+
++
+此命令會顯示SnapDrive 在適用於UNIX的使用者名稱或虛擬介面。
+
+. 確認客體作業系統可以與儲存系統通訊：
++
+'儲存設備show-all _command_*
+
+. 在儲存系統上建立RDM LUN：
++
+hy* SnapDrive 實體儲存設備create -lun _long lun_name_-lunsize _size_o_of_the_lun_*
+
+. 將RDM LUN連接至主機：
++
+hy* SnapDrive 實體儲存設備連線LUN _long lun_name_*
+
+
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2843698["適用於VMware vSphere的Virtual Storage Console、VASA Provider及Storage Replication Adapter for VMware vSphere管理指南（7.2版）"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368859["《適用於7-Mode的資訊儲存管理指南》（英文）Data ONTAP"]

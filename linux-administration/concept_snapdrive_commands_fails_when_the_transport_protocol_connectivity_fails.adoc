@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_snapdrive_commands_fails_when_the_transport_protocol_connectivity_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, transport, fc, iscsi, storage 
+summary: 當主機與儲存系統之間的iSCSI或FC連線失敗、或儲存系統上的iSCSI或FC故障時、無法執行指令。SnapDrive 
+---
+= 傳輸傳輸傳輸協定連線失敗時、無法執行指令SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當主機與儲存系統之間的iSCSI或FC連線失敗、或儲存系統上的iSCSI或FC故障時、無法執行指令。SnapDrive
+
+
+
+== 因應措施
+
+若要成功使用SnapDrive 支援UNIX的指令、您必須先還原iSCSI或FC服務。

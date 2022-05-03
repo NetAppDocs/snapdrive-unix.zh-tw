@@ -1,0 +1,68 @@
+---
+permalink: linux-administration/task_setting_values_in_the_snapdrive_conf_file.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, conf, value, name 
+summary: 您可以變更SnapDrive檔案中的值、或新增名稱值配對。 
+---
+= 設定SnapDrive檔案中的值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以變更「snapdrive.conf」檔案中的值、或新增名稱值配對。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 備份「snapdrive.conf」檔案。
+. 在文字編輯器中開啟「snapdrive.conf」檔案。
+. 若要新增名稱-值配對、請使用下列格式：
++
+「*組態選項名稱=值#」選項「註解*」
+
++
+'_config-option-name_'是您要設定的變數名稱、例如：稽核記錄檔。「_Value_」是您要指派給此選項的值。
+
++
+如果您要在註解中加入名稱-值配對、請在註解之前加上數字符號（#）。
+
++
+每行只能輸入一個名稱值配對。
+
++
+如果名稱或值使用字串、請將字串括在單引號（'）或雙引號（"）內。您可以將引號括住整個名稱-值配對、或只圍繞該值。下列範例顯示如何使用雙引號和註解搭配名稱-值配對使用：
+
++
+「*」「config-option-on=string with white spaces」#雙引號括住pair *
+
++
+"*config-option-2="strING with white space"#雙引號括住Value*
+
++
+'*config-option-2B=''"tring with white space'#圍繞著Value*的單引號
+
+. 若要修改名稱-值配對、請以新值取代目前值。
++
+請遵循下列步驟、確保檔案中已記錄預設值。
+
++
+.. 將符號（#）新增至您要修改的行。
+.. 複製該行。
+.. 移除數字符號（#）以啟動複製的文字。
+.. 修改值。
+
+
++
+如果您要指定空白值（例如、若要停用稽核記錄檔）、請輸入一對雙引號（""）。
+
+. 變更後儲存檔案。
++
+UNIX版的還原功能會在每次啟動時自動檢查此檔案。SnapDrive您的變更會在下次啟動時生效。
+
+. 使用「磁碟重新啟動」命令、重新啟動SnapDrive UNIX的程式檔。
++
+需要重新啟動精靈、才能使「snapdrive.conf」檔案變更生效。
+
+

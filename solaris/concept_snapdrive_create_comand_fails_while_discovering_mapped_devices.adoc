@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, command, fail, mapped, device 
+summary: 當您在SnapDrive UNIX的適用環境中執行儲存建立命令時、在探索階段會拒絕探索部分對應的裝置、命令也會失敗。 
+---
+= UNIX儲存設備建立命令在探索部分對應裝置時失敗SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在SnapDrive UNIX版的程式碼中執行「建立」命令時、在探索階段會拒絕探索部分對應的裝置、命令也會失敗。
+
+
+
+== 因應措施
+
+若要接受所有裝置、請編輯「/etc/lvm/lvm.conf」檔案的篩選區段：
+
+[listing]
+----
+filter = [ "a/.*/" ]
+----
+*相關資訊*
+
+xref:concept_guidelines_for_thestorage_createoperation.adoc[儲存設備建立作業準則]

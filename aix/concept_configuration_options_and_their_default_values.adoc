@@ -1,0 +1,977 @@
+---
+permalink: aix/concept_configuration_options_and_their_default_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, option, default, value 
+summary: 您可以執行SnapDrive 下列命令來判斷目前可設定的變數及其設定。 
+---
+= 組態選項及其預設值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行「SnapDrive variconfig show」命令來判斷目前可設定的變數及其設定。
+
+支援的可設定項目及其預設設定可能因主機作業系統和SnapDrive 不同版本的UNIX版而異。例如、在AIX上、預設路徑為「/var/log/`\」...
+
+下表說明了「snapdrive.conf」檔案中的參數：
+
+|===
+| 變動 | 說明 
+
+
+ a| 
+「lunpath-監 控頻率」
+ a| 
+可讓您指定SnapDrive for UNIX自動修復LUN路徑的頻率。預設值為24小時。
+
+
+
+ a| 
+「黑名單介面」
+ a| 
+可讓您在有多個乙太網路介面時、指定不想使用的介面、以縮短作業時間。如果組態有多個乙太網路介面、SnapDrive 則UNIX版有時會搜尋介面清單、以判斷介面是否可以ping。如果介面無法ping通、則會在檢查下一個介面之前嘗試五次。因此、執行作業需要更多時間。
+
+如果您想SnapDrive 讓某些介面忽略、可以在「黑名單介面」參數中指定這些介面。如此可縮短作業時間。
+
+
+
+ a| 
+「all-access-if-RBAC未指定=開啟」
+ a| 
+在SnapDrive 存取控制檔案中輸入權限字串、指定執行UNIX版的每個主機的存取控制權限。您指定的字串可控制SnapDrive 主機在儲存系統上執行哪些UNIX Snapshot複本及其他儲存作業的功能。（這些存取權限不會影響顯示或清單作業。）
+
+將此值設為「On（開啟）」或「Off（關閉）」、其中：
+
+* 「On SnapDrive 」指定如果儲存系統上不存在存取控制權限檔案、則UNIX版的支援功能會啟用所有存取權限。預設值為「開啟」。
+* 「關」指定儲存系統僅允許主機存取控制權限檔案中提及的權限。
+
+
+如果您提供存取控制檔案、此選項將不會生效。
+
+
+
+ a| 
+「enable-partial clone-Connect =開啟」
+ a| 
+UNIX版的支援功能可讓您連線至檔案系統的子集、或僅連線至複製磁碟群組的主機Volume。SnapDrive
+
+將此值設為「On（開啟）」或「Off（關閉）」：
+
+* 「On」（開啟SnapDrive ）指定UNIX版的支援功能可讓您連線至檔案系統的子集、或僅連線至複製磁碟群組的主機Volume。
+* 「Off SnapDrive 」（關）可判斷UNIX版的功能無法連線至檔案系統的子集、或僅連線至複製磁碟群組的主機Volume。
+
+
+
+
+ a| 
+"Audit日誌文件="/var/log/SD-Audit日誌"
+ a| 
+指定SnapDrive UNIX版的RUNPC寫入稽核記錄檔的位置。
+
+預設值取決於您的主機作業系統。範例中所示的路徑是AIX主機的預設路徑。
+
+
+
+ a| 
+「稽核記錄-最大大小= 20480」
+ a| 
+指定稽核記錄檔的最大大小（以位元組為單位）。當檔案達到這個大小時、SnapDrive UNIX的功能將重新命名、並啟動新的稽核記錄。預設值為「20480」位元組。由於UNIX版的不需要在作業過程中啟動新的記錄檔、因此檔案的正確大小可能與此處指定的值略有不同。SnapDrive
+
+
+NOTE: 您應該使用預設值。如果您決定變更預設值、請記住、太多的記錄檔可能佔用磁碟空間、最終可能影響效能。
+
+
+
+ a| 
+「稽核記錄-儲存= 2」
+ a| 
+決定SnapDrive UNIX的舊稽核記錄檔應儲存多少個。達到此限制後、SnapDrive UNIX的for UNIX會捨棄最舊的檔案、並建立新的檔案。
+
+UNIX版根據您在「稽核記錄儲存」變數中指定的值來旋轉此檔案。SnapDrive預設值為「2」。
+
+
+NOTE: 您應該使用預設值。如果您決定變更預設值、請記住、太多的記錄檔可能佔用磁碟空間、最終可能影響效能。
+
+
+
+ a| 
+「自動支援」功能
+ a| 
+確定「自動支援」選項預設為「開啟」。
+
+此選項預設為啟用、可將AutoSupport 資訊儲存在儲存系統的事件管理系統（EMS）記錄檔中。
+
+
+NOTE: 適用於UNIX及更新版本的支援中心4.2沒有「autosup-filer'」選項。SnapDrive
+
+
+
+ a| 
+「可用的LUN保留區= 8」
+ a| 
+指定當目前SnapDrive 的UNIX版更新作業完成時、主機必須準備建立的LUN數目。如果可用的作業系統資源很少、無法建立指定的LUN數量、SnapDrive 則根據「_enable、imicit、host-Preparation」變數中提供的值、適用於UNIX的Sfor UNIX會要求額外的資源。
+
+預設值為「8」。
+
+[NOTE]
+====
+此變數僅適用於需要準備主機才能建立LUN的系統。主機需要這項準備工作。
+
+此變數用於包含LUN的組態。
+
+====
+
+
+ a| 
+「bypass SnapDrive-clone generated -check」
+ a| 
+指定刪除SnapDrive 由非SnapDrive產生的FlexClone。
+
+將此值設為「On（開啟）」或「Off（關閉）」、其中：
+
+* 「On」（開啟SnapDrive ）-指定UNIX版的功能可刪除SnapDrive所產生及非SnapDrive所產生的FlexClone磁碟區。
+* 「Off」（關）-指定SnapDrive UNIX版的功能僅允許刪除SnapDrive所產生的FlexClone Volume。預設值為「關」。
+
+
+
+
+ a| 
+「Check、Export、permission、nfs、clone」
+ a| 
+決定NFS匯出權限的設定、允許/停用在次要主機（沒有父磁碟區匯出權限的主機）或儲存系統中建立複製。
+
+* 「On」（開啟）- SnapDrive UNIX版的支援功能會檢查次要主機的Volume是否具有適當的匯出權限。預設值為開啟。
+* 「Off」（關）- SnapDrive UNIX版的支援不檢查次要主機的磁碟區是否有適當的匯出權限。
+
+
+如果NFS實體中的某個Volume沒有匯出權限、則適用於UNIX的不允許複製。SnapDrive若要克服這種情況、請在「snapdrive.conf」檔案中停用此變數。由於執行複製作業、SnapDrive 所以提供適當的權限來存取複製的Volume。
+
+將此值設為「Off」（關）、可在叢集Data ONTAP 式的餐廳中使用二線保護功能。
+
+
+
+ a| 
+「叢集作業逾時秒=600」
+ a| 
+指定主機叢集作業逾時（以秒為單位）。使用遠端節點和HA配對作業時、您應該設定此值、以判斷SnapDrive 何時應超時執行UNIX版的功能。預設值為「600秒」。
+
+如果SnapDrive 從非主節點啟動for UNIX作業、則除了非主節點之外、主機叢集主節點也可以是遠端節點。
+
+如果SnapDrive 在主機叢集中的任何節點上執行的UNIX作業超過您設定的值、或預設值「600」秒（如果您未設定值）、則作業會逾時並顯示下列訊息：
+
+[listing]
+----
+Remote Execution of command on slave node sfrac-57 timed out. Possible reason could be that timeout is too less for that system. You can increase the cluster connect timeout in snapdrive.conf file. Please do the necessary cleanup manually. Also, please check the operation can be restricted to lesser jobs to be done so that time required is reduced.
+----
+
+
+ a| 
+「contact-http-port=80」
+ a| 
+指定用於與儲存系統通訊的HTTP連接埠。預設值為「80」。
+
+
+
+ a| 
+「contact-SSL-port=443」
+ a| 
+指定用於與儲存系統通訊的SSL連接埠。預設值為「443」。
+
+
+
+ a| 
+「contact-http-port-sdU-daemon=4094」
+ a| 
+指定HTTP連接埠、以用於與SnapDrive UNIX版的for UNIX精靈通訊。預設值為「4094」。
+
+
+
+ a| 
+「contact-http-dfm-port=8088」
+ a| 
+指定用於與Operations Manager伺服器通訊的HTTP連接埠。預設值為「8088」。
+
+
+
+ a| 
+「contact-SSL-DFM-port=8488」
+ a| 
+指定用於與Operations Manager伺服器通訊的SSL連接埠。預設值為「8488」。
+
+
+
+ a| 
+「診斷轉換等待= 120」
+ a| 
+指定SnapDrive UNIX等待DataMotion執行VFilerTM（轉換階段）作業完成、然後重試SnapDrive 執行UNIX命令的秒數。預設值為「120」秒。
+
+
+
+ a| 
+「DfM-API-timeout=180」
+ a| 
+指定SnapDrive UNIX等待DFM API傳回的秒數。預設值為「180秒」。
+
+
+
+ a| 
+「dfm-RBAC重試次數=12」
+ a| 
+指定SnapDrive UNIX版的for UNIX檢查Operations Manager重新整理的存取重試次數。預設值為「12」。
+
+
+
+ a| 
+「dfm-RBAC重試-睡眠-秒= 15」
+ a| 
+指定SnapDrive UNIX在重新嘗試Operations Manager重新整理的存取檢查之前等待的秒數。預設值為「15」。
+
+
+
+ a| 
+「預設節點提示=關」
+ a| 
+指定是否要使用「-noprompt」選項。預設值為「Off（關）」（無法使用）。
+
+如果您將此選項變更為onSnapDrive for UNIX、則不會提示您確認由「-force」要求的動作。
+
+
+
+ a| 
+「設備重試次數=3」
+ a| 
+指定SnapDrive 適用於UNIX的查詢數量、以查詢LUN所在的裝置。預設值為「3」。
+
+在正常情況下、預設值應已足夠。在其他情況下、LUN查詢Snapcreate作業可能會失敗、因為儲存系統異常忙碌。
+
+如果LUN查詢持續失敗、即使LUN已連線且設定正確、您可能會想要增加重試次數。
+
+此變數用於包含LUN的組態。
+
+
+NOTE: 您應該為主機叢集中所有節點的「設備重試次數」變數設定相同的值。否則、涉及多個主機叢集節點的裝置探索可能會在某些節點上失敗、並在其他節點上成功。
+
+
+
+ a| 
+「設備重試-睡眠-秒= 1」
+ a| 
+指定SnapDrive UNIX在查詢LUN所在裝置時等待的秒數。預設值為「1」秒。
+
+在正常情況下、預設值應已足夠。在其他情況下、LUN查詢Snapcreate作業可能會失敗、因為儲存系統異常忙碌。
+
+如果LUN查詢持續失敗、即使LUN已連線且設定正確、您可能會想要增加兩次重試之間的秒數。
+
+此變數用於包含LUN的組態。
+
+
+NOTE: 您應該在主機叢集中的所有節點上、針對「設備重試睡眠-秒」選項設定相同的值。否則、涉及多個主機叢集節點的裝置探索可能會在某些節點上失敗、並在其他節點上成功。
+
+
+
+ a| 
+「Default transport=iSCSI」
+ a| 
+指定SnapDrive 當建立儲存設備時、UNIX用作傳輸類型的通訊協定（如果需要做出決定）。可接受的值是「iSCSI」或「FCP」。
+
+
+NOTE: 如果主機只設定一種傳輸類型、SnapDrive 而該類型則由支援UNIX的支援、SnapDrive 則無論在「snapdrive.conf」檔案中指定的類型為何、適用於UNIX的支援都會使用該傳輸類型。
+
+在AIX主機上、請確定「多路徑類型」選項設定正確。如果指定FCP、則必須將「多路徑類型」設定為下列其中一個值：
+
+* 《NativeMPIO》
+* 《DMP》
+
+
+
+
+ a| 
+「enable-alua=on」
+ a| 
+決定是否支援ALUA在igroup上執行多重路徑。儲存系統必須是HA配對、HA配對容錯移轉狀態必須是「單一映像」模式。
+
+* 預設值為「開啟」、以支援igroup的ALUA
+* 您可以設定選項「Off（關）」來停用ALUA支援
+
+
+
+
+ a| 
+「enable-FCP快取=開啟」
+ a| 
+指定是否啟用或停用快取。此技術可維護可用作用中連接埠的快取、以及連接埠名稱（WWPN）資訊、以更快傳送回應。SnapDrive
+
+此變數在連接埠沒有連接FC纜線或連接埠使用包覆式插頭的少數情況下非常實用、SnapDrive 而UNIX版的列舉可能會經歷長時間延遲、無法取得FC介面及其對應WWPN的相關資訊。快取有助於解決/改善SnapDrive 此類環境中的不一致作業效能。
+
+預設值為「開啟」。
+
+
+
+ a| 
+「enable-IMPERIT主機準備=開啟」
+ a| 
+決定SnapDrive 針對UNIX的功能是否隱含要求主機準備LUN、或通知您需要並結束LUN。
+
+* 「On」（開啟）- SnapDrive UNIX版的功能不一定會要求主機建立更多資源、如果可用資源不足以建立所需的LUN數量。所建立的LUN數量是在'_可用-LUN-RESE__變數中指定。預設值為「開啟」。
+* 「Off」（關）- SnapDrive UNIX版的功能可通知您、是否需要額外的主機準備來建立LUN、SnapDrive 以及是否需要退出作業。然後、您可以執行必要的作業、以釋出建立LUN所需的資源。例如、您可以執行「SnapDrive flexconfig prepare LUNs」命令。準備完成後、您可以重新輸入目前SnapDrive 的UNIX版功能。
+
+
+
+NOTE: 此變數僅適用於需要準備主機的系統、才能為需要準備的主機建立LUN。此變數僅用於包含LUN的組態。
+
+
+
+ a| 
+「啟用-移轉- NFS版本」
+ a| 
+允許使用較高版本的NFS來複製/還原。
+
+在純NFSv4環境中、當使用在NFSv3上建立的Snapshot複本嘗試執行Snapmanagement作業（例如複製與還原）時、Snapmanagement作業會失敗。
+
+預設值為「關」。在此移轉過程中、SnapDrive 只考慮使用通訊協定版本、而其他選項如「rw」和「largefiles」則不被UNIX考慮在內。
+
+因此、只有對應NFS檔案的NFS版本才會新增到「etc/fstab'」檔案中。確保使用適當的NFS版本來掛載檔案規格、方法是使用「-o ves=3」來掛載NFSv3、使用「-o ves=4」來掛載NFSv3。如果您想要使用所有掛載選項來移轉NFS檔案規格、建議您在Snapmanagement作業中使用「-mntets」。在叢集Data ONTAP 式功能中移轉期間、必須在父Volume的匯出原則規則中、於存取傳輸協定的屬性值中使用「NFS」。
+
+
+NOTE: 確保只使用「nfsvers」或「vrs」命令作為掛載選項、以檢查NFS版本。
+
+
+
+ a| 
+「啟用安裝保護支援」
+ a| 
+支援SnapDrive UNIX的支援功能、可支援AIX的Mount Guard功能、避免同時或同時掛載。如果在一個節點上掛載檔案系統、且變數已啟用、則AIX會防止在另一個節點上掛載相同的檔案系統。缺省情況下，將"_enable－mountguide-support_"（啓用安裝保護支持）變量設置爲"Off"（關）。
+
+
+
+ a| 
+「啟用ping檢查檔案管理器連線能力」
+ a| 
+如果停用ICMP傳輸協定存取、或是在SnapDrive 部署了for UNIX的主機和儲存系統網路之間捨棄ICMP封包、則此變數必須設定為「Off」（關）、SnapDrive 以便UNIX的DB2不會ping來檢查儲存系統是否可連線。如果將此變數設為「On」SnapDrive （僅限）、則由於ping失敗、無法執行「On」（僅限）的「On」（無線連結）作業。根據預設、此變數會設為「On」（開啟）
+
+
+
+ a| 
+「enable-s拆 分複製=關閉」
+ a| 
+如果將此變數設為「On」（開啟）或「Sync」（同步）、則可在Snapshot連線和Snapshot中斷作業期間分割複製的磁碟區或LUN。您可以為此變數設定下列值：
+
+* 「On」（開啟）-可非同步分割複製的磁碟區或LUN。
+* 「Sync」（同步）：可同步分割複製的磁碟區或LUN。
+* 「Off」（關）-停用分割複製的磁碟區或LUN。預設值為「關」。
+
+
+如果您在Snapshot連線作業期間將此值設為「On」（開啟）或「Sync」（同步）、而在Snapshot中斷作業期間將此值設為「Off」（關閉）、SnapDrive 則UNIX版的DB2不會刪除Snapshot複本中的原始Volume或LUN。
+
+您也可以使用「分割」選項來分割複製的磁碟區或LUN。
+
+
+
+ a| 
+「enforce—Strong—ciphers=Off」
+ a| 
+將SnapDrive 此變數設為「開啟」、以便讓Sfor the Sfor the Sfor the Sfor the daemdaemdaemon,強制TLSv1與用戶端通訊。
+
+使用SnapDrive 更完善的加密功能、可增強用戶端與該程式之間的通訊安全性。
+
+此選項預設為「關」。
+
+
+
+ a| 
+「filer-ree-retries=140」
+ a| 
+指定SnapDrive 當還原期間發生故障時、UNIX使用的還原功能嘗試在儲存系統上還原Snapshot複本的次數。預設值為「140」。
+
+在正常情況下、預設值應已足夠。在其他情況下、這項作業可能會因為儲存系統異常忙碌而失敗。如果即使LUN處於線上且設定正確、仍持續故障、您可能會想要增加重試次數。
+
+
+
+ a| 
+「filer-reske-retry、sleep-secs=15」
+ a| 
+指定SnapDrive UNIX在嘗試還原Snapshot複本之間等待的秒數。預設值為「15」秒。
+
+在正常情況下、預設值應已足夠。在其他情況下、這項作業可能會因為儲存系統異常忙碌而失敗。如果即使LUN已連線且設定正確、仍持續故障、您可能會想要增加兩次重試之間的秒數。
+
+
+
+ a| 
+"filesystem-cally-timeout-sec=300"
+ a| 
+指定SnapDrive UNIX在嘗試存取檔案系統之間等待的秒數。預設值為「300」秒。
+
+此變數僅用於包含LUN的組態。
+
+
+
+ a| 
+「FlexClone - writereserve-enable=on」
+ a| 
+它可以採用下列任一值：
+
+* 「開啟」
+* 「關」
+
+
+決定所建立FlexClone Volume的保留空間。可接受的值是「On」（開啟）和「Off」（關閉）、根據下列規則。
+
+* 保留：開啟
+* 最佳化：檔案
+* 不受限：Volume
+* 保留：關
+* 最佳化：檔案
+* 無限制：無
+
+
+
+
+ a| 
+fstype=JFS2'
+ a| 
+指定您要用於SnapDrive UNIX作業的檔案系統類型。檔案系統必須是SnapDrive UNIX版支援的作業系統類型。
+
+AIX：「jfs」、「jfs3」或「VxFS」
+
+預設值為「JFS2」。
+
+
+NOTE: JFS檔案系統類型僅支援Snapshot作業、不支援儲存作業。
+
+您也可以透過CLI使用「-fstype,」選項來指定要使用的檔案系統類型。
+
+
+
+ a| 
+「LUN內嵌-進行中-睡眠-秒=3」
+ a| 
+指定在磁碟區SnapRestore 型的還原作業之後、嘗試將LUN重新連線期間、重試的秒數。預設值為「3」。
+
+
+
+ a| 
+「LUN在線上-進行中-重試次數=40」
+ a| 
+指定在進行Volume型SnapRestore 的還原作業後、嘗試將LUN重新連線的重試次數。預設值為「40」。
+
+
+
+ a| 
+「GMT-retry、sleep-secs=2」
+ a| 
+指定SnapDrive UNIX在重新嘗試管理ONTAP 功能控制通道上的作業之前、等候多少秒。預設值為「2」秒。
+
+
+
+ a| 
+「GMT-retry、sleep-long、secs = 90」
+ a| 
+指定SnapDrive 發生ONTAP 容錯移轉錯誤訊息後、在重新嘗試管理等控制通道上的作業之前、UNIX的等候秒數。預設值為「90」秒。
+
+
+
+ a| 
+「多路徑類型= NativeMPIO」
+ a| 
+指定要使用的多重路徑軟體。預設值取決於主機作業系統。此變數僅適用於下列其中一項陳述為真的情況：
+
+* 有多個多重路徑解決方案可供使用。
+* 組態包括LUN。
++
+可接受的值是「無」或「nativempio」。
+
+
+
+您可以為此變數設定下列值：
+
+AIX：您為AIX設定的值取決於您使用的傳輸協定。
+
+* 如果您使用FCP、請將其設為下列任一值：
++
+** NativeMPIO的預設值為「無」。
+
+
+* 此外、請將「預設傳輸」選項設定為FCP。
+* 如果您使用iSCSI、請將此值設為「無」。此外、將「_default-transport」選項設為「iSCSI」。
+
+
+
+
+ a| 
+「overre-vbsr-SnapMirror檢查」
+ a| 
+當要還原的Snapshot複本在Volume Based SnapRestore Snapshot（VBRSR）期間比SnapMirror基準Snapshot複本舊時、您可以將「_overre-vbsr-SnapMirror檢查」變數的值設為「開啟」、以覆寫SnapMirror關係。只有OnCommand 在未設定「支援不支援不支援的Data Fabric Manager（DFM）」時、才能使用此變數。
+
+依預設、此值會設為「關」。此變數不適用於叢集Data ONTAP 式的8.2版或更新版本。
+
+
+
+ a| 
+「path="/sbin：/sbin：/bin：/usr/lib/vxm/ bin：/usr/bin：/opt/NTAPontapontrap/SANToolkit / bin：/opt/NTAPsanlun/bin：/opt/VRts/bin：/etc/vx/bi n"。
+ a| 
+指定系統用來尋找工具的搜尋路徑。
+
+您應該確認這項資訊是否適用於您的系統。如果不正確、請將其變更為正確的路徑。
+
+預設值可能會因作業系統而異。此路徑為的預設路徑
+
+AIX主機不會使用此變數、因為它們會以不同的方式處理命令。
+
+
+
+ a| 
+「/opt/NetApp/SnapDrive/.pwfile'」
+ a| 
+指定密碼檔案的位置、以供儲存系統的使用者登入。
+
+預設值可能會因作業系統而異。
+
+Linux的預設路徑為「/opt /NetApp/SnapDrive /.pwfile/opt / ontap / SnapDrive/.pwfile'」
+
+
+
+ a| 
+"ping-interfaces with -same八位元組"
+ a| 
+避免透過主機中可能設定不同子網路IP的所有可用介面進行不必要的ping。如果此變數設為「On」（開啟）、SnapDrive 則UNIX版的Sf2僅會考慮儲存系統的相同子網路IP、並ping儲存系統以驗證位址回應。如果此變數設為「Off SnapDrive （關閉）」、則會取得主機系統中所有可用的IP、並ping儲存系統、以驗證每個子網路的位址解析、而此子網路可能會在本機偵測為ping攻擊。
+
+
+
+ a| 
+「prefix-filer-LUN」
+ a| 
+指定SnapDrive UNIX適用的字首、套用到內部產生的所有LUN名稱。此前置字元的預設值為空白字串。
+
+此變數可讓從目前主機建立但SnapDrive 未在適用於UNIX的指令行上明確命名的所有LUN名稱共用初始字串。
+
+
+NOTE: 此變數僅用於包含LUN的組態。
+
+
+
+ a| 
+「prefix-clone名稱」
+ a| 
+提供的字串會附加原始儲存系統磁碟區名稱、以建立FlexClone磁碟區的名稱。
+
+
+
+ a| 
+「prepe-lun-count=16」
+ a| 
+指定SnapDrive UNIX的LUN範本應準備建立多少個。UNIX版在收到要求讓主機準備建立額外LUN時、會檢查此值。SnapDrive
+
+預設值為「16」、表示系統可在準備完成後再建立16個LUN。
+
+
+NOTE: 此變數僅適用於需要準備主機才能建立LUN的系統。此變數僅用於包含LUN的組態。主機需要這項準備工作。
+
+
+
+ a| 
+「RBAC方法= DFM」
+ a| 
+指定存取控制方法。可能的值包括「原生」和「dFM」。
+
+如果變數設為「原生」、則會使用儲存在「/vol/vol0/sdprbac/sdbhost-name.prbac'或「/vol/vol0/sdprbac/sdgeneric-name.prbac"中的存取控制檔案來進行存取檢查。
+
+如果變數設定為「dFM」、則營運經理是必要的條件。在這種情況SnapDrive 下、UNIX版的支援中心會向Operations Manager進行存取檢查。
+
+
+
+ a| 
+「RBAC快取=關」
+ a| 
+指定啟用或停用快取。適用於UNIX的可維護存取檢查查詢的快取及對應結果。SnapDrive僅當所有已設定的Operations Manager伺服器都停機時、UNIX版的適用功能才會使用此快取。SnapDrive
+
+您可以將變數的值設定為「開啟」以啟用快取、或將其設為「關閉」以停用。預設值為「Off」（關）、將SnapDrive UNIX的功能組態設定為使用Operations Manager、並將「_RBAC方法」組態變數設定為「dFM」。
+
+
+
+ a| 
+「RBAC快取逾時」
+ a| 
+指定RBAC快取逾時期間、僅適用於啟用「_RBAC快取」的情況。預設值為「24小時」。僅當所有已設定的Operations Manager伺服器都停機時、UNIX版的適用功能才會使用此快取。SnapDrive
+
+
+
+ a| 
+"reccove-log-file=/var/log/sdrecovery．log"
+ a| 
+指定SnapDrive UNIX的哪些地方會寫入恢復記錄檔。
+
+預設值取決於您的主機作業系統。本範例所示的路徑是AIX主機的預設路徑。
+
+
+
+ a| 
+"REce-log-SAVE = 20"
+ a| 
+指定SnapDrive UNIX用的恢復記錄檔應儲存多少個舊檔。達到此限制之後、SnapDrive 當UNIX的範圍建立新的檔案時、將捨棄最舊的檔案。
+
+UNIX版可在每次啟動新作業時、旋轉此記錄檔。SnapDrive預設值為「20」。
+
+
+NOTE: 您應該使用預設值。如果您決定變更預設值、請記住、如果有太多大型記錄檔、可能會佔用磁碟空間、最終可能影響效能。
+
+
+
+ a| 
+「an clone方法」
+ a| 
+指定可以建立的複本類型。
+
+它可以採用下列值：
+
+* 《lunclone》
++
+在同一個儲存系統磁碟區中建立LUN的複本、以允許連線。預設值為「lunclone」。
+
+* 最佳化
++
+建立儲存系統磁碟區的受限FlexClone磁碟區、以允許連線。
+
+* 不受限制
++
+建立儲存系統磁碟區的不受限制FlexClone磁碟區、以允許連線。
+
+
+
+
+
+ a| 
+「ecure-communication——clusternodes=on」
+ a| 
+指定主機叢集節點內的安全通訊、以遠端執行SnapDrive UNIX的指令。
+
+您可以透過SnapDrive 變更此組態變數的值、將UNIX版的功能導向至使用RSHH或SSH。針對UNIX遠端執行而採用的RSHH或SSH方法SnapDrive 、僅取決於下列兩個元件的「snapdrive.conf」檔案安裝目錄中所設定的值：
+
+* 執行UNIX版的主機、以取得遠端節點的主機WWPN資訊和裝置路徑資訊。SnapDrive
++
+例如SnapDrive 、在主主機叢集節點上執行的「支援儲存建立」、只會在本機「snapdrive.conf」檔案中使用RSHH或SSH組態變數來執行下列任一項作業：
+
++
+** 確定遠端通訊通道。
+** 在遠端節點上執行「devfsadm'」命令。
+
+
+* 非主要主機叢集節點、如果SnapDrive 要在主要主機叢集節點上遠端執行UNIX適用的命令。
++
+若要將SnapDrive 支援UNIX的指令傳送至主主機叢集節點、請參閱本機「snapdrive.conf」檔案中的RSH/SSH組態變數、以判斷用於遠端命令執行的RSH或SSH機制。
+
+
+
+預設值「on」表示SSH用於遠端執行命令。值「Off（關）」表示RSHH用於執行。
+
+
+
+ a| 
+「napcree-cg：timeout=輕鬆」
+ a| 
+指定「SnapDrive flexsnap create」命令允許儲存系統完成隔離的時間間隔。此變數的值如下：
+
+* 「緊急」-指定短時間間隔。
+* 「新媒體」-指定緊急和休閒的時間間隔。
+* 「重新傳真」-指定最長的時間間隔。此值為預設值。
+
+
+如果儲存系統未在允許的時間內完成隔離、SnapDrive 則適用於UNIX的功能會使用Data ONTAP 7.2之前版本的功能來建立Snapshot複本。
+
+
+
+ a| 
+「napcree-control-non永久性nf=on」
+ a| 
+啟用和停用Snapshot建立作業、以搭配非持續性的NFS檔案系統使用。此變數的值如下：
+
+* 「On」（開啟）- SnapDrive UNIX版的Sfor UNIX會檢查SnapDrive 檔案系統掛載表中是否存在「flexSnap create」命令中指定的NFS實體。如果NFS實體未透過檔案系統掛載表持續掛載、則Snapshot建立作業會失敗。這是預設值。
+* 「Off」（關）- SnapDrive UNIX版的功能可建立檔案系統掛載表中沒有掛載項目的NFS實體Snapshot複本。
++
+Snapshot還原作業會自動還原及掛載您指定的NFS檔案或目錄樹狀結構。
+
+
+
+您可以使用「SnapDrive /snsnap connect」命令中的「-noperersist」選項、防止NFS檔案系統在檔案系統掛載表中新增掛載項目。
+
+
+
+ a| 
+「napcree-consistency、retry、sleep=1」
+ a| 
+指定「盡力快照複本一致性」重試之間的秒數。預設值為「1」秒。
+
+
+
+ a| 
+「napconnect、nfs、removeediations=Off」
+ a| 
+決定SnapDrive 在Snapshot連線作業期間、for UNIX是否從FlexClone磁碟區刪除或保留不需要的NFS目錄。
+
+* 「On SnapDrive 」（開啟）-在Snapshot連線作業期間、從FlexClone磁碟區刪除不需要的NFS目錄（「Sfsnap Connect」命令中未提及的儲存系統目錄）。
++
+如果FlexClone Volume在Snapshot中斷作業期間是空的、則會將其銷毀。
+
+* 「Off」（關）-在Snapshot連線作業期間保留不需要的NFS儲存系統目錄。預設值為「關」。
++
+在Snapshot中斷連線作業期間、只有指定的儲存系統目錄會從主機上卸載。如果主機上的FlexClone磁碟區未掛載任何內容、則會在Snapshot中斷作業期間銷毀FlexClone磁碟區。
+
+
+
+如果您在連線作業期間或中斷作業期間將此變數設為「關」、FlexClone Volume即使有不需要的儲存系統目錄、也不會被銷毀。
+
+
+
+ a| 
+「napcrede-mable-snapinfo-on-qtree =關」
+ a| 
+將此變數設為「開啟」、以啟用Snapshot建立作業來建立qtree的Snapshot複本資訊。預設值為「Off（關）」（停用）。
+
+如果LUN仍在qtree上、UNIX版的執行常會嘗試在qtree根目錄下寫入snapinfo。SnapDrive當您將此變數設為「On」（開啟）時、SnapDrive 若無法寫入此資料、則UNIX版的功能無法執行Snapshot建立作業。只有在使用qtree SnapMirror複寫Snapshot複本時、才應將此變數設為「開啟」。
+
+
+NOTE: qtree的Snapshot複本的運作方式與Volume的Snapshot複本相同。
+
+
+
+ a| 
+「napcreation-consistency重試次數=3」
+ a| 
+指定SnapDrive UNIX版的for UNIX在收到一致性檢查失敗訊息後、嘗試對Snapshot複本進行一致性檢查的次數。
+
+此變數在不含凍結功能的主機平台上特別有用。此變數僅用於包含LUN的組態。
+
+預設值為「3」。
+
+
+
+ a| 
+「napdelete-delete-nap-withsnap=off」
+ a| 
+將此值設為「開啟」、以刪除與Snapshot複本相關的所有復原Snapshot複本。將其設為「Off（關）」以停用此功能。預設值為「關」。
+
+此變數僅會在Snapshot刪除作業期間生效、如果您遇到作業問題、恢復記錄檔會使用此變數。
+
+最好接受預設設定。
+
+
+
+ a| 
+「napmirror dest-multier-filervolumesenable=Off」
+ a| 
+將此變數設為「On」（開啟）、以還原橫跨（鏡射）目的地儲存系統上多個儲存系統或磁碟區的Snapshot複本。將其設為「Off（關）」以停用此功能。預設值為「關」。
+
+
+
+ a| 
+「napf還原 刪除復原還原後還原=關」
+ a| 
+將此變數設為「開啟」、可在成功執行Snapshot還原作業後刪除所有復原Snapshot複本。將其設為「Off（關）」以停用此功能。預設值為「Off（關）」（已啟用）。
+
+如果作業發生問題、恢復記錄檔會使用此選項。
+
+最好接受預設值。
+
+
+
+ a| 
+「napf還原-make復原=開啟」
+ a| 
+將此值設為「開啟」以建立復原Snapshot複本、或設為「關閉」以停用此功能。預設值為「開啟」。
+
+復原是SnapDrive 指在儲存系統上執行Snapshot還原作業之前、在儲存系統上執行的資料複本。如果在Snapshot還原作業期間發生問題、您可以使用復原Snapshot複本、將資料還原至作業開始之前的狀態。
+
+如果您不想在還原時提供復原Snapshot複本的額外安全性、請將此選項設為「關」。如果您想要復原、但如果無法執行Snapshot還原作業、則無法執行、請將變數「shnaperserver-me-makerollback」設為「Off」。
+
+此變數會由恢復記錄檔使用、如果您遇到問題、請將此檔案傳送給NetApp技術支援部門。
+
+最好接受預設值。
+
+
+
+ a| 
+「napf還原- me-make回溯=開啟」
+ a| 
+將此變數設為「開啟」、以便在復原建立失敗時、使Snapshot還原作業失敗。將其設為「Off（關）」以停用此功能。預設值為「開啟」。
+
+* 「On」（開啟）- SnapDrive UNIX版的功能可在開始Snapshot還原作業之前、嘗試在儲存系統上建立資料的復原複本。如果無法建立資料的復原複本、SnapDrive UNIX版的停止Snapshot還原作業。
+* 「關」-如果您想要在還原時提供復原Snapshot複本的額外安全性、但如果無法執行Snapshot還原作業、則使用此值。
+
+
+如果作業發生問題、恢復記錄檔會使用此變數。
+
+最好接受預設值。
+
+
+
+ a| 
+「nap還原- SnapMirror檢查=開啟」
+ a| 
+將此變數設為「On」（開啟）、以啟用「SnapDrive 還原功能」命令來檢查SnapMirror目的地Volume。如果設定為「Off」（關）、則「SnapDrive 停止還原」指令將無法檢查目的地Volume。預設值為「開啟」。
+
+如果此組態變數的值為「開啟」、且SnapMirror關係狀態為「中斷」、則仍可繼續還原。
+
+
+
+ a| 
+「P起 搏-保留-啟用=開啟」
+ a| 
+在建立LUN時啟用空間保留。根據預設、此變數會設為「On」（開啟）、因此SnapDrive 由適用於UNIX的DB2所建立的LUN會保留空間。
+
+您可以使用此變數來停用由「SnapDrive varfsnap connect」命令和「SnapDrive fuse storage creation」命令所建立的LUN空間保留。最好是使用「-Reserve」和「-noreserve」命令列選項、在「SnapDrive 還原建立」、SnapDrive 「還原連結」和「SnapDrive 還原還原資料」命令中啟用或停用LUN空間保留。
+
+UNIX版可建立LUN、調整儲存空間大小、製作Snapshot複本、並根據此變數中指定的空間保留權限、或是「-Reserve」或「-noreserve」命令列選項來連線或還原Snapshot複本。SnapDrive在執行上述工作之前、IT不考慮儲存系統端的精簡配置選項。
+
+
+
+ a| 
+"scall-enable=on"
+ a| 
+將此變數設為「開啟」以啟用追蹤記錄檔、或設為「關閉」以停用它。預設值為「開啟」。啟用此檔案不會影響效能。
+
+
+
+ a| 
+「scall-level = 7」
+ a| 
+指定SnapDrive UNIX寫入追蹤記錄檔時所需的訊息類型。此變數接受下列值：
+
+* 「1」-記錄致命錯誤
+* 「2」-記錄管理錯誤
+* 「3」-記錄命令錯誤
+* 「4」-記錄警告
+* 「5」-錄製資訊訊息
+* 「6」-以詳細模式錄製
+* 「7」-完整診斷輸出
+
+
+預設值為「7」。
+
+
+NOTE: 最好不要變更預設值。將值設定為「7」以外的值、並無法取得成功診斷的適當資訊。
+
+
+
+ a| 
+"TRACE記錄檔=/var/log/SD追蹤記錄"
+ a| 
+指定SnapDrive UNIX的哪些地方會寫入追蹤記錄檔。
+
+預設值視主機作業系統而定。
+
+本範例所示的路徑是AIX主機的預設路徑。
+
+
+
+ a| 
+「scall-log-max-size=0」
+ a| 
+指定記錄檔的最大大小（以位元組為單位）。當記錄檔達到這個大小時、SnapDrive UNIX的Renesfit會重新命名並啟動新的記錄檔。
+
+
+NOTE: 但是、當追蹤記錄檔達到最大大小時、不會建立新的追蹤記錄檔。對於精靈追蹤記錄檔、會在記錄檔達到最大大小時建立新的記錄檔。
+
+預設值為「0」。UNIX版不會在作業過程中啟動新的記錄檔。SnapDrive檔案的實際大小可能與此處指定的值略有不同。
+
+
+NOTE: 最好使用預設值。如果您變更預設值、請記住、太多大型記錄檔可能佔用磁碟空間、最終可能影響效能。
+
+
+
+ a| 
+"scall-log-sem=100"
+ a| 
+指定SnapDrive UNIX用的舊追蹤記錄檔應儲存多少個。達到此限制之後、SnapDrive 當UNIX的範圍建立新的檔案時、將捨棄最舊的檔案。此變數適用於'_tracelog -max-size_'變數。預設情況下、「_score-logmax-size=0_」會在每個檔案中儲存一個命令、而「_score-log-sef=100_」則會保留最後一個「100」記錄檔。
+
+
+
+ a| 
+「use-https-to - dfm=on」
+ a| 
+指定SnapDrive 您是否想讓UNIX使用SSL加密（HTTPS）與Operations Manager通訊。
+
+預設值為「開啟」。
+
+
+
+ a| 
+「use-https-to -filer=on」
+ a| 
+指定SnapDrive 當UNIX與儲存系統通訊時、是否要使用SSL加密（HTTPS）。
+
+預設值為「開啟」。
+
+
+NOTE: 如果您使用Data ONTAP 的是舊版的版本、則啟用HTTPS時效能可能會變慢。如果您執行Data ONTAP 的是更新版本的更新版本、效能緩慢並不是問題。
+
+
+
+ a| 
+"vmtype=lvm"
+ a| 
+指定SnapDrive 要用於UNIX作業的Volume Manager類型。Volume Manager必須是SnapDrive UNIX支援的作業系統類型。以下是您可以為此變數設定的值、預設值視主機作業系統而定：
+
+* AIX：「VxVVM」或「LVM」
++
+預設值為「LVM」
+
+
+
+您也可以使用「-vmtype」選項來指定要使用的Volume Manager類型。
+
+
+
+ a| 
+「vol-restore」
+ a| 
+決定SnapDrive for UNIX是否應執行磁碟區型快照還原（vbsr）或單一檔案快照還原（SFSR）。
+
+以下是可能的值。
+
+* 「預覽」-指定SnapDrive UNIX版的功能、會針對SnapRestore 指定的主機檔案規格、啟動Volume型的功能。
+* 「execute」（執行）-針對SnapDrive 指定的檔案、指定UNIX的功能以Volume為基礎SnapRestore 的功能繼續執行。
+* 「Off」（關）-停用vbsr選項並啟用SFSR選項。預設值為「關」。
++
+
+NOTE: 如果變數設定為預覽/執行、則無法使用CLI執行SFSR作業來覆寫此設定。
+
+
+
+
+
+ a| 
+「volmove-cover-retry = 3」
+ a| 
+指定SnapDrive UNIX在Volume移轉切換階段中重試作業的次數。
+
+預設值為「3」。
+
+
+
+ a| 
+「volmove-cover-retry睡眠= 3」
+ a| 
+指定SnapDrive UNIX在磁碟區移動轉換重試作業之間等待的秒數。
+
+預設值為「3」。
+
+
+
+ a| 
+「Volume：clone-retry：3」
+ a| 
+指定SnapDrive 在FlexClone建立期間、UNIX用的功能重試作業的次數。
+
+預設值為「3」。
+
+
+
+ a| 
+「Volume：clone-retry：retle-sleep=3」
+ a| 
+指定SnapDrive 在FlexClone建立期間、UNIX的功能在重試之間等待的秒數。
+
+預設值為「3」。
+
+|===

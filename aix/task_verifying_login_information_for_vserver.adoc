@@ -1,0 +1,32 @@
+---
+permalink: aix/task_verifying_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, login, information, vserver 
+summary: 您可以SnapDrive 使用SnapDrive 下列命令來驗證Vserver是否在適用於UNIX的方面進行設定： 
+---
+= 正在驗證Vserver的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 「SnapDrive vsconfiglist」命令來驗證Vserver是否設定為適用於UNIX。
+
+.步驟
+. 輸入下列命令：「SnapDrive flexconfig list」
++
+此命令會顯示SnapDrive 在適用於UNIX的使用者名稱或Vserver中指定的名稱、而不會顯示Vserver的密碼。
+
++
+以下範例將「_vsadmin_'」顯示為「_StorageSystem_」。
+
++
+[listing]
+----
+# snapdrive config list
+username    appliance name   appliance type
+-------------------------------------------
+vsadmin     clstr-vs2        StorageSystem
+----
+

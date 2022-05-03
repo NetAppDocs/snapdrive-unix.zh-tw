@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/concept_command_syntax_to_increase_the_sizeof_the_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, size, storage, increase 
+summary: 若要增加儲存設備的大小、您應該知道要使用的語法正確。 
+---
+= 命令語法可增加儲存設備的大小
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要增加儲存設備的大小、您應該知道要使用的語法正確。
+
+「SnapDrive 儲存設備大小調整-dg _file_spec_｛-roadby |-roadto｝大小（-addlun [-igroup _ig_name_[_ig_name ..._]]）[{-Reserve |- noreserve}][-fstype_][-vmtype _type_]
+
+[NOTE]
+====
+您無法使用「SnapDrive 物件儲存區大小調整」命令來縮減實體的大小。您只能使用此命令來增加大小。
+
+「支援不直接在邏輯磁碟區或檔案系統上執行SnapDrive 「物件儲存區大小調整」命令。例如、您無法使用「SnapDrive 物件儲存區大小調整」命令來調整LUN上的檔案系統大小。
+
+*結果*：此命令可增加儲存實體（邏輯磁碟區或磁碟群組）的大小、方法如下：
+
+* 將位元組新增至儲存設備（`-growby）。
+* 將大小增加到您指定的位元組大小（`-growto）。
+
+
+====

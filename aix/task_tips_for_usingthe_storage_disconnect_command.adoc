@@ -1,0 +1,29 @@
+---
+permalink: aix/task_tips_for_usingthe_storage_disconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command 
+summary: 當您在SnapDrive 某些作業系統上使用flexststorage disconnects命令時、您會遺失諸如主機Volume名稱、檔案系統掛載點、儲存系統Volume名稱及LUN名稱等資訊。如果沒有這些資訊、您很難在稍後時間再次連線至儲存設備。 
+---
+= 使用儲存中斷連線命令的秘訣
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在SnapDrive 某些作業系統上使用「停止儲存設備連線」命令時、您會遺失主機磁碟區名稱、檔案系統掛載點、儲存系統磁碟區名稱及LUN名稱等資訊。如果沒有這些資訊、您很難在稍後時間再次連線至儲存設備。
+
+為避免遺失資訊、您應先使用「SnapDrive 效能快照建立」命令建立儲存設備的Snapshot複本、再執行「SnapDrive 效能不中斷」命令。
+
+如此一來、如果您想稍後重新連線儲存設備、可以使用下列因應措施：
+
+.步驟
+. 執行下列命令：
++
+《SnapDrive 抓取還原檔案快照-snapname long快照名稱》
+
++
+在此命令中加入Snapshot複本的完整路徑。
+
+. 您也可以執行「SnapDrive flexfsnap刪除」命令來移除Snapshot複本。
+

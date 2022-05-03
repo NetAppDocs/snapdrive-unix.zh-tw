@@ -1,0 +1,42 @@
+---
+permalink: solaris/task_uninstalling_snapdrive_for_unix_from_a_solaris_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, solaris, host, uninstall 
+summary: 若要從SnapDrive Solaris系統解除安裝適用於UNIX的功能、您必須使用uninstall命令。 
+---
+= 從SnapDrive Solaris主機解除安裝適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要從SnapDrive Solaris系統解除安裝適用於UNIX的功能、您必須使用「uninstall」命令。
+
+請確定您以root使用者身分登入。
+
+當您在SnapDrive 稀少的根區域中解除安裝適用於UNIX的功能時、解除安裝程序不會移除SnapDrive 位於「usr/bin」和「usr/sbin」中的符號連結、因為符號連結會以唯讀檔案系統的形式掛載在稀疏根區域中。您必須從全域區域移除這些符號連結。在移除符號連結之前、請確定沒有其他的稀疏根區域使用SnapDrive 適用於UNIX的DB2。
+
+"rm /sbin/SnapDrive"
+
+"rm /sbin/snapdrived（rm /sbin/snapdrived）"
+
+"rm /usr/bin/SnapDrive"
+
+.步驟
+. 使用下列命令移除軟體：
++
+"* uninstall*（*解除安裝*）"
+
+. 當命令詢問您是否確定要移除附加套件時、請回答y（或yes）。
++
+如果您回答n（或否）、則命令不會解除安裝附加套件。
+
++
+若要避免收到確認查詢、請使用「-f」選項輸入「/uninstall」命令、以防止解除安裝指令碼以互動模式執行。
+
++
+
+NOTE: 若要確保SnapDrive 停止所有的UNIX支援服務、請使用SnapDrive 適用於UNIX的VMware卸載指令碼；請勿使用像「pkgrm」這樣的作業系統工具。
+
+

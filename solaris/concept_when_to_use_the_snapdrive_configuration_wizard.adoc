@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_when_to_use_the_snapdrive_configuration_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, wizard 
+summary: 使用「局部組態精靈」SnapDrive 更新精靈中的組態變數。您可以隨時執行組態精靈、將組態變更修改為SnapDrive 「效益」。 
+---
+= 組態精靈SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「局部組態精靈」SnapDrive 更新精靈中的組態變數。您可以隨時執行組態精靈、將組態變更修改為SnapDrive 「效益」。
+
+您可以從「/opt/NTAPsnapdrive/setup/config_wizard」執行組態精靈
+
+輸入「exit」以關閉組態精靈、而不儲存變更。
+
+或者、您也可以直接在「snapdrive.conf」檔案中修改組態變數值。
+
+*相關資訊*
+
+xref:reference_stack_requirements.adoc[堆疊需求]

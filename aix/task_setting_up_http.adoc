@@ -1,0 +1,36 @@
+---
+permalink: aix/task_setting_up_http.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, http, configure 
+summary: 您可以設定SnapDrive UNIX版的支援功能、將HTTP用於您的主機平台。 
+---
+= 設定HTTP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定SnapDrive UNIX版的支援功能、將HTTP用於您的主機平台。
+
+請確定您以root使用者身分登入。
+
+.步驟
+. 備份「snapdrive.conf」檔案。
+. 在文字編輯器中開啟「snapdrive.conf」檔案。
+. 將'_US-https-to -filer_'變數的值變更為「Off」。
++
+修改「snapdrive.conf」檔案的最佳做法是執行下列步驟：
+
++
+.. 註釋掉您要修改的行。
+.. 複製註解輸出行。
+.. 移除井號（#）、取消註釋複製的文字。
+.. 修改值。
+
+
+. 變更後儲存檔案。
++
+UNIX版的還原功能會在每次啟動時自動檢查此檔案。SnapDrive您必須重新啟動SnapDrive UNIX版的功能、變更才會生效。
+
+

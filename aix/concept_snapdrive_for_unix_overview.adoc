@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_snapdrive_for_unix_overview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, overview, data, management 
+summary: 適用於UNIX的透過簡化的儲存資源配置和檔案系統一致的Snapshot複本、簡化資料管理並提升應用程式資料的可用度和可靠性。SnapDrive 
+---
+= UNIX版概述SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的透過簡化的儲存資源配置和檔案系統一致的Snapshot複本、簡化資料管理並提升應用程式資料的可用度和可靠性。SnapDrive
+
+適用於UNIX的支援簡化資料備份、即使資料被刪除或修改、也能恢復資料。SnapDriveUNIX的支援功能使用Snapshot技術、在連接至UNIX主機的共享或非共享儲存系統上建立資料映像。SnapDrive當您還原Snapshot複本時、它會以Snapshot複本中的資料取代儲存系統上的目前資料。
+
+適用於UNIX的支援功能可讓您管理整個儲存階層、例如主機端的應用程式可見檔案、Volume Manager、以及儲存系統端的邏輯單元編號（LUN）SnapDrive 。
+
+適用於UNIX的支援角色型存取控制。SnapDrive儲存管理員會根據使用者執行的角色和工作、使用RBAC來限制使用者存取儲存系統。
+
+
+NOTE: 您必須使用Operations Manager主控台3.7或更新版本才能使用RBAC。

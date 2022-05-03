@@ -1,0 +1,27 @@
+---
+permalink: aix/reference_understanding_exit_status_values_of_error_messages.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, exit, status, value, error, message 
+summary: 每SnapDrive 個適用於UNIX的錯誤訊息都與結束狀態值相關聯。結束狀態值包含錯誤原因及其類型-警告、命令、管理或致命。 
+---
+= 瞭解錯誤訊息的結束狀態值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+每SnapDrive 個適用於UNIX的錯誤訊息都與結束狀態值相關聯。結束狀態值包含錯誤原因及其類型-警告、命令、管理或致命。
+
+每SnapDrive 個故障訊息ID都會連結至退出狀態值。結束狀態值包含下列資訊：
+
+* Exit Status Value（退出狀態值）-表示錯誤條件的基本原因。
+* 類型-表示錯誤類型。嚴重性等級取決於訊息、而非價值。以下是可能的值：
++
+** 警告：SnapDrive for UNIX執行了命令、但發出警告、指出可能需要您注意的情況。
+** Command（命令）- SnapDrive for UNIX由於命令列中的錯誤而無法執行命令。請檢查命令列格式、確保其正確無誤。
+** 管理- SnapDrive for UNIX因為系統組態不相容而無法執行命令。請聯絡您的系統管理員以檢閱您的組態參數。
+** fatal（致命）-SnapDrive for UNIX由於意外情況而無法執行命令。極少發生致命錯誤。如果發生嚴重錯誤、且您在解決問題時遇到問題、請聯絡NetApp技術支援部門、以協助您判斷正確恢復及修正任何錯誤狀況所需採取的步驟。
+
+
+

@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_troubleshooting.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, troubleshoot 
+summary: 適用於UNIX的疑難排解工具SnapDrive 可讓您在解決問題的同時、也能找到相關資訊。 
+---
+= 疑難排解
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的疑難排解工具SnapDrive 可讓您在解決問題的同時、也能找到相關資訊。
+
+發行本版時SnapDrive 、關於UNIX的解決方法存在一些已知問題和限制。雖然有些問題會影響SnapDrive UNIX主機平台的所有功能、但其他問題則只會影響特定的主機平台。如需已知問題和疑難排解秘訣的相關資訊、請參閱《_ SnapDrive 適用於UNIX的版本說明》。_

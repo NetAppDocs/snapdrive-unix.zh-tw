@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_command_to_use_todisplay_availablestorage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, display, nfs, lun, command 
+summary: 此功能可讓您看到LUN或NFS目錄樹、這些樹狀結構是一或多個儲存實體的基礎。SnapDrive SnapDrive您可以使用SnapDrive f2 storage show命令來瞭解及知道磁碟群組、主機磁碟區、檔案系統或NFS目錄樹狀結構的Snapshot複本中的內容。 
+---
+= 用於顯示可用儲存設備的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「不二儲存展示」或「不二儲存清單」會顯示LUN或NFS目錄樹狀結構、這些樹狀結構是一或多個儲存實體的基礎。SnapDrive SnapDrive您可以使用「SnapDrive fuse storage show」命令來學習及知道磁碟群組、主機磁碟區、檔案系統或NFS目錄樹狀結構的Snapshot複本中的內容。
+
+您可以使用這些命令來顯示下列資訊：
+
+* LUN適用於特定儲存系統或儲存系統磁碟區
+* 與檔案系統、主機磁碟區或磁碟群組相關的LUN
+* NFS掛載點和目錄樹
+* 特定主機已知的LUN、以及LUN所包含的任何LVM實體
+* 特定主機已知的裝置
+* 共享和專用主機上的資源
+
+
+
+NOTE: 您可以在SnapDrive 命令列上使用「fuse storage show」或「SnapDrive fuse storage list」。

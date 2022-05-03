@@ -1,0 +1,103 @@
+---
+permalink: solaris/concept_after_rebooting_the_host_os_and_cluster_services_fail_to_start.html 
+sidebar: sidebar 
+keywords: reboot, host, os, cluster, fail, start 
+summary: 在Solaris 10主機上、如果檔案系統在重新開機後無法掛載、作業系統和叢集就不會啟動。 
+---
+= 重新啟動主機之後、作業系統和叢集服務無法啟動
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Solaris 10主機上、如果檔案系統在重新開機後無法掛載、作業系統和叢集就不會啟動。
+
+重新啟動Solaris 10主機之後、如果服務「shvc：/system/filesystem/local」無法掛載下列任何檔案系統、則相依的OS或叢集服務將不會啟動。
+
+* 本機檔案系統
+* 共享檔案系統
+
+
+
+NOTE: 以上的檔案系統必須由SnapDrive UNIX的效能提升開發。
+
+
+
+== 因應措施
+
+. 使用下列命令尋找重新開機後無法啟動的服務：
++
+"vcs -vx /network/inetd"
+
++
+*範例：*
+
++
+[listing]
+----
+# svcs -vx /network/inetd
+svc:/network/inetd:default (inetd)
+State: offline since Fri 25 May 2008 04:06:59 PM IST
+Reason: Service svc:/system/filesystem/local:default
+is not running because a method failed.
+----
+. 如果「服務/系統/檔案系統/本機：預設」失敗、請使用下列命令尋找無法掛載的持續檔案系統：
++
+"tail /var/sv/log/system-filesystem-local:efault.log"
+
++
+*範例：*
+
++
+[listing]
+----
+# tail /var/svc/log/system-filesystem-local:default.log
+[ May 25 15:58:35 Method "start" exited with status 95 ]
+[ May 25 16:07:17 Executing start method
+("/lib/svc/method/fs-local") ]
+UX:vxfs fsck: ERROR: V-3-20693: cannot access device
+/dev/vx/rdsk/dg2/fs1_SdHv:
+UX:vxfs mount: ERROR: V-3-20003: Cannot open
+/dev/vx/dsk/dg2/fs1_SdHv: No such device or address
+UX:vxfs mount: ERROR: V-3-24996: Unable to get disk
+layout version
+WARNING: /sbin/mountall -l failed: exit status 1
+[ May 25 16:07:18 Method "start" exited with status 95 ]
+----
+. 請針對重新啟動主機後無法掛載的檔案系統、在「/etc/vstab'」中註釋項目。
+. 執行下列命令、重新啟動OS服務：「vc：/system/filesystal/local:Default（vc：/system/filesystem/local:Default）。
++
+.. 停用「vcadm」
++
+「vc：/系統/檔案系統/本機：預設」
+
+.. 「vcadm啟用」
++
+「vc：/系統/檔案系統/本機：預設」
+
+
+
++
+作業系統與叢集服務隨即啟動。
+
+. 對於無法掛載的本機檔案系統、請完成下列步驟：
++
+.. 手動掛載檔案系統。
+.. 取消註釋/etc/vFst'項。
+
+
+. 對於叢集服務、請完成下列步驟：
++
+.. 使用「cfsmount'」命令檢查共用檔案系統是否已正確掛載。
+.. 取消註釋此檔案系統所有叢集節點上的「/etc/vFst'」項目。
++
+「vcadm啟用」
+
++
+「vc：/系統/檔案系統/本機：預設」
+
+
+
+. 如果本機或叢集檔案系統在完成上述步驟後仍無法掛載、請聯絡NetApp技術支援部門。
+

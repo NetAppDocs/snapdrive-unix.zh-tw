@@ -1,0 +1,41 @@
+---
+permalink: linux-administration/concept_guidelines_for_thestorage_createoperation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, operation, lun, guidelines 
+summary: 當您在SnapDrive 建立儲存作業中使用「flexfuse storage create」命令時、應遵循特定準則。 
+---
+= 儲存設備建立作業準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您使用「SnapDrive fuse storage cre創作」命令進行儲存建立作業時、請遵循特定準則。
+
+* 如果您使用-LUN選項列出不同儲存系統磁碟區的LUN、則無法在命令提示字元中加入「-dg」、「-hostvol'」或「-FS」選項。
+* nolvm選項會直接在LUN上建立檔案系統、而不會啟動主機LVM。
++
+使用此選項時、您無法指定主機磁碟區或磁碟群組。
+
+* 您無法使用SnapDrive UNIX儲存資源配置命令來執行NFS檔案或目錄樹狀結構。
+* 如果您使用「SnapDrive flexunity storage create」命令直接在LUN上建立檔案系統、則無法指定多個LUN。
++
+當您使用此形式的命令時、適用於UNIX的往往會建立新的LUN。SnapDrive
+
+* 有些作業系統會限制您可以建立多少LUN。
++
+如果您的主機正在執行其中一種作業系統、您可能會想要執行「SnapDrive 支援組態檢查LUN」命令。
+
+* 支援使用DMP多重路徑在原始LUN上建立檔案系統。
+* 使用「enable mount-with -NETDEV」參數、您可以將「_NETDEV」檔案系統選項加入到「etc/fstab」檔案中。
++
+當值設為「Off」（關閉）（預設值）時、您必須在「SnapDrive 停止儲存建立」命令中手動指定「-mnterts _NETDEV」。不過、如果您將值變更為「On」（開啟）、則當您執行「SnapDrive 循環儲存建立」命令時、系統會自動執行「-mnttops _NETDEV」（-mnttops _NETDEV）。
+
+
+
+*相關資訊*
+
+xref:concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.adoc[UNIX儲存設備建立命令在探索部分對應裝置時失敗SnapDrive]
+
+xref:concept_configuration_options_and_their_default_values.adoc[組態選項及其預設值]

@@ -1,0 +1,46 @@
+---
+permalink: aix/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager 
+summary: 在AIX上、Volume Manager稱為原生LVM和Veritas Volume Manager（VxV\）。 
+---
+= 適用於SnapDrive UNIX的Volume Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在AIX上、Volume Manager稱為原生LVM和Veritas Volume Manager（VxVVM）。
+
+下表說明主機平台上的Volume Manager：
+
+|===
+| 主機 | Volume管理程式 | 磁碟區或磁碟群組 | 邏輯磁碟區的位置 | 多重路徑裝置的位置 
+
+
+ a| 
+AIX
+ a| 
+原生LVM
+ a| 
+Volume群組為"vg」
+ a| 
+"DEV/lvol"
+
+所有邏輯磁碟區都共用相同的命名空間
+ a| 
+iSCSI不支援多重路徑（僅FC）
+
+
+
+ a| 
+Veritas Volume Manager（VxVM）
+ a| 
+Volume群組為"vg」
+ a| 
+開發/ vx/dsk/ ds/lvol
+ a| 
+「dev/vx/dmmp/disk_1」
+
+|===

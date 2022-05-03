@@ -1,0 +1,44 @@
+---
+permalink: linux-administration/concept_unable_to_restore_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, restore, command, issuelun, scsi 
+summary: 影響SnapDrive 使用「Snapshot還原」命令還原Snapshot複本的功能的情況很少。 
+---
+= 無法還原Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有些情況會影響到「SnapDrive 還原快照」命令還原Snapshot複本的功能。
+
+* 「還原功能」命令必須能夠執行下列工作：SnapDrive
++
+** 查詢所有磁碟群組以取得LUN清單。
+** 透過SCSI命令查詢所有LUN。主機磁碟區和檔案系統不需要可用、也不需要掛載、就SnapDrive 能成功執行「還原功能」命令。
+
+
+* 存取權限必須允許主機在該儲存系統上建立及還原資訊的Snapshot複本。
+* NFS掛載目錄必須正確匯出至主機、才能掛載。
+
+
+
+NOTE: 將LUN新增至磁碟群組或從磁碟群組移除LUN之後、您應該一律執行另一個Snapshot複本。
+
+* 如果您在執行Snapshot複本之後、將主機磁碟區或檔案系統新增至磁碟群組、然後嘗試還原Snapshot複本、就會收到錯誤訊息。您必須在命令列中加入「force」選項（`-f'）、才能在這種情況下成功執行還原作業。
++
+
+NOTE: 當您建立及還原Snapshot複本時、無法再存取您在製作Snapshot複本之後新增的主機磁碟區和檔案系統。
+
+* 如果您重新命名主機磁碟區或檔案系統、或是在拍攝Snapshot複本之後變更掛載點、然後嘗試還原、還原作業就會失敗。您必須在命令列中加入「force」選項（`-f'）、才能在這種情況下成功執行還原作業。
++
+
+NOTE: 請謹慎使用「-f」選項、以確保不會意外覆寫不想覆寫的內容。
+
+* 如果您在執行Snapshot複本之後重新命名LUN、然後嘗試還原該Snapshot複本、還原作業就會失敗。重新命名LUN之後、您應該製作新的Snapshot複本。
++
+
+NOTE: 在您開始Snapshot還原作業之後、請勿停止該作業。停止此作業可能會使系統處於不一致的狀態。然後您可能需要執行手動恢復。
+
+

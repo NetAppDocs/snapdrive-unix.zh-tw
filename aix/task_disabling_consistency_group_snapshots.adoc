@@ -1,0 +1,24 @@
+---
+permalink: aix/task_disabling_consistency_group_snapshots.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disable, snapshot, copy, consistency, group 
+summary: 您可以設定SnapDrive UNIX版的功能、停用一致性群組Snapshot複本。 
+---
+= 停用一致性群組Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定SnapDrive UNIX版的功能、停用一致性群組Snapshot複本。
+
+.步驟
+. 輸入：
++
+hy* SnapDrive fsnap create -fs /mnt/fS3 -snapname_ nfs_snap __節點檔案隔離_*
+
++
+一致性群組Snapshot複本已成功停用。
+
+

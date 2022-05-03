@@ -1,0 +1,56 @@
+---
+permalink: linux-administration/task_specifying_login_information_for_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, virtual, storage, console, rdm, lun 
+summary: 虛擬儲存主控台必須設定SnapDrive 為適用於UNIX、以便在客體作業系統中配置RDM LUN。不過、SnapDrive 有一個使用者名稱和密碼可讓UNIX版的支援者存取虛擬儲存主控台。虛擬儲存主控台不會驗證這些登入認證資料。 
+---
+= 指定虛擬儲存主控台的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+虛擬儲存主控台必須設定SnapDrive 為適用於UNIX、以便在客體作業系統中配置RDM LUN。不過、SnapDrive 有一個使用者名稱和密碼可讓UNIX版的支援者存取虛擬儲存主控台。虛擬儲存主控台不會驗證這些登入認證資料。
+
+確認已使用vCenter設定虛擬儲存主控台。
+
+. 輸入下列命令：
++
+`* SnapDrive 《*》組態集-viadmin <user><viadmin_name>*》
+
++
+「_user_」是虛擬介面系統的使用者名稱。
+
++
+"_viadmin_name_"是虛擬介面系統的名稱或IP位址。
+
+. 出現提示時、輸入密碼（如果有）。
++
+[NOTE]
+====
+如果您尚未設定任何密碼、請按
+
+「Enter」
+
+（null值）。
+
+====
++
+此範例會針對虛擬介面設定名為「shdadmin」的使用者：
+
++
+[listing]
+----
+guest# snapdrive config set -viadmin sdadmin ruffleskin
+Password for sdadmin:
+Retype Password:
+----
++
+UNIX版現在已準備好在客體作業系統中配置RDM LUN。SnapDrive
+
++
+
+NOTE: 如果您想要設定新的虛擬介面、現有的虛擬介面詳細資料將會被覆寫、SnapDrive 因為適用於UNIX的版本僅能將一個虛擬介面設定為客體作業系統。
+
+

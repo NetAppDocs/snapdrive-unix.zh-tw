@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_snapdrive_operations_fail_in_multiple_subnet_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operations, fail, subnet, configuration 
+summary: 如果停用網際網路控制訊息傳輸協定（ICMP）存取、或是在主機與儲存系統網路之間丟棄ICMP封包、則在多個子網路組態中執行的功能會失敗。SnapDrive 
+---
+= 無法在多個子網路組態中執行支援SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果停用網際網路控制訊息傳輸協定（ICMP）存取、或是在主機與儲存系統網路之間丟棄ICMP封包、則在多個子網路組態中執行的功能會失敗。SnapDrive
+
+
+
+== 因應措施
+
+確保將"_enable－ping-to -inCheck－filer-reensions_"設置爲"Off"。

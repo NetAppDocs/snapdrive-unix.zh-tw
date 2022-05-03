@@ -1,0 +1,14 @@
+---
+permalink: solaris/task_stopping_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, daemon 
+summary: 如果您變更SnapDrive UNIX版的功能檔、則必須停止並重新啟動精靈。您可以不強制或強制地停止精靈。 
+---
+= 停止精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您變更SnapDrive UNIX版的功能檔、則必須停止並重新啟動精靈。您可以不強制或強制地停止精靈。

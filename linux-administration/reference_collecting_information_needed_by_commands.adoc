@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/reference_collecting_information_needed_by_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, information, keywords, arguments, values, options, format 
+summary: UNIX版指令的格式與關鍵字相關。SnapDrive這些命令具有選項和引數、並要求使用者輸入值。 
+---
+= 收集命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版指令的格式與關鍵字相關。SnapDrive這些命令具有選項和引數、並要求使用者輸入值。
+
+檢查清單可協助使用者快速執行SnapDrive UNIX版的功能。針對每個命令、它提供下列項目：
+
+* 建議格式
+* 有關命令可用的關鍵字、選項和引數、以及您應該提供的值的資訊
+* 命令範例
+

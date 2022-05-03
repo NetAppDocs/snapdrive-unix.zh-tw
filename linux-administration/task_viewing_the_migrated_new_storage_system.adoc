@@ -1,0 +1,28 @@
+---
+permalink: linux-administration/task_viewing_the_migrated_new_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, migrate, config, list, command, storage 
+summary: 您可以執行SnapDrive 下列命令來驗證移轉的儲存系統是否包含在主機系統中： 
+---
+= 檢視移轉的新儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行「SnapDrive 支援組態移轉清單」命令、來驗證移轉的儲存系統是否包含在主機系統中。
+
+.步驟
+. 輸入下列命令：
++
+‘* SnapDrive 《*組態移轉清單*》
+
++
+[listing]
+----
+New Entry            Old Entry
+------------------------------------------------
+roaster              tuffleskin
+----
+

@@ -1,0 +1,51 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_incorrectly_interprets_the_dollar_sign_symbol.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, dollar, sign, special, characters, value 
+summary: 若將特殊字元指定為組態值的一部分、UNIX版無法正確解譯美元符號（$\）和所有特殊字元。SnapDrive 
+---
+= UNIX版不正確地解譯美元符號SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若將特殊字元指定為組態值的一部分、UNIX版無法正確解譯美元符號（$）和所有特殊字元。SnapDrive
+
+所有指定的組態值都應為數值。如果您將$或任何其他特殊字元指定為組態值的一部分、SnapDrive 則適用於UNIX的匿名功能會接受該值、但會以不同的方式解譯特殊字元之後提及的數值。
+
+
+
+== 範例
+
+以下是$解譯方式的範例：
+
+[listing]
+----
+#a=$123
+#echo $a
+23
+
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_set volume-clone-retry-sleep=$129
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_show |grep volume-clone-retry-sleep
+volume-clone-retry-sleep:Number of seconds between retries during flex-clone create:'3':'29':1:0:'^[0-9]+$':filer
+----
+在此範例中SnapDrive 、UNIX版的示例將組態值（$123）解譯為23。
+
+
+
+== 因應措施
+
+在$之前指定反斜槓（\）。修改上一個範例、如下所示：
+
+[listing]
+----
+#a=\$123
+#echo $a
+23
+
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_set volume-clone-retry-sleep=$129
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_show |grep volume-clone-retry-sleep
+volume-clone-retry-sleep:Number of seconds between retries during flex-clone create:'3':'29':1:0:'^[0-9]+$':filer
+----

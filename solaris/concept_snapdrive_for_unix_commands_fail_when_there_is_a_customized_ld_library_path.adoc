@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_commands_fail_when_there_is_a_customized_ld_library_path.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, library, path 
+summary: 如果有自訂的LD_LIBRAR_PATH_PATH,而且將snapcree-簽 核非永久性NFS設為Off、則UNIX命令的支援將會失敗。SnapDrive 
+---
+= UNIX命令無法使用自訂的LD_LIBRARY_PATH SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果有自訂的「LD_LIBRARIN_PATH'」、而且將「napcree-Check非永久性NFS」設為「Off」、則UNIX命令的支援將會失敗。SnapDrive
+
+
+
+== 因應措施
+
+在包裝指令碼中設定env變數、以確保只SnapDrive 有在不含資訊的二進位檔中才會看到該變數。

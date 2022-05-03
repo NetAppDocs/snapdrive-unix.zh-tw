@@ -1,0 +1,48 @@
+---
+permalink: solaris/concept_log_file_rotation_settings.html 
+sidebar: sidebar 
+keywords: snap, snpadrive, log, file, rotation, setting 
+summary: 您在SnapDrive .conf檔案中為變數指定的值、會影響記錄檔的旋轉。 
+---
+= 記錄檔旋轉設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您在「snapdrive.conf」檔案中為變數指定的值、會影響記錄檔的旋轉。
+
+您在「shnapdrive.conf」檔案中指定的值、可啟用自動記錄檔輪調。如有必要、您可以編輯「snapdrive.conf」變數來變更這些值。下列選項會影響記錄檔的旋轉：
+
+* 「稽核日誌大小上限」
+* 「稽核日誌儲存」
+* 「跡線最大尺寸」
+* 「追蹤記錄-最大儲存」
+* 「重新探索記錄儲存」
+
+
+利用自動記錄輪替功能、SnapDrive UNIX版的功能可將舊的記錄檔保留到「稽核記錄儲存」、「追蹤記錄儲存」和「恢復記錄儲存」變數中指定的限制為止。然後刪除最舊的記錄檔。
+
+UNIX版透過在建立檔案時指派編號「0」來追蹤哪個檔案最舊。SnapDrive每次建立新檔案時、會以指派給每個現有記錄檔的數字遞增1。當記錄檔的編號達到儲存值時、SnapDrive 適用於UNIX的停止功能會刪除該檔案。
+
+*範例：*此範例使用「ls」命令來顯示系統上記錄檔的相關資訊。
+
+根據這些設定、您會在記錄檔中看到下列資訊。
+
+[listing]
+----
+# ls -l /var/log/sd*
+-rw-r--r-- 1 root other 12247 Mar 13 13:09 /var/log/sd-audit.log
+-rw-r--r-- 1 root other 20489 Mar 12 16:57 /var/log/sd-audit.log.0
+-rw-r--r-- 1 root other 20536 Mar 12 03:13 /var/log/sd-audit.log.1
+-rw-r--r-- 1 root other 3250 Mar 12 18:38 /var/log/sd-recovery.log.1
+-rw-r--r-- 1 root other 6250 Mar 12 18:36 /var/log/sd-recovery.log.2
+-rw-r--r-- 1 root other 6238 Mar 12 18:33 /var/log/sd-recovery.log.3
+-rw-r--r-- 1 root other 191704 Mar 13 13:09 /var/log/sd-trace.log
+-rw-r--r-- 1 root other 227929 Mar 12 16:57 /var/log/sd-trace.log.0
+-rw-r--r-- 1 root other 213970 Mar 12 15:14 /var/log/sd-trace.log.1
+-rw-r--r-- 1 root other 261697 Mar 12 14:16 /var/log/sd-trace.log.2
+-rw-r--r-- 1 root other 232904 Mar 12 14:15 /var/log/sd-trace.log.3
+-rw-r--r-- 1 root other 206905 Mar 12 14:14 /var/log/sd-trace.log.4
+----

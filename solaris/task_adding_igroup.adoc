@@ -1,0 +1,30 @@
+---
+permalink: solaris/task_adding_igroup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, add, igroup 
+summary: 適用於UNIX的支援功能可讓您將儲存系統的特定igroup新增至主機、並使用設定的igroup執行支援程序。SnapDrive SnapDrive您必須確保igroup在儲存系統中可用。 
+---
+= 新增igroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您將儲存系統的特定igroup新增至主機、並使用設定的igroup執行支援程序。SnapDrive SnapDrive您必須確保igroup在儲存系統中可用。
+
+.步驟
+. 在主機上輸入下列命令：
++
+hy* SnapDrive fingroup add _igroup_name filer_name_[_filer_name..._]*
+
++
+[listing]
+----
+snapdrive igroup add ig toaster
+Added igroup configuration for appliance: toaster
+----
++
+儲存系統烤麵包機已成功新增「ig」igroup。
+
+

@@ -1,0 +1,53 @@
+---
+permalink: solaris/concept_limitations_of_rdm_luns_managed_by_snapdrive.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, rdm, lun 
+summary: 在配置RDM LUN方面有一些限制。SnapDrive您必須瞭解可能影響環境的限制。 
+---
+= 受由功能不完善管理的RDM LUN限制SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置RDM LUN方面有一些限制。SnapDrive您必須瞭解可能影響環境的限制。
+
+* RDM LUN不能用作開機磁碟或系統磁碟。
+* 雖然VMware ESX伺服器支援MPIO、但在客體作業系統中不支援MPIO。SnapDrive
+* 當傳輸傳輸傳輸協定為「_FC_」時、SnapDrive CLI命令中指定的igroup會被忽略、而且igroup會自動由虛擬介面建立。
+* 您可以重新命名、移動或刪除「usr/bin/resce-scsi-bus.sh」指令碼、此指令碼是「sg3_utils」的一部分、以避免將RDM LUN的數量限制為8個。
++
+
+NOTE: 如果您想保留「scga_utils」中的「usr/bin/resce-scsi-bus.sh」、並避免將RDM LUN數量限制為8個、則必須建立包裝指令碼「/root/動態-lun-resce.sh」、並從該指令碼執行/usr/bin/rescscsi-bus.sh、並使用「-w」、「full」、「c」和「rfull」等選項、「r」、「r」、「r」、「r」、「r」、
+
+
+
+以下是「/root/動態-LUN-resce.sh」修改內容的範例：
+
+[listing]
+----
+#cat /root/dynamic-lun-rescan.sh
+#Wrapper script used to call the actual rescan script.
+/usr/bin/rescan-scsi-bus.sh -w -c -r
+----
+*與VMware ESX server*相關的限制
+
+* 每個客體作業系統都可設定四個SCSI控制器、每個SCSI控制器可對應至16個裝置。
++
+不過、每個控制器保留一個裝置、因此總共可將60（16*4--4）個RDM LUN對應至客體作業系統。
+
+* 每個ESX伺服器最多可對應至256個RDM LUN。
+
+
+*相關資訊*
+
+xref:concept_guest_os_preparation_for_installing_sdu.adoc[客用作業系統準備好安裝SnapDrive 適用於UNIX的功能]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[VMware VMotion支援SnapDrive UNIX版]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[設定適用於SnapDrive UNIX的虛擬儲存主控台]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[配置RDM LUN的考量]
+
+http://www.vmware.com/pdf/vsphere4/r40/vsp_40_config_max.pdf["www.vmware.com/pdf/vsphere4/r40/vsp_40_config_max.pdf"]

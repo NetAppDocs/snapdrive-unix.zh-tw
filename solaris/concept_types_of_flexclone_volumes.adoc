@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_types_of_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume 
+summary: 根據SnapDrive UNIX的使用方式、FlexClone Volume可歸類為暫時性或全用途。 
+---
+= FlexClone磁碟區類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據SnapDrive UNIX的使用方式、FlexClone Volume可歸類為暫時性或全用途。
+
+* *受限或暫時性的FlexClone Volume *：此FlexClone Volume（在「nap Connect」（抓取連線）期間建立）主要用於驗證資料。此FlexClone Volume不允許透過SnapDrive UNIX進行資源配置和Snapshot作業（「快照中斷」除外）。
+* *不受限或通用的FlexClone Volume *：此FlexClone Volume（在「午睡連線」期間建立）也可作為後端、用於資源配置和Snapshot作業、如同一般的彈性磁碟區。您可以在SnapDrive 這個FlexClone Volume上執行所有的例行性的資料複本作業。
+

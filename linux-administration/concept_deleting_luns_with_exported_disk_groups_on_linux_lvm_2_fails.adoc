@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_deleting_luns_with_exported_disk_groups_on_linux_lvm_2_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, exported, disk, group, lvm2, fail, lun 
+summary: UNIX版不會刪除Linux LVM2上已匯出磁碟群組的LUN。SnapDrive 
+---
+= 在Linux LVM2上刪除已匯出磁碟群組的LUN失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版不會刪除Linux LVM2上已匯出磁碟群組的LUN。SnapDrive
+
+如果您在Linux LVM2上匯出磁碟群組（dg）並嘗試刪除LUN、則刪除作業會失敗。
+
+
+
+== 因應措施
+
+您必須使用「vgimport <DGEname>」匯入磁碟群組、然後使用下列命令刪除磁碟群組和LUN：# SnapDrive elvesstorage DELETE - dg <DGE>[-f完整]

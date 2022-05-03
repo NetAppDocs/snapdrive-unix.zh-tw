@@ -1,0 +1,107 @@
+---
+permalink: aix/reference_informationrequired_forusing_the_snapdrive_storagedisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command, required 
+summary: 下表提供使用SnapDrive 「停止儲存」指令時所需提供的資訊。 
+---
+= 使用SnapDrive 「停止儲存」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表提供使用「SnapDrive 停止儲存設備連線」命令時所需提供的資訊：
+
+|===
+| 需求 | 引數 
+
+
+ a| 
+根據您輸入的命令、您可以從下列任一項目移除對應：
+
+* LUN
++
+如果您中斷一或多個LUN的連線、第一個引數必須使用長格式的LUN名稱、以指定儲存系統名稱、磁碟區名稱及磁碟區內LUN的名稱。
+
++
+若要指定其他LUN、如果新LUN與先前LUN位於相同的儲存系統和磁碟區、則可以單獨使用LUN名稱。否則、您可以指定新的儲存系統名稱和磁碟區名稱（或僅指定磁碟區名稱）來取代先前的值。
+
+* LUN上的檔案系統
++
+指定給「-FS」的「_file_spec_」是檔案系統掛載點的名稱。適用於UNIX的解決方法會自動找出與您指定的檔案系統相關聯的LUN、並中斷其連線。SnapDrive
+
+* 磁碟或磁碟區群組
+* 磁碟或磁碟區群組上的檔案系統
+* 主機或邏輯磁碟區
+
+
+您為file_spec引數輸入的值必須識別您要中斷連線的儲存實體。
+
+
+
+ a| 
+LUN（`-LUN'）
+ a| 
+「LUN名稱」（長格式或短格式）
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_`）或磁碟區群組（`-vg _file_spec_`）
+ a| 
+磁碟或磁碟區群組的名稱
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+文件系統名稱
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機或邏輯磁碟區的名稱
+
+
+
+ a| 
+如果您想SnapDrive 要讓UNIX版的支援中心中斷指定的儲存設備連線、即使您在命令提示字元中加入其他實體的主機端實體（例如具有一或多個主機磁碟區的磁碟群組）、請在命令提示字元中加入「-full」（全滿）選項。
+
+如果不包含此選項、則只能指定空白的主機端實體。
+
+
+
+ a| 
+「-full」
+ a| 
+~
+
+
+
+ a| 
+如果您想要停用節點或主機叢集、使其無法共用檔案系統
+
+
+
+ a| 
+「-fstype-
+ a| 
+`_type_'
+
+
+
+ a| 
+vmtype
+ a| 
+`_type_'
+
+
+
+ a| 
+*選用：*指定用於SnapDrive UNIX作業的檔案系統和Volume Manager類型。
+
+|===

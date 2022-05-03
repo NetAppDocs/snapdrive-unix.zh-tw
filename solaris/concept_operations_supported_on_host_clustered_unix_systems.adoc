@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_operations_supported_on_host_clustered_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snpadrive, support, host, cluster 
+summary: 適用於主機叢集式UNIX系統上的UNIX、可讓您在整個叢集的主機共用儲存設備上建立儲存設備並執行Snapshot作業。SnapDrive 
+---
+= 支援在主機叢集式UNIX系統上執行的作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於主機叢集式UNIX系統上的UNIX、可讓您在整個叢集的主機共用儲存設備上建立儲存設備並執行Snapshot作業。SnapDrive
+
+Snapshot作業是在包含磁碟群組、檔案系統和LUN的儲存系統上執行。您可以執行Snapshot作業、例如建立、重新命名、還原、連線、中斷連線、 顯示及刪除。
+
+
+NOTE: 主機叢集式系統的作業僅適用於Solaris主機上的Veritas SFRAC。

@@ -1,0 +1,21 @@
+---
+permalink: solaris/concept_what_snapdrive_for_unix_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix 
+summary: 適用於UNIX的可簡化儲存管理工作。SnapDriveUNIX版使用Snapshot技術來建立儲存在共享或非共享儲存系統上的資料映像。SnapDrive此外、此解決方案也能協助您進行儲存資源配置。SnapDrive 
+---
+= UNIX的功能SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的可簡化儲存管理工作。SnapDriveUNIX版使用Snapshot技術來建立儲存在共享或非共享儲存系統上的資料映像。SnapDrive此外、此解決方案也能協助您進行儲存資源配置。SnapDrive
+
+您可以使用SnapDrive 適用於UNIX的功能來執行下列工作：
+
+* **備份與還原資料：** SnapDrive for UNIX可讓您使用Snapshot技術來建立儲存在儲存系統上之主機資料的映像（Snapshot複本）。此Snapshot複本提供您該資料的複本、您可以稍後再還原。Snapshot複本中的資料可存在於單一儲存系統、或橫跨多個儲存系統及其磁碟區。這些儲存系統可以位於HA配對、節點本機檔案系統或磁碟群組、或是主機叢集環境中的LUN。
+* *管理儲存設備：*您可以在主機叢集和非叢集環境中建立和刪除儲存元件、包括磁碟群組、主機磁碟區、檔案系統和LUN。UNIX版的支援擴充儲存設備、將儲存設備連線至主機、然後中斷連線、即可管理儲存設備。SnapDrive
+* **角色型存取控制：** SnapDrive for UNIX提供角色型存取控制（RBAC）。RBAC可讓SnapDrive 管理員限制存取儲存系統以執行各種SnapDrive 功能操作。儲存作業的存取權限取決於指派給使用者的角色。RBAC可讓儲存管理員根據SnapDrive 指派的角色、限制使用者執行的作業。
+

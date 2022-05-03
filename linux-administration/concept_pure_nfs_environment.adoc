@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/concept_pure_nfs_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, subnet, nfs, volumes, interface, data, configure, system, management 
+summary: 如果您將系統設定為多個子網路、並透過管理介面掛載一或多個NFS磁碟區、則應一律將第一個資料介面設定為管理介面。 
+---
+= 純NFS環境
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您將系統設定為多個子網路、並透過管理介面掛載一或多個NFS磁碟區、則應一律將第一個資料介面設定為管理介面。
+
+在以下範例中、管理介面為「10.72.221.19」、資料介面為「10.72.220.45」。
+
+[listing]
+----
+# snapdrive config list
+username    appliance name   appliance type
+-------------------------------------------
+root        10.72.221.19     StorageSystem
+
+# snapdrive config list -mgmtpath
+system name    management interface   datapath interface
+--------------------------------------------------------
+f2040-221-19   10.72.221.19           10.72.220.45
+----

@@ -1,0 +1,30 @@
+---
+permalink: aix/concept_multipath_access_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, multipath, access 
+summary: 適用於UNIX的支援FC多重路徑存取、使用標準的多重路徑軟體解決方案存取儲存系統。SnapDrive透過多重路徑、您可以在主機與儲存系統之間設定多個網路路徑。 
+---
+= 支援SnapDrive UNIX的多重路徑存取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援FC多重路徑存取、使用標準的多重路徑軟體解決方案存取儲存系統。SnapDrive透過多重路徑、您可以在主機與儲存系統之間設定多個網路路徑。
+
+|===
+| 平台 | 多重路徑解決方案 
+
+
+ a| 
+AIX
+ a| 
+適用於FC
+
+* NativeMPIO
+* DMP
+
+
+|===
+如果有一條路徑故障、FC流量會繼續保留在其餘路徑上。如果主機有多個LUN路徑、則需要使用多重路徑、並讓基礎路徑對使用者透明。如果SnapDrive 設定並支援針對UNIX作業使用的組態檔中指定的多重路徑解決方案、SnapDrive 則適用於UNIX的支援將使用指定的多重路徑解決方案。

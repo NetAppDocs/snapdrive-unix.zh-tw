@@ -1,0 +1,65 @@
+---
+permalink: linux-installation-7mode/reference_snapdrive_licensing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, license, requirements, software 
+summary: 在安裝SnapDrive 適用於UNIX的版本之前、您必須確保擁有適當的授權、以符合所需的軟體和傳輸協定。 
+---
+= 適用於UNIX授權需求SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝SnapDrive 適用於UNIX的版本之前、您必須確保擁有適當的授權、以符合所需的軟體和傳輸協定。
+
+下列是UNIX授權需求：SnapDrive
+
+|===
+| 授權 | 說明 | 安裝位置 
+
+
+ a| 
+SnapRestore
+ a| 
+必要授權、SnapDrive 讓UNIX版的功能能夠還原Snapshot複本。
+ a| 
+在NetApp儲存系統上
+
+
+
+ a| 
+FlexClone
+ a| 
+複製Snapshot複本的選用授權。
+ a| 
+在NetApp儲存系統上
+
+
+
+ a| 
+通訊協定
+ a| 
+LUN、iSCSI或FC授權所需。
+ a| 
+在NetApp儲存系統上
+
+
+
+ a| 
+SnapMirror
+ a| 
+鏡射備份至儲存系統的選用授權。
+ a| 
+在NetApp儲存系統上
+
+
+
+ a| 
+SnapVault
+ a| 
+將備份歸檔至儲存系統的選用授權。
+ a| 
+在NetApp儲存系統上
+
+|===

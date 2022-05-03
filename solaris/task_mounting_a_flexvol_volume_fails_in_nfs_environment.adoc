@@ -1,0 +1,35 @@
+---
+permalink: solaris/task_mounting_a_flexvol_volume_fails_in_nfs_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mount, flexvol, fail, nfs, volume 
+summary: 當您掛載FlexVol 完一個setcvolume時、/etc/exports檔案中會新增一個項目。在NFS環境中SnapDrive 、UNIX的功能無法運作、並產生錯誤訊息。 
+---
+= 在FlexVol NFS環境中掛載不正常的Sf大量 資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您掛載FlexVol 完某個數據區時、會在「/`/etc/exports file」（匯出檔案）中新增一個項目。在NFS環境中SnapDrive 、UNIX的功能無法運作、並產生錯誤訊息。
+
+錯誤訊息為
+
+[listing]
+----
+0001-034 Command error: mount failed: nfs mount:
+dub12137:/vol/vn_dub12137_testprisredo_0: Permission denied.
+----
+UNIX可能會因為選項「nfs.export.auto-update`」設為「Off」而出現錯誤訊息。SnapDrive「nfs.export.auto-update`」選項可控制是否對「/etc/exports」檔案執行自動更新。
+
+
+NOTE: 當NFS環境中的Sf大量 故障時、該功能不會傳送訊息給儲存系統。AutoSupport FlexVol
+
+.步驟
+. 設定「nfs.export.auto-update`」選項「on」、以便自動更新/etc/exports檔案。
++
+UNIX版的適用功能現在可以掛載此功能。SnapDrive FlexVol
+
+
+
+在HA配對主動/主動組態中、請確定您已為兩個儲存系統設定NFS匯出選項。

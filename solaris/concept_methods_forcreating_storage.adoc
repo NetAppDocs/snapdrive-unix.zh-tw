@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_methods_forcreating_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, storage 
+summary: 適用於UNIX的解決方案提供一些基本格式的支援功能、可讓您輕鬆建立想要的儲存設備。SnapDrive SnapDrive儲存設備建立作業分為各種一般類別。 
+---
+= 建立儲存設備的方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供一些基本格式的「支援功能」命令、讓您更輕鬆地建立所需的儲存設備。SnapDrive SnapDrive儲存設備建立作業分為各種一般類別。
+
+* Create LUNs（建立LUN SnapDrive ）-「flexenstorage create」命令會自動在儲存系統上建立LUN、但不會建立任何其他儲存實體。適用於UNIX的執行所有與主機準備和建立每個LUN的儲存探索相關的工作、以及對應和連線至LUN。SnapDrive
+* 直接在LUN上建立檔案系統、並自動設定LUN（SnapDrive 適用於UNIX）、即可執行設定檔案系統所需的所有動作。您不需要指定任何LUN來建立。
+* 直接在LUN上建立檔案系統、並指定您要與其相關聯的LUN、在此情況下、您可以使用「SnapDrive 靜態儲存建立」命令來指定您要設定的檔案系統、以及您要與檔案系統相關聯的LUN。
+* 建立LVM並自動設定LUN -「SnapDrive 還原儲存建立」命令可讓您在主機上建立檔案系統、邏輯磁碟區或磁碟群組。UNIX版執行設定實體所需的所有動作、包括自動建立所需的磁碟群組和LUN。SnapDrive您不需要為其指定任何LUN即可建立。
+* 在主機上建立LVM實體、並指定您要與其相關聯的LUN - 在這種情況下、您可以使用「SnapDrive 支援儲存建立」命令來指定您要設定的實體（檔案系統、邏輯磁碟區或磁碟群組）、以及您要與該實體相關聯的LUN。
+* 在主機叢集環境中的共用主機上建立檔案系統-在此情況下、您會在共用主機上建立檔案系統、邏輯磁碟區或磁碟群組。
+

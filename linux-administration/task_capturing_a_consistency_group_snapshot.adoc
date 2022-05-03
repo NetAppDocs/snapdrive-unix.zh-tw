@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/task_capturing_a_consistency_group_snapshot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, consistency, group, snapshot, copy, configuration 
+summary: 您可以設定SnapDrive UNIX版的功能、以建立一致性群組Snapshot複本。 
+---
+= 建立一致性群組Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定SnapDrive UNIX版的功能、以建立一致性群組Snapshot複本。
+
+.步驟
+. 在主機上輸入下列命令：+
++
+hy* SnapDrive f-sap create -fs /mnt/test -snapname _SnapshotName_-f -nosmp.*
+
++
+「SnapshotName_」是為一致性群組Snapshot複本指定的名稱。
+
+
+
+
+
+== 範例
+
+以下是命令的範例：
+
+[listing]
+----
+snapdrive snap create -fs /mnt/test -snapname snap_123 -f -noprompt
+----
+已成功建立一致性群組Snapshot複本。

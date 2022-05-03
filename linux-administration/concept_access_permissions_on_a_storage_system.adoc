@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_access_permissions_on_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, permission 
+summary: 存取權限會指出主機是否可以執行特定的Snapshot複本與儲存作業。存取權限不會影響SnapDrive 任何的不僅僅是儲存展示或儲存清單作業。利用此功能、您可以在儲存系統上的檔案中指定每個主機的存取權限。SnapDrive 
+---
+= 存取儲存系統上的權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+存取權限會指出主機是否可以執行特定的Snapshot複本與儲存作業。存取權限不會影響SnapDrive 任何的不僅僅是儲存展示或儲存清單作業。利用此功能、您可以在儲存系統上的檔案中指定每個主機的存取權限。SnapDrive
+
+您也可以指定SnapDrive 當找不到指定主機的權限檔案時、必須採取的動作。您可以在「all-access-if-RBAC未指定」的「snapdrive.conf」組態檔中設定值、以指定動作。您也可以修改存取權限、以啟用或停用儲存系統存取。
+
+
+NOTE: 在適用於UNIX及更新版本的版本中、您可以根據角色型存取控制功能來執行儲存作業。SnapDrive

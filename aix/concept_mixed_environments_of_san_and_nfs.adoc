@@ -1,0 +1,27 @@
+---
+permalink: aix/concept_mixed_environments_of_san_and_nfs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mixed, san, nfs, environment 
+summary: 在混合式SAN與NFS環境中、必須對應管理與資料介面、使第一個資料介面與管理介面相同。 
+---
+= 混合式SAN與NFS環境
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在混合式SAN與NFS環境中、必須對應管理與資料介面、使第一個資料介面與管理介面相同。
+
+在以下範例中、管理介面為「10.72.197.91」、資料介面為「a10.72.220.91」。
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91 f3050-197-91 f3050-220-91
+
+#snapdrive config list -mgmtpath
+ system name        management interface   datapath interface
+ --------------------------------------------------------------------
+ bart               10.72.197.91           10.72.197.91|10.72.220.91
+----

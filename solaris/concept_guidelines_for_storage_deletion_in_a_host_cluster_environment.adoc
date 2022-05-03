@@ -1,0 +1,38 @@
+---
+permalink: solaris/concept_guidelines_for_storage_deletion_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, host, cluster 
+summary: 您必須瞭解在主機叢集環境中使用napdrive storage DELETE命令的一些準則。 
+---
+= 在主機叢集環境中刪除儲存設備的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解SnapDrive 在主機叢集環境中使用「還原刪除」命令的一些準則。
+
+* 如果您從SnapDrive 主機叢集中的任何非主要節點、以「-DEVICETYPE」共享選項來起始「Setsstorage DELETE」命令、該命令會傳送至主要節點並執行。為了達成此目標、您必須確保所有主機叢集節點都允許rsh或ssh「未輸入密碼的存取提示」。
+* 可以從主機叢集中的任何節點執行「SnapDrive 支援刪除」命令。
+* 若要成功執行儲存設備刪除作業、也不應為假：
++
+** 儲存實體必須共用。
+** LUN應對應至主機叢集中的所有節點。
+
+
+* 您可以使用「-DEVICETYPE Dedicated」選項刪除特定節點上的儲存實體、或在命令列語法中省略「-DEVICETYPE」選項、因為預設值為Dedicated。
+* 如果使用「-DEVICETYPE Dedicated」（專用）選項刪除共享儲存實體或LUN、或刪除具有共享選項的專用儲存實體或LUN、則SnapDrive 「支援刪除」命令會顯示錯誤訊息。
+* 如果發生下列其中一種情況、儲存設備刪除作業將會失敗：
++
+** 如果刪除儲存實體的過程中發生任何錯誤。
++
+適用於UNIX的範本會刪除儲存實體、從所有非主要節點中斷開LUN的連線、然後從主機叢集中的主要節點中斷開及刪除LUN。SnapDrive
+
+** 如果主機叢集中的某個節點在SnapDrive 執行「停止儲存刪除」命令之前關機並重新開機。
++
+這是因為LUN仍會對應至不存在的節點。若要避免這種情況、請使用「-force」選項。
+
+
+
+

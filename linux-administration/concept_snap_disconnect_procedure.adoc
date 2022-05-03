@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_snap_disconnect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, procedure, steps 
+summary: 本節說明SnapDisconnect. 
+---
+= SnapDisconnecture程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節說明SnapDisconnect.
+
+下列步驟說明「抓取中斷程序（nap disconnecture）：
+
+. UNIX版從「nap Disconnects」CLI取得主機檔案規格、並找出儲存系統磁碟區。SnapDrive
+. 刪除主機檔案規格並取消對應LUN之後、SnapDrive 適用於UNIX的支援功能會檢查目前的Volume是否為SnapDrive 由支援所建立的實體複本。
+. 如果FlexClone是SnapDrive 由效益技術所建立、SnapDrive 那麼適用於UNIX的功能將會檢查下列項目是否：
++
+.. 複製磁碟區中有任何對應的LUN
+.. 在複製的Volume中有任何新的LUN
+.. 有任何新的Snapshot複本
+
+
+
+
+如果滿足所有條件、SnapDrive UNIX版的功能將會刪除複製的Volume。對於不受限制的FlexClone、如果已設定RBAC、SnapDrive 則適用於UNIX的不執行子步驟1和子步驟2檢查。
+
+在採用7.2版之前版本的儲存系統Data ONTAP 上、SnapDrive 受限的FlexClone Volume不會被適用於UNIX的部分刪除。應使用儲存系統命令來刪除這些命令。但是、當使用者獲得適當的RBAC功能時、即會刪除不受限制的FlexClone磁碟區。
+
+*相關資訊*
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[以角色為基礎的UNIX存取控制SnapDrive]

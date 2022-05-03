@@ -1,0 +1,14 @@
+---
+permalink: aix/index.html 
+sidebar: sidebar 
+keywords: guide, documentation, installation, administration 
+summary: 說明如何在SnapDrive AIX平台上安裝、設定及使用適用於UNIX的功能。 
+---
+= IBM AIX安裝與管理指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南說明如何在SnapDrive AIX平台上安裝、設定及使用適用於UNIX的《32位元組態設定》。

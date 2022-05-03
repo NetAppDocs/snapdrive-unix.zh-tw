@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_command_syntax_for_disconnectingluns_and_storageentities_from_thehost.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, lun, storage, host, disconnect 
+summary: 若要使用SnapDrive 「停止儲存」命令來移除LUN與儲存實體的對應、請使用下列語法。 
+---
+= 用於從主機中斷LUN與儲存實體連線的命令語法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用「SnapDrive 停止儲存設備連線」命令來移除LUN與儲存實體的對應、請使用下列語法：
+
+* SnapDrive 鏡像儲存設備中斷連線｛-dg |-FS |-hostvol｝_file_spec_[_file_spec..._][{-dg |-fs |-hostvol }_file_spec_[_file_spec...] ..._][-fstype_type_][-vmtype _type_]*

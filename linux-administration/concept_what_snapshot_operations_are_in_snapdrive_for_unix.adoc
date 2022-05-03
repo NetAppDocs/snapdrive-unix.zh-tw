@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/concept_what_snapshot_operations_are_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, ontap, image, host, storage, data, unix 
+summary: 適用於UNIX的支援功能可讓您使用「支援快照」技術、建立儲存在儲存系統上之主機資料的映像（Snapshot複本）SnapDrive Data ONTAP 。 
+---
+= 什麼是Snapshot作業SnapDrive 是UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您使用「支援不支援的Snapshot」技術來建立儲存在儲存系統上之主機資料的映像（Snapshot複本）SnapDrive Data ONTAP 。
+
+此Snapshot複本提供您該資料的複本、您可以稍後再還原。Snapshot複本中的資料可存在於單一儲存系統、或橫跨多個儲存系統及其磁碟區。這些儲存系統可以位於HA配對、節點本機檔案系統、或是主機叢集環境中的磁碟群組或LUN。在SnapDrive 安裝了適用於UNIX的非叢集式UNIX主機上、您可以在儲存系統上建立一個或多個Volume群組的Snapshot複本。
+
+Snapshot複本可包含檔案系統、邏輯磁碟區、磁碟群組、LUN及NFS目錄樹狀結構。建立Snapshot複本之後、您可以重新命名、還原或刪除它。您也可以連線至同一主機上的不同位置、或連線至不同的主機。連線之後、您可以檢視及修改Snapshot複本的內容、也可以中斷Snapshot複本的連線。此外、適用於UNIX的功能可讓您顯示所建立之Snapshot複本的相關資訊。SnapDrive在SnapDrive 已安裝適用於UNIX的叢集式UNIX主機上、您可以在包含磁碟群組和檔案系統的主機叢集節點上執行Snapshot作業。Snapshot作業包括建立、重新命名、還原、連線、中斷連線、 顯示及刪除。

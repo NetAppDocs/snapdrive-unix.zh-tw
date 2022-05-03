@@ -1,0 +1,25 @@
+---
+permalink: aix/task_adding_sd_hostname_to_the_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hostname, storage, system 
+summary: Operations Manager主控台管理員可使用Operations Manager主控台、在儲存系統上建立SD-hostname使用者。完成這些步驟之後、Operations Manager主控台管理員必須手動將認證資料傳送SnapDrive 給UNIX管理員。您可以使用任何名稱來取代SD-hostname;不過最好使用SD-hostname. 
+---
+= 將SD-HostName新增至儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager主控台管理員可使用Operations Manager主控台、在儲存系統上建立SD-hostname使用者。完成這些步驟之後、Operations Manager主控台管理員必須手動將認證資料傳送SnapDrive 給UNIX管理員。您可以使用任何名稱來取代SD-hostname;不過最好使用SD-hostname.
+
+.步驟
+. 取得儲存系統的root密碼並儲存密碼。
++
+若要新增儲存系統的密碼、請選取*管理*>*儲存系統*。
+
+. 為每個UNIX系統建立SD-HostName使用者。
+. 將「API-*」和「login-*」功能指派給SD角色等角色。
+. 將此角色（SD-role）納入新的使用者群組、例如SD-usergroup。
+. 將此使用者群組（SD-usergroup）與儲存系統上的SD主機名稱使用者建立關聯。
+

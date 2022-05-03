@@ -1,0 +1,34 @@
+---
+permalink: linux-administration/concept_snapshot_copiesthat_span_storagesystems_orvolumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, storage, volume 
+summary: 適用於UNIX的支援功能可讓您在相同或不同的儲存系統上、取得位於多個儲存系統磁碟區中的Snapshot複本。SnapDrive 
+---
+= 跨越儲存系統或磁碟區的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您在相同或不同的儲存系統上、取得位於多個儲存系統磁碟區中的Snapshot複本。SnapDrive
+
+適用於UNIX的支援功能可讓您在多個儲存系統磁碟區或多個儲存系統之間取得Snapshot複本。SnapDrive這些磁碟區可位於相同的儲存系統或不同的儲存系統上。雖然「SnapDrive flexsnap create」命令會建立包含您所要求實體的所有磁碟區的Snapshot複本、SnapDrive 但適用於UNIX的僅還原您在SnapDrive 「flexsnap create」命令中指定的實體。
+
+當您使用「SnapDrive flexfsnap create」命令建立跨越多個磁碟區的Snapshot複本時、您不需要在命令提示字元上命名磁碟區。UNIX版從您指定的「file_spec」引數取得此資訊。SnapDrive
+
+* 如果您輸入的「file_spec」要求磁碟群組、或磁碟群組上的檔案系統或主機磁碟區、SnapDrive 則UNIX版的支援中心會自動建立Snapshot複本、其中包含您指定的磁碟群組、磁碟區或檔案系統的所有儲存系統磁碟區。
+* 如果您輸入的「file_spec」要求LUN、SnapDrive 則適用於UNIX的功能會為包含LUN的儲存系統磁碟區建立Snapshot複本。
+* 如果您輸入的「file_spec」要求檔案系統直接位於LUN上、SnapDrive 則適用於UNIX的for UNIX會取得儲存系統磁碟區的Snapshot複本、其中包含您指定的LUN和檔案系統。
+* 如果您輸入的「file_spec」要求NFS目錄、SnapDrive 則適用於UNIX的for UNIX會建立包含NFS目錄樹狀目錄的Volume Snapshot複本。
+
+
+除了使用以多個儲存系統和儲存系統磁碟區的實體為基礎所建置的「file_spec」引數之外、您也可以使用「file_spec」引數組合、其中每個值都是以單一儲存系統或儲存系統磁碟區為基礎。例如、假設您有一個設定、其中磁碟群組DG1橫跨儲存系統儲存系統2和儲存系統3、DG2位於儲存系統2、而DG3位於儲存系統3。在這種情況下、下列任一命令列都是正確的：
+
+《SnapDrive 支援建立- dg dg 1 -snapname snapdg1》
+
+《SnapDrive 不完整的建構- dg2 DG3 -snapname snapg23》
+
+《SnapDrive 不完整的建構建構建構：DG2 DG3 -snapname snapDG123》
+
+建立橫跨儲存系統和磁碟區的Snapshot複本時、請謹記SnapDrive 以下幾點：適用於UNIX的Eshot使用簡短名稱在每個儲存系統磁碟區上建立Snapshot複本。即使磁碟區位於不同的儲存系統、名稱中也不會包含完整路徑名稱。這表示如果您稍後重新命名Snapshot複本、則必須前往每個儲存系統和磁碟區、並在此重新命名。

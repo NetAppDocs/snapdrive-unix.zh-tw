@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_diagnostic_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snaprive, diagnostic, file 
+summary: UNIX版安裝診斷檔案、可協助偵測UNIX版的問題。SnapDrive SnapDrive 
+---
+= 由適用於UNIX的效能分析所安裝的診斷檔案SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版安裝診斷檔案、可協助偵測UNIX版的問題。SnapDrive SnapDrive
+
+* 「/opt/NTAPsnapdrive/diag/SnapDrive。DC」
+* /`opt / NTAPsnapdrive/diag/solaris資訊
+* /`opt/NTAPsnapdrive/diag/filer_info'
+* /`opt/NTAPsnapdrive/diag/Brocade資訊
+* 「/opt/NTAPsnapdrive/diag/Cisco_info'」（選擇性/ NTAPsnapdrive/diag/Cisco_info'）
+* /`opt/NTAPsnapdrive/diag/McData資料
+* 「/opt/NTAPsnapdrive/diag/SHsupport.pm'」
+* 「/opt/NTAPsnapdrive/diag/Telnet.pm'」
+

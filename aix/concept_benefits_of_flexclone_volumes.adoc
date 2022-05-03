@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_benefits_of_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, benefits, flexcone, volumes 
+summary: FlexClone Volume提供資料管理與效能優勢。 
+---
+= FlexClone Volume的優點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FlexClone Volume提供資料管理與效能優勢。
+
+* 簡化資料管理並降低風險。
+* 靈活度與更高的使用率。
++
+您可以使用FlexClone Volume為其他使用者建立多個資料複本、而不讓他們存取原始資料。
+
+* 速度比LUN複製快。
+

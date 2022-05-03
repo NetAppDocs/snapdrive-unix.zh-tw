@@ -1,0 +1,30 @@
+---
+permalink: aix/task_disconnectingsnapshot_copy_withluns_and_nostorage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, lun, storage 
+summary: 您可以使用SnapDrive 「停止連結」命令來中斷包含LUN且無儲存實體的Snapshot複本。 
+---
+= 中斷使用LUN和無儲存實體的Snapshot複本連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 停止快照中斷連線」命令來中斷包含LUN且無儲存實體的Snapshot複本。
+
+.步驟
+. 輸入下列命令語法：
++
+hy* SnapDrive 快照中斷連線-LUN _long lun_name_[_lun_name..._]*
+
+
+
+適用於UNIX的解決方法會移除命令列中指定之儲存實體的對應。SnapDrive
+
+下列命令會移除儲存系統快顯通知中指向luna和lunb的對應：
+
+[listing]
+----
+# snapdrive snap disconnect -lun toaster:/vol/vol1/luna lunb
+----

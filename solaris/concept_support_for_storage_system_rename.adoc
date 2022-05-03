@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_support_for_storage_system_rename.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, storage, rename 
+summary: 支援重新命名儲存系統。SnapDrive如果已建立Snapshot複本、且儲存系統在複本建立後重新命名、SnapDrive 則只要您已重新驗證所有用戶端（主機）、即可執行Snapshot作業。 
+---
+= 支援儲存系統重新命名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援重新命名儲存系統。SnapDrive如果已建立Snapshot複本、且儲存系統在複本建立後重新命名、SnapDrive 則只要您已重新驗證所有用戶端（主機）、即可執行Snapshot作業。
+
+只有在重新驗證用戶端之後、還原、連線、中斷連線、顯示及刪除等快照作業才會繼續在主機系統中運作。您必須重新驗證、因為主機名稱是登錄機碼的一部分、用於保存密碼。

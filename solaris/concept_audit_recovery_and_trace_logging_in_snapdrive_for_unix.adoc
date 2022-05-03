@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_audit_recovery_and_trace_logging_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, audit, recovery, trace, log 
+summary: 適用於UNIX的支援功能可協助您維護各種類型的記錄檔、例如稽核、還原及追蹤記錄檔。SnapDrive稍後會使用這些記錄檔進行疑難排解。 
+---
+= UNIX版的稽核、恢復及追蹤記錄SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可協助您維護各種類型的記錄檔、例如稽核、還原及追蹤記錄檔。SnapDrive稍後會使用這些記錄檔進行疑難排解。

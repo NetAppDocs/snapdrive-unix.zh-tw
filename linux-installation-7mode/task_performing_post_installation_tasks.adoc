@@ -1,0 +1,34 @@
+---
+permalink: linux-installation-7mode/task_performing_post_installation_tasks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, post, install, configure, task 
+summary: 安裝完成後、您必須設定其他功能。您必須安裝伺服器憑證並設定SnapDrive 適用於UNIX的功能、才能與儲存系統和精靈服務建立安全連線。 
+---
+= 執行安裝後工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝完成後、您必須設定其他功能。您必須安裝伺服器憑證並設定SnapDrive 適用於UNIX的功能、才能與儲存系統和精靈服務建立安全連線。
+
+.步驟
+. 如果SnapDrive 您使用的是與儲存系統和精靈服務的安全連線、請將適用於UNIX的伺服器憑證安裝在「side-solide-path=/opt/NetApp/SnapDrive / SnapDrive .pem」位置。
++
+憑證路徑是在s'napdrive.conf檔案中的「教育-取消儲存憑證路徑」組態變數中定義。
+
+. 在「snapdrive.conf」檔案中設定「use-https-to -SDU-daemon=on_」、以使用HTTPS與儲存系統和精靈服務進行安全連線。
++
+
+NOTE: 適用於UNIX及更新版本的支援HTTPS以進行精靈通訊。SnapDrive預設會停用此選用參數。
+
+. 重新啟動SnapDrive 此程式服務：
++
+快照的start*
+
++
+
+NOTE: 每次手動變更組態檔時、您都必須重新啟動SnapDrive 這個程式。
+
+

@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_guest_os_preparation_for_installing_sdu.html 
+sidebar: sidebar 
+keywords: snap, snapdrve, guest, os, install, prepare 
+summary: 您必須先準備好客體系統、才能在SnapDrive 系統上安裝適用於UNIX的功能。在來賓準備過程中、您必須安裝Solaris主機公用程式。 
+---
+= 客用作業系統準備好安裝SnapDrive 適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先準備好客體系統、才能在SnapDrive 系統上安裝適用於UNIX的功能。在來賓準備過程中、您必須安裝Solaris主機公用程式。
+
+*相關資訊*
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[設定適用於SnapDrive UNIX的虛擬儲存主控台]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[VMware VMotion支援SnapDrive UNIX版]
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[受由功能不完善管理的RDM LUN限制SnapDrive]
+
+xref:task_verifying_virtual_storage_console.adoc[驗證虛擬儲存主控台的登入資訊]
+
+xref:concept_configuration_options_and_their_default_values.adoc[組態選項及其預設值]
+
+xref:task_hosts_preparation_for_adding_luns.adoc[主機準備新增LUN]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[配置RDM LUN的考量]

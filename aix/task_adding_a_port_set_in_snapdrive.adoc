@@ -1,0 +1,41 @@
+---
+permalink: aix/task_adding_a_port_set_in_snapdrive.html 
+sidebar: sidebar 
+keywords: port, set, snap, snapdrive, add 
+summary: 您可以在儲存系統中新增連接埠集、以便與Vserver通訊。這是一次性活動、必須在使用儲存系統之前完成。 
+---
+= 在SnapDrive 不完善的環境中新增連接埠集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在儲存系統中新增連接埠集、以便與Vserver通訊。這是一次性活動、必須在使用儲存系統之前完成。
+
+
+NOTE: 如果您想升級SnapDrive 至適用於UNIX的5.2版、請確認舊版SnapDrive 的UNIX版的for UNIX igroup已手動與儲存管理員所設定的連接埠建立關聯。
+
+在下列範例中、儲存管理員使用Vserver名稱而非IP位址、並驗證Vserver名稱是否已在DNS伺服器上註冊。
+
+.步驟
+. 在主機上輸入下列命令：
++
+「* SnapDrive 」「*」「*」「*」「*」「*」「*」「」「*」「」「*」「」「」「*」「」「*」「」「*」「
+
++
+「portSet_name_」是連接埠集的名稱。
+
++
+「_filername_」是Vserver的名稱。
+
++
+[listing]
+----
+snapdrive portset add ps2 vs91
+Added portset configuration for appliance: vs91
+----
++
+連接埠集PS2已成功新增SnapDrive 至無法更新的功能。
+
+

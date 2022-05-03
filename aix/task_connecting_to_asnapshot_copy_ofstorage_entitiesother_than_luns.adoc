@@ -1,0 +1,147 @@
+---
+permalink: aix/task_connecting_to_asnapshot_copy_ofstorage_entitiesother_than_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, storage, lun 
+summary: 您可以使用SnapDrive 「fingsnap connect」命令來連線至Snapshot複本、其中包含LUN以外的儲存實體。當您提供的目的地名稱目前正在使用中、或是有檔案系統名稱作為掛載點時、就無法使用此命令。 
+---
+= 連線至LUN以外儲存實體的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive fingsnap connects」命令來連線至Snapshot複本、其中包含LUN以外的儲存實體。當您提供的目的地名稱目前正在使用中、或是有檔案系統名稱作為掛載點時、就無法使用此命令。
+
+當您從非來源主機連線至包含以預設掛載「QIO」選項掛載的VxFS檔案系統的Snapshot複本時、您應該已安裝Veritas檔案裝置驅動程式（VxFDD）的Veritas授權。
+
+.步驟
+. 輸入下列命令：
++
+hy* SnapDrive fsnap connect -snapname fspec_set [_fspec_set_...] -snapname _long快照名稱_[-igroup _ig_name_[_ig_name_...] [-autodel][-autorename][-nopersist][{-Reserve |-noreserve}][-readonal][-sited]*
+
++
+在前面的使用中、「_fspec_Set_」格式如下：
+
++
+「*」｛-dg |-FS |-hostvol｝_src/file_spec_[_dest_file_spec_][｛-destdg |-destvg｝_dgname_][｛-destlv |-desthv｝lvname]*
+
++
+此命令必須始終以您要連接的儲存實體名稱開頭（例如、「-dg」、「-hostvol」或「-FS」）。如果您指定NFS掛載點、則無法在同一命令列上指定非NFS實體（如「-vg」、「-dg」、「-FS」、「-lvol"或「-hostvol"）。
+
+
+
+適用於UNIX的可複製您指定的LUN、並將其連線至新位置。SnapDrive
+
+下列命令列會連接磁碟群組、並使用預設名稱做為目的地名稱（也就是從來源名稱建立名稱）：
+
+[listing]
+----
+# snapdrive snap connect -vg vg1 -snapname
+filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1
+----
+下列命令列可將磁碟群組與單一主機磁碟區連線。它也會指定目的地主機磁碟區和磁碟群組的名稱：
+
+[listing]
+----
+# snapdrive snap connect -lvol vg1/vol1 vg1copy/vol1copy -snapname
+filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1copy
+----
+下列命令列可將磁碟群組連接至兩個LUN和兩個檔案系統。它會指定每個檔案系統的目的地名稱、其中一個檔案系統的主機磁碟區、以及兩個檔案系統的磁碟群組：
+
+[listing]
+----
+# snapdrive snap connect -fs mnt/fs1 /mnt/fs1copy -destvg vg1copy \
+-fs /mnt/fs2 /mnt/fs2copy -destlv vg1copy/vol2copy -destvg vg1copy
+\ -snapname filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1copy
+----
+下列命令列包含-autodexpand選項、可將磁碟群組與兩個檔案系統連線。它會使用預設名稱做為目的地名稱（也就是從來源名稱建立名稱）：
+
+[listing]
+----
+# snapdrive snap connect -lvol mnt/fs1 -snapname
+filer1:/vol/vol1:vg1snapshot \
+-autoexpand
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1
+----
+下列命令列包含「-autorename"選項、可將磁碟群組連接至兩個檔案系統和兩個LUN：
+
+[listing]
+----
+# snapdrive snap connect -fs mnt/fs1 -snapname
+filer1:/vol/vol1:vg1snapshot \
+-autorename
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1_0
+----
+下列範例會以檔案系統（在LVM堆疊上建立的磁碟群組）連線至Snapshot複本：
+
+[listing]
+----
+# snapdrive snap connect -fs /mnt/jfs1 /mnt/jfs1_clone -snapname
+snoopy:/vol/vol1:snapLvm -autorename
+connecting lvm1:
+LUN copy lunLvm1_0 ... created
+(original: snoopy:/vol/vol1/lunLvm1)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing lvm1_0
+Successfully connected to snapshot snoopy:/vol/vol1:snapLvm
+disk group lvm1_0 containing host volumes
+jfs1_SdHv_0 (filesystem: /mnt/jfs1_clone)
+----
+在下列範例中、檔案系統1（fs1）位於儲存系統1、而檔案系統2（fs2）位於儲存系統1、也位於合作夥伴儲存系統2上。檔案系統3（FS3）位於儲存系統1、合作夥伴儲存系統2和儲存系統3、而非HA配對的一部分。另一個檔案系統fs4完全位於儲存系統4。
+
+下列命令會建立fs1、fs2、FS3和fs4的Snapshot複本：
+
+[listing]
+----
+snapdrive snap create -fs /mnt/fs1 /mnt/fs2 /mnt/fs3 /mnt/fs4
+-snapname fs_all_snap
+----
+下一個命令用於連接目的地儲存系統上的fs1和fs2。fs1和fs2都位於HA配對上、因此您可以使用一個命令來還原它們：
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/fs1 /mt/fs2 -snapname fs_all_snap
+----
+下列命令可還原fs4：
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/fs4 -snapname fs_all_snap
+----
+UNIX版無法在目的地儲存系統上連接FS3、因為此檔案系統位於儲存系統1、儲存系統2和儲存系統3。SnapDrive

@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_guidelines_forconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, connect, snapshot, copy 
+summary: 連線至Snapshot複本時、請遵循準則。 
+---
+= 連接Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+連線至Snapshot複本時、請遵循準則。
+
+* 「Snapsnap Connect」命令僅適用於以適用於UNIX的Snapshot 4.2建立的Snapshot複本。SnapDrive SnapDrive
+* 在來源主機SnapDrive 上、適用於UNIX的支援連接及還原由舊版SnapDrive 的UNIX版所建立的Snapshot複本。
+* 如需NFS目錄樹的讀取和寫入存取權限、「SnapDrive Sfusnap Connect」命令會使用Data ONTAP FlexVol 「Sfor the volume」功能、因此需要Data ONTAP 使用更新版本的版本資訊。使用NetApp功能7.1的組態Data ONTAP 可連接NFS檔案或目錄樹狀結構、但提供唯讀存取。
+* 如果在Snapshot連線作業期間將「啟用-分割-複製_」組態變數值設定為「On」或「Sync」、在Snapshot中斷作業期間將「Off」、SnapDrive 則UNIX版的Sfor不會刪除Snapshot複本中的原始Volume或LUN。
+* 您必須設定Data ONTAP 值為使用不需更新的VFiler組態選項。「vol_clone」_ZAPI_allow」至「On」、以連線至vFiler單元中某個Volume或LUN的Snapshot複本。
+* 具有不同主機組態的主機不支援Snapshot連線作業。
+* 用來連線至實體儲存系統或vFiler單元的根Volume的「SnapDrive 鏈接」命令會失敗、因為Data ONTAP 無法複製根Volume。
+

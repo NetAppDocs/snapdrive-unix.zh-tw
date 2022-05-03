@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_host_preparation_for_installing_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, install, unix, prepare 
+summary: 您必須先準備好主機、才能在SnapDrive 系統上安裝適用於UNIX的功能。在準備主機時、您必須安裝Solaris主機公用程式。 
+---
+= 主機準備安裝SnapDrive 適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先準備好主機、才能在SnapDrive 系統上安裝適用於UNIX的功能。在準備主機時、您必須安裝Solaris主機公用程式。

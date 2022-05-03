@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_snapshot_copies_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, copy, snapshot 
+summary: UNIX版的支援功能可讓您建立主機資料的Snapshot複本。SnapDrive 
+---
+= 在SnapDrive UNIX的不適用環境中建立及使用Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您建立主機資料的Snapshot複本。SnapDrive

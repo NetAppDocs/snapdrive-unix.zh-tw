@@ -1,0 +1,37 @@
+---
+permalink: linux-administration/task_enabling_thin_provisioning_for_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, lun, thin, provisioning, reservation, space 
+summary: 您可以使用SnapDrive UNIX版的解決方法、在儲存系統上執行精簡配置。精簡配置也稱為空間保留。 
+---
+= 啟用LUN的精簡配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive UNIX版的解決方法、在儲存系統上執行精簡配置。精簡配置也稱為空間保留。
+
+.步驟
+. 將「啟用保留的」組態變數值設為「開啟」。
++
+您也可以使用「-Reserve」和「-noreserve」參數來啟用精簡配置。
+
++
+參數會覆寫「啟用空間保留」變數中所述的值。
+
++
+您可以使用「-Reserve」和「-noreserve」搭配下列命令來啟用或停用LUN保留：
+
++
+** 《倉儲創作》SnapDrive
+** 《不一樣的儲存空間大小調整》SnapDrive
+** 《鏈接》SnapDrive
+** 《還原快照》SnapDrive
+
+
++
+根據預設SnapDrive 、UNIX版的支援空間保留功能可讓全新或新的儲存設備建立作業。對於快照還原和快照連線作業、如果命令列未指定「-Reserve」或「-noreserve」參數、或組態檔中的值未加上註釋、則會使用Snapshot複本中的空間保留。
+
+

@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_manual_pages_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, man, pages, install 
+summary: UNIX版提供多種格式的手冊頁。SnapDrive 
+---
+= 由適用於UNIX的英文版手冊頁SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供多種格式的手冊頁。SnapDrive
+
+手冊頁可從下列位置取得：
+
+* 「/opt/NetApp/SnapDrive / DOS/SnapDrive .DC.1」
+* 「/opt/NetApp/SnapDrive/docs/SnapDrive」
+* 「/opt/NetApp/SnapDrive / DOS/SnapDrive .1.html」
+* /`opt/NetApp/SnapDrive / DOS/Brocbode_info.1'
+* /`opt/NetApp/SnapDrive/docs/McData info.1'
+* /`opt/NetApp/SnapDrive/docs/cisco_info.1'
+* /`opt/NetApp/SnapDrive/docs/filer_info.1'
+* /`opt/NetApp/SnapDrive / DOS/AIX_info.1'
+

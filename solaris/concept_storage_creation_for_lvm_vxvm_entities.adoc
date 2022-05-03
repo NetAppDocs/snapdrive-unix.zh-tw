@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_storage_creation_for_lvm_vxvm_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, creat, vxvm 
+summary: 如果您使用SnapDrive 適用於UNIX的功能、使用VxVM*建立邏輯磁碟區或檔案系統、SnapDrive 則適用於UNIX的功能會自動建立所需的磁碟群組。適用於UNIX的支援會根據主機Volume Manager支援的類型來建立檔案系統。SnapDrive對於Solaris、它包括VxFS和ufs。 
+---
+= 為VxVMEnt個體 建立儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用SnapDrive 適用於UNIX的功能、使用VxVM*建立邏輯磁碟區或檔案系統、SnapDrive 則適用於UNIX的功能會自動建立所需的磁碟群組。適用於UNIX的支援會根據主機Volume Manager支援的類型來建立檔案系統。SnapDrive對於Solaris、它包括VxFS和ufs。

@@ -1,0 +1,18 @@
+---
+permalink: solaris/task_enabling_thin_provisioning_for_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, thin, provisioning, nfs, entity 
+summary: 您可以使用SnapDrive UNIX版的功能、為儲存系統上的NFS實體執行精簡配置。精簡配置稱為空間保留。 
+---
+= 為NFS實體啟用精簡配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive UNIX版的功能、為儲存系統上的NFS實體執行精簡配置。精簡配置稱為空間保留。
+
+.步驟
+. 若要啟用快照連線作業的空間保留、您可以使用「-reserv__」參數搭配NFS實體的命令、為磁碟區啟用空間保留。對於NFS實體而SnapDrive 言、如果命令中未指定「-reserve」或「-noreserve」參數、則UNIX版的Sfor UNIX會使用Snapshot複本中可用的空間保留。
+

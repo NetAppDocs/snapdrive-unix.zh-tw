@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/concept_snaprestore_and_snapconnect_operations_do_not_work_in_linux_after_multipathing_migration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, snapconnect, migration, multipathing, operations 
+summary: 如果移轉多重路徑類型、則無法執行「支援」和「SnapConnect」作業。SnapRestore 
+---
+= 在移轉多重路徑類型之後、在Linux中執行的不再是執行支援和SnapConnect作業SnapRestore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果移轉多重路徑類型、則無法執行「支援」和「SnapConnect」作業。SnapRestore
+
+如果現有的多重路徑類型設為「_None_」、 之後您傾向於將多重路徑類型變更為「_NativeMPIO」、當您SnapRestore 針對現有的Snapshot複本執行Snapconnect和Eshot作業時、可能會遇到錯誤訊息「找不到快照中的linunull多重路徑軟體」。
+
+舉例來說、執行此作業SnapRestore
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/tstmp -snapname withoutmpio
+0002-105 Command error: Unable to find multipathing software linuxnull as present in the snapshot
+----
+SnapConnect作業範例
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/tstmp -snapname
+f3020-225-54:/vol/vol1:withoutmpio -autorename
+0002-105 Command error: Unable to find multipathing software
+linuxnull as present in the snapshot
+----

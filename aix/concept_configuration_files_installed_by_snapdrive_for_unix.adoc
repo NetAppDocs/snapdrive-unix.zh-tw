@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_configuration_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, file, install 
+summary: UNIX版的安裝SnapDrive.conf檔案、可儲存產品目前版本的組態資訊。SnapDrive 
+---
+= 由適用於UNIX的程式檔所安裝的組態檔SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版安裝「snapdrive.conf」檔案、儲存產品目前版本的組態資訊。SnapDrive
+
+您應該修改系統的「snapdrive.conf」檔案。如果您升級SnapDrive 的是適用於UNIX的版本、它會保留您目前的「snapdrive.conf」檔案。組態檔位於下列位置：
+
+「/opt/NetApp/SnapDrive / SnapDrive。」

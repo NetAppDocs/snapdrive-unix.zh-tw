@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_role_based_access_control_for_flexclone_volume_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, access, control, flexclone, volume 
+summary: 如果Operations Manager已設定系統、Operations Manager管理員必須授予您執行FlexClone磁碟區儲存作業所需的功能。 
+---
+= FlexClone Volume作業的角色型存取控制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果Operations Manager已設定系統、Operations Manager管理員必須授予您執行FlexClone磁碟區儲存作業所需的功能。
+
+*不受限制的FlexClone Volume *：您必須具備下列功能、才能在不受限制的FlexClone Volume上執行儲存作業：
+
+* 對於SnapConnect、您必須在父磁碟區上具有「.edsnapshot、Un限制Clone」功能。
+* 對於快照中斷、您必須在FlexClone磁碟區上具有「.DitroyUnclonedClone」功能。
+
+
+*受限FlexClone Volume *：您必須具備下列功能、才能在受限的FlexClone Volume上執行儲存作業：
+
+* 對於SnapConnect、您必須在父磁碟區上具有「.Snapshot、Clone」功能。
+* 對於快照中斷、您必須在父磁碟區上具有「.Snapshot、Clone」功能。
+
+
+若要在SnapConnect作業期間分割FlexClone磁碟區、請在父磁碟區上使用「.Storage.Write」存取功能。
+
+若要在快照中斷期間對分割的FlexClone磁碟區執行儲存作業、對於分割的FlexClone磁碟區、您必須在分割磁碟區複製上具有「.Storage.Delete」功能。

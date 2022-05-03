@@ -1,0 +1,53 @@
+---
+permalink: solaris/task_installing_snapdrivefor_unix_on_asolaris_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, solaris, host, unix 
+summary: 若要在SnapDrive Solaris主機上安裝適用於UNIX的功能、您必須確認您是以root登入。如果您是從遠端執行此檔案、而且系統組態不允許您以root登入、您可以使用su命令成為root。安裝檔案是標準的Solaris.pkg檔案。 
+---
+= 在SnapDrive Solaris主機上安裝適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要在SnapDrive Solaris主機上安裝適用於UNIX的功能、您必須確認您是以root登入。如果您是從遠端執行此檔案、但系統組態不允許以root登入、則可使用「show」命令成為root。安裝檔案是標準的Solaris.pkg檔案。
+
+請確定您未刪除SnapDrive 安裝for UNIX的目錄。如果刪除目錄、可能會發生啟動和停止精靈的問題。在安裝SnapDrive 適用於UNIX的版本之前、您也應該先安裝Solaris主機公用程式。
+
+在稀疏根區域中、SnapDrive 由於某些檔案系統在稀疏根區域中具有唯讀存取權限、因此UNIX版的安裝只能部分成功。若要避免這種情況、您可以在全域區域中建立幾個符號連結、以便讓這些連結可供使用於稀少的根區域。
+
+"ln -s /opt/NTAPsnapdrive/bin/SnapDrive /usr/bin/SnapDrive"
+
+"ln -s /opt/NTAPsnapdrive/bin/SnapDrive usr/sbin/SnapDrive"
+
+"ln -s /opt/NTAPsnapdrive/bin/snapdrived /usr/sn/snapdive"
+
+.步驟
+. 切換到您的Solaris主機上的目錄、您可以在其中放置從NetApp支援網站下載的軟體。
+. 輸入下列命令以安裝SnapDrive 適用於UNIX的功能：
++
+/install*
+
++
+指令碼可在SnapDrive 沒有問題的情況下安裝適用於UNIX的功能。它會將安裝資訊寫入記錄檔。
+
++
+[listing]
+----
+# ./install
+		Installing NTAPsnapdrive now ...
+		NTAPsnapdrive install completed successfully.
+		snapdrive Installation complete. Log is in
+		/tmp/snapdrive_install_log.23752.
+----
+. 為SnapDrive 系統設定適用於UNIX的功能、以完成設定。
++
+大部分資訊都是預設設定的、但您需要指定下列資訊：
+
++
+** 儲存系統的登入資訊。
+** 支援的功能包括：支援使用支援的功能（不含支援的功能、但建議您啟用此功能）AutoSupport AutoSupport 。
+
+
+

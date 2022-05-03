@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_guidelines_forrenaming_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rename, snapshot, copy 
+summary: 重新命名Snapshot複本時、請確定兩個Snapshot複本的名稱不相同。 
+---
+= 重新命名Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+重新命名Snapshot複本時、請確定兩個Snapshot複本的名稱不相同。
+
+當您使用「SnapDrive flexSnaprame」命令時、請遵循下列準則：
+
+* 如果您嘗試將Snapshot複本重新命名為不同的儲存系統磁碟區、就會出現錯誤訊息。
+* 如果Snapshot複本的新名稱已經存在、就會出現錯誤訊息。您可以使用「-force」選項強制SnapDrive for UNIX變更名稱、而不會產生錯誤訊息。
+

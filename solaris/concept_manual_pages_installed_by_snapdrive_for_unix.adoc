@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_manual_pages_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, man, page, install 
+summary: UNIX版提供多種格式的手冊頁。SnapDrive 
+---
+= 由適用於UNIX的英文版手冊頁SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供多種格式的手冊頁。SnapDrive
+
+手冊頁可從下列位置取得：
+
+* /`opt/NTAPsnapdrive/docs/SnapDrive．1'
+* /`opt/NTAPsnapdrive/docs/snapdrive.1'
+* /`opt/NTAPsnapdrive/docs/SnapDrive．1.html
+* /`opt/NTAPsnapdrive/docs/snapdrived.html'
+* /`opt/NTAPsnapdrive/docs/solaris資訊.1'
+* /`opt/NTAPsnapdrive/docs/Brocade資訊.1'
+* /`opt/NTAPsnapdrive/docs/McData info.1'
+* /`opt/NTAPsnapdrive/docs/cisco_info.1'
+* /`opt/NTAPsnapdrive/docs/filer_info.1'
+* /`opt/NTAPsnapdrive/docs/SnapDrive．DC．1'
+
+
+如果您在SnapDrive 較少的根區域中安裝適用於UNIX的功能、則不會在「/usr/share/man/」新增手冊頁、因為「usr/share/man/」是以唯讀檔案系統的形式掛載。若要擷取位於稀疏根區域的手冊頁、請執行「pkgtrans NTAPsnapdrive.pkg /tmp]命令。執行命令後、手冊頁會解壓縮至「/tmp/NTAPsnapdrive/root/opt/NTAPsnapdrive/docs/」。

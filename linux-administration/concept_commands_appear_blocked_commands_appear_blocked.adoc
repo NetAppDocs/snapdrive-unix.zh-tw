@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_commands_appear_blocked_commands_appear_blocked.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, commands, blocked 
+summary: 您無法執行SnapDrive UNIX指令的功能、因為命令似乎被封鎖超過10分鐘。您可能需要等待命令完成。 
+---
+= 命令顯示為封鎖
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您無法執行SnapDrive UNIX指令的功能、因為命令似乎被封鎖超過10分鐘。您可能需要等待命令完成。
+
+在極少數情況下、當VxVM/DMP需要時間來管理Volume組態精靈時、就會發生這種行為。此行為的觸發因素包括：
+
+* 從恐慌中恢復的儲存系統
+* 已從離線移轉至線上的儲存系統目標介面卡
+
+
+
+
+== 因應措施
+
+等待命令完成。Veritas組態精靈需要幾分鐘的時間才能執行並探索裝置的目前狀態。

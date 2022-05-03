@@ -1,0 +1,43 @@
+---
+permalink: aix/task_uninstalling_snapdrive_for_unix_from_an_aix_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, uninstall, aix, host, unix 
+summary: 您可以使用系統管理介面工具（Smit）、從SnapDrive AIX系統解除安裝適用於UNIX的功能。 
+---
+= 從SnapDrive AIX主機解除安裝適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用系統管理介面工具（Smit）、從SnapDrive AIX系統解除安裝適用於UNIX的功能。
+
+.步驟
+. 輸入下列命令來啟動Smit：
++
+* smit *
+
+. 選擇*軟體安裝與維護*功能表選項。
+. 在顯示的畫面上、選取*軟體維護與公用程式*功能表選項。
+. 在下一個畫面中、選取「*移除安裝的軟體*」功能表選項。
+. 使用下列其中一種方法移除軟體：
++
+** 輸入套件名稱「NetApp.SnapDrive」。確保將「Preview only（僅預覽）」選項設為「no（否）」。
+** 按下f4顯示名稱清單。
++
+... 向下捲動名稱清單、直到找到「NetApp.SnapDrive」。
+... 選取「NetApp.SnapDrive」、然後按Enter。
++
+隨即顯示提示訊息。
+
+... 選擇「Continue（繼續）」或「cancel（取消）」。
+... 按Enter完成解除安裝。
++
+解除安裝程序會將記錄檔放在下列位置：「/tmp/SnapDrive解除安裝」。
+
+
+
+
+
+

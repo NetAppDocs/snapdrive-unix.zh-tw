@@ -1,0 +1,20 @@
+---
+permalink: solaris/reference_storage_disconnect_of_disk_group_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, disk, group, fail 
+summary: 在使用Solaris版本10、更新10或更新版本的儲存系統上、SnapDrive 使用for UNIX命令刪除及中斷磁碟群組連線時、如果沒有-full選項、就會失敗。刪除和中斷連線命令失敗、因為主機磁碟區並未完全中斷連線或刪除。 
+---
+= 磁碟群組的儲存中斷連線失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用Solaris版本10、更新10或更新版本的儲存系統上、SnapDrive 使用for UNIX命令刪除及中斷磁碟群組連線時、如果沒有「-full」選項、就會失敗。刪除和中斷連線命令失敗、因為主機磁碟區並未完全中斷連線或刪除。
+
+
+
+== 因應措施
+
+執行「-full」命令來中斷所有檔案系統和相關主機磁碟區的連線。

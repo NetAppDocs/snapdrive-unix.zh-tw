@@ -1,0 +1,66 @@
+---
+permalink: aix/concept_connecting_to_a_single_filespec_in_a_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, single, filespec, lun 
+summary: 您可以連線至位於LUN中的單一檔案。下列範例說明如何完成此作業。 
+---
+= 連線至LUN中的單一檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以連線至位於LUN中的單一檔案。下列範例說明如何完成此作業。
+
+
+NOTE: Filespec可以是任何一個檔案系統、主機磁碟區、磁碟群組或LUN。
+
+若要建立受限的FlexClone、您需要在「snapdrive.conf」檔案中設定「shan clone-method =optal」選項、或是在連接檔案之前設定「-clone optal」選項。此範例顯示您想要連接位於LUN「homer:/vol/vol1/lun1」中的filespec「/mnt/fs1」時的結果
+
+以下是來源檔案系統的配置：
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1 -capabilities
+raw device: /dev/sdc1 mount point: /mnt/fs_1 (persistent) fstype jfs2
+
+allowed operations: all
+
+device filename adapter path size proto state clone lun path backing snapshot
+-------------- ------- ---- ---- ----- ----- ----- -------- ----------------
+/dev/sdc -  P 100m iscsi online No homer:/vol/vol1/lun1  -
+----
+[listing]
+----
+# snapdrive snap connect -fs /mnt/fs_1 -snapname homer:/vol/vol1:snap1 -autorename
+
+ connecting /mnt/fs_1:
+        creating restricted volume clone homer:/vol/Snapdrive_vol1_volume_clone_from_snap1_snapshot ... success
+
+        mapping new lun(s) ... done
+        discovering new lun(s) ... done
+Successfully connected to snapshot homer:/vol/vol1:snap1
+        file system: /mnt/fs_1_0
+----
+在這裡、SnapDrive UNIX版的支援會自動選擇從Snapshot snap1建立受限的FlexClone「napdrive_vol1_0_volvol_clone _from _snap1_snapshot」、並將其連接至此FlexClone的LUN testlun1、以建立複製的主機檔案系統/mnt/fs_1_0。
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1_0 -capabilities
+
+raw device: /dev/sde1   mount point: /mnt/fs_1_0 (persistent) fstype jfs2
+allowed operations: snap disconnect; snap list; snap show; storage show; storage list
+
+device filename adapter path size  proto  state  clone  lun path backing snapshot
+--------------- ------- ---- ----- ------ ------ ------ -------- ----------------
+/dev/sde  -  P  100m iscsi online flex-clone homer:/vol/Snapdrive_vol1_volume_clone_from_snap1_snapshot/lun1 vol1:snap1
+----
+UNIX用CLI中提到的前置詞來命名目的地FlexClone。SnapDrive
+
+如果產生的FlexClone名稱（含前置碼）已在使用中、SnapDrive 則適用於UNIX的解決方案會顯示錯誤訊息。在這種情況下、您可以使用「-autorenamenames」選項和「-prefixfv」來自動產生實體磁碟區名稱。
+
+-`-prefix-fv' CLI選項僅適用於SAN型檔案。在FlexClone作業期間、UNIX for SAN型檔案支援程式會忽略「-destfv」CLI選項SnapDrive 。
+
+
+NOTE: 由於LUN複製而鎖定Snapshot複本時、UNIX版的顯示警告。SnapDrive不過SnapDrive 、UNIX版的功能仍會繼續執行「nap Connect」作業。

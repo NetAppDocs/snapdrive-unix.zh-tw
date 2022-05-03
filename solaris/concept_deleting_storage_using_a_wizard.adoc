@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_deleting_storage_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, wizard 
+summary: 您可以使用儲存設備刪除精靈來執行某些刪除作業。 
+---
+= 使用精靈刪除儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用儲存設備刪除精靈來執行某些刪除作業。
+
+您可以使用「SnapDrive 取消儲存精靈」命令來啟動精靈。
+
+您可以刪除下列實體：
+
+* LUN
+* 磁碟群組
+* 邏輯磁碟區
+* 檔案系統
+

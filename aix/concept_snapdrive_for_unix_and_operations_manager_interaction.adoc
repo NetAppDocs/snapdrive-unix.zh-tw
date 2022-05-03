@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_snapdrive_for_unix_and_operations_manager_interaction.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operations, manager, console, interaction 
+summary: 角色型存取控制（RBAC）的使用取決於Operations Manager主控台基礎架構。Operations Manager主控台管理員必須建立SnapDrive 使用者名稱以供UNIX使用。所有儲存作業要求都會先傳送至Operations Manager主控台進行存取檢查。Operations Manager主控台驗證特定SnapDrive 使用者的儲存作業之後、即會完成作業。 
+---
+= 適用於UNIX與Operations Manager主控台互動SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+角色型存取控制（RBAC）的使用取決於Operations Manager主控台基礎架構。Operations Manager主控台管理員必須建立SnapDrive 使用者名稱以供UNIX使用。所有儲存作業要求都會先傳送至Operations Manager主控台進行存取檢查。Operations Manager主控台驗證特定SnapDrive 使用者的儲存作業之後、即會完成作業。
+
+下圖說明儲存作業的整個RBAC。
+
+image::../media/sdu_rbac_process_01_aix.gif[SDU RBAC程序01 AIX]
+
+. Operations Manager主控台管理員在Operations Manager主控台新增SD-admin使用者。
+. Operations Manager主控台管理員會在儲存系統上建立SD-hostname使用者。
+. Operations Manager主控台管理員將SD-admin和SD-hostname認證傳送給SnapDrive UNIX管理員。
+. 系統管理員會使用收到的使用者認證來設定不實。SnapDrive SnapDrive
+. Operations Manager主控台會使用SnapDrive 由管理員新增的使用者認證來執行UNIX的存取檢查SnapDrive 。
+. 驗證完這個使用者之後、使用者就能連線到儲存系統。SnapDrive
+
+
+當某位使用者想要執行某些儲存作業時SnapDrive 、使用者會在命令列發出對應的命令。要求會傳送至Operations Manager主控台進行存取檢查。Operations Manager主控台會檢查所要求的使用者是否擁有執行SnapDrive 該功能的適當權限。存取檢查的結果會傳回SnapDrive 到原地。視結果而定、允許或不允許使用者在儲存系統上執行儲存作業。
+
+如果在存取檢查後驗證使用者、則使用者會以SD-hostname的形式連線至儲存系統。
+
+
+NOTE: 建議使用SD-HostName和SD-admin。您可以使用SnapDrive 其他使用者名稱來設定UNIX版的功能。

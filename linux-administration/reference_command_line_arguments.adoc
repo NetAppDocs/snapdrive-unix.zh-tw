@@ -1,0 +1,208 @@
+---
+permalink: linux-administration/reference_command_line_arguments.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, argument, format, copy, snapshot 
+summary: 適用於UNIX的功能以特定格式取得引數。SnapDrive 
+---
+= 命令列引數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的功能以特定格式取得引數。SnapDrive
+
+下表說明您可以使用關鍵字指定的引數。
+
+請使用「SnapDrive festet_name operation_name [<keyworm/option><arguments>]」格式；例如、如果您想從主機檔案系統「/mnt/dir」建立名為「shnap_hr」的Snapshot複本、請輸入下列命令列：
+
+hy* SnapDrive fs-fs/mnt/dir -snapname _snap_hr*。
+
+|===
+| 引數 | 說明 
+
+
+ a| 
+Dest_fspec
+ a| 
+連接磁碟群組或LUN後、目標實體可存取的名稱。
+
+
+
+ a| 
+DGNAME
+ a| 
+磁碟群組或磁碟區群組的名稱。
+
+
+
+ a| 
+d_lun_name
+ a| 
+可讓您指定SnapDrive 目的地名稱、以便UNIX使用此名稱、在新連線的Snapshot複本中提供LUN。
+
+
+
+ a| 
+檔案名稱
+ a| 
+儲存系統的名稱。
+
+
+
+ a| 
+檔案管理器路徑
+ a| 
+儲存系統物件的路徑名稱。此名稱可以包含儲存系統名稱和Volume、但SnapDrive 不需要使用UNIX版的預設值、就能根據先前引數所提供的值、為遺失的元件使用預設值。以下是路徑名稱的範例：
+
+* 「test_filer/vol/vol3/qtree _2」
+* /`vol/vol3/qtree _2'
+* "qtree 2」
+
+
+
+
+ a| 
+檔案規格
+ a| 
+儲存實體的名稱、例如主機Volume、LUN、磁碟或Volume群組、檔案系統或NFS目錄樹狀結構。
+
+一般而言、您會使用file_spec引數做為下列其中一項：
+
+* 您想SnapDrive 要供UNIX使用的物件、可以製作Snapshot複本或從Snapshot複本還原
+* 您要在資源配置儲存設備時建立或使用的物件
+
+
+物件不一定都是相同類型。如果您提供多個主機磁碟區、則它們都必須屬於同一個Volume Manager。
+
+如果您提供此引數的值來解析為備援磁碟群組或主機磁碟區、則命令會失敗。
+
+錯誤使用的範例：此範例假設DG1具有主機磁碟區HV1和hv2、檔案系統為fs1和fs2。因此、下列引數可能會因為涉及備援磁碟群組或主機磁碟區而失敗。
+
+h-dg _dg1_-hostvoldg1/hv1'
+
+dg _dg1_
+
+「-FS/fs1」
+
+h-hostvol DG1/HV1-FS /fs1`
+
+正確使用範例：此範例顯示此引數的正確使用方式。
+
+hov1dg1/hv1v2/hv2
+
+-fs/fs1/fs2
+
+h-hostvoldg1/hv1 -fs/fs2
+
+
+
+ a| 
+fspec_set
+ a| 
+與SnapConnect命令搭配使用以識別：
+
+* 主機LVM實體
+* LUN上所含的檔案系統
+
+
+此引數也可讓您指定SnapDrive 一組目的地名稱、以便在新連線的Snapshot複本中提供實體時、供UNIX使用。
+
+fspec_set的格式為：「｛-vg |-dg |-FS |-lvol|-hostvol｝_src/fspec_[_dest_fspec_][{-destdestdg |-destvg }_dg/name_][{- destlv |-desthv }_lv_name_]
+
+
+
+ a| 
+host_lvm_fspec
+ a| 
+可讓您指定在執行儲存建立命令時、是否要建立檔案系統、邏輯磁碟區或磁碟群組。此引數可能有下列三種格式的任一種。您使用的格式取決於您要建立的實體。
+
+
+NOTE: 「-dg」和「-vg」選項是同義字、反映出某些作業系統指磁碟群組、而其他作業系統指的是磁碟群組。此外、「-lvol'」和「-hostvol'也是同義字。本指南使用-dg來參照磁碟群組和磁碟區群組、並使用「-hostvol'」來同時參照邏輯磁碟區和主機磁碟區。
+
+
+
+ a| 
+若要建立檔案系統、請使用以下格式：-FS file_spec_`[-fstype_type_][-fsopts _options_][-hostvol_file_spec_][-dg _dg名稱_]建立邏輯或主機磁碟區、請使用以下格式：[-hostvol_file_spec_][-_dg dg name_
+
+您必須為要建立的頂層實體命名。您不需要提供任何基礎實體的名稱。如果您未提供基礎實體的名稱、SnapDrive 則適用於UNIX的功能會以內部產生的名稱來建立這些實體。
+
+如果您指定SnapDrive UNIX的支援功能來建立檔案系統、則必須指定SnapDrive 支援主機LVM的UNIX支援類型。這些類型包括「ext4」或「ext3」
+
+選項「-fsopts」用於指定要傳遞給建立新檔案系統之主機作業的選項、例如「mKFS」。
+
+
+
+ a| 
+IG_NAME
+ a| 
+啟動器群組的名稱。
+
+
+
+ a| 
+long檔案管理器路徑
+ a| 
+路徑名稱、其中包含儲存系統名稱、磁碟區名稱、以及該磁碟區中可能的其他目錄和檔案元素。以下是長路徑名稱的範例：
+
+「test_filer/vol/vol3/qtree _2」
+
+「10.10：/vol/vol4/LUN_21」
+
+
+
+ a| 
+LON_LUN_NAME
+ a| 
+包含儲存系統名稱、磁碟區和LUN名稱的名稱。以下是長LUN名稱的範例：
+
+「test_filer/vol/vol1/lona'」
+
+
+
+ a| 
+LON_SNAP名稱
+ a| 
+包含儲存系統名稱、磁碟區和Snapshot複本名稱的名稱。以下是長Snapshot複本名稱的範例：「test_filer/vol/account_vol：snap _20040202」
+
+有了「SnapDrive 不完整顯示」SnapDrive 和「不完整刪除」命令、您可以使用星號（*）字元做為萬用字元、以符合Snapshot複本名稱的任何部分。如果您使用萬用字元、則必須將其置於Snapshot複本名稱的結尾。如果您在名稱中的任何其他點使用萬用字元、則適用於UNIX會顯示錯誤訊息。SnapDrive
+
+範例：此範例使用萬用字元搭配「nap show」命令和「nap delete」命令：「nap show myfiler/vol/vol2：mynap*」
+
+「Myfiler:/vol/vol2：/yoursnap * snap show myfiler:/vol/vol1/qtree1:qtree_snap * snap刪除10.10.10.10：/vol/vol2：mysnap* 10.11：/vol/vol3：yoursnap * hersnap」
+
+萬用字元限制：您無法在Snapshot複本名稱中間輸入萬用字元。例如、下列命令列會產生錯誤訊息、因為萬用字元位於Snapshot複本名稱的中間：「banao:/vol/vol1:my* snap」
+
+
+
+ a| 
+LUN_name
+ a| 
+LUN的名稱。此名稱不包括LUN所在的儲存系統和磁碟區。以下是LUN名稱的範例：luna
+
+
+
+ a| 
+路徑
+ a| 
+任何路徑名稱。
+
+
+
+ a| 
+prefix字串
+ a| 
+在磁碟區複製的名稱產生中使用的前置詞
+
+
+
+ a| 
+s_LUN_name
+ a| 
+表示在Snapshot複本中擷取的LUN實體、快照複本是由「_long快照名稱」指定。
+
+|===
+*相關資訊*
+
+xref:reference_storage_provisioning_command_lines.adoc[儲存資源配置命令列]

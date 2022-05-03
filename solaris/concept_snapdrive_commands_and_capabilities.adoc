@@ -1,0 +1,245 @@
+---
+permalink: solaris/concept_snapdrive_commands_and_capabilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, rbac 
+summary: 在角色型存取控制\（RBAC）中、每項作業都必須具備特定功能才能成功。使用者必須擁有正確的指派功能集、才能執行儲存作業。 
+---
+= 指令與功能SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在角色型存取控制（RBAC）中、每項作業都必須具備特定功能才能成功。使用者必須擁有正確的指派功能集、才能執行儲存作業。
+
+下表列出命令及所需的相應功能：
+
+|===
+| 命令 | 能力 
+
+
+ a| 
+《龍捲風秀》
+ a| 
+SD.Storage.Read on Volume
+
+
+
+ a| 
+《名單》
+ a| 
+SD.Storage.Read on Volume
+
+
+
+ a| 
+《創世紀》
+ a| 
+* 對於磁碟區內的LUN：「磁碟區上的「.Storage.Write」
+* 對於qtree內的LUN：qtree上的「.Storage.Write」
+
+
+
+
+ a| 
+《調整大小》
+ a| 
+LUN上的「.Write」
+
+
+
+ a| 
+"刪除"
+ a| 
+LUN上的「.Delete」
+
+
+
+ a| 
+「午睡秀」
+ a| 
+磁碟區上的「.edread」快照
+
+
+
+ a| 
+《午餐清單》
+ a| 
+磁碟區上的「.edread」快照
+
+
+
+ a| 
+'刪除小睡'
+ a| 
+Volume上的「.Delete」
+
+
+
+ a| 
+《nap重新命名》
+ a| 
+磁碟區上的「.Write」
+
+
+
+ a| 
+"網路快照連線"
+ a| 
+* 對於Volume中的LUN複製：磁碟區上的「.edsnapshot .Clone」
+* 對於qtree中的LUN克隆：qtree上的「..edsnapshot .Clone」
+* 對於傳統的Volume Clon..儲存系統上的「.Snapshot、Clone」（快照、複製）
+* 對於FlexClone Volume：父Volume上的「.Snapshot、Clone」
+* 對於不受限制的FlexClone Volume：父Volume上的「.edsnapshot、UnclonedClone」
+
+
+
+
+ a| 
+「nap連線分割」
+ a| 
+* 對於LUN克隆（LUN在Volume中複製和分割）：磁碟區上的「.Snapshot、Clone」（資料快照、複製）和磁碟區上的「.Write」（資料寫入）
+* 對於LUN克隆（在qtree中複製和分割LUN）：qtree上的「.edsnapshot .Clone」和qtree上的「.Data Storage.Write」
+* 對於拆分的傳統Volume複製：儲存系統上的「.edsnapshot .Clone」和儲存系統上的「.Storage.Write」
+* 對於分割的Flex Volume複本：父Volume上的「..edsnapshot .Clone」。
+
+
+
+
+ a| 
+《Clone Split start》（複製分割開始）
+ a| 
+* 對於LUN位於Volume或qtree中的LUN複製：包含Volume或qtree的「.edsnapshot .Clone」
+* 對於Volume Clone：父Volume上的「.Snapshot、Clone」
+
+
+
+
+ a| 
+"午睡中斷連線"
+ a| 
+* 對於LUN位於Volume或qtree中的LUN複製：包含Volume或qtree的「.edsnapshot .Clone」
+* 對於Volume Clone：父Volume上的「.Snapshot、Clone」
+* 刪除不受限制的Volume Clon..磁碟區上的「.DitroyUn限制Clone」
+
+
+
+
+ a| 
+「nap中斷連線分割」
+ a| 
+* 對於LUN位於Volume或qtree中的LUN複製：包含Volume或qtree上的「.edsnapshot .Clone」
+* 對於Volume Clone：父Volume上的「.Storage.Delete」
+* 刪除不受限制的Volume Clon..磁碟區上的「.DitroyUn限制Clone」
+
+
+
+
+ a| 
+恢復快照
+ a| 
+* 對於存在於磁碟區中的LUN：磁碟區上的「.Snapshot、Restore」和LUN上的「.Storage、Write」
+* 對於qtree中的LUN：qtree上的「.Snapshot．Restore」和LUN上的「.Data Storage.Write」
+* 如果LUN不在磁碟區內：磁碟區上的「.Snapshot、Restore」和磁碟區上的「.Storage、Write」
+* 對於未在qtree中的LUN：qtree上的「..snapshot .Restore」和qtree上的「.Storage.Write」
+* 對於磁碟區：傳統磁碟區儲存系統上的「.Snapshot、Restore」、或是彈性磁碟區的「.Snapshot、Restore」
+* 對於磁碟區中的單一檔案管理單元還原：磁碟區上的「第三快照、還原」
+* 對於qtree中的單一檔案嵌入式管理單元還原：「s .edsnapshot .Restore」qtree
+* 如果要覆寫磁碟區上的基礎Snapshot複本：「.ed snapshot .DisruptBaseline'（資料快照已中斷基準線）」
+
+
+
+
+ a| 
+「主機連線」、「主機連線中斷」
+ a| 
+LUN上的「.Write」
+
+
+
+ a| 
+組態存取
+ a| 
+儲存系統上的「.edRead」
+
+
+
+ a| 
+組態準備
+ a| 
+至少在一個儲存系統上執行「.Write」（設定寫入）
+
+
+
+ a| 
+組態檢查
+ a| 
+至少在一個儲存系統上執行「.edRead」（配置讀取）
+
+
+
+ a| 
+「config show」
+ a| 
+至少在一個儲存系統上執行「.edRead」（配置讀取）
+
+
+
+ a| 
+「組態集」
+ a| 
+儲存系統上的「.Write」
+
+
+
+ a| 
+「config set -dfm」、「config set -mgmtpath」、
+ a| 
+至少在一個儲存系統上執行「.Write」（設定寫入）
+
+
+
+ a| 
+"config DELETE（組態刪除）"
+ a| 
+儲存系統上的「.edelete」
+
+
+
+ a| 
+「config DELETE Dfm_appliance」、「config DELETE -mgmtpath」
+ a| 
+至少一個儲存系統上的「.edelete」
+
+
+
+ a| 
+組態清單
+ a| 
+至少在一個儲存系統上執行「.edRead」（配置讀取）
+
+
+
+ a| 
+「組態移轉集」
+ a| 
+至少在一個儲存系統上執行「.Write」（設定寫入）
+
+
+
+ a| 
+"config移轉刪除"
+ a| 
+至少一個儲存系統上的「.edelete」
+
+
+
+ a| 
+"config migrate list"（配置遷移列表）
+ a| 
+至少在一個儲存系統上執行「.edRead」（配置讀取）
+
+|===
+
+NOTE: UNIX版不檢查系統管理員（root）的任何功能。SnapDrive

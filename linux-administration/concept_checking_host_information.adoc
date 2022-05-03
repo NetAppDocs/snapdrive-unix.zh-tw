@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_checking_host_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, check 
+summary: 有些主機系統要求您在建立新的LUN之前先準備好它們。適用於UNIX的支援提供命令來完成這些步驟、讓主機做好建立新LUN的準備。SnapDrive 
+---
+= 正在檢查主機資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有些主機系統要求您在建立新的LUN之前先準備好它們。適用於UNIX的支援提供命令來完成這些步驟、讓主機做好建立新LUN的準備。SnapDrive
+
+如果作業系統要求您在建立新LUN之前先準備好、您可以使用「SnapDrive show config」命令。「支援此功能的指令可讓您檢查儲存系統上建立多少LUN、並將其對應至主機的相關資訊。SnapDrive
+
+
+NOTE: 並非所有的主機平台作業系統都要求您準備主機。目前、這些命令只有在Linux主機上才有必要。

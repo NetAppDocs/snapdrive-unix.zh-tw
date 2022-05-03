@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_the_storagedisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command 
+summary: 儲存中斷作業會移除LUN、或是使用SnapDrive 「建立儲存區」SnapDrive 或「停止儲存」連線命令對應至主機的LUN和儲存實體。 
+---
+= 儲存中斷連線命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「中斷連線」作業會移除LUN、或是使用「SnapDrive 停止儲存建立」SnapDrive 或「停止儲存連線」命令對應至主機的LUN和儲存實體。
+
+使用「SnapDrive 停止儲存設備的連線功能）命令來中斷連線：
+
+* LUN
+* 直接在LUN上建立的檔案系統
+* 在LUN上建立磁碟群組、主機磁碟區和檔案系統
+
+
+當for UNIX移除LUN對應時、會匯出LUN所包含的磁碟群組或檔案系統。SnapDrive此動作會將磁碟和檔案系統標示為已匯出、這是中斷對應的唯一變更、對LUN的內容而言是如此。

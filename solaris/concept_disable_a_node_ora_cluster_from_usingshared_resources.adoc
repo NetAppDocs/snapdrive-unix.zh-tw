@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_disable_a_node_ora_cluster_from_usingshared_resources.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disable, node, cluster, resource 
+summary: 您必須修改/etc/VRTSvcs/conf/config/main.cf,才能停用節點使用共用資源。如需max.cf.檔案的詳細資訊、請參閱《Veritas Cluster Server Installation Guide for Solaris》（適用於Solaris的Veritas叢集伺服器安裝指南）。 
+---
+= 禁止節點或叢集使用共用資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須修改「/etc/VRTSvcs/conf/config/main.cf'」檔案、才能停用節點使用共用資源。如需max.cf.檔案的詳細資訊、請參閱《Veritas Cluster Server _Installation Guide for Solaris》（英文）。
+
+若要停用節點使用共用資源、請使用下列語法：
+
+hy* SnapDrive 實體儲存設備中斷連線-FS _file_spec_-LUN _long LUN名稱_[_LUN_name..._][- DEVICETYPE Shared]*

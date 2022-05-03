@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_methods_fordisconnectingstorage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, storage 
+summary: 為了讓儲存設備更容易中斷連線、SnapDrive 適用於UNIX的解決方案提供SnapDrive 多種格式的指令以供使用。 
+---
+= 中斷儲存設備連線的方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+為了讓儲存設備更容易中斷連線、SnapDrive 適用於UNIX的解決方案提供多種格式的「SnapDrive 停止儲存」指令。
+
+這是因為中斷連線作業屬於下列一般類別：
+
+* 指定要從主機中斷連線的LUN。
+* 指定直接在LUN上建立的檔案系統、以中斷與主機的連線。
++
+適用於UNIX的、會中斷檔案系統與LUN的連線。SnapDrive
+
+* 指定位於您要中斷主機連線之LUN上的磁碟群組、主機磁碟區或檔案系統。
++
+UNIX版會中斷與該實體相關聯的所有LUN連線、也會移除構成您中斷連線之實體的檔案系統、主機磁碟區和磁碟群組對應。SnapDrive
+
+* 在主機叢集環境中使用共用磁碟群組或檔案系統來停用節點。
+

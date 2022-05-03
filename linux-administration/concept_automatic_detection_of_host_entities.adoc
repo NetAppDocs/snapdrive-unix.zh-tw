@@ -1,0 +1,169 @@
+---
+permalink: linux-administration/concept_automatic_detection_of_host_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, detection, host, automatic 
+summary: 適用於UNIX的支援會自動偵測主機實體的組態、以執行部分命令。SnapDrive有些SnapStorage命令只需要主機實體名稱。在這些情況下、您不需要指定主機實體的類型。 
+---
+= 自動偵測主機實體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援會自動偵測主機實體的組態、以執行部分命令。SnapDrive有些「午睡儲存設備」命令只需要主機實體名稱。在這些情況下、您不需要指定主機實體的類型。
+
+下列命令可用於自動偵測：
+
+* "刪除"
+* 《調整大小》
+* 打造午睡功能
+* 恢復快照
+* "網路快照連線"
+* 《午餐清單》
+
+
+當主機實體存在時、SnapDrive 適用於UNIX的現象會自動偵測主機實體的類型。在這種情況下、您只需要提供主機實體的名稱、而不需要指定類型。這個指令和一些「shorage」命令也只需要主機實體的名稱、您不需要指定類型。SnapDrive
+
+自動偵測指令SnapDrive 需要更多時間才能執行、因為它會收集所有儲存資源的詳細資料。如果您想要更快的回應速度、請使用SnapDrive 適用於UNIX的指令功能來指定檔案規格。
+
+您可以執行「SnapDrive 支援刪除儲存設備」命令、為儲存設備刪除作業啟用自動偵測。
+
+*範例1：*
+
+[listing]
+----
+snapdrive storage delete host_dg my_fs -full
+----
+在範例中、會自動偵測到「host_dg」和「my_FS」。
+
+*範例2：*
+
+[listing]
+----
+snapdrive storage delete mydg -fs myfs -full
+----
+在此範例中、系統會自動偵測到「mydg」磁碟群組。
+
+您可以執行「SnapDrive 物件儲存區大小調整」命令、自動偵測儲存區大小調整作業。
+
+*例如*：
+
+[listing]
+----
+[root@lnx197-132 ~]# snapdrive storage resize mydg23 -addlun -growby 10m
+Auto detecting the type of filespec 'mydg23' in progress ... detected as disk group
+        discovering filer LUNs in disk group mydg23...done
+        LUN bart:/vol/voldm/mydg23-1_SdLun ... created
+
+        mapping new lun(s) ... done
+        discovering new lun(s) ... done.
+        initializing LUN(s) and adding to disk group mydg23...done
+Disk group mydg23 has been resized
+----
+您可以執行「SnapDrive 支援快照建立」命令來啟用快照建立作業的自動偵測功能。
+
+*例如*：
+
+[listing]
+----
+root@lnx197-132 ~]# snapdrive snap create mydg22 mydg23 /mnt/mnt12 -snapname new_snap
+Auto detecting the type of filespec 'mydg22' in progress ... detected as disk group
+Auto detecting the type of filespec 'mydg23' in progress ... detected as disk group
+Auto detecting the type of filespec '/mnt/mnt12 ' in progress ... detected as file system
+
+Starting snap create /dev/mapper/mydg22, /dev/mapper/mydg23, /mnt/mnt12
+  WARNING:  DO NOT CONTROL-C!
+            If snap create is interrupted, incomplete snapdrive
+                 generated data may remain on the filer volume(s)
+                 which may interfere with other snap operations.
+Successfully created snapshot new_snap on bart:/vol/voldm
+
+        snapshot new_snap contains:
+        disk group mydg22
+        disk group mydg23
+        disk group dg121 containing host volumes
+                lv121 (filesystem: /mnt/mnt12)
+----
+您可以執行「SnapDrive 支援連結」命令、自動偵測快照連線作業。
+
+*例如*：
+
+[listing]
+----
+[root@lnx197-132 ~]# snapdrive snap connect mydg22 xxx mydg23 yyy -snapname bart:/vol/voldm:snap_1
+Auto detecting the type of filespec 'mydg22' in progress ... detected as disk group
+Auto detecting the type of filespec 'xxx' in progress ...
+        xxx does not exist - Taking xxx as a destination to fspec mydg22Auto detecting the type of filespec 'mydg23' in progress ... detected as disk group
+Auto detecting the type of filespec 'yyy' in progress ...
+        yyy does not exist - Taking yyy as a destination to fspec mydg23
+ connecting mydg22:
+        LUN copy mydg22_SdLun_0 ... created
+                 (original: bart:/vol/voldm/mydg22_SdLun)
+
+        mapping new lun(s) ... done
+
+ connecting mydg23:
+        LUN copy mydg23_SdLun_1 ... created
+                 (original: bart:/vol/voldm/mydg23_SdLun)
+
+        mapping new lun(s) ... done
+        discovering new lun(s) ... done
+        Importing xxx, yyy
+Successfully connected to snapshot bart:/vol/voldm:snap_1
+        disk group xxx
+        disk group yyy
+----
+您可以執行「SnapDrive 還原快照」命令、啟用快照還原作業的自動偵測功能。
+
+*例如*：
+
+[listing]
+----
+snapdrive snap restore bart:/vol/voldm/lun44 /mnt/fs3 fs5_SdDg/fs5_SdHv fs4_SdDg -snapname bart:/vol/voldm:toi_snap
+
+        Auto detection of file_spec(s) in progress ...
+               - 'bart:/vol/voldm/lun44' detected as LUN.
+               - '/mnt/fs3' detected as file system.
+               - 'fs5_SdDg/fs5_SdHv' detected as logical volume.
+               - 'fs4_SdDg' detected as disk group.
+        Starting to restore /dev/mapper/fs4_SdDg, /mnt/fs3, /dev/mapper/fs5_SdDg-fs5_SdHv, bart:/vol/voldm/lun44
+         WARNING:  This can take several minutes.
+           DO NOT CONTROL-C!
+           If snap restore is interrupted, the filespecs
+           being restored may have inconsistent or corrupted
+           data.
+       For detailed progress information, see the log file /var/log/sd-recovery.log
+           Importing fs4_SdDg, fs3_SdDg, fs5_SdDg
+           Successfully restored snapshot toi_snap on bart:/vol/voldm
+       disk group fs4_SdDg containing host volumes
+               fs4_SdHv (filesystem: /mnt/fs4)
+       disk group fs3_SdDg containing host volumes
+               fs3_SdHv (filesystem: /mnt/fs3)
+       disk group fs5_SdDg containing host volumes
+               fs5_SdHv (filesystem: /mnt/fs5)
+       raw LUN: bart:/vol/voldm/lun44
+----
+由於檔案規格不正確、因此不支援自動偵測快照連線和快照還原作業。SnapDrive
+
+您可以執行「SnapDrive 支援快照清單」命令、為快照清單作業啟用自動偵測。
+
+*例如*：
+
+[listing]
+----
+root@lnx197-132 ~]# snapdrive snap list -snapname bart:/vol/voldm:snap_1
+
+snap name                            host                   date         snapped
+--------------------------------------------------------------------------------
+bart:/vol/voldm:snap_1           lnx197-132.xyz.com Apr  9 06:04 mydg22 mydg23 dg121
+[root@lnx197-132 ~]# snapdrive snap list mydg23
+Auto detecting the type of filespec 'mydg23' in progress ... detected as disk group
+
+snap name                            host                   date         snapped
+--------------------------------------------------------------------------------
+bart:/vol/voldm:snap_1           lnx197-132.xyz.com Apr  9 06:04 mydg22 mydg23 dg121
+bart:/vol/voldm:all                  lnx197-132.xyz.com Apr  9 00:16 mydg22 mydg23 fs1_SdDg
+bart:/vol/voldm:you                  lnx197-132.xyz.com Apr  8 21:03 mydg22 mydg23
+bart:/vol/voldm:snap_2                  lnx197-132.xyz.com Apr  8 18:05 mydg22 mydg23
+----

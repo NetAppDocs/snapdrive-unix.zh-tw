@@ -1,0 +1,40 @@
+---
+permalink: solaris/concept_san_filespec_created_with_solaris_volume_manager_svm_using_iscsi_does_not_automount.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, filespec, iscsi, volume, solaris, manager, network, mount 
+summary: 重新啟動主機系統時、使用iSCSI建立的Solaris Volume Manager（SVM\）儲存區域網路檔案規格不會自動掛載、而且主機不會啟動。 
+---
+= 使用iSCSI使用Solaris Volume Manager建立的儲存區域網路檔案規格不會自動掛載
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+重新啟動主機系統時、使用iSCSI建立的Solaris Volume Manager（SVM）儲存區域網路檔案規格不會自動掛載、而且主機不會啟動。
+
+如果主機啟動、您可以使用上述步驟來掛載檔案規格。
+
+
+
+== 因應措施
+
+. 輸入中繼線
++
+「*」的DGNAME -t*
+
++
+命令以手動變更磁碟集擁有權。
+
++
+
+NOTE: 確定已定義metadb。
+
+. 輸入
++
+「* mount -A*」
+
++
+用於掛載檔案規格的命令。
+
+

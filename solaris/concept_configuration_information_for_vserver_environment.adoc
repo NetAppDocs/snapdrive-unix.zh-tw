@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_configuration_information_for_vserver_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuraiton, vserver 
+summary: 您必須在SnapDrive UNIX的伺服器上設定Vserver、才能執行SnapDrive 效能不景的作業。 
+---
+= Vserver的組態資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在SnapDrive UNIX的伺服器上設定Vserver、才能執行SnapDrive 效能不景的作業。
+
+若要在SnapDrive 叢集Data ONTAP 式的支援區中設定支援UNIX的Vserver、請確定Vserver管理邏輯介面（LIF）的IP位址已對應至Vserver名稱、無論是在網域名稱服務（DNS）或在「/etc/hosts」檔案中。您也必須SnapDrive 使用下列命令、確保在適用於UNIX的方面、將Vserver名稱設定為：
+
+hes* SnapDrive 《*》組態集<vsadmin><vserver name>*》
+
+*相關資訊*
+
+xref:concept_support_for_vserver.adoc[支援Vserver]

@@ -1,0 +1,22 @@
+---
+permalink: solaris/task_resetting_the_snap_reserve_option_by_using_filerview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reset, snap, reserve, option, filerview 
+summary: '在FC或iSCSI環境中使用Data ONTAP 支援功能時、您應該使用FilerView將SnapReserve選項重設為0%。' 
+---
+= 使用FilerView重設SnapReserve選項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在FC或iSCSI環境中使用Data ONTAP 支援功能時、您應該使用FilerView將「nap Reserve」選項重設為0%。
+
+.步驟
+. 開啟FilerView工作階段至儲存系統、以保留要變更其「nap Reserve」設定的磁碟區。
+. 從FilerView主頁瀏覽至* Volumes *>* Snapshot *>* Configure *。
+. 在「* Volume *」（* Volume *）欄位中、選取要變更其「nap Reserve」（快照保留）設定的Volume。
+. 在* Snapshot Reserve（快照保留）*字段中輸入0。
+. 按一下「 * 套用 * 」。
+

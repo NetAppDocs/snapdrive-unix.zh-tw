@@ -1,0 +1,32 @@
+---
+permalink: solaris/concept_guidelines_for_storage_create_operation_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapshot, storage, create, host cluster 
+summary: 在主機叢集環境中建立儲存設備時、請遵循特定準則。 
+---
+= 在主機叢集環境中建立儲存設備作業的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在主機叢集環境中建立儲存設備時、請遵循特定準則。
+
+* 您可以SnapDrive 從主機叢集中的任何節點執行「flexflex止storage create」命令。
+* 若要讓儲存建立作業成功、則兩者都不應該是真的：
++
+** 儲存實體不應存在於主機叢集中的任何節點上。
+** LUN不應對應至主機叢集中的任何節點。
+
+
+* 您可以使用「-DEVICETYPE」專屬或「-DEVICETYPE共享」選項、在特定節點上建立儲存實體。如果您要建立處於專用模式的儲存實體、您可以省略「-DEVICETYPE」選項、因為預設值為「dedated」。
+* 在搭配Veritas檔案系統（VxFS）使用Veritas Volume Manager的磁碟群組上、支援建立整個叢集的檔案系統儲存設備。此操作不支援原始LUN、也不支援「-nolvm」選項。
+* 儲存建立作業不支援「-igroup」選項。
+* 發生下列其中一種情況時、儲存建立作業會失敗：
++
+** 如果在建立儲存實體的過程中出現任何錯誤訊息、適用於UNIX的支援從主機叢集中的主節點執行儲存建立作業。SnapDrive在建立共享儲存實體之前、SnapDrive UNIX版的支援會建立LUN、將LUN對應至主節點、然後將LUN對應至所有非主節點。UNIX版可內部建立及管理所有節點的igroup。SnapDrive
+** 如果主機叢集中的節點在啟動主機叢集式Volume Manager（CVM）之前關機並重新開機、則應在節點上探索LUN使用的共用磁碟群組。根據預設、如果FC連接埠位址未變更、LUN就會顯示；否則、您必須使用「SnapDrive show storage connect」命令來對應LUN。
+
+
+

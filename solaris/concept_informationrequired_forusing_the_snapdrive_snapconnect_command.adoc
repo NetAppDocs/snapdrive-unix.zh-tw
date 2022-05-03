@@ -1,0 +1,270 @@
+---
+permalink: solaris/concept_informationrequired_forusing_the_snapdrive_snapconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, command 
+summary: 若要連線至Snapshot複本、請判斷儲存實體的類型、將Snapshot複本與NFS目錄樹狀結構連線至Data ONTAP 不支援的7.3組態等。 
+---
+= 使用SnapDrive 「finflexSnap Connect」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要連線至Snapshot複本、請判斷儲存實體的類型、將Snapshot複本與NFS目錄樹狀結構連線至Data ONTAP 不支援的7.3組態等。
+
+下表提供使用「SnapDrive Snapsnap Connect」命令時所需提供的資訊。
+
+
+NOTE: 「網路快照連線」作業需要Storage Foundation Enterprise授權、才能在使用Veritas的Solaris上執行「虛擬埠」。
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+決定要用來附加Snapshot複本的儲存實體類型、並以適當的引數提供該實體的名稱。這是"_SR_fspec_"引數的值。
+
+* 如果您連接LUN的Snapshot複本、SnapDrive 則適用於UNIX的功能會連接您指定的LUN。不能在同一命令行上使用與"-vg "、"-dg、"-f"、"-lvol"或"-hostvol"選項相同的"-LUN"選項。您可以使用LUN_name或qtree名稱/LUN_name格式來指定LUN的簡短名稱。
+* 如果您連接直接在LUN上建立的檔案系統Snapshot複本、SnapDrive 則適用於UNIX的解決方案會連接具有檔案系統的LUN。
+* 如果您連接具有主機磁碟區或檔案規格的磁碟群組Snapshot複本、則此引數會轉譯為儲存系統上的一組磁碟群組。UNIX版的支援功能可連接包含實體的整個磁碟群組、即使實體是主機磁碟區或檔案系統亦然。SnapDrive
+* 如果您連接NFS檔案系統的Snapshot複本、則引數會轉譯為NFS目錄樹狀結構。適用於UNIX的可建立磁碟區的FlexClone、移除未在Snapshot複本中指定的目錄樹狀結構、然後連線並掛載NFS目錄樹狀結構。SnapDrive如果您指定NFS掛載點、則無法在同一命令列上指定非NFS實體（如「-vg」、「-dg」、「-FS」、「-lvol"或「-hostvol"）。
++
+
+NOTE: UNIX版不支援掛載點層級的符號連結。SnapDrive
+
+
+
+
+
+ a| 
+LUN（`-LUN _file_spec_`）
+ a| 
+lun._的簡稱
+
+
+
+ a| 
+「_s_LUN_name_」指定存在於「-snapname _long快照名稱_」中的LUN。需要簡短的LUN_name。您不能包含儲存系統或儲存系統磁碟區名稱。「_d_LUN_name_」指定LUN連接的名稱。需要簡短的「_LUN_name_」。您不能包含儲存系統或儲存系統磁碟區名稱。您必須指定「_d_lun_name_'」
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_`）或磁碟區群組（`-vg _file_spec_`）
+ a| 
+磁碟或磁碟區群組的名稱_
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+檔案系統名稱_
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機或邏輯Volume的名稱_
+
+
+
+ a| 
+使用NFS目錄樹狀結構將Snapshot複本連線Data ONTAP 至不完整的7.3組態。
+
+* 如果您的組態使用Data ONTAP 含有Data ONTAP 傳統FlexVol （非隻字不作參考）磁碟區的更新版本的功能、則必須指定此選項、才能使用唯讀存取（必要）來連接Snapshot複本。
+* 如果您的組態使用Data ONTAP 的是支援還原的7.3版及更新版本和FlexVol 支援的功能、SnapDrive 則適用於UNIX的功能會自動提供讀寫存取權限。只有當您想要限制唯讀存取時、才指定此選項（選用）。
+
+
+
+
+ a| 
+-readonly
+ a| 
+設定唯讀權限_
+
+
+
+ a| 
+選用：提供連接儲存實體後可存取目標實體的名稱。UNIX版使用此名稱來連接目的地實體。SnapDrive這是「_dest_file_spec_」引數。
+
+如果您省略此名稱、snap connect命令會使用您為「_SR_fspec_」提供的值。
+
+
+
+ a| 
+目標實體名稱
+ a| 
+dest_file_spec_'
+
+
+
+ a| 
+選用：指定目的地儲存實體的名稱。如果您在「_dest_fspec/src/fspec_」配對中加入此資訊、則不需要在此處輸入。
+
+如果此資訊不是「_dest_fspec/sr_fspec_'配對的一部分、您可以使用「-destxx」選項來指定目的地儲存實體的名稱。例如、「-fs-」選項只會命名目的地掛載點、因此您可以使用「-destdg」選項來指定目的地磁碟群組。
+
+如果您未指定連接目的地磁碟群組中某個實體所需的名稱、則「SnapDrive show snap connect」命令會從來源磁碟群組取得名稱。
+
+如果您未指定連接目的地磁碟群組中某個實體所需的名稱、則「午睡連線命令」會從來源磁碟群組取得名稱。如果無法使用該名稱、則除非您在命令提示字元中加入「-autoramene"、否則作業會失敗。
+
+
+
+ a| 
+目的地磁碟群組（`-destdg）或目的地磁碟區群組（`-destvg）
+ a| 
+》
+
+
+
+ a| 
+目的地邏輯Volume（`-destlv）或目的地主機Volume（`-desthv）
+ a| 
+‘_lvname_'
+
+
+
+ a| 
+指定Snapshot複本的名稱。使用名稱的長格式輸入儲存系統名稱、Volume和Snapshot複本名稱。
+
+
+
+ a| 
+Snapshot複本名稱（`-snapname`）
+ a| 
+h_long快照名稱_
+
+
+
+ a| 
+《業者》
+ a| 
+~
+
+
+
+ a| 
+選用：將Snapshot複本連線至新位置、而不需在主機檔案系統表格中建立項目。
+
+* 使用「-nopersist」選項、您可以將Snapshot複本連線至新位置、而無需在主機檔案系統表格中建立項目。根據預設SnapDrive 、UNIX的功能可建立持續掛載。這表示：
++
+** 當您在Solaris主機上連接Snapshot複本時、SnapDrive 適用於UNIX的支援會掛載檔案系統、然後將構成檔案系統的LUN項目放入主機的檔案系統表格中。
+** 您無法使用「-noperersist」來連接包含NFS目錄樹狀結構的Snapshot複本。
+
+
+
+
+
+
+ a| 
+保留|-noreserve
+ a| 
+~
+
+
+
+ a| 
+選用：將Snapshot複本連接至新位置、無論是否建立空間保留。
+
+
+
+ a| 
+igroup名稱（`-igroup'）
+ a| 
+h_ig名稱_
+
+
+
+ a| 
+選用：NetApp建議您為主機使用預設的igroup、而不要提供igroup名稱。
+
+
+
+ a| 
+「自動擴充」
+ a| 
+~
+
+
+
+ a| 
+若要縮短連線至Volume群組時必須提供的資訊量、請在命令提示字元中加入「-autodexpand」選項。此選項可讓您僅命名Volume群組中的邏輯磁碟區或檔案系統子集。然後將連線擴充至磁碟群組中其餘的邏輯磁碟區或檔案系統。如此一來、您就不需要指定每個邏輯磁碟區或檔案系統。UNIX版使用此資訊來產生目的地實體名稱。SnapDrive
+
+此選項適用於在命令提示字元中指定的每個磁碟群組、以及群組中的所有主機LVM實體。如果沒有「-autodoland」（自動擴充）選項（預設）、您必須指定該磁碟群組中包含的所有受影響主機磁碟區和檔案系統、才能連接整個磁碟群組。
+
+
+NOTE: 如果您輸入的值是磁碟群組、則不需要輸入所有的主機磁碟區或檔案系統、因為SnapDrive UNIX版的支援功能知道磁碟群組要連線的項目。
+
+NetApp建議您、如果您包含此選項、也應該加入「-autorenamenamen'」選項。如果需要連接LVM實體的目的地複本、但名稱已在使用中、則命令會失敗、除非命令提示字元中有「-autorename"選項。
+
+
+
+ a| 
+如果您不包含-autodexpand、而且未在命令提示字元中指定所有磁碟群組中的所有LVM主機磁碟區（可透過指定主機磁碟區本身或檔案系統）、則命令會失敗。
+
+
+
+ a| 
+-`-autorenamen'
+ a| 
+~
+
+
+
+ a| 
+如果在不使用"-autorename"選項的情況下使用"-autodake"選項，則在使用LVM實體的目的地複本的預設名稱時，"nap nable"命令會失敗。如果您包含「-autorenamenames」選項、SnapDrive 則當使用預設名稱時、適用於UNIX的功能會重新命名實體。這表示在命令提示字元中使用「-autorename"選項時、無論是否有所有必要的名稱可用、Snapshot連線作業都會繼續執行。
+
+此選項適用於在命令提示字元中指定的所有主機端實體。
+
+如果您在命令提示字元中加入「-autorename"選項、即使您未加入該選項、也會暗示「-autorexpand」選項。
+
+
+
+ a| 
+《DEVICETYPE》
+ a| 
+~
+
+
+
+ a| 
+選用：指定SnapDrive 用於UNIX作業的裝置類型。這可以是「共享」、將LUN、磁碟群組和檔案系統的範圍指定為主機叢集範圍、或是將LUN、磁碟群組和檔案系統的範圍指定為本機範圍的「專屬」。
+
+如果您指定「-DEVICETYPE」專屬選項、SnapDrive 目前支援的所有功能選項、都SnapDrive 會像以往一樣、在適用於UNIX的支援中提供。
+
+如果您從SnapDrive 主機叢集中的任何非主要節點、以「-DEVICETYPE共享」選項來起始「支援鏈接」命令、則該命令會運送至主要節點並執行。為了達成此目標、您必須確保在主機叢集中的所有節點上、都應該設定root使用者的「rsh」或「sh」存取（不需密碼）提示。
+
+
+
+ a| 
+「分割」
+ a| 
+~
+
+
+
+ a| 
+可在Snapshot連線和Snapshot中斷作業期間分割複製的磁碟區或LUN。
+
+
+
+ a| 
+《我的最大目標》
+ a| 
+~
+
+
+
+ a| 
+*選用：*如果您要建立檔案系統、可以指定下列選項：
+
+* 使用「-mnterts」指定您要傳遞至主機掛載命令的選項（例如、指定主機系統記錄行為）。您指定的選項會儲存在主機檔案系統表格檔案中。允許的選項取決於主機檔案系統類型。
+* "_mnterts_"引數是使用mount命令"-o"旗標指定的檔案系統"-type"選項。請勿在「-mnterts_」引數中加入「-o」旗標。例如、sequence -mntops tmplog會將字串「-o tmplog」傳遞到「mounts」命令、然後在新的命令列上插入文字tmplog。
++
+
+NOTE: 如果您將任何無效的「-mnterts」選項用於儲存和快照作業、SnapDrive 則適用於UNIX的DB2不會驗證這些無效的掛載選項。
+
+
+
+|===

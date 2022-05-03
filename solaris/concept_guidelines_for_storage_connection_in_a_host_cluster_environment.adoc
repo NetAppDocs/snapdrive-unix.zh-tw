@@ -1,0 +1,34 @@
+---
+permalink: solaris/concept_guidelines_for_storage_connection_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, host, cluster 
+summary: 在主機叢集環境中使用SnapDrive flexfstorage connect命令之前、您必須遵守幾項準則。 
+---
+= 主機叢集環境中的儲存連線準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在主機叢集環境中使用「SnapDrive flexfstorage connect」命令之前、您必須遵守幾項準則。
+
+* 如果使用共享磁碟群組或檔案系統的主機叢集組態新增了一個節點、請使用「SnapDrive esfstorage connect -DEVICETYPE shared」命令。您可以SnapDrive 從主機叢集中的任何節點執行「支援不支援儲存設備連線」作業。
+* 若要成功執行儲存設備連線作業、不應發生下列情況：
++
+** 儲存實體不應存在於主機叢集中的任何節點上。
+** LUN不應對應至主機叢集中的任何節點。
+
+
+* 您可以使用「-DEVICETYPE Dedicated」選項、或在命令列語法中省略「-DEVICETYPE」選項、連線至特定節點上的儲存實體、因為預設值為Dedicated。
+* 使用Veritas Volume Manager搭配Veritas檔案系統（VxFS）的磁碟群組、可支援整個叢集的檔案系統儲存連線。此作業不支援原始LUN、也就是不支援「-nolvm」選項。
+* 「-igroup」選項不支援「-igroup SnapDrive 」命令。
+* 如果符合下列任一項條件、儲存設備連線作業將會失敗：
++
+** 如果在連接儲存實體的過程中發生任何錯誤。UNIX版可從主機叢集中的主節點執行此作業。SnapDrive在建立共用儲存實體之前、它會建立LUN、將LUN對應至主節點、然後將LUN對應至所有非主節點。適用於UNIX的內部建立及管理所有節點的igroup。SnapDrive
+** 如果主機叢集中的節點在啟動叢集式Volume Manager（CVM）之前關機並重新開機、則應在節點上探索LUN使用的共用磁碟群組。根據預設、如果FC連接埠位址未變更、LUN會顯示出來；否則、LUN必須使用「SnapDrive show storage connect」命令來對應。
+
+
+* 只有在儲存實體不存在於任何主機叢集節點上時、您才能對使用專用儲存實體資料建立的LUN上的儲存實體執行共享儲存設備連線作業、然後再中斷連線。
+* 只有當目前節點並非主機叢集的一部分、或儲存實體不存在於主機叢集時、您才能使用共享儲存實體中繼資料、與LUN上的儲存實體進行專用儲存連線作業。
+

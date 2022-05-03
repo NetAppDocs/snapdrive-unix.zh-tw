@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_host_cluster_environment_for_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, cluster, unix 
+summary: 主機叢集式系統的支援僅適用於Solaris主機上的Veritas SFRAC。SnapDrive 
+---
+= 適用於UNIX的主機叢集環境SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+主機叢集式系統的支援僅適用於Solaris主機上的Veritas SFRAC。SnapDrive

@@ -1,0 +1,90 @@
+---
+permalink: solaris/concept_using_selective_lun_map_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, selective, lun, map 
+summary: 從叢集Data ONTAP 式的版本8.3開始、所有新LUN對應的選擇性LUN對應（SLM\）預設為啟用。當您建立新的LUN對應時、LUN只能透過擁有該LUN及其HA合作夥伴的節點上的路徑存取。 
+---
+= 在SnapDrive UNIX中使用選擇性LUN對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從叢集Data ONTAP 式的版本8.3開始、在所有新LUN對應上預設都會啟用選擇性LUN對應（SLM)。當您建立新的LUN對應時、LUN只能透過擁有該LUN及其HA合作夥伴的節點上的路徑存取。
+
+根據預設、LUN可在儲存虛擬機器（SVM）的所有生命里進行存取。您應該在網路中的每個叢集節點上、將生命量指派給SVM。隨著叢集中的節點數量增加、潛在路徑的數量也會倍增。這可能會導致通往LUN的路徑過多、每個主機有多個igroup、以及中斷營運的行動事件。藉由將LUN存取權限限制在擁有LUN和HA合作夥伴節點的節點上、而由SLM解決這些問題。它也會為每個主機建立單一igroup、並支援不中斷營運的LUN行動作業、不需要處理連接埠集或重新對應LUN。
+
+
+NOTE: 在叢集Data ONTAP 式的還原8.3之前建立的LUN對應、不會自動套用至該LUN對應。
+
+如果您透過擁有LUN的節點存取LUN、則路徑稱為「作用中最佳化」。 但是、如果您透過HA合作夥伴節點存取該LUN、則路徑稱為「作用中未最佳化」。
+
+|===
+| 指令SnapDrive | 說明 
+
+
+ a| 
+《SnapDrive LUN showPaths _Long LUN名稱_》（英文）
+ a| 
+「SnapDrive LUN showPaths」命令會列出通往LUN的所有路徑。它也會顯示哪些路徑已啟用最佳化、以及哪些路徑為主動未最佳化路徑。
+
+「_long lun_name_」是LUN的名稱。如果未指定LUN、則會在所有LUN上執行作業。
+
+[listing]
+----
+snapdrive lun showpaths
+lun path            device filename                   asymmetric access state
+------------------------------------------------------------------------------
+vs1:/vol/vol2/lun10  /dev/mapper/3600a09807746505a4e24455450473655   Non-optimized
+vs1:/vol/vol2/lun2  /dev/mapper/3600a09807746505a4d3f455432474b30    Optimized
+vs1:/vol/vol2/lun1  /dev/mapper/3600a09807746505a4e24455450473656    Optimized
+----
+
+
+ a| 
+《SnapDrive LUN固定路徑_Long LUN名稱_》
+ a| 
+「SnapDrive 支援LUN的固定路徑」命令會嘗試修復LUN路徑、使LUN至少沒有一個作用中最佳化路徑。「_long lun_name_」是LUN的名稱。如果未指定LUN、則會在所有至少沒有一個作用中最佳化路徑的LUN上執行作業。
+
+[listing]
+----
+snapdrive lun fixpaths
+The following LUNs are using Non-optimized paths
+-------------------------------------------------
+vs1:/vol/vol2/lun10
+
+Path correction successful for the following LUNs
+--------------------------------------------------
+vs1:/vol/vol2/lun10
+----
+
+NOTE: 在來賓作業系統中、「SnapDrive 支援LUN的固定路徑」命令無法運作。
+
+|===
+「lunpath-監 控頻率」參數可讓您指定SnapDrive UNIX版的顯示器自動修復LUN路徑的頻率。預設值為24小時。
+
+如果「SnapDrive 無法執行指令LUN固定路徑」作業、AutoSupport 則會針對所有LUN產生一則消息「SUP」（ASUP）。ASUP訊息包含下列詳細資料：
+
+* 電腦名稱
+* 事件來源
+* 應用程式版本
+* 事件ID
+* 類別
+* 主旨
+
+
+以下是ASUP訊息的範例：
+
+[listing]
+----
+computerName="owhyee"
+       eventSource="snapdrive"
+       appVersion="5.2.2 for UNIX"
+       eventID="6"
+       category="lun path"
+       subject="Paths are misconfigured for the Luns /vol/June12v1/LUN2 in storage system sdu_100_101_60_62_vs1 on owhyee host."
+----
+*相關資訊*
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《SAN管理指南》（英文）ONTAP"]

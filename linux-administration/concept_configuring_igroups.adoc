@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_configuring_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, igroup, storage, configure 
+summary: UNIX版的支援功能可讓您設定儲存系統上的igroup。SnapDrive設定的igroup用於對應儲存系統上的LUN。 
+---
+= 設定igroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您設定儲存系統上的igroup。SnapDrive設定的igroup用於對應儲存系統上的LUN。
+
+
+NOTE: igroup必須包含來源啟動器和目的地啟動器。

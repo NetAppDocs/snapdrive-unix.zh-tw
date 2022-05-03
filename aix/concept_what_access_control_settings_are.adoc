@@ -1,0 +1,40 @@
+---
+permalink: aix/concept_what_access_control_settings_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, access, control, settings 
+summary: 為了判斷使用者存取權、SnapDrive UNIX版的程式碼會檢查儲存系統根磁碟區中兩個權限檔案的其中一個。您必須檢查這些檔案中設定的規則、才能評估存取控制。 
+---
+= 什麼是存取控制設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+為了判斷使用者存取權、SnapDrive UNIX版的程式碼會檢查儲存系統根磁碟區中兩個權限檔案的其中一個。您必須檢查這些檔案中設定的規則、才能評估存取控制。
+
+* 「DHost-name.prbac」檔案位於目錄「/vol/vol0/sdprbac」SnapDrive （以角色為基礎的存取控制權限）中。
++
+檔案名稱為「shDhost-name.prbac"、其中「_host-name_」是權限套用的主機名稱。您可以為附加至儲存系統的每個主機設定權限檔案。您可以使用「SnapDrive 效能分析存取」命令來顯示特定儲存系統上主機可用權限的相關資訊。
+
++
+如果不存在「shdHost-name.prbac」、請使用「shdsgeneric.prbac」檔案來檢查存取權限。
+
+* 「dsgeneric.prbac」檔案也位於目錄「/vol/vol0/sdprbac」中。
++
+檔案名稱「shdgeneric.prbac」是儲存系統上無法存取「shidhost-name.prbac」檔案的多個主機的預設存取設定。
+
+
+
+如果您在「/vol/vol0/sdprbac"路徑中同時有「shdHost-name.prbac"」和「shdgeneric.prbac"檔案、請使用「shdHost-name.prbac」來檢查存取權限、因為這會覆寫為「shedgeneric.prbac"檔案提供的值。
+
+如果您沒有「shDhost-name.prbac」和「shdgeneric.prbac」檔案、請檢查在「snapdrive.conf」檔案中定義的組態變數「_all-access-if-RBAC未指定」。
+
+從特定主機設定存取控制至特定vFiler單元、是一項手動操作。來自特定主機的存取權是由位於受影響vFiler單元根Volume中的檔案所控制。檔案包含「/vol/<vFilerroot vole>/sdprbac/sdhost-name.prbac'、其中「_host-name_」是受影響主機的名稱、由「gethostname（3）」傳回。您應確保此檔案可從可存取的主機讀取、但不可寫入。
+
+
+NOTE: 若要判斷主機名稱、請執行「主機名稱」命令。
+
+如果檔案是空的、無法讀取的或格式無效、SnapDrive 則UNIX版的for不會授予主機任何作業的存取權。
+
+如果檔案遺失、SnapDrive UNIX版的Sfesfing會在「snapdrive.conf」檔案中檢查組態變數「_all-access-if-RBAC未指定」。如果變數設為「On」（開啟）（預設值）、則可讓主機完整存取該儲存系統上的所有這些作業。如果變數設為「Off」（關閉）、SnapDrive 則UNIX版的還原功能會拒絕主機執行該儲存系統存取控制所管理的任何作業權限。

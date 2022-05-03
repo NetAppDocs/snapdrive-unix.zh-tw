@@ -1,0 +1,62 @@
+---
+permalink: linux-administration/concept_snap_connect_operation_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, fail, error, operation, reboot, reload 
+summary: Snap連線作業失敗、重新啟動主機後不會載入原始Volume群組。 
+---
+= SnapConnect作業失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap連線作業失敗、重新啟動主機後不會載入原始Volume群組。
+
+在Linux主機上、如果SnapDrive 來源主機上的for UNIX因為重新啟動主機或使用「Ctrl-C」而中斷、則Snapshot連線作業會在來源主機上失敗。中斷會導致在/etc/lvm/lvm.conf檔案中新增「#SDUTEMP」標記；任何後續SnapDrive 的UNIX功能失敗、並顯示下列錯誤訊息：
+
+[listing]
+----
+0001-945 Admin error: Volume Manager's configuration file contains
+tags from previous SDU operation. Please cleanup the cloned lun(s),
+if any, existing from a previous unsuccessful operation and cleanup
+the configuration file before proceeding.
+----
+
+
+== 因應措施
+
+. 從儲存系統移除先前故障或中斷的Snapshot連線作業中可能存在的任何複製LUN。
++
+
+NOTE: 您可以使用SnapDrive 「fuse storage show」命令搭配-分配 進行驗證。
+
+. 輸入下列命令、檢查是否已從主機移除LUN：
++
+** 對於iSCSI、請輸入命令「/etc/init.d/iscsi」reload
++
+
+NOTE: 「etc/init.d/iSCSI Reload」選項適用於RHEL 4更新6及更早版本。
+
+** 對於RHEL 5及更新版本、如果您使用iSCSI、則必須手動移除LUN。此外、您也必須手動執行主機重新掃描。
++
+如果您使用的是多重路徑解決方案、請同時手動重新掃描多重路徑。您可以執行命令「多路徑」來執行
+
++
+
+NOTE: 如果您使用FC、則上述程序適用於RHEL 4更新6之前的所有版本、以及RHEL 5及更新版本。
+
+
+
+. 從/etc/lvm/lvm.conf檔案中移除Volume群組。
++
+從/etc/lvm/lvm.conf檔案移除複製的LUN之後、檔案可能會如下所示：
+
++
+'#SDUEXISTING volume清單=["vgx"、"vgY"] volume清單=["vgx"]#SDUTEMP
+
+. 刪除結尾處包含「#SDUTEMP」標記的整行如果有以「#SDUEXISTING」標記開頭的行、請僅移除標記、然後保留該行。
+. 執行「vgscan」命令、以保留在組態檔中所做的變更。
+. 輸入「vgchange -A y」命令以保留原始Volume群組。
+. 檢閱主機中的「etc/fstab"檔案以重新掛載檔案系統之後、執行適當的掛載命令來掛載邏輯Volume群組。
+

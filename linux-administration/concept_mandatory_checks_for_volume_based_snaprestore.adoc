@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/concept_mandatory_checks_for_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, checks, volume, snaprestore 
+summary: 在執行Volume型SnapRestore 的功能之前、SnapDrive 針對UNIX執行某些強制性檢查。這些檢查是必要的、以便SnapRestore 安全使用Volume型的功能。強制檢查不得由使用者取代。 
+---
+= 強制檢查Volume型SnapRestore 的不全
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行Volume型SnapRestore 的功能之前、SnapDrive 針對UNIX執行某些強制性檢查。這些檢查是必要的、以便SnapRestore 安全使用Volume型的功能。強制檢查不得由使用者取代。
+
+以下是SnapDrive 在實作Volume型SnapRestore 的動作之前、針對UNIX執行的強制檢查：
+
+* Volume型SnapRestore 的功能僅適用於使用SnapDrive UNIX版的功能所建立的Snapshot。
+* Volume SnapRestore 型的功能不應是儲存系統的根Volume。
+* 適用於UNIX的磁碟區複製檢查。SnapDrive如果有來自新Snapshot複本的任何Volume複本、則不允許進行Volume還原作業。這是Data ONTAP 由不確定的限制。
+* 磁碟區SnapRestore 型的實體磁碟區不應有任何對應的LUN、而應與指定的LUN（原始LUN或LUN存在於檔案系統、磁碟群組或主機磁碟區）分開進行還原。
+* UNIX版的測試顯示、磁碟區是否存在於SnapMirror關係中。SnapDrive
+* UNIX版的測試顯示、磁碟區是否存在於不確定的情況下。SnapDrive SnapVault
+
+
+如果SnapVault UNIX版的SnapMirror使用Operations Manager來執行RBAC、SnapDrive 而且使用者在Volume上具有SD.snapshot。中斷基準功能、則SnapMirror和SnapMirror檢查可被覆寫。如需使用者覆寫這些檢查的特定RBAC功能相關資訊、請參閱SnapDrive 《UNIX適用的角色型存取控制》。
+
+*相關資訊*
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[以角色為基礎的UNIX存取控制SnapDrive]

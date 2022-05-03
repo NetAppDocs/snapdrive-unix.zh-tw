@@ -1,0 +1,43 @@
+---
+permalink: aix/concept_error_message_locations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message, location 
+summary: 適用於UNIX的解決方案可在命令輸出和各種記錄檔中提供錯誤訊息的相關資訊。SnapDrive 
+---
+= 錯誤訊息位置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的解決方案可在命令輸出和各種記錄檔中提供錯誤訊息的相關資訊。SnapDrive
+
+適用於UNIX的解決方案可在下列位置提供錯誤訊息的相關資訊：SnapDrive
+
+* 命令輸出
++
+它會顯示SnapDrive 所有訊息、顯示以供UNIX使用的指令之標準錯誤輸出。
+
+* 系統記錄
++
+UNIX版使用SysLog(3)機制、將嚴重性等級為「致命」和「系統管理」錯誤的所有錯誤記錄到系統記錄中。SnapDrive
+
+* 稽核記錄檔
++
+稽核日誌會記錄下列每SnapDrive 個適用於UNIX的資訊命令：
+
++
+** 發行者
+** 發行時
+** 其退出狀態為何。
++
+這對於判斷系統實際發生的情況非常有用。
+
+
+
+* 追蹤記錄檔
++
+追蹤記錄會記錄任何錯誤的詳細資訊。NetApp技術支援會在診斷問題時使用此記錄。
+
+

@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_operations_performed_using_wizards.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizards, storage, create 
+summary: 您可以使用不同的精靈來建立儲存實體、SnapDrive 並以有效率的方式操控UNIX版的功能。 
+---
+= 使用精靈執行的作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用不同的精靈來建立儲存實體、SnapDrive 並以有效率的方式操控UNIX版的功能。
+
+下列SnapDrive for UNIX命令具有執行作業的等效精靈：
+
+* 《創世紀》
+* "刪除"
+* 恢復快照
+* "網路快照連線"
+* "午睡中斷連線"
+

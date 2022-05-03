@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_restoring_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: restore, multiple, storage, entities, snap, snapdrive 
+summary: 您可以還原包含多個儲存實體的Snapshot複本。 
+---
+= 還原多個儲存實體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以還原包含多個儲存實體的Snapshot複本。
+
+若要還原包含位於多個目的地儲存系統上之儲存實體的Snapshot複本、您必須符合下列需求：
+
+* 您在命令提示字元中指定的儲存實體必須位於單一儲存系統或HA配對上。
+* 來源儲存系統的磁碟區名稱必須與目的地儲存系統的磁碟區名稱相符。
+* 您必須將「snapdrive.conf」檔案中的「sfapmirror dest-multier-filervolese-enabled」引數設為「On」。
+
+
+您可以使用一個命令來還原位於單一儲存系統或HA配對上的儲存實體。

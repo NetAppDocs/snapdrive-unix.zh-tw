@@ -1,0 +1,72 @@
+---
+permalink: solaris/concept_informationrequired_forusing_the_snapdrive_snapdelete_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, command 
+summary: 若要刪除Snapshot複本、請指定要刪除的Snapshot複本名稱。您可以使用SnapDrive 「Snapsnap刪除」命令來檢視已刪除的Snapshot複本清單。 
+---
+= 使用SnapDrive 「finfsnap刪除」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要刪除Snapshot複本、請指定要刪除的Snapshot複本名稱。您可以使用「SnapDrive 抓取刪除」命令來檢視已刪除的Snapshot複本清單。
+
+下表提供有關「SnapDrive flexfsnap刪除」命令的資訊。
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+指定Snapshot複本的名稱。使用Snapshot複本名稱的長格式、您可以在其中輸入儲存系統名稱、Volume和Snapshot複本名稱。以下是一個長Snapshot複本名稱的範例：「Big _filer/vol/account_vol：snap _20031115」
+
+如果您想要指定其他Snapshot複本、則可以使用名稱的簡短格式（如果名稱與第一個Snapshot複本位於相同的儲存系統和磁碟區）。否則、請再次使用名稱的長格式。
+
+
+
+ a| 
+Snapshot複本名稱（`-snapname`）
+ a| 
+h_long快照Copy_name_`
+
+
+
+ a| 
+其他Snapshot複本
+ a| 
+Snapshot COP_name_`（長型或短型）
+
+
+
+ a| 
+「verbose」
+ a| 
+~
+
+
+
+ a| 
+若要顯示已刪除的Snapshot複本清單、請包含-verbose選項。如果您使用的是Snapshot複本名稱的簡短形式、此選項會填入遺失的儲存系統和磁碟區資訊。
+
+
+
+ a| 
+「力量」
+ a| 
+~
+
+
+
+ a| 
+noprompt
+ a| 
+~
+
+
+
+ a| 
+選用：決定是否要覆寫現有的Snapshot複本。如果您提供現有Snapshot複本的名稱、如果沒有此選項、此作業將會停止。當您提供此選項並指定現有Snapshot複本的名稱時、系統會提示您確認是否要覆寫Snapshot複本。若要防止SnapDrive UNIX版的for UNIX顯示提示、也請加入「-noprompt」選項。（如果您想使用「-noprompt」選項、則必須一律包含「-force」選項。）
+
+|===

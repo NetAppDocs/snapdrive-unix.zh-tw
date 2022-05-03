@@ -1,0 +1,33 @@
+---
+permalink: solaris/task_removing_a_port_set_from_snapdrive.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, remove, port, set, command 
+summary: 您可以使用SnapDrive 「flexportset DELETE」命令刪除SnapDrive 在場景中設定的連接埠集。 
+---
+= 從SnapDrive 無法使用的地方移除連接埠集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive 不知道端口集刪除」命令來刪除SnapDrive 在場景中設定的連接埠集。
+
+.步驟
+. 在主機系統上輸入下列命令：
++
+《* SnapDrive 》-《*》-《*》-《*刪除_檔案名稱_》（_filername..._]*）
+
++
+「_filername_」是設定連接埠集的Vserver名稱。
+
++
+[listing]
+----
+snapdrive portset delete vs91
+Deleted portset configuration for appliance: vs91
+----
++
+已SnapDrive 成功移除設定為使用此功能的連接埠集。
+
+

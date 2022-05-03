@@ -1,0 +1,47 @@
+---
+permalink: linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, message, error 
+summary: 包含下列資訊的資訊。AutoSupport 
+---
+= 內容AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+包含下列資訊的資訊。AutoSupport
+
+* 事件來源
+* 事件ID
+* 適用於UNIX的版本SnapDrive
+* 訊息狀態：記錄層級訊息、例如警示1、嚴重2、錯誤3、警告4、通知5、 6、資訊、7、偵錯
+* 主機名稱
+* 主機作業系統
+* 主機作業系統的發行版本
+* 儲存系統名稱
+* 使用Protection Manager /角色型存取控制
+* 錯誤類別
+* 將訊息項目標示為假AutoSupport
+* 主機多重路徑類型：記錄在「snapdrive.conf」檔案中設定的值。如果由於組態值不正確而未載入助理、則不會記錄任何主機多重路徑類型。
+* 已啟用主機虛擬化：此功能僅適用於VMware來賓作業系統。
+* 傳輸協定：在「snapdrive.conf」檔案中設定為「預設傳輸」的值。
+* 啟用保護：如果OnCommand 將支援SnapDrive UNIX的支援功能設定為使用支援功能的支援功能、則會記錄「Yes（是）」值。
++
+
+NOTE: UNIX版無法驗證是否正在使用此功能。SnapDrive OnCommand
+
+
+
+當您執行「SnapDrive flexstorage show -all」命令時、可以取得下列額外資訊：
+
+* 傳輸協定類型（FCP / iSCSI）：用於建立LUN的傳輸協定（如果有）。
+* 已連線LUN的數量
+* 磁碟或磁碟區群組數
+* 檔案規格數量
+* 主機磁碟區數量
+
+
+
+NOTE: 當在UNIX的支援中啟用了支援功能時、任何操作失敗時、錯誤訊息都會記錄在事件管理系統（VM）儲存系統中。AutoSupport SnapDrive如果錯誤訊息包含任何特殊字元、例如（<、>、&、'、"、 \r）、儲存系統的EMS記錄檢視中會顯示亂碼值。

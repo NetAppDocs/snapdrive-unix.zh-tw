@@ -1,0 +1,69 @@
+---
+permalink: linux-administration/task_connecting_to_asnapshot_copy_thatcontains_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, lun, connect, command 
+summary: 您可以使用SnapDrive flexSnapconnect命令連線至包含LUN的Snapshot複本。 
+---
+= 連線至包含LUN的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive Snapsnap Connect」命令連線至包含LUN的Snapshot複本。
+
+.步驟
+. 輸入下列命令語法以連線至包含LUN的Snapshot複本：
++
+hy* SnapDrive fsnap connect -lun _s_lun_named_lun_name_[-lun]_s_lun_named_lun_name ..._-snapname _long快照名稱_[-igroup _ig_name_[_ig_name..._]][-sepoid]*
+
++
+
+NOTE: 「_s_LUN_name_」和「_d_LUN_name_」的格式應為LUN_name或qtree名稱/LUN_name。
+
+
+
+適用於UNIX的可複製您指定的LUN、並將其連線至新位置。SnapDrive
+
+以下範例將hornet/vol/vol1/tuesdaysnapshot中的LUN mylun1連接到mylun1copy：
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -snapname
+hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1) mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+以下範例分別將兩個LUN（mylun1和mylun2）連接至mylun1copy和mylun2copy：
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -lun mylun2
+mylun2copy -snapname hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1)
+mapping new lun(s) ... done
+connecting hornet:/vol/vol1/mylun2:
+LUN copy mylun2copy ... created
+(original: hornet:/vol/vol1/mylun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+下列範例將LUN lun1_0連接至Snapshot lech:/vol/vol1:rt：
+
+[listing]
+----
+
+snapdrive snap connect -fs /mnt/fs /mnt/fs1  -snapname lech:/vol/vol1:rrt
+connecting /mnt/fs:
+   LUN copy lun1_0 ... created
+     (original: lech:/vol/vol1/lun1)
+   exporting new lun(s) to Guest OS ... done
+   discovering new lun(s) ... done
+Successfully connected to snapshot lech:/vol/vol1:rrt
+        file system: /mnt/fs1
+----

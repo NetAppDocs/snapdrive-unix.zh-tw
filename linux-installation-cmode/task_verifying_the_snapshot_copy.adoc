@@ -1,0 +1,16 @@
+---
+permalink: linux-installation-cmode/task_verifying_the_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, verify 
+summary: 您可以還原資料來驗證Snapshot複本。 
+---
+= 驗證Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以還原資料來驗證Snapshot複本。
+
+如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2849340["適用於Linux *的《UNIX系統管理指南》SnapDrive"]。

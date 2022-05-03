@@ -1,0 +1,134 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_snapcreate_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snap, create, command, information, required 
+summary: 建立Snapshot複本時、您應該決定要擷取的儲存實體、並指定Snapshot複本的名稱。 
+---
+= 使用SnapDrive 「finfsnap create」命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+建立Snapshot複本時、您應該決定要擷取的儲存實體、並指定Snapshot複本的名稱。
+
+下表提供您使用「SnapDrive 支援建立」指令時所需的資訊：
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+確定要在Snapshot複本中擷取的儲存實體類型。您可以在單一命令列上指定NFS實體、LUN、直接在LUN上建立的檔案系統、以及LVM實體。
+
+提供該實體的名稱及適當的引數。這是「file_spec」引數的值。
+
+* 如果您指定的磁碟群組具有主機磁碟區或檔案規格、則此引數會轉譯為儲存系統上的一組磁碟群組。UNIX版的支援功能可建立包含實體的整個磁碟群組、即使實體是主機磁碟區或檔案系統也沒問題。SnapDrive
+* 如果指定的檔案規格是NFS掛載點、則此引數會轉譯至儲存系統磁碟區上的目錄樹狀結構。
+* 如果您指定LUN或具有檔案系統的LUN、則此引數會轉譯為LUN或具有檔案系統的LUN。
++
+
+NOTE: 您無法在儲存實體中指定特殊字元、例如「-vg」、「-dg」、「-FS」、「-lvol'」和「-hostvol'」。不過、儲存實體如「-fs-」、「-lvol'」和「-hostvol」則可使用斜槓（/）。
+
+
+
+
+
+ a| 
+LUN（`-LUN file_spec_）
+ a| 
+LUN名稱
+
+您必須包含儲存系統、磁碟區和LUN的名稱。
+
+
+
+ a| 
+磁碟群組（`-dg file_spec）或磁碟區群組（`-vg file_spec）
+ a| 
+磁碟或磁碟區群組的名稱
+
+
+
+ a| 
+檔案系統（`-FS file_spec）
+ a| 
+檔案系統名稱
+
+
+
+ a| 
+主機磁碟區（`-hostvol file_spec）或邏輯磁碟區（`-lvol file_spec）
+ a| 
+主機或邏輯磁碟區的名稱
+
+
+NOTE: 您必須同時提供所要求的磁碟區和包含該磁碟區的磁碟群組、例如：「-hostvolvg DG3/acct_volume'。
+
+
+
+ a| 
+Snapshot複本名稱（`-snapname snap_name）
+ a| 
+Snapshot Copy_name
+
+
+
+ a| 
+指定Snapshot複本的名稱。這可以是名稱的長版本、其中包含儲存系統和磁碟區、並具有Snapshot複本名稱、或是Snapshot複本名稱的短版本。
+
+
+NOTE: 您必須確保針對「napname」指定的值不超過200個字元。
+
+
+
+ a| 
+「不相關」
+ a| 
+~
+
+
+
+ a| 
+選用：SnapDrive 若要在建立Snapshot複本時建立儲存實體的Snapshot複本、而這些實體在建立Snapshot複本時並無相依寫入、則適用於UNIX會建立個別儲存實體的損毀一致Snapshot複本、但不會嘗試使實體彼此一致。
+
+
+
+ a| 
+「力量」
+ a| 
+~
+
+
+
+ a| 
+noprompt
+ a| 
+~
+
+
+
+ a| 
+選用：決定是否要覆寫現有的Snapshot複本。如果您提供現有Snapshot複本的名稱、如果沒有此選項、此作業將會停止。當您提供此選項並指定現有Snapshot複本的名稱時、命令會提示您確認是否要覆寫Snapshot複本。若要防止SnapDrive UNIX版的for UNIX顯示提示、也請加入「-noprompt」選項。（如果您想使用「-noprompt」選項、則必須一律包含「-force」選項。）
+
+
+
+ a| 
+「-fstype-
+ a| 
+`_type_'
+
+
+
+ a| 
+vmtype
+ a| 
+`_type_'
+
+
+
+ a| 
+選用：指定要用於SnapDrive UNIX作業的檔案系統和Volume Manager類型。
+
+|===

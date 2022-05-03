@@ -1,0 +1,34 @@
+---
+permalink: solaris/concept_what_the_web_service_and_daemon_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, web, service, daemon 
+summary: 適用於UNIX的支援服務提供統一介面、可讓所有NetApp產品和第三方產品無縫整合適用於UNIX的支援功能。SnapDrive SnapManager SnapDrive若要在SnapDrive 適用於UNIX的列舉中使用命令列介面（CLI）命令、您需要啟動精靈。 
+---
+= Web服務和精靈的意義
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援服務提供統一介面、可讓所有NetApp產品和第三方產品無縫整合適用於UNIX的支援功能。SnapDrive SnapManager SnapDrive若要在SnapDrive 適用於UNIX的方面使用命令列介面（CLI）命令、您需要啟動精靈。
+
+各種NetApp SnapManager 產品使用命令列介面（CLI）與SnapDrive 適用於UNIX的解決方案進行通訊。使用CLI會限制SnapManager UNIX版的效能和可管理性。SnapDrive當您使用SnapDrive for UNIX精靈時、所有命令都會以獨特的程序運作。監控程式服務不會影響SnapDrive 使用UNIX指令的方式。
+
+適用於UNIX的支援服務可讓第三方應用程式與適用於UNIX的支援無縫整合。SnapDrive SnapDrive他們使用SnapDrive API與UNIX版的for UNIX互動。
+
+當您啟動精靈時、SnapDrive for UNIX精靈會先檢查精靈是否正在執行。如果精靈未執行、則會啟動精靈。如果精靈已經在執行中、而您嘗試啟動它、SnapDrive 則適用於UNIX的畫面會顯示訊息：
+
+《不只是執行的程式》SnapDrive
+
+您可以檢查監控程式的狀態、查看SnapDrive 是否正在執行UNIX的功能。在決定啟動精靈之前、您應該先檢查狀態。如果root使用者以外的使用者嘗試檢查狀態、SnapDrive 則UNIX版的for UNIX會檢查使用者的認證資料、並顯示訊息：
+
+「SnapDrive 只有root使用者才能看到此功能的狀態」
+
+當您嘗試停止精靈時、SnapDrive 適用於UNIX的功能會檢查您的認證資料。如果您是root使用者以外的使用者、SnapDrive 則會顯示訊息「適用於UNIX」
+
+只有root使用者才能停止執行此功能SnapDrive
+
+停止精靈之後、您必須重新啟動SnapDrive UNIX的funcfor daemon.、才能使組態檔或任何模組的任何變更生效。如果root使用者以外的使用者嘗試重新啟動SnapDrive UNIX版的程式、SnapDrive 則適用於UNIX的顯示器會檢查使用者的認證資料、並顯示訊息
+
+只有root使用者才能重新啟動此程式SnapDrive

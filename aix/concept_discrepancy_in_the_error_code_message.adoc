@@ -1,0 +1,42 @@
+---
+permalink: aix/concept_discrepancy_in_the_error_code_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, discrepancy, error, code, message 
+summary: 如果您在SnapDrive FC和iSCSI服務同時開機或當兩者關機時執行「停止儲存刪除」命令、SnapDrive 則適用於UNIX的R不到 位時、會顯示錯誤訊息。 
+---
+= 錯誤代碼訊息中的差異
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在SnapDrive FC和iSCSI服務同時開機或當它們停機時執行「停止儲存刪除」命令、SnapDrive 則適用於UNIX的Runf2會顯示錯誤訊息。
+
+|===
+| *傳輸傳輸協定* | *顯示訊息（錯誤訊息）* | *應改為顯示的訊息（正確訊息）* 
+
+
+ a| 
+已設定FC和iSCSI
+ a| 
+[listing]
+----
+0002-181 Command error: Could not select appropriate File System. Please check the value of fstype in config file, and ensure proper file system is configured in the system.
+---- a| 
+「0002-143管理員錯誤：不支援與linuiscsi linufcp驅動程式共存。
+
+「請確定主機中只載入其中一個驅動程式、然後重試。
+
+
+
+ a| 
+未設定FC和iSCSI
+ a| 
+[listing]
+----
+0001-465 Command error: The following filespecs do not exist and cannot be deleted.
+---- a| 
+「0001-877管理員錯誤：找不到HBA助理。涉及LUN的命令應該會失敗
+
+|===

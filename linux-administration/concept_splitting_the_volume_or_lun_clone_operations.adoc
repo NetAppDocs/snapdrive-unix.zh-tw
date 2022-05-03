@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/concept_splitting_the_volume_or_lun_clone_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clone, lun, volume, split, parent 
+summary: UNIX版的支援功能可讓您分割Volume Clone或LUN Clone複製。SnapDrive完成複本分割之後、父磁碟區與複本之間的關係就會毀損、而且兩個實體彼此獨立、而且各自擁有各自的儲存空間。 
+---
+= 分割磁碟區複製或LUN複製
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您分割Volume Clone或LUN Clone複製。SnapDrive完成複本分割之後、父磁碟區與複本之間的關係就會毀損、而且兩個實體彼此獨立、而且各自擁有各自的儲存空間。
+
+以下是實體複本分割作業：
+
+* 預估磁碟區複製或LUN複製的磁碟空間（以MB為單位）。
+* 分割磁碟區複製或LUN複製。
+* 停止磁碟區複製或LUN複製分割。
+* 檢視進行中、已完成或失敗的複本分割狀態。
+
+
+[NOTE]
+====
+* 如果磁碟區複本已分割、則會刪除複製磁碟區中的所有Snapshot複本。
+* 在分割檔案規格之前、必須先執行「Clone分割EstEstEstimate」命令、以判斷複製磁碟區中是否有任何Snapshot複本。
+* 對於所有的複製分割命令、只能使用「-LUN」選項來指定長LUN名稱。您無法在同一命令列上指定「-LUN」選項、以及其他儲存實體（-vg、-dg、-FS、- lvol或-hostvol選項）。
+* 一律必須使用檔案規格的絕對路徑名稱搭配Clone分割命令。
+* 使用Snapshot的LUN實體複本分割預估僅適用於SnapDrive 從適用於UNIX及更新版本的NetApp的版本4.2所建立的Snapshot複本。
+
+
+====

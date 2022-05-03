@@ -1,0 +1,29 @@
+---
+permalink: aix/task_viewing_the_list_of_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, list, storage, system 
+summary: 您可以使用SnapDrive 主機系統中的flexconfig list命令來檢視所有儲存系統。 
+---
+= 檢視儲存系統清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在SnapDrive 主機系統中使用「flexconfig list」命令來檢視所有的儲存系統。
+
+.步驟
+. 輸入下列命令：
++
+《組態清單》SnapDrive
+
++
+[listing]
+----
+snapdrive config list
+username appliance name appliance type
+-----------------------------------------------------
+root      roaster     StorageSystem
+----
+

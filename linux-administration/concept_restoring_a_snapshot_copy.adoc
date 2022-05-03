@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_restoring_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: 您可以還原單一儲存實體或多個儲存實體的Snapshot複本。 
+---
+= 還原Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以還原單一儲存實體或多個儲存實體的Snapshot複本。

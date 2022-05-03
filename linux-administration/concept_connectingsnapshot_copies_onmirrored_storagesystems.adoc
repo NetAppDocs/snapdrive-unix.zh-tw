@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_connectingsnapshot_copies_onmirrored_storagesystems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, mirrored, storage 
+summary: 如果是鏡射儲存系統上的Snapshot複本、您可以將Snapshot複本連接至來源儲存系統和目的地系統。 
+---
+= 連接鏡射儲存系統上的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果是鏡射儲存系統上的Snapshot複本、您可以將Snapshot複本連接至來源儲存系統和目的地系統。
+
+當您在鏡射儲存系統上建立Snapshot複本時、Snapshot複本會自動從建立Snapshot複本的來源系統複寫到目的地（鏡射）儲存系統。UNIX版的支援功能可讓您連接來源儲存系統上的Snapshot複本。SnapDrive您也可以在目的地儲存系統上連接Snapshot複本。

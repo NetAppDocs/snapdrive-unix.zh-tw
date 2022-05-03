@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_login_information_for_storage_systems.html 
+sidebar: sidebar 
+keywords: login, information, storage, system, snap, snapdrive 
+summary: 使用者名稱或密碼可讓SnapDrive UNIX使用者存取每個儲存系統。它也提供安全性、因為除了以root身分登入、執行SnapDrive UNIX的人員必須在系統提示時提供正確的使用者名稱或密碼。如果登入遭到入侵、您可以刪除登入並設定新的使用者登入。 
+---
+= 儲存系統的登入資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用者名稱或密碼可讓SnapDrive UNIX使用者存取每個儲存系統。它也提供安全性、因為除了以root身分登入、執行SnapDrive UNIX的人員必須在系統提示時提供正確的使用者名稱或密碼。如果登入遭到入侵、您可以刪除登入並設定新的使用者登入。
+
+您在設定每個儲存系統時、都已建立使用者登入。若要讓UNIX與儲存系統搭配使用、您必須提供此登入資訊。SnapDrive根據您在設定儲存系統時所指定的內容、每個儲存系統都可以使用相同的登入或獨特的登入。
+
+適用於UNIX的支援將這些登入和密碼以加密形式儲存在每個主機上。SnapDrive您可以SnapDrive 設定「_SnapDrive、conf_」組態變數「_use-https到filer=on_」、指定當與儲存系統通訊時、UNIX版的Sfor UNIX會加密此資訊。

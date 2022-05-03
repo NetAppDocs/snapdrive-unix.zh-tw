@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_unable_to_create_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: 影響SnapDrive 使用Snapshot create命令建立Snapshot複本的功能的情況很少。 
+---
+= 無法建立Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有些情況會影響到「SnapDrive 不知道如何建立Snapshot複本」命令的功能。
+
+* 執行下列工作時、「執行功能」命令必須是「執行功能」SnapDrive ：
++
+** 查詢所有磁碟群組以取得LUN清單。
+** 透過SCSI命令查詢所有LUN。
+
+
+* 磁碟群組中的LUN必須在線上並對應至磁碟群組、才能進行Snapshot複本。如果有任何LUN離線或未對應、建立作業就會失敗。
++
+在嘗試執行Snapshot複本之前、請先確定所有LUN均已連線並對應至主機。
+
+* 存取權限不允許主機在該儲存系統上建立資訊的Snapshot複本。
++
+此外、由於它可與LVM項目搭配使用、因此您必須以足夠的權限登入主機、才能處理LVM項目。
+
+

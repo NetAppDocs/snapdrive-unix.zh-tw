@@ -1,0 +1,43 @@
+---
+permalink: linux-administration/concept_operation_with_multiple_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, objects, multiple, error, authorized, user 
+summary: 下列範例顯示當您不是執行特定作業的授權使用者時、會收到的錯誤訊息。 
+---
+= 使用多個儲存物件進行作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下列範例顯示當您不是執行特定作業的授權使用者時、會收到的錯誤訊息。
+
+[listing]
+----
+[john]$ snapdrive storage show –all
+
+Connected LUNs and devices:
+
+device filename   adapter  path  size  proto  state  clone  lun path                           backing Snapshot
+----------------  -------  ----  ----  -----  -----  -----  --------                           ---------------
+/dev/sdao            -     -     200m  iscsi  online  No    storage_array1:/vol/vol2/passlun1           -
+/dev/sda1            -     -     200m  fcp    online  No    storage_array1:/vol/vol2/passlun2           -
+
+Host devices and file systems:
+
+dg: testfs1_SdDg                dgtype lvm
+hostvol: /dev/mapper/testfs1_SdDg-testfs1_SdHv  state: AVAIL
+fs: /dev/mapper/testfs1_SdDg-testfs1_SdHv       mount point: /mnt/testfs1 (persistent) fstype ext3
+
+device filename   adapter  path  size  proto  state   clone  lun path                                backing Snapshot
+----------------  -------  ----  ----  -----  -----   -----  --------                                ---------
+/dev/sdn             -      P    108m  iscsi  online   No    storage_array1:/vol/vol2/testfs1_SdLun         -
+/dev/sdn1             -      P    108m  fcp  online   No    storage_array1:/vol/vol2/testfs1_SdLun1         -
+
+0002-719 Warning: SD.Storage.Read access denied on volume storage_array1:/vol/vol1 for user unix_host\john on Operations Manager server ops_mngr_server
+----
+John有權在vol2上列出儲存實體、但在vol1上則不列出。UNIX版顯示vol1實體、並顯示vol2的警告訊息。SnapDrive
+
+
+NOTE: 對於「儲存清單」、「儲存顯示」、「午睡清單」及「午睡顯示」命令SnapDrive 、UNIX版使用時會顯示警告而非錯誤。

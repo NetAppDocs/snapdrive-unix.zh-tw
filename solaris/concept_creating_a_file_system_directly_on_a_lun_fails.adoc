@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_creating_a_file_system_directly_on_a_lun_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, fail, create, file, system 
+summary: 在Solaris主機上、直接在LUN上建立ufs檔案系統會失敗。 
+---
+= 直接在LUN上建立檔案系統失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Solaris主機上、直接在LUN上建立ufs檔案系統會失敗。
+
+當您在同一部Solaris主機上同時安裝了ufs和Veritas堆疊、並將預設傳輸組態變數設為「_iSCSI_」之後、SnapDrive UNIX版的Sfor UNIX將不會選擇ufs做為直接在LUN上建立檔案系統的預設檔案系統。作業失敗、並顯示下列錯誤訊息：
+
+[listing]
+----
+0002-138 Admin error: Transport Type: iscsi Volume Manager: VxVM is
+not supported combination.
+----
+
+
+== 因應措施
+
+使用「-fstype"命令的「ufs」值、直接在LUN上建立ufs檔案系統。

@@ -1,0 +1,70 @@
+---
+permalink: linux-administration/task_estimating_the_storage_space_using_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, clone, estimate 
+summary: 當儲存系統中沒有可供Snapshot複本使用的實體複本時、複本分割預估可協助您使用Snapshot複本來預估所需的儲存空間（以MB為單位）。 
+---
+= 使用Snapshot複本估算儲存空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當儲存系統中沒有可供Snapshot複本使用的實體複本時、複本切割預估功能可協助您使用Snapshot複本來預估所需的儲存空間（以MB為單位）。
+
+.步驟
+. 輸入下列命令以預估所需的儲存空間。
++
+「* SnapDrive 」-實體複製切割預估-snapname [_long_snap_name_]｛-volclone|-lunclone｝][-v |-verbose]*
+
+
+
+以下範例會預估使用Snapshot複本分割LUN實體的儲存空間。
+
+[listing]
+----
+snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource       Container  Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112: f3050-220 	5120	   14078    AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+以下範例會使用Snapshot複本搭配「-FS」選項來預估分割LUN實體複本的儲存空間。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource         Container Required Available Storage
+                            Space(MB)Space(MB) Status
+f3050-220-112:   f3050-220  4120     14078  AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+以下範例會使用Snapshot複本搭配「-FS」選項來預估分割磁碟區複本的儲存空間。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/fs1 -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019   54517  AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+以下範例會預估使用Snapshot複本分割磁碟區複本的儲存空間。
+
+[listing]
+----
+# snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019    54517    AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+[NOTE]
+====
+* 「資源」欄位包含Snapshot複本名稱、前提是已針對Snapshot複本完成複本分割預估。
+* 如果您提供任何失效檔案規格、以及含有「-lunclone」選項的Snapshot複本、則「必要空間」會顯示為0。
+* 使用Snapshot的LUN實體複本分割預估僅適用於SnapDrive 從適用於UNIX及更新版本的NetApp的版本4.2所建立的Snapshot複本。
+
+
+====

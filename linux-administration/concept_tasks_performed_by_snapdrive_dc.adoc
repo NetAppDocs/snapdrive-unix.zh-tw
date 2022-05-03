@@ -1,0 +1,37 @@
+---
+permalink: linux-administration/concept_tasks_performed_by_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, diagnostic, copy, log, file, data, utility 
+summary: 資料收集公用程式會執行NetApp診斷公用程式、複製SnapDrive UNIX記錄檔的還原資料、並建立用於分析的壓縮檔案。 
+---
+= 由SnapDrive執行的工作。DC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資料收集公用程式會執行NetApp診斷公用程式、複製SnapDrive UNIX記錄檔的還原資料、並建立用於分析的壓縮檔案。
+
+「snapdrive.DC公用程式會執行下列工作：
+
+* 執行「host_info」和「filer_info」公用程式、以收集主機與連接主機之儲存系統的相關資訊、並將此資訊儲存在壓縮檔案中。「host_info」公用程式和「filer_info」公用程式隨附SnapDrive 適用於UNIX的支援套件。
++
+例如、在Linux上、它就是「Linux資訊」公用程式。
+
+* 建立名為/tmp/NetApp/ntip_SnapDrive_name的目錄。此工具會將下列檔案的複本放在目錄中：
++
+** UNIX版本適用、如執行fashversion命令所示SnapDrive SnapDrive
+** 「sfapdrive.conf」檔案
+** 稽核記錄檔
+** 追蹤記錄檔
+** 恢復記錄檔
+** 由host_info公用程式建立的檔案
+
+
+* 建立目錄內容的壓縮檔案、並顯示訊息、說明您已將此檔案傳送給NetApp技術支援部門。
+
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux Unified Host Utilities 7.1安裝指南》"]

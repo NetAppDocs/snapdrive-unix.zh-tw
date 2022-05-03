@@ -1,0 +1,56 @@
+---
+permalink: solaris/concept_contents_of_an_audit_log_file.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, audit, log, file 
+summary: 稽核日誌會顯示有關您使用SnapDrive 適用於UNIX的指令的資訊。 
+---
+= 稽核記錄檔的內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+稽核日誌會顯示有關您使用SnapDrive 適用於UNIX的指令的資訊。
+
+稽核記錄檔會保留下列資訊的歷程記錄：
+
+* 發出的命令。
+* 這些命令的傳回值。
+* 叫用命令之使用者的使用者ID。
+* 時間戳記表示命令何時啟動（不含傳回碼）、以及指示命令何時完成（含傳回碼）的另一個時間戳記。稽核日誌記錄只會顯示有關SnapDrive 「Use」（使用）（已發出命令）的資訊。
+
+
+稽核記錄檔包含下列資訊。
+
+|===
+| 欄位 | 說明 
+
+
+ a| 
+UID
+ a| 
+使用者ID
+
+
+
+ a| 
+Gid
+ a| 
+群組ID
+
+
+
+ a| 
+msgText
+ a| 
+訊息文字
+
+
+
+ a| 
+退回代碼
+ a| 
+從命令傳回程式碼
+
+|===

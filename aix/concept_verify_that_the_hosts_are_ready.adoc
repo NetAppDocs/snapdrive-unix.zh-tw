@@ -1,0 +1,31 @@
+---
+permalink: aix/concept_verify_that_the_hosts_are_ready.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, host, ready 
+summary: 您必須確認主機已就緒。若要開始驗證作業、您應該先輸入ping filername命令、測試主機是否已連線至儲存系統。 
+---
+= 驗證主機是否就緒
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須確認主機已就緒。若要開始驗證作業、您應該先輸入「ping filername」命令、測試主機是否已連線至儲存系統。
+
+您也必須確認主機與儲存系統之間是否可以相互通訊。若要確認、請執行「SnapDrive flexstorage show -all」命令、檢查主機和儲存系統是否正在通訊。執行特定作業、確認主機已就緒：
+
+* 請根據主機的主機公用程式文件中的指示、確認您已正確設定主機和儲存系統。
+* 確認您的組態使用NFS、並設定匯出檔案。
+* 確認主機符合SnapDrive UNIX的最低要求、包括必要的作業系統修補程式。
+
+
+*相關資訊*
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["S9 NFS參考資料ONTAP"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["《適用於7-Mode的資訊、資料存取與通訊協定管理指南》（英文）Data ONTAP"]
+
+http://mysupport.netapp.com["NetApp支援"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《AIX Host Utilities 6.0安裝與設定指南》"]

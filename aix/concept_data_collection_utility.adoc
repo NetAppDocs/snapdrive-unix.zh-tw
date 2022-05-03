@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapshot, data, collection, utility, troubleshoot 
+summary: 「資料收集公用程式」是一種疑難排解工具、可收集資訊來診斷問題。SnapDrive 
+---
+= 資料收集公用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「資料收集公用程式」是一種疑難排解工具、可收集資訊來診斷問題。SnapDrive
+
+適用於UNIX的支援中心提供資料收集公用程式（SnapDrive、DC）、可收集有關適用於UNIX的診斷資訊、支援不整組態檢查程式、以及系統設定程式。SnapDrive SnapDrive SnapDrive

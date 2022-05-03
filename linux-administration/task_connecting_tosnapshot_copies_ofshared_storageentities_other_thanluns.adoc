@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/task_connecting_tosnapshot_copies_ofshared_storageentities_other_thanluns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, storage, lun, command, connect 
+summary: 您可以使用SnapDrive 「flexfap snap Connect」命令、連線至LUN以外的共享儲存實體的Snapshot複本。 
+---
+= 連線至LUN以外之共享儲存實體的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive flexSnapsnap Connect」命令來連線至LUN以外之共享儲存實體的Snapshot複本。
+
+.步驟
+. 輸入下列命令：
++
+hy* SnapDrive fsnap connect _fspec_Set_[_fspec_set..._]-snapname _long快照名稱_*
+
++
+「*」fspec_Set_[_fspec_set..._]-snapname _long快照名稱_[- DEVICETYPE shared][-SPERV]*
+
++
+在此語法中、「_fspec_Set_」為：「｛-dg |-FS｝_SRC_file_SPEC [dest_file_spec_][-destdg _DGname_].'
+
+

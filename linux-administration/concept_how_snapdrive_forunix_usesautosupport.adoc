@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_how_snapdrive_forunix_usesautosupport.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, storage, ems 
+summary: 啟用自動支援的選項在SnapDrive .conf檔案中設為On時、會在儲存系統的EMS記錄檢視中記錄支援訊息。AutoSupport根據預設、此選項會在SnapDrive .conf檔案中設為「On」（開啟）。UNIX版將不真實訊息傳送至儲存系統、訊息會記錄在事件管理系統（EMS）中。SnapDrive AutoSupport 
+---
+= UNIX版的功能SnapDrive AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當在「snapdrive.conf」檔案中將「autosup-enabled'（已啟用自動支援）」選項設定為「On（開啟）」時、系統會在儲存系統的EMS記錄檢視中記錄資訊。AutoSupport在預設情況下、此選項會在「snapdrive.conf」檔案中設為「On」。適用於UNIX的解決方案會將不真實的訊息傳送至儲存系統、並將訊息記錄在事件管理系統（EMS）中。SnapDrive AutoSupport
+
+下列任一案例中都會傳送一則消息：AutoSupport
+
+* 當作業因作業失敗而停止時、AutoSupport 會傳送一個消息到作業失敗的儲存系統。
+* 如果有多個儲存系統連線至主機、且多個儲存系統發生作業故障、SnapDrive 則適用於UNIX的整套功能AutoSupport 會將此資訊傳送至作業失敗的特定儲存系統。
+* 當使用「SnapDrive _esfconfig set <username><filername>_」新增儲存控制器時、SnapDrive 適用於UNIX的Sf2會將AutoSupport 一個「不實」訊息傳送至指定的儲存系統。
+* 當重新啟動或啟動此程式時、會將此資訊傳送至設定的儲存系統。SnapDrive AutoSupport
+* 當執行「SnapDrive flexstorage show」-all命令時、AutoSupport 會將該訊息傳送至所有已設定的儲存系統。
+* 當快照建立作業成功時、AutoSupport 會將此資訊傳送至儲存系統。
+

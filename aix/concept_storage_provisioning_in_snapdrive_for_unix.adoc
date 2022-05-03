@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_storage_provisioning_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provisioning 
+summary: 當您使用儲存資源配置時、可以使用SnapDrive 適用於UNIX的功能。適用於UNIX的解決方案可協助您建立儲存設備、並連接至現有的儲存系統或實體。SnapDrive 
+---
+= UNIX儲存資源配置SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您使用儲存資源配置時、可以使用SnapDrive 適用於UNIX的功能。適用於UNIX的解決方案可協助您建立儲存設備、並連接至現有的儲存系統或實體。SnapDrive

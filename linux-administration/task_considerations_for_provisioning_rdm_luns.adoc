@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/task_considerations_for_provisioning_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rdm, lun, provisioning 
+summary: UNIX版的供應RDM LUN需要考量幾個因素。SnapDrive 
+---
+= 配置RDM LUN的考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的供應RDM LUN需要考量幾個因素。SnapDrive
+
+* 驗證在客戶操作系統的'snapdrive.conf文件中，配置變量'default-transfit'是否設置爲'FCP（FCP）'。
+* 設定SnapDrive 適用於UNIX的功能、以存取適用於VMware vSphere的NetApp虛擬儲存主控台。
+* 確保在「snapdrive.conf」檔案中使用支援RDM LUN的組態變數。諸如「contact-viadmin-port、use-https-toe-viadmin、vif-password-file」和「virtualization operation-timeoutses=600」等變數、都是用於RDM LUN支援。
+
+
+*相關資訊*
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[受由功能不完善管理的RDM LUN限制SnapDrive]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[VMware VMotion支援SnapDrive UNIX版]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[設定適用於SnapDrive UNIX的虛擬儲存主控台]
+
+xref:concept_configuration_options_and_their_default_values.adoc[組態選項及其預設值]

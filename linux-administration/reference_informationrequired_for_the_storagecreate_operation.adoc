@@ -1,0 +1,261 @@
+---
+permalink: linux-administration/reference_informationrequired_for_the_storagecreate_operation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, operation 
+summary: 完成儲存建立作業時、您必須提供一些資訊。 
+---
+= 儲存建立作業所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成儲存建立作業時、您必須提供一些資訊。
+
+下表列出當您使用「SnapDrive ‘fuse storage create’命令建立儲存設備時、所需提供的資訊：
+
+|===
+| 需求 | 引數 
+
+
+ a| 
+決定您要配置的儲存設備類型。根據您輸入的命令、您可以建立下列任一項目：
+
+* LUN
++
+如果您建立一個或多個LUN、第一個引數必須使用長格式的LUN名稱、以指定儲存系統名稱、磁碟區名稱及磁碟區內LUN的名稱。
+
++
+若要指定其他LUN、如果新LUN位於與先前LUN相同的儲存系統和磁碟區、則可以單獨使用LUN名稱（簡稱）。否則、您可以指定新的儲存系統名稱和磁碟區名稱（或僅指定磁碟區名稱）來取代先前的值。
+
+* 直接在LUN上建立的檔案系統
++
+如果您在LUN上建立檔案系統、第一個引數必須是「_-FS_」掛載點。若要在儲存系統和磁碟區的LUN上建立檔案系統、請使用「-filervol_」引數、並指定儲存系統和磁碟區的名稱。若要在特定LUN上建立檔案系統、請使用「-LUN_」引數、並指定儲存系統名稱、磁碟區名稱和LUN名稱。您也必須加入「-nolvm」選項、才能在LUN上建立檔案系統、而不啟動主機LVM。
+
++
+根據預設、SnapDrive UNIX版的功能會自動執行與LUN主機準備和探索相關的所有工作、以及對應和連線至LUN。
+
++
+如果您在Linux主機上建立LUN、SnapDrive 則適用於UNIX的功能會執行下列動作：
+
++
+** 建立LUN。
+** 將LUN設定為一個分割區。
+
+
+
+
+
+NOTE: 如果您使用的是S10更新2、則會使用原始裝置來建立檔案系統。
+
+* 使用主機磁碟區和檔案系統的LVM磁碟群組
++
+當您指定磁碟或磁碟區群組、檔案系統、主機或邏輯Volume時、SnapDrive UNIX版的支援功能會執行所有必要的動作、以建立您指定的實體。您可以明確指定LUN、或只是提供儲存系統和Volume資訊、讓SnapDrive UNIX版的流通系統自動建立LUN。
+
++
+如果您要建立檔案系統等實體、則不需要提供磁碟或磁碟區群組的值。適用於UNIX的可自動建立一個。SnapDrive
+
+
+
+
+
+ a| 
+* LUN（-LUN）
+
+ a| 
+‘*長LUN名稱*’
+
+
+
+ a| 
+* 其他LUN
+
+ a| 
+「* lun_name*」（長格式或短格式）
+
+
+
+ a| 
+* 磁碟群組（`-dg * DGNAME *）或磁碟區群組（`-vg * vgname*）
+
+ a| 
+「*磁碟*」或「*磁碟區群組名稱*」
+
+
+
+ a| 
+UNIX版可建立磁碟或磁碟區群組、根據您使用「-dg」選項輸入的值來容納LUN。SnapDrive您為群組提供的名稱不得存在。
+
+
+
+ a| 
+* 主機磁碟區（`-hostvol* file_spec*）或邏輯磁碟區（`-lvol* file_spec*）
+
+ a| 
+「*主機*」或「*邏輯磁碟區名稱*」
+
+
+
+ a| 
+* 檔案系統（`-FS * file_spec*）
+
+ a| 
+文件系統名稱*
+
+
+
+ a| 
+-nolvm
+ a| 
+~
+
+
+
+ a| 
+*必要：*如果您要建立直接位於LUN上的檔案系統、請指定「-nolvm」選項。
+
+
+
+ a| 
+* LUN大小（`-lunsize-）
+
+ a| 
+規模*
+
+
+
+ a| 
+* 磁碟群組大小（`-DGSIZE）
+* Volume群組大小（`-vgSizer'）
+
+ a| 
+規模*
+
+
+
+ a| 
+為所建立的每個實體指定大小（以位元組為單位）或其他資料單位。LVM實體的大小取決於您要求的LUN集合大小。
+
+若要控制主機實體的大小、請使用「-DGSITY」選項來指定基礎磁碟群組的大小（以位元組為單位）。
+
+
+
+ a| 
+* 儲存系統磁碟區路徑（`-filervol'）
+
+ a| 
+`*long filer_path*
+
+
+
+ a| 
+* 「* LUN *」
+
+ a| 
+‘*長LUN路徑*’
+
+
+
+ a| 
+指定儲存系統及其磁碟區、SnapDrive 以便讓UNIX使用者能夠自動建立LUN。
+
+* 使用「-filervol」選項來指定您要在其中建立LUN的儲存系統和磁碟區。
++
+請勿指定LUN。當您使用這種形式的「還原儲存建立」命令時、適用於UNIX的可自動建立LUN。SnapDrive SnapDrive它使用系統預設值來判斷LUN ID及每個LUN的大小。它會根據主機磁碟區或檔案系統的名稱來建立相關磁碟/磁碟區群組的名稱。
+
+* 使用「-LUN」選項來命名您要使用的LUN。
+
+
+
+
+ a| 
+檔案系統類型（`-fstypy'）
+ a| 
+‘*類型*’
+
+
+
+ a| 
+如果您要建立檔案系統、請提供代表檔案系統類型的字串。
+
+UNIX版支援Linux：「_ext4_」或「ext3」SnapDrive
+
+
+NOTE: 根據預設、SnapDrive 如果您的主機平台只有一種檔案系統類型、則UNIX版的支援功能會提供此值。在這種情況下、您不需要輸入。
+
+
+
+ a| 
+vmtype
+ a| 
+‘*類型*’
+
+
+
+ a| 
+*選用：*指定用於SnapDrive UNIX作業的Volume Manager類型。
+
+
+
+ a| 
+「-fsopts」
+ a| 
+‘*選項名稱和值*’
+
+
+
+ a| 
+「mnttops」
+ a| 
+‘*選項名稱和值*’
+
+
+
+ a| 
+《業者》
+ a| 
+~
+
+
+
+ a| 
+保留|-noreserve
+ a| 
+~
+
+
+
+ a| 
+*選用：*如果您要建立檔案系統、可以指定下列選項：
+
+* 使用「-fsopts」指定您要傳遞至用於建立檔案系統之主機命令的選項。例如、您可以提供「mKFS」命令所使用的選項。您所提供的值通常必須是引號字串、而且必須包含要傳遞給命令的確切文字。
+* 使用「-mnterts」指定您要傳遞至主機掛載命令的選項（例如、指定主機系統記錄行為）。您指定的選項會儲存在主機檔案系統表格檔案中。允許的選項取決於主機檔案系統類型。
++
+mnterts參數是使用"mount"命令"-o"標記指定的檔案系統類型選項。請勿在「-mnterts_」引數中加入「-o」旗標。例如、一系列的「-mntops tmplog」會將字串「-o tmplog」傳遞至「mount"命令、並將文字tmplog插入新的命令列。
+
++
+如果將「enable mount-with -NETDEV」組態參數的值設為「Off」（關閉）（預設值）、您必須在「SnapDrive 停止儲存建立」命令中手動指定「-mnttops _NETDEV」。不過、如果您將值變更為「On」（開啟）、則當您執行「SnapDrive 循環儲存建立」命令時、系統會自動執行「-mnttops _NETDEV」（-mnttops _NETDEV）。
+
++
+
+NOTE: 如果您將任何無效的「_-mnttops_」選項用於儲存和快照作業、SnapDrive 則適用於UNIX的不能驗證這些無效的掛載選項。
+
+* 使用「-noperersist」建立檔案系統、而不將項目新增至主機上的檔案系統掛載表格檔案（例如Linux上的「Fstab」）。根據預設、「SnapDrive flexiStorage create」命令會建立持續掛載。當您在Linux主機上建立LVM儲存實體時、SnapDrive 適用於UNIX的Sfor UNIX會自動建立儲存設備、掛載檔案系統、然後在主機檔案系統表格中放置檔案系統的項目。在Linux系統上SnapDrive 、UNIX版的支援功能會在主機檔案系統表中新增一個UUID。
+* 使用「-Reserve |-noreserve」建立儲存設備、無論是否建立空間保留。
+
+
+
+
+ a| 
+* igroup名稱（`*—igroup*）
+
+ a| 
+hy*ig名稱*
+
+
+
+ a| 
+*選用：* NetApp建議您使用主機的預設igroup、而非提供igroup名稱。
+
+|===

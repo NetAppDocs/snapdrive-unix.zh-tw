@@ -1,0 +1,104 @@
+---
+permalink: linux-administration/reference_snapshot_operation_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, command, unix 
+summary: UNIX版的指令可用於Snapshot作業。SnapDrive 
+---
+= Snapshot作業命令列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的指令可用於Snapshot作業。SnapDrive
+
+下表提供Snapshot作業的各種命令列選項。
+
+|===
+| 營運 | 命令列選項 
+
+
+ a| 
+建立
+ a| 
+「SnapDrive 功能區建立（-LUN |-dg |-vg |-hostvol |-lvol |-fs）_file_spec_[file_spec...」 [｛-LUN |-dg |-vg |-hostvol |-lvol |-fs｝_file_spec_[file_spec...] ...] -snapname _snap_name_[-force [-nosup][不相關的][-fstype][-vmtype類型]
+
+
+
+ a| 
+顯示/列出
+ a| 
+「SnapDrive 功能不全｛show | list｝-filervol _filervol_[_filervol..._][-verbose]」
+
+
+
+ a| 
+「SnapDrive 功能不全｛show | list｝[-verbose]｛-vg |-dg |-fs |-lvolv |-hostvol｝_file_spec_[file_spec...] [-fstyp類型][-vmtype類型]
+
+
+
+ a| 
+「SnapDrive 快照[-verbose][-snapname]_long快照名稱_[snap_name ...]"
+
+
+
+ a| 
+「SnapDrive 快照｛show | list｝[-verbose][-lun |-vg |-dg |-fs |-lvol |-hostvol]_file_spec_[file_spec...]」
+
+
+
+ a| 
+連線
+ a| 
+「SnapDrive 快照連線-LUN _s_lun_named_lun_name_[-lun]_s_lun_named_lun_name ..._]-snapname _long_snap_name _[-sipv][-clone｛lunclone | optimal | unreacted｝][-prefixfvprefistr][-verbose]
+
+
+NOTE: 在「Snapsnap Connect」命令中、LUN名稱的格式應為「LUN_NAME」或「qtree名稱/LUN_name」SnapDrive 。
+
+
+
+ a| 
+「SnapDrive fsnap connect _fspec_Set_[_fspec_set..._]-snapname _long_snap_name_[-autodel][-autorenamen][-nopersist][-mntopts選項][{-Reserve |-noreserve}][-readonef][-verbosit][-clone {lunclone｛lunclone | optimplate | optim
+
+[NOTE]
+====
+fspec_set引數的格式如下：
+
+「-vg |-dg |-FS |-lvol |-hostvol]_src/file_spec_[_dest_file_spec_][{-destdg |-destvg} dgname」[{-destlv |-desthv} lvname]
+
+====
+
+
+ a| 
+重新命名
+ a| 
+「SnapDrive 快照重新命名-[snapname ]_old_long快照名稱new_snap名稱_[-force [-nos提示]]」
+
+
+
+ a| 
+還原
+ a| 
+「SnapDrive 還原功能」（-LUN |-dg |-vg |-hostvol |-lvol |-FS |-file]_file_spec_[file_spec...） [｛-LUN |-dg |-vg |-hostvol |-lvol |-FS |-file｝_file_spec_[file_spec ...] ...] -snapname _snap_name_[-force [-nospromp][-mnterts options][{-Reserve |-noreserve}][-vbsr [預覽|執行]]]
+
+
+
+ a| 
+中斷連線
+ a| 
+「SnapDrive 快照中斷連線-LUN _long lun_name_[_lun_name..._][-fstype][-vmtype類型][-sep]」
+
+
+
+ a| 
+「SnapDrive 抓取中斷連線｛-dg |-vg |-hostvol |-lvol |-FS｝_file_spec_[file_spec...」 [｛-dg |-vg |-hostvol |-lvol |-fs｝_file_spec_[file_spec ...] ...] [-f完整][-fsttype類型][-vmtype類型][-split]
+
+
+
+ a| 
+刪除
+ a| 
+「SnapDrive 快照刪除[-snapname]_long快照名稱_[_snap名稱..._][-verbose][-force [-nosprompt]]」
+
+|===

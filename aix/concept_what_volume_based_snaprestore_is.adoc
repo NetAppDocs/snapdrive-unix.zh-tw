@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_what_volume_based_snaprestore_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume 
+summary: Volume型SnapRestore 功能（VBRSR）會還原含有所有儲存物件的磁碟區。磁碟區型還原速度比個別還原的每個儲存物件快。VBRSR也可搭配FlexClone Volume和VFiler組態使用。適用於VFiler的VBRSR適用於Data ONTAP 不含更新版本的版本。 
+---
+= 什麼是Volume型SnapRestore 的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Volume型SnapRestore 的功能（VBRSR）可還原含有所有儲存物件的Volume。磁碟區型還原速度比個別還原的每個儲存物件快。VBRSR也可搭配FlexClone Volume和VFiler組態使用。適用於VFiler的VBRSR適用於Data ONTAP 不含更新版本的版本。
+
+適用於UNIX和更早版本的Sf3.0可還原主機端實體的LUN、例如檔案系統、磁碟群組和主機磁碟區、或是透過NFS從應用程式一致的快照建立的一般檔案。SnapDriveUNIX版使用單一檔案Snap Restore SFSR、實作於還原。SnapDrive Data ONTAPSFSR的運作方式如下：
+
+* 對於在SFSR進行期間的一般檔案、任何嘗試變更檔案的作業都會暫停、直到SFSR完成為止。
+* 對於LUN、當SFSR繼續進行時、LUN可用且允許I/O（讀取和寫入）。根據LUN的大小或要還原的檔案、一般檔案和LUN的SFSR可能需要很長時間。
+
+
+因此、對於某些環境而言、SFSR是一項阻礙。
+
+適用於UNIX及更新版本的支援區4.0可讓您取得Volume型Snapshot複本。SnapDriveVBRSR速度快得多、需要的CPU和儲存資源也較少。它會還原作用中檔案系統上的所有資料。如果使用者想要從同一個Snapshot複本還原磁碟區上的所有LUN或一般檔案、則可使用此功能。
+
+基於Volume的Snapshot複本應謹慎使用、因為會刪除用於還原作業的Volume Snapshot複本之後所取得的所有Snapshot複本。必須刪除在此磁碟區上建立的所有新檔案和新LUN。

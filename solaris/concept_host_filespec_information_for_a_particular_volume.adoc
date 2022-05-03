@@ -1,0 +1,52 @@
+---
+permalink: solaris/concept_host_filespec_information_for_a_particular_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, filespec, volume 
+summary: 作爲Volume Restore預覽報告的一部分、適用於UNIX會顯示LUN對應資訊。SnapDrive此顯示資訊與檢查相關、且會還原一般檔案。在特定磁碟區上找出所有以LUN為基礎的主機檔案、是一項耗時的程序、會拖慢磁碟區還原程序。 
+---
+= 特定磁碟區的主機檔案資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+作爲Volume Restore預覽報告的一部分、適用於UNIX會顯示LUN對應資訊。SnapDrive此顯示資訊與檢查相關、且會還原一般檔案。在特定磁碟區上找出所有以LUN為基礎的主機檔案、是一項耗時的程序、會拖慢磁碟區還原程序。
+
+如果您想知道對應至特定儲存系統Volume之本機主機的主機檔案資訊、可以使用「SnapDrive 支援儲存設備show -filervol <Full-volume名稱>」。以下為此範例。
+
+[listing]
+----
+#snapdrive storage show -filervol bart:/vol/volusecase2
+
+Connected LUNs and devices:
+
+ device filename        adapter path    size    proto   state   clone   lun path           backing snapshot
+----------------        ------- ----    ----    -----   -----   -----   --------                        ----------------
+/dev/sdg                  -     P       100m    iscsi   online   No     bart:/vol/volusecase2/lun5          -
+
+Host devices and file systems:
+
+dg: vbsrfs_1_SdDg               dgtype lvm
+hostvol: /dev/mapper/vbsrfs_1_SdDg-vbsrfs_1_SdHv        state: AVAIL
+fs: /dev/mapper/vbsrfs_1_SdDg-vbsrfs_1_SdHv     mount point: /mnt/vbsrfs_1 (persistent) fstype ufs
+
+ device filename     adapter path    size    proto   state   clone   lun path           backing snapshot
+----------------        ------- ----    ----    -----   -----   -----   --------                        ----------------
+/dev/sdbe                 -     P       100m    iscsi   online   No     bart:/vol/volusecase1/lun9_0        -
+/dev/sdbf                 -     P       100m    iscsi   online   No     bart:/vol/volusecase2/lun4_0        -
+
+raw device: /dev/sdbr1  mount point: /mnt/fs11 (persistent) fstype ufs
+
+ device filename     adapter path    size    proto   state   clone   lun path           backing snapshot
+----------------        ------- ----    ----    -----   -----   -----   --------                        ----------------
+/dev/sdbr                 -     P       200m    iscsi   online   No     bart:/vol/volusecase2/fs11_SdLun    -
+
+NFS device: bart:/vol/volusecase1        mount point: /mnt/volusecase1 (non-persistent)
+
+LUNs not connected to this host:
+
+ lun path                                           size   state
+ -----------------------------               ------ ------
+ bart:/vol/volusecase2/lunotherhost 20m   online
+----

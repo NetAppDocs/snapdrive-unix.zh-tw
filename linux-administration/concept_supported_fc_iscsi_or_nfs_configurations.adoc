@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_supported_fc_iscsi_or_nfs_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fc, iscsi, nfs, support, ha, host, cluster 
+summary: 適用於UNIX的支援主機叢集和HA配對拓撲。SnapDriveFC或iSCSI組態支援FC主機公用程式或iSCSI主機公用程式所支援的相同主機叢集和HA配對組態。 
+---
+= 支援的FC、iSCSI或NFS組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援主機叢集和HA配對拓撲。SnapDriveFC或iSCSI組態支援FC主機公用程式或iSCSI主機公用程式所支援的相同主機叢集和HA配對組態。
+
+適用於UNIX的支援下列主機叢集和HA配對拓撲：SnapDrive
+
+* 獨立組態、其中單一主機連接至單一儲存系統
+* 任何涉及儲存系統HA配對容錯移轉的拓撲
+* 具有NetApp支援之主機叢集的任何拓撲
+
+
+如需主機與所使用儲存系統的建議組態相關資訊、請參閱Linux主機公用程式文件。
+
+
+NOTE: 如果您需要SnapDrive 公用程式文件中未提及的UNIX版支援功能、請聯絡技術支援部門。

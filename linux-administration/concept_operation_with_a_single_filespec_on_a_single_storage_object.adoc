@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_operation_with_a_single_filespec_on_a_single_storage_object.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, filespec, single, storage, object 
+summary: 當您不是在指定磁碟區上建立檔案的授權使用者時、適用於UNIX會顯示錯誤訊息。SnapDrive 
+---
+= 在單一儲存物件上使用單一檔案總管進行作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您不是在指定磁碟區上建立檔案的授權使用者時、適用於UNIX會顯示錯誤訊息。SnapDrive
+
+filespec：filespec可以是檔案系統、主機磁碟區、磁碟群組或LUN._
+
+[listing]
+----
+[john]$ snapdrive storage create -fs /mnt/testfs -filervol storage_array1:/vol/vol1 -dgsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user unix_host\john on Operations Manager server ops_mngr_server
+----
+在此範例中、John是非root使用者、無權在指定的Volume上建立檔案。John必須要求Operations Manager主控台管理員授予「第一次儲存設備寫入」存取權、以存取磁碟區「第一次儲存空間：/vol/vol1」。

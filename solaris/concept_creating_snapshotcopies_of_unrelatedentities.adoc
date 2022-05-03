@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_creating_snapshotcopies_of_unrelatedentities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, unrelated, create 
+summary: 適用於UNIX的透過維護個別損毀一致的Snapshot複本、來建立不相關實體的Snapshot複本。SnapDrive 
+---
+= 建立不相關實體的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的透過維護個別損毀一致的Snapshot複本、來建立不相關實體的Snapshot複本。SnapDrive
+
+除非您另有指定、SnapDrive 否則針對UNIX的解決方法假設您在特定SnapDrive 的esfsnap create命令列上指定的所有實體都是相關的、換句話說、更新某個實體的有效性取決於對其他指定實體的更新。當儲存實體以這種方式進行相依寫入時、SnapDrive 適用於UNIX的功能會採取步驟來建立Snapshot複本、使所有儲存實體的群組當機狀況一致。
+
+以下範例說明SnapDrive UNIX的功能如何建立可能具有相依寫入的儲存實體Snapshot複本。在下列範例中、SnapDrive 「flexfsnap create」命令會指定LUN上的檔案系統、以及磁碟群組。磁碟群組包含位於單一儲存系統上的LUN（請參閱建立Snapshot複本）。LUN上的檔案系統位於不同的儲存系統和儲存系統磁碟區。檔案系統和磁碟群組以群組形式橫跨多個儲存系統磁碟區、但個別的磁碟區則不會。
+
+下列命令會指定Snapshot複本、其中包含檔案系統「/mnt/fs1」和磁碟群組DG1：SnapDrive fssnap create -fs /mnt/fs1 -dg DG1 -snapname fs1_DG1'
+
+由於這些儲存實體可能具有相依寫入、SnapDrive 因此UNIX版的Fsite-for UNIX會嘗試建立損毀一致的Snapshot複本、並將檔案系統/mnt/fs1和磁碟群組DG1視為群組。這表示SnapDrive 需要UNIX版的功能才能在建立Snapshot複本之前、凍結儲存系統磁碟區的I/O作業。
+
+在各磁碟區之間為多個儲存實體建立損毀一致的Snapshot複本需要更多時間、而且SnapDrive 如果UNIX版的無法凍結I/O作業、則不一定能這麼做。由於如此、SnapDrive UNIX版的功能可讓您建立不相關儲存實體的Snapshot複本。不相關的儲存實體是指在拍攝Snapshot複本時、您可以指定不具有相依寫入的實體。由於實體沒有相依寫入、SnapDrive 所以UNIX版的功能無法採取步驟、使實體成為群組一致。而針對UNIX的功能則是建立Snapshot複本、讓每個個別儲存實體的當機狀況一致。SnapDrive
+
+下列命令會指定LUN上檔案系統的Snapshot複本、以及先前所述的磁碟群組。由於指定了不相關的選項、SnapDrive 所以針對UNIX而言、支援使用者可建立Snapshot複本、其中檔案系統/mnt/fs1和磁碟群組DG1會以個別儲存實體的形式當機、但不會視為群組。下列命令不需要SnapDrive 用到UNIX來凍結儲存系統磁碟區上的I/O作業：「SnapDrive /sfsnap create -FS /mnt/fs1 -dg dg1 -instructioned-snapname fss1_g1」
+
+*相關資訊*
+
+xref:task_creating_asnapshot_copy.adoc[建立Snapshot複本]

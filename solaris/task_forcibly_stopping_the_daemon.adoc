@@ -1,0 +1,23 @@
+---
+permalink: solaris/task_forcibly_stopping_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, forcibly, stop, daemon, command 
+summary: 當您不想等待所有命令完成執行時、可以強制停止精靈。收到強制停止精靈的要求後、SnapDrive for UNIX精靈會取消執行中或佇列中的任何命令。當您強制停止精靈時、系統狀態可能未定義。不建議使用此方法。 
+---
+= 強制停止精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您不想等待所有命令完成執行時、可以強制停止精靈。收到強制停止精靈的要求後、SnapDrive for UNIX精靈會取消執行中或佇列中的任何命令。當您強制停止精靈時、系統狀態可能未定義。不建議使用此方法。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 強制停止精靈：
++
+快照的-force stop（停止）*
+
+

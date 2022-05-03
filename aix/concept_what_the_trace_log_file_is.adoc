@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_what_the_trace_log_file_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, trace, log, file 
+summary: 技術支援使用追蹤記錄檔來疑難排解問題。 
+---
+= 追蹤記錄檔的內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+技術支援使用追蹤記錄檔來疑難排解問題。
+
+啟用追蹤記錄檔不會影響系統效能。預設會啟用此檔案。您可以將「已啟用磁碟機.conf追蹤」變數設定為「關」、以停用此功能。

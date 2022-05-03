@@ -1,0 +1,32 @@
+---
+permalink: aix/concept_how_to_manage_snapshot_copies_of_lvm_vxvm_raw_devices_and_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, raw, device, nfs, entities, copy, snapshot 
+summary: 您可以使用SnapDrive esfuse命令來建立、還原及管理LVM、原始裝置和NFS實體的Snapshot複本。 
+---
+= 如何管理LVM、原始裝置和NFS實體的Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive esfuse命令來建立、還原及管理LVM、原始裝置和NFS實體的Snapshot複本。
+
+您必須在主機上執行命令、才能建立、還原及管理儲存實體的Snapshot複本。
+
+* Volume Manager實體
++
+Volume Manager實體是使用主機Volume Manager建立的具有主機磁碟區和檔案系統的磁碟群組。
+
+* 原始實體
++
+原始實體為LUN或LUN、其中包含檔案系統、而不建立任何磁碟區或磁碟群組、直接對應至主機。
+
+* NFS實體
++
+NFS實體為NFS檔案和目錄樹狀結構。
+
+
+
+您建立的Snapshot複本可存在於多個儲存系統和儲存系統磁碟區。針對Snapshot複本中的儲存實體檢查讀取或寫入權限、以確保所有Snapshot複本資料均損毀一致。SnapDrive除非資料損毀一致、否則無法建立Snapshot複本。SnapDrive

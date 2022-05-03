@@ -1,0 +1,49 @@
+---
+permalink: aix/reference_preconfigured_roles_for_ease_of_user_role_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, user, role, configuration 
+summary: 預先設定的角色可簡化指派角色給使用者的工作。 
+---
+= 預先設定的角色、可輕鬆設定使用者角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預先設定的角色可簡化指派角色給使用者的工作。
+
+下表列出預先定義的角色：
+
+|===
+| 角色名稱 | 說明 
+
+
+ a| 
+GlobalSDStorage
+ a| 
+利用適用於UNIX的解決方法管理儲存設備SnapDrive
+
+
+
+ a| 
+GlobalSDConfig
+ a| 
+利用UNIX版的解決方法來管理組態SnapDrive
+
+
+
+ a| 
+GlobalSDSnapshot
+ a| 
+使用SnapDrive 適用於UNIX的功能來管理Snapshot複本
+
+
+
+ a| 
+GlobalSDFullControl
+ a| 
+完整使用SnapDrive 適用於UNIX的功能
+
+|===
+在上表中、Global是指Operations Manager主控台所管理的所有儲存系統。

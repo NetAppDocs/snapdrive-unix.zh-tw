@@ -1,0 +1,104 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_snapshow_or_list_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, show, list, command, information, required 
+summary: 您可以使用命令SnapDrive fisfsnap show或list來顯示有關儲存系統、儲存系統磁碟區、磁碟或磁碟區群組、檔案系統、 Snapshot複本等。 
+---
+= 使用SnapDrive 「資訊」snap show或list命令所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用命令「SnapDrive flexsnap show」或「list」來顯示儲存系統、儲存系統磁碟區、磁碟或磁碟區群組、檔案系統、 Snapshot複本等。
+
+下表提供您使用「SnapDrive show | list」命令時所需提供的資訊。
+
+
+NOTE: 無論您是輸入SnapDrive 「Sfsnap show」SnapDrive 或「Sfsnap list」作為命令、都可以使用相同的引數。這些命令是同義字。
+
+|===
+| 需求/選項 | 引數 
+
+
+ a| 
+根據您輸入的命令、您可以顯示下列任一項目的相關資訊：
+
+* 儲存系統
+* 儲存系統磁碟區
+* 磁碟或磁碟區群組
+* 檔案系統
+* 主機或邏輯磁碟區
+* Snapshot複本
+
+
+您為「file_spec」引數輸入的值、必須識別您要顯示其資訊的儲存實體。此命令假設實體位於目前主機上。
+
+
+
+ a| 
+儲存系統（？檔案管理器）
+ a| 
+Filername_`
+
+
+
+ a| 
+儲存系統上的磁碟區（「-filervol」）
+ a| 
+Filervol_'
+
+
+
+ a| 
+磁碟群組（`-dg _file_spec_`）或磁碟區群組（`-vg _file_spec_`）
+ a| 
+磁碟或磁碟區群組的名稱
+
+
+
+ a| 
+檔案系統（`-FS _file_spec_`）
+ a| 
+文件系統名稱
+
+
+
+ a| 
+主機磁碟區（`-hostvol_file_spec_`）或邏輯磁碟區（`-lvol_file_spec_`）
+ a| 
+主機或邏輯Volume的名稱
+
+
+
+ a| 
+Snapshot複本名稱（`-snapname _long快照名稱_）
+ a| 
+h_long快照名稱_
+
+
+
+ a| 
+其他Snapshot複本名稱
+ a| 
+「_snap_name_'（長版或短版）
+
+
+
+ a| 
+如果您要顯示Snapshot複本的相關資訊、請指定Snapshot複本的名稱。對於第一個Snapshot複本、「_long快照名稱」、請輸入名稱的長版本、其中包括儲存系統名稱、Volume和Snapshot複本名稱。如果Snapshot複本名稱位於同一個儲存系統和磁碟區、您可以使用該名稱的簡短版本。
+
+
+
+ a| 
+「verbose」
+ a| 
+~
+
+
+
+ a| 
+若要顯示其他資訊、請加入「-verbose」選項。
+
+|===

@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_fc_or_iscsi_configuration_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fc, iscsi, configuration 
+summary: 雖然光纖通道傳輸協定（FCP）和網際網路小型電腦系統介面（iSCSI）曾經以獨立公用程式的形式散佈、但您可以在Solaris主機公用程式中找到FCP和iSCSI組態支援。 
+---
+= FC或iSCSI組態檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+雖然光纖通道傳輸協定（FCP）和網際網路小型電腦系統介面（iSCSI）曾經以獨立公用程式的形式散佈、但您可以在Solaris主機公用程式中找到FCP和iSCSI組態支援。
+
+如果您的組態使用FC或iSCSI、則必須先完成下列工作、才能安裝SnapDrive 適用於UNIX的版本：
+
+* 請確定您已在主機系統上安裝Solaris主機公用程式。
+* 設定主機和儲存系統。
++
+若要與主機搭配使用、請遵循儲存系統主機公用程式隨附文件中的指示。包含多重路徑或Volume Manager軟體的組態必須使用Solaris Host Utilities和SnapDrive UNIX版支援的軟體。
+
+
+
+
+NOTE: 有關UNIX版的最新SnapDrive 資訊及其需求、請參閱互通性對照表。
+
+*相關資訊*
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

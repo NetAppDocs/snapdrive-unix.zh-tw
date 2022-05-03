@@ -1,0 +1,78 @@
+---
+permalink: aix/task_installing_snapdrive_for_unix_on_an_aix_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, host, unix 
+summary: 您可以使用系統管理介面工具（Smit）在SnapDrive AIX主機上安裝適用於UNIX的功能。 
+---
+= 在SnapDrive AIX主機上安裝適用於UNIX的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用系統管理介面工具（Smit）、在SnapDrive AIX主機上安裝適用於UNIX的功能。
+
+您必須確保以root使用者身分登入。
+
+
+IMPORTANT: 您不應該刪除SnapDrive 安裝了UNIX版的目錄。如果刪除目錄、啟動和停止精靈可能會發生問題。
+
+.步驟
+. 請從NetApp支援網站下載軟體。
+. 切換到您放置未壓縮「NetApp.SnapDrive _AIX_5_2.z檔案」的目錄。
+. 執行下列命令來啟動Smit：
++
+* smit *
+
+. 選擇*軟體安裝與維護*選項。
+. 在下一個畫面中、選取*安裝與更新軟體*功能表選項。
+. 在Install Software（安裝軟體）畫面中、以下列其中一種方式指定軟體的位置：
++
+** 手動輸入軟體位置的路徑。
+** 按下f4以顯示選項清單。
+
+
++
+如果您要使用f4方法、請完成下列步驟：
+
++
+.. 按下f4。
+.. 在詢問您要安裝哪個軟體的提示下、輸入：
++
+「NetApp」。SnapDrive*。
+
+.. 出現詢問您是否要繼續或取消的提示時、請按Enter完成安裝。
+
+
+. 使用「lslpp -l NetApp.SnapDrive」命令來驗證軟體套件安裝。
+. 為SnapDrive 系統設定適用於UNIX的功能、以完成設定。
++
+大部分資訊都是預設設定的、但您需要指定下列資訊：
+
++
+.. 儲存系統的登入資訊
+.. 還原設定AutoSupport
+.. 根據您使用的是FC傳輸協定或iSCSI傳輸協定、為下列選項SnapDrive for UNIX設定正確的組態值：
++
+*** 「預設傳輸」
++
+視傳輸協定而定、選取「FCP」或「iSCSI」。
+
+*** 「多路徑類型」
++
+對於FC、請將其設為下列任一值：
+
++
+**** 《NativeMPIO》
+**** 《DMP》
+
+
+
+
+
+
++
+對於iSCSI、請將其設為「NativeMPIO」或「DMP」。
+
+

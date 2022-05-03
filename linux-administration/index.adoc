@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/index.html 
+sidebar: sidebar 
+keywords: index, snap, snapdrive, administration, guide 
+summary: 本指南說明SnapDrive 如何在部署完成後、在Linux環境中管理適用於UNIX的功能。 
+---
+= Linux®系統管理指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南說明如何在SnapDrive 部署完成後、在Linux環境中管理適用於UNIX的NetApp功能。
+
+主題包括如何設定產品、如何建立及複製Snapshot複本、如何升級及解除安裝產品、以及CLI命令的說明。

@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_guidelines_fordisconnectingsnapshot_copies_for_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, nfs, disconnect, host, command 
+summary: Snapshot複本的中斷連線作業可從主機叢集環境中的任何節點執行。使用命令選項可中斷儲存實體與特定節點的連線。 
+---
+= 中斷NFS實體Snapshot複本連線的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot複本的中斷連線作業可從主機叢集環境中的任何節點執行。使用命令選項可中斷儲存實體與特定節點的連線。
+
+當中斷包含NFS實體的Snapshot複本時、請遵循下列準則：
+
+* 如果您中斷以唯讀權限連線的NFS目錄樹狀結構、SnapDrive 則適用於UNIX的Sfor UNIX會執行下列動作：
++
+** 卸載檔案系統。
+** 移除檔案系統表格檔案中的掛載項目。
+** 移除掛載點。
+** 不會移除Snapshot複本目錄的匯出規則、此目錄是在從次要主機（父磁碟區上沒有匯出權限的主機）連接NFS檔案時建立的。
+
+
+* 如果您中斷連接具有讀寫權限的NFS目錄樹狀結構、SnapDrive 則適用於UNIX的Sfor UNIX會執行下列動作：
++
+** 卸載檔案系統。
+** 移除檔案系統表格檔案中的掛載項目。
+** 刪除FlexVol 對應於檔案系統的NFS目錄樹狀目錄、以供執行此動作。
+** 銷毀基礎FlexVol 的實體磁碟區複製（如果是空的）。
+** 移除掛載點。
+
+
+

@@ -1,0 +1,58 @@
+---
+permalink: solaris/task_setting_up_an_sfrac_i_o_fencing_environment_on_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, sfrac, fencing, environment, storage 
+summary: 適用於UNIX的支援功能提供儲存資源配置和Snapshot管理選項、可在SFRAC環境中管理整個叢集的共用磁碟群組和節點本機磁碟群組、以及檔案系統。SnapDrive 
+---
+= 在儲存系統上設定SFRAC I/O隔離環境
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能提供儲存資源配置和Snapshot管理選項、可在SFRAC環境中管理整個叢集的共用磁碟群組和節點本機磁碟群組、以及檔案系統。SnapDrive
+
+.步驟
+. 手動設定「rsh」或「sh」、以針對所有主機叢集節點上的root使用者、使用不含密碼的存取提示。
++
+如需設定指示、請參閱_Veritas Cluster Server Installation Guide for Solaris。
+
+. 在SnapDrive 主機叢集中的所有節點上安裝適用於UNIX的功能。
++
+如果SnapDrive 不同節點上安裝不同版本的UNIX版、SnapDrive 則無法執行UNIX版的功能。
+
+. 檢查儲存系統之間的FC連線能力。
++
+若要瞭解主機的硬體需求、請參閱SFRAC _Release Notes_。
+
++
+
+NOTE: 所有節點上的「/opt/NTAPsnapdrive/SnapDrive.conf」檔案必須將「預設傳輸」組態變數設定為FCP。
+
+. 設定「叢集節點之間的安全通訊」組態變數的值、以確保為叢集中的所有節點設定「rsh」或「sh」存取、而不需密碼提示。
++
+此值是必要的、因為如果您從SnapDrive 主機叢集中的任何節點（主節點或非主節點）啟動UNIX適用的功能、SnapDrive 則適用於UNIX會在主機叢集中的其他節點上執行作業。
+
+. 在主機叢集中的每個節點上執行下列命令、檢查主機叢集節點上的裝置探索：
++
+hy* SnapDrive 實體儲存設備create -lun _long_lun_name_[_lun_name..._]-lunsize [{_-reserved_|-noreserve_}][_-igroup ig_name_[_ig_name ..._]*
+
++
+[listing]
+----
+
+	# snapdrive storage create -lun f270-197-109:/vol/vol2/luntest -lunsize 20m
+
+		LUN f270-197-109:/vol/vol2/luntest ... created
+
+		mapping new lun(s) ... done
+		discovering new lun(s) ... done
+
+		LUN to device file mappings:
+	-f270-197-109:/vol/vol2/luntest => /dev/vx/dmp/c5t0d6s2
+
+	# snapdrive storage delete -lun f270-197-109:/vol/vol2/luntest -lunsize 20m
+	- LUN f270-197-109:/vol/vol2/luntest ... deleted
+----
+

@@ -1,0 +1,36 @@
+---
+permalink: solaris/concept_guidelines_forsnapshot_copycreation.html 
+sidebar: sidebar 
+keywords: snap, snapshot, snapdrive, copy, create 
+summary: 使用SnapDrive 適用於UNIX的功能建立Snapshot複本時、請考量下列事項。每個Volume最多可保留255個Snapshot複本、SnapDrive UNIX版的支援僅支援所建立的Snapshot複本、無法建立根磁碟群組的Snapshot複本、以及開機裝置或交換裝置、SnapDrive 而UNIX版的for UNIX則需要凍結作業來維持損毀一致性。 
+---
+= 建立Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用SnapDrive 適用於UNIX的功能建立Snapshot複本時、請考慮下列事項： 每個Volume最多可保留255個Snapshot複本、SnapDrive UNIX版的支援僅支援所建立的Snapshot複本、無法建立根磁碟群組的Snapshot複本、以及開機裝置或交換裝置、SnapDrive 而UNIX版的for UNIX則需要凍結作業來維持損毀一致性。
+
+當您輸入建立Snapshot複本的命令時、請遵循下列準則：
+
+* 每個儲存系統磁碟區最多可保留255個Snapshot複本。此限制由儲存系統設定。總數視其他工具是否使用這些Snapshot複本而定。
++
+當Snapshot複本數量達到上限時、Snapshot建立作業就會失敗。您必須先刪除部分舊的Snapshot複本、才能使用SnapDrive for UNIX來繼續拍攝。
+
+* UNIX版不支援它不建立的Snapshot複本。SnapDrive例如、它不支援從儲存系統主控台建立的Snapshot複本、因為這種做法可能會導致檔案系統內部發生不一致的情況。
+* 您無法使用SnapDrive 適用於UNIX的功能來建立下列項目的Snapshot複本：
++
+** 根磁碟群組
++
+當您嘗試為LVM取得根磁碟群組的Snapshot複本時、Snapshot建立作業會失敗。
+
+** 開機裝置或交換裝置
++
+UNIX版不會取得系統開機裝置或系統交換裝置的Snapshot複本。SnapDrive
+
+
+
+* 當Snapshot複本橫跨多個儲存系統或儲存系統磁碟區時、SnapDrive 適用於UNIX的解決方案需要凍結作業、才能確保當機一致性。如需在未提供凍結作業的組態上建立Snapshot複本的相關資訊、
+

@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_considerations_forrestoring_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: 還原Snapshot複本之前、請確定您沒有使用檔案系統、而且不會中斷還原程序。 
+---
+= 還原Snapshot複本的考量事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原Snapshot複本之前、請確定您沒有使用檔案系統、而且不會中斷還原程序。
+
+還原Snapshot複本之前、請先考量下列重要資訊：
+
+* 確保您不在要還原的檔案系統上的任何目錄中。您可以SnapDrive 從任何目錄執行「還原資料」命令、但檔案系統上您要還原資訊的目錄除外。
+* 請勿輸入Ctrl-C來中斷還原作業這樣做可能會使您的系統處於無法使用的組態。如果發生這種情況、您可能必須聯絡NetApp技術支援部門以進行恢復。
+* 將NFS實體匯出至磁碟區時、請將匿名使用者ID選項設為「0」、以SnapDrive 使「還原功能」命令順利運作。
+

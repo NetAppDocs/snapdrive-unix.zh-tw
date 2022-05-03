@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_restoring_a_single_storage_entity_on_a_storage_system_or_storagesystem_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy, ha, storage, pair 
+summary: 您可以還原包含單一儲存實體的Snapshot複本。 
+---
+= 還原儲存系統或儲存系統HA配對上的單一儲存實體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以還原包含單一儲存實體的Snapshot複本。
+
+您可以還原Snapshot複本、其中包含位於儲存系統或儲存系統HA配對上的單一儲存實體。目的地儲存系統上的磁碟區名稱必須與來源儲存系統上的磁碟區名稱相符。

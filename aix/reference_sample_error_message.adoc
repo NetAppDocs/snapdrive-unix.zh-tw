@@ -1,0 +1,24 @@
+---
+permalink: aix/reference_sample_error_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, sample, error, message 
+summary: 這是SnapDrive UNIX版的錯誤訊息。 
+---
+= 範例錯誤訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這是SnapDrive UNIX版的錯誤訊息。
+
+下列訊息指出命令提示字元發生問題。訊息ID為0001-377。
+
+[listing]
+----
+Return Code: 43
+
+0001-377 Command error: Disk group name dg2 is already in use or
+conflicts with another entity.
+----

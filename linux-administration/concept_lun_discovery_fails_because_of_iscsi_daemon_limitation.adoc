@@ -1,0 +1,89 @@
+---
+permalink: linux-administration/concept_lun_discovery_fails_because_of_iscsi_daemon_limitation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, discovery, fail, iscsi, daemon, limitation 
+summary: UNIX命令無法在連續多次迭代後發現LUN。SnapDrive 
+---
+= 由於iSCSI精靈限制、LUN探索失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX命令無法在連續多次迭代後發現LUN。SnapDrive
+
+您可能會看到下列錯誤訊息。
+
+[listing]
+----
+0000-001 Admin error: iscsi transport protocol has dropped sessions in the host. Please ensure the connection and the service in the storage system.
+----
+這是因為下列主機的iSCSI精靈限制所造成：
+
+* Red Hat Enterprise Linux 4.0
+* Oracle Enterprise Linux 4.0
+
+
+
+
+== 因應措施
+
+[listing]
+----
+Before modifying the following system parameters, contact the OS vendor.
+----
+. 將「* fs.file-max-*」參數新增至「/etc/syscl.conf」檔案。
++
+以下是命令列的範例。
+
++
+[listing]
+----
+# sysctl -w fs.file-max=65536
+----
++
+
+NOTE: 我們建議將參數值設為「65536」、但您也可以根據主機上的應用程式來設定值。
+
+. 將「65536」指派給「* fs.file-max-*」參數。
+. 更新root使用者UNIX帳戶的預設Shell「Start-Up」檔案。
++
+** 對於Bourne、Bash或Korn Shell、請執行下列命令、將下列行新增至「/etc/profile」檔案：
++
+[listing]
+----
+cat >> /etc/profile <<EOF
+if [ \$USER = "root" ]; then
+if [ \$SHELL = "/bin/ksh" ]; then
+ulimit -p 16384
+ulimit -n 65536
+else
+ulimit -u 16384 -n 65536
+fi
+umask 022
+fi
+EOF
+----
+** 對於C shell（csh或tcsh）、請執行下列命令、將下列行新增至/etc/csh.login'檔案：
++
+[listing]
+----
+cat >> /etc/csh.login <<EOF
+if ( \$USER == "root" ) then
+limit maxproc 16384
+limit descriptors 65536
+endif
+EOF
+----
+
+
+. 執行下列命令、將下列參數新增至「/setc/security/limits.conf'檔案：
++
+[listing]
+----
+root soft nofile 65536
+root hard nofile 65536
+----
+. 執行下列命令以啟動系統的所有核心參數：「yscll -p」
+

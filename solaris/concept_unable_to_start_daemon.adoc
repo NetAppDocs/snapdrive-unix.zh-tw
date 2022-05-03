@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_unable_to_start_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restart, daemon, host, communivation, storage 
+summary: 當主機無法與任何已設定的儲存系統通訊時、就無法啟動精靈。 
+---
+= 當主機無法與儲存系統通訊時、無法重新啟動精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當主機無法與任何已設定的儲存系統通訊時、就無法啟動精靈。
+
+在此情況下、當您嘗試重新啟動精靈時、精靈不會啟動、而且會遇到下列錯誤訊息。
+
+[listing]
+----
+Unable to start daemon...check daemon log file for more details
+----
+主要是、您必須執行ping命令、確保主機是否正在與儲存系統通訊。如果主機仍無法與儲存系統通訊、請嘗試使用下列選項：
+
+* 刪除未與主機通訊的儲存系統、然後嘗試重新啟動精靈。
+* 如果您不想刪除設定為主機的儲存系統、請停用「snapdrive.conf」檔案中的「_autosupsupport-enabled_」選項來抑制錯誤訊息。
+

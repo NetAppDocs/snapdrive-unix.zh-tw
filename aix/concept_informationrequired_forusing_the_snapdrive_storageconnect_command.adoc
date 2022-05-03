@@ -1,0 +1,152 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_storageconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, command, information, required 
+summary: 當您使用SnapDrive flexstorage connect命令時、需要提供一些資訊。此資訊可協助您正確使用命令。 
+---
+= 使用SnapDrive 方面所需的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您使用「SnapDrive show storage connect」命令時、您需要提供一些資訊。此資訊可協助您正確使用命令。
+
+|===
+| 需求 | 引數 
+
+
+ a| 
+指定LUN、直接在LUN上建立的檔案系統、或您要連線到主機的LVM實體。
+
+* 如果連接一個或多個LUN、第一個引數必須使用長形式的LUN名稱、以指定儲存系統名稱、磁碟區名稱及磁碟區內LUN的名稱。
++
+若要指定其他LUN、如果新LUN與先前LUN位於相同的儲存系統和磁碟區、則可以單獨使用LUN名稱。否則、您可以指定新的儲存系統名稱和磁碟區名稱（或僅指定磁碟區名稱）來取代先前的值。
+
+* 如果您直接連接LUN上建立的檔案系統、則必須包含LUN名稱的長格式、以及「-nolvm」選項。
+* 如果您將LUN連接到磁碟群組、主機磁碟區和檔案系統、則必須使用「-FS」和「-hostvol'」選項來指定檔案系統和主機磁碟區。主機磁碟區必須包含磁碟群組名稱。
+
+
+
+
+ a| 
+LUN（`-LUN'）
+ a| 
+h_long lun_name_'
+
+
+
+ a| 
+您提供的第一個「-LUN」選項值必須包含儲存系統名稱、Volume和LUN名稱。若要在同一個磁碟區上連接多個LUN、您可以在第一個路徑名稱中提供完整資訊之後、使用「-LUN」選項的相對路徑名稱。當for UNIX遇到相對路徑名稱時、它會在與先前LUN相同的磁碟區上尋找LUN。SnapDrive若要連接其他不在同一個磁碟區上的LUN、請輸入每個LUN的完整路徑名稱。
+
+
+
+ a| 
+其他LUN
+ a| 
+「LUN名稱」（長格式或短格式）
+
+
+
+ a| 
+指定給「-FS」的「_file_spec_」是連接直接在LUN上建立的檔案系統時、檔案系統掛載點的名稱。
+
+
+
+ a| 
+檔案系統（`-FS file-spec）
+ a| 
+文件系統名稱
+
+
+
+ a| 
+可連接在LUN上建立的檔案系統而不啟動主機LVM。
+
+
+
+ a| 
+「-nolvm」
+ a| 
+
+
+
+ a| 
+若要連接主機磁碟區上的檔案系統：
+
+您提供的「-FS _file_spec_」和「-hostvol _file_spec_」可識別您要連線至新主機的LVM檔案系統、磁碟群組和主機磁碟區。
+
+您連線的儲存階層必須包含磁碟群組、主機磁碟區和檔案系統。您必須為「-fs-」和「-hostvol.」指定一個值。「-hostvol'」值必須包含磁碟群組的名稱。
+
+
+
+ a| 
+主機磁碟區（`-hostvol file-spec`）
+ a| 
+磁碟群組名稱_和`_host_volume名稱_
+
+
+
+ a| 
+選用：使用「-nopersist」選項、將儲存設備連接至新位置、而不需在主機檔案系統表格中建立項目。根據預設、storage connect命令會建立持續掛載。這表示當您在AIX主機上建立LVM儲存實體時、SnapDrive 適用於UNIX的整套功能會自動建立儲存設備、掛載檔案系統、然後將檔案系統的項目放入主機檔案系統表格中。
+
+
+
+ a| 
+《業者》
+ a| 
+~
+
+
+
+ a| 
+*選用：*建議您使用主機的預設igroup、而不要提供igroup名稱。
+
+
+
+ a| 
+igroup名稱（`-igroup'）
+ a| 
+h_ig名稱_
+
+
+
+ a| 
+「-fstype-
+ a| 
+`_type_'
+
+
+
+ a| 
+"vmtype"
+ a| 
+`_type_'
+
+
+
+ a| 
+*選用：*指定用於SnapDrive UNIX作業的檔案系統和Volume Manager類型。
+
+
+
+ a| 
+「mnttops」
+ a| 
+~
+
+
+
+ a| 
+*選用：*如果您要建立檔案系統、可以指定下列選項：
+
+* 使用「-mnterts」指定您要傳遞至主機掛載命令的選項（例如、指定主機系統記錄行為）。您指定的選項會儲存在主機檔案系統表格檔案中。允許的選項取決於主機檔案系統類型。
+* "_-mnterts_"參數是使用"mount"命令"-o"標記指定的檔案系統"-type"選項。請勿在「-mnterts_」引數中加入「-o」旗標。例如、sequence -mntops tmplog會將字串「-o tmplog」傳遞到「mounts」命令、然後在新的命令列上插入文字tmplog。
++
+
+NOTE: 如果您將任何無效的「_-mnttops_」選項用於儲存和快照作業、SnapDrive 則適用於UNIX的不能驗證這些無效的掛載選項。
+
+
+
+|===

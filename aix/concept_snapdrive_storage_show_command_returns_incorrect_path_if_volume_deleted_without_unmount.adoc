@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_snapdrive_storage_show_command_returns_incorrect_path_if_volume_deleted_without_unmount.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, vserver, storage, show, incorrect, unmount 
+summary: 如果在Vserver上刪除磁碟區、但未在主機系統上卸載磁碟區、而且執行SnapDrive 了flexvstorage show -v命令時、實際路徑不正確。 
+---
+= 如果在Vserver上刪除磁碟區而未在主機系統上卸載磁碟區、SnapDrive 則使用show storage show命令會顯示不正確的實際路徑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在Vserver上刪除磁碟區而未在主機系統上卸載磁碟區、而且執行「SnapDrive 停止儲存show -v」命令時、實際路徑不正確。
+
+如果未在Vserver上連接磁碟區、您也可能會遇到相同的情況。下列範例顯示不正確的實際路徑：
+
+[listing]
+----
+# snapdrive storage show -fs /mnt /file1 -v
+NFS device: vs1:/vol_test1 mount point: /mnt
+(non-persistent)
+Protocol: NFS Actual Path:
+vs1:/vol/roovol1/vol_test1
+----

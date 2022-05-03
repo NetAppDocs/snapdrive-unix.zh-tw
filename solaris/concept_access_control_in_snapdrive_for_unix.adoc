@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_access_control_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, access, control 
+summary: 適用於UNIX的支援功能可讓您控制每個主機對主機所連接之每個儲存系統的存取層級。SnapDrive 
+---
+= UNIX版的存取控制SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援功能可讓您控制每個主機對主機所連接之每個儲存系統的存取層級。SnapDrive
+
+UNIX版的存取層級SnapDrive 指出當主機鎖定特定儲存系統時、允許執行哪些作業。除了show和list作業之外、存取控制權限可能會影響所有Snapshot和儲存作業。

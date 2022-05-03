@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_connecting_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, multiple, storage, entities 
+summary: 您可以連接包含多個儲存實體的Snapshot複本。 
+---
+= 連接多個儲存實體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以連接包含多個儲存實體的Snapshot複本。
+
+若要連接包含位於多個目的地儲存系統上之儲存實體的Snapshot複本、您必須符合下列需求：
+
+* 您在命令提示字元中指定的儲存實體必須位於單一儲存系統或HA配對上。
+* 來源儲存系統的磁碟區名稱必須與目的地儲存系統的磁碟區名稱相符。
+* 您必須將SnapDrive.conf檔案中的「SnapMirror目的地多重檔案資源流啟用」變數設為「on」。
+
+
+您可以使用一個命令來連接位於單一儲存系統或HA配對上的儲存實體。

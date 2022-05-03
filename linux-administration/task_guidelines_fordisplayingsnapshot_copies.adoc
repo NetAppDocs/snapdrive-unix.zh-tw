@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/task_guidelines_fordisplayingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, wildcard, copy 
+summary: 您可以使用萬用字元來顯示Snapshot複本。您可以顯示特定物件中的所有Snapshot複本。 
+---
+= 顯示Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用萬用字元來顯示Snapshot複本。您可以顯示特定物件中的所有Snapshot複本。
+
+在使用Snapshot複本之前、請謹記以下幾點：
+
+* 您可以在Snapshot複本名稱中使用萬用字元（*）。Snapshot show作業可讓您使用萬用字元來顯示符合特定模式或特定磁碟區上所有Snapshot複本名稱的所有Snapshot複本名稱。在Snapshot複本名稱中使用萬用字元時、適用下列規則：
++
+** 您只能在名稱結尾使用萬用字元。您無法在Snapshot複本名稱的開頭或中間使用萬用字元。
+** 您無法在Snapshot複本名稱的儲存系統或儲存系統Volume欄位中使用萬用字元。
+
+
+* 您也可以使用此命令列出特定物件上的所有Snapshot複本、包括儲存系統及其磁碟區、磁碟群組、主機磁碟區群組、檔案系統、主機磁碟區、 和邏輯磁碟區。
+* 如果您輸入「SnapDrive funfsnap show」命令、SnapDrive 而UNIX的funix找不到任何Snapshot複本、就會顯示「no matching Snapshot copies」（無相符的Snapshot複本）訊息。 如果您在命令列上指定引數、但其中有些部分不存在、SnapDrive 則適用於UNIX的功能會傳回找到Snapshot複本的部分清單。它也會列出無效的引數。
+* 如果突然SnapDrive 中止「festsnap create」命令、儲存系統的磁碟區中會儲存一個不完整的「.stoc.xml」檔案。因此、儲存系統所製作的所有排程Snapshot複本、都會有不完整的「.stoc.xml」檔案複本。若要SnapDrive 讓「不完整清單」命令順利運作、請完成下列步驟：
+
+
+.步驟
+. 刪除Volume中不完整的「.stoc.xml」檔案。
+. 刪除儲存系統所製作的排程Snapshot複本、其中包含不完整的「.stoc.xml」檔案。
+

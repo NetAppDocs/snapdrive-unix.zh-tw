@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_standard_exit_status_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, standard, exit, status, value 
+summary: UNIX版的錯誤訊息ID SnapDrive 具有相關的結束狀態值。您可以使用結束狀態值來判斷SnapDrive 適用於UNIX的指令是否成功。 
+---
+= 標準結束狀態值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的錯誤訊息ID SnapDrive 具有相關的結束狀態值。您可以使用結束狀態值來判斷SnapDrive 適用於UNIX的指令是否成功。

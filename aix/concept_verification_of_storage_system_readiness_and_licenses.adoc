@@ -1,0 +1,36 @@
+---
+permalink: aix/concept_verification_of_storage_system_readiness_and_licenses.html 
+sidebar: sidebar 
+keywords: snap, snapshot, verification, storage, license, system, readiness 
+summary: 在安裝SnapDrive 適用於UNIX的版本之前、您必須先確認儲存系統是否就緒、並檢查特定軟體的授權。 
+---
+= 驗證儲存系統整備度與授權
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝SnapDrive 適用於UNIX的版本之前、您必須先確認儲存系統是否就緒、並檢查特定軟體的授權。
+
+您必須確保符合下列條件：
+
+* 儲存系統已上線。
+* 儲存系統符合SnapDrive UNIX版的最低系統需求。
+* 儲存系統中的HBA或網路介面卡（NIC）符合主機作業系統的需求。
++
+如需HBA卡的詳細資訊、請參閱互通性對照表。
+
+* 主機和儲存系統可以使用網際網路傳輸協定（IP）進行通訊。
+* 下列項目的授權有效：
++
+** SnapRestore
+** 軟件MultiStore
+** 安全地以HTTP存取儲存系統
+
+
+
+
+*相關資訊*
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

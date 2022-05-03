@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_what_autosupport_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, failure, ems, log, storage, operational 
+summary: 支援UNIX的支援功能、可將因執行故障而產生的任何故障傳送至/etc/log/EMS檔案中儲存系統的EMS記錄檢視。AutoSupport SnapDrive SnapDrive 
+---
+= 什麼是呢AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援UNIX的支援功能、可將因執行故障而產生的任何故障、傳送至儲存系統的EMS記錄檢視畫面（位於「/etc/log/EMS檔案」中）AutoSupport SnapDrive SnapDrive 。

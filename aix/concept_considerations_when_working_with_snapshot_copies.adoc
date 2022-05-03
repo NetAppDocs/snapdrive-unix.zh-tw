@@ -1,0 +1,35 @@
+---
+permalink: aix/concept_considerations_when_working_with_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, considerations, snapshot, copy 
+summary: 在使用Snapshot複本時、您必須謹記某些考量事項、例如SnapDrive 、適用於UNIX的Snapshot僅能與它所建立的Snapshot複本搭配使用、或Snapshot複本會自動從儲存系統複寫到主機等。 
+---
+= 使用Snapshot複本時的考量事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用Snapshot複本時、您必須謹記某些考量事項、例如SnapDrive 、適用於UNIX的Snapshot僅能與它所建立的Snapshot複本搭配使用、或Snapshot複本會自動從儲存系統複寫到主機等。
+
+使用Snapshot作業時、您應該考慮下列事項：
+
+* UNIX版僅適用於所建立的Snapshot複本。SnapDrive
++
+它無法還原未建立的Snapshot複本。
+
+* 當您在目的地儲存系統上建立Snapshot複本時、Snapshot複本會自動從建立Snapshot複本的來源儲存系統複寫到目的地儲存系統。
++
+UNIX版的支援功能可讓您在目的地儲存系統上還原Snapshot複本。SnapDrive
+
+* 當您使用「SnapDrive flexSnapconnect」命令、在上次連線的同一主機（或仍連線）上的新位置連線至Snapshot複本時、就會連線到來源主機。
+* 對於橫跨多個儲存系統磁碟區或多個儲存系統的儲存實體、快照支援僅限於不允許在軟體堆疊中進行凍結作業的組態。
+* 當您透過NFS傳輸協定匯出Volume時、必須將匿名使用者ID選項設為0、SnapDrive 才能讓UNIX命令使用。
+* 當單一磁碟群組中有兩個JFS檔案系統（JFS和JFS2）時、SnapDrive 適用於UNIX的支援僅適用於JFS2檔案系統。
+* 適用於UNIX的支援功能可讓您建立並行Volume群組的Snapshot複本、並使用相同的內容來複製或還原。SnapDrive
+* 單一檔案SnapRestore 功能（SFSR）作業之後、建立Snapshot複本會立即失敗。
++
+經過一段時間後、您必須重試此作業。如需詳細資訊、請參閱 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["叢集Data ONTAP 式《叢集式《邏輯儲存管理指南》"]。
+
+

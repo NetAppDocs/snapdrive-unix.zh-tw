@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snapdrived_start_command_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, command, fails, troubleshoot, resolve, issue 
+summary: 在某些情況下、快照啟動命令可能會失敗。有幾個疑難排解步驟可解決此問題。 
+---
+= 快照啟動命令失敗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些情況下，"shapdrived start"命令可能會失敗。有幾個疑難排解步驟可解決此問題。
+
+* 檢查「snapdrive.conf」檔案中指定的精靈連接埠是否已被其他應用程式使用。
+* 檢查是否正確停止較早的精靈執行個體。
+* 檢查是否達到系統範圍的號誌限制、此時精靈啟動將無法運作。
+* 檢查機器上是否有任何服務（如iSCSI、VxVMis）未執行。
+* 如果HTTPS設定為「on」、請檢查是否已在指定目錄中安裝自我簽署的憑證。
+

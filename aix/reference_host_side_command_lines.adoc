@@ -1,0 +1,49 @@
+---
+permalink: aix/reference_host_side_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, side, command, line 
+summary: UNIX命令的支援用於主機端作業。SnapDrive 
+---
+= 主機端命令列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX命令的支援用於主機端作業。SnapDrive
+
+下表提供主機端作業的各種命令列選項。
+
+|===
+| 營運 | 命令列選項 
+
+
+ a| 
+主機連線
+ a| 
+「SnapDrive 支援主機連線-LUN _long lun_name_[_lun_name ..._][-vmtype _type_]」
+
+
+
+ a| 
+「SnapDrive 支援主機連線功能-FS _file_spec_-nolvm -LUN _long LUN名稱_[-noperersist][-mnttops選項][-fstype_type_][-vmtype _type_]
+
+
+
+ a| 
+「SnapDrive 支援主機連線功能-FS _file_spec_-hostvol_file_spec_-LUN _long LUN名稱_[_lun_name_][-nopersist][-mnttops _options_]-vmtype _te_]
+
+
+
+ a| 
+主機中斷連線
+ a| 
+「SnapDrive 支援主機中斷連線LUN _long lun_name_[_lun_name..._][-vmtype _type_]」
+
+
+
+ a| 
+「SnapDrive 支援主機中斷連線（{-vg |-dg |-FS |-lvol |-hostvol}_file_spec_[_file_spec..._][{-vg |-dg |-fs |-lvolvol |-hostvol}_file_spec_[_file_spec..._]...）] [-f完整][-fstype_type_][-vmtype _type_]
+
+|===

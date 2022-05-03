@@ -1,0 +1,67 @@
+---
+permalink: aix/task_configuring_sd_admin_using_cli.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, admin, command, line, interface 
+summary: 儲存系統管理員可使用命令列介面來設定SD-admin使用者。 
+---
+= 使用命令列介面設定SD-admin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存系統管理員可使用命令列介面來設定SD-admin使用者。
+
+.步驟
+. 新增名為SD-admin的使用者。
++
+[listing]
+----
+# useradd sd-admin
+----
++
+[listing]
+----
+# passwd sd-admin
+Changing password for sd-admin.
+New password:
+Re-enter new password:
+Password changed
+----
+. 新增名為SD-admin的系統管理員。
++
+[listing]
+----
+# dfm user add sd-admin
+Added administrator sd-admin.
+----
+. 建立名為SD-admin-role的角色。
++
+[listing]
+----
+# dfm role create sd-admin-role
+Created role sd-admin-role.
+----
+. 新增功能至步驟3所建立的角色。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Core.AccessCheck Global
+Added 1 capability to role sd-admin-role.
+----
+. Operations Manager管理員也可以將全域群組的「Dfm.Database.Write」功能授予「<sd-admin>'」、讓SnapDrive UNIX的支援功能在Operations Manager中重新整理儲存系統實體。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+. 將SD-admin-role角色新增至SD-admin使用者。
++
+[listing]
+----
+# dfm user role set sd-admin sd-admin-role
+Set 1 role for administrator sd-admin.
+----
+

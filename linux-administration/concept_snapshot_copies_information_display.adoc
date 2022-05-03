@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_snapshot_copies_information_display.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, display, storage, lun, command, show, list 
+summary: 您可以顯示儲存系統、儲存系統磁碟區、LUN及其他儲存實體的Snapshot複本。使用命令SnapDrive flexsnap show（或list\）顯示Snapshot複本。 
+---
+= 快照複本資訊隨即顯示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以顯示儲存系統、儲存系統磁碟區、LUN及其他儲存實體的Snapshot複本。使用命令「SnapDrive flexfsnap show」（或清單）來顯示Snapshot複本。

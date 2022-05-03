@@ -1,0 +1,20 @@
+---
+permalink: solaris/task_hosts_preparation_for_adding_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, preparation, add, lun 
+summary: 您需要準備好主機以新增LUN。 
+---
+= 主機準備新增LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要準備好主機以新增LUN。
+
+*相關資訊*
+
+xref:concept_guest_os_preparation_for_installing_sdu.adoc[客用作業系統準備好安裝SnapDrive 適用於UNIX的功能]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[VMware VMotion支援SnapDrive UNIX版]

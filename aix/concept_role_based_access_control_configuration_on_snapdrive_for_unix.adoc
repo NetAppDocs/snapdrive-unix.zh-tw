@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_role_based_access_control_configuration_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, role, based, access, rbac, configuration 
+summary: 您必須完成各種工作、才能設定角色型存取控制（RBAC）以SnapDrive 供UNIX使用。您可以使用Operations Manager主控台或命令列介面來執行工作。 
+---
+= 在SnapDrive UNIX版的不適用功能組態中設定角色型存取控制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須完成各種工作、才能設定角色型存取控制（RBAC）SnapDrive 以供UNIX使用。您可以使用Operations Manager主控台或命令列介面來執行工作。

@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_thin_provisioning_in_snapdrive_for_unix_overview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, thin, provisioning 
+summary: 您無法設定部分保留值、也無法與Data ONTAP 下列功能整合：SnapDrive 例如、在適用於UNIX的支援中、自動刪除和自動調整大小。雖然Data ONTAP 您可以安全地搭配SnapDrive 使用適用於UNIX的功能、SnapDrive 但適用於UNIX的不登錄自動刪除或自動調整大小事件。 
+---
+= 以適用於UNIX的SnapDrive 方式進行精簡配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您無法設定部分保留值、也無法與Data ONTAP 下列功能整合：SnapDrive 例如、在適用於UNIX的支援中、自動刪除和自動調整大小。雖然Data ONTAP 您可以安全地搭配SnapDrive 使用適用於UNIX的功能、SnapDrive 但適用於UNIX的不登錄自動刪除或自動調整大小事件。

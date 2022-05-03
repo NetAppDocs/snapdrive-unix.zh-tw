@@ -1,0 +1,53 @@
+---
+permalink: solaris/concept_example_of_an_autosupport_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autsupport, example 
+summary: UNIX版提供不同情境的範例。SnapDrive在所有範例中、任何作業系統的資訊內容基本上都相同。AutoSupport 
+---
+= 範例AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供不同情境的範例。SnapDrive在所有範例中、任何作業系統的資訊內容基本上都相同。AutoSupport
+
+範例：新增儲存系統
+
+下列範例是從名稱為「_sun1990-90_」的主機傳送的訊息：
+
+[listing]
+----
+computerName="sun221-51"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="3"
+        category="f2040-221-20 configured"
+        subject="host_name=sun221-51, host_os=SunOS, host_os_release=5.10, host_os_version=Generic_147441-01, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=mpxio, Protection Enabled=No, Protocol=iscsi"
+----
+範例：重新啟動Daemon
+
+當您重新啟動精靈時、適用於UNIX的功能可將下列資訊傳送至儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="sun221-51"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=sun221-51, host_os=SunOS, host_os_release=5.10, host_os_version=Generic_147441-01, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=mpxio, Protection Enabled=No, Protocol=iscsi
+"
+----
+當「LUN建立」作業失敗時、適用於UNIX的範圍會傳送下列資訊給儲存系統：SnapDrive AutoSupport
+
+[listing]
+----
+computerName="sun221-51"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="4"
+        category="storage create failed"
+        subject="host_name=sun221-51, host_os=SunOS, host_os_release=5.10, host_os_version=Generic_147441-01, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=mpxio, Protection Enabled=No, Protocol=iscsi,1417: The following names are already in use: /mnt/abc. Please specify other names."
+----

@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_the_storagedeletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command 
+summary: 除了所有基礎主機端實體和儲存系統LUN做為其後盾之外、使用「還原儲存設備刪除」命令可移除主機上的儲存實體。SnapDrive 
+---
+= storage DELETE命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了所有基礎主機端實體和儲存系統LUN做為後盾之外、「支援刪除實體」命令也會移除主機上的儲存實體。SnapDrive
+
+
+IMPORTANT: 此命令會刪除資料。

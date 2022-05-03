@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_stale_devices_in_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, lun, clone, stale, device 
+summary: 刪除LUN和複製可能會在UNIX中留下過時的裝置、SnapDrive 而刪除這些過時的裝置則不是由適用於UNIX的執行。 
+---
+= 刪除LUN和複製會在UNIX中留下過時的裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+刪除LUN和複製可能會在UNIX中留下過時的裝置、SnapDrive 而刪除這些過時的裝置則不是由適用於UNIX的執行。
+
+當您從Snapshot複本手動建立LUN的裝置、並從SnapDrive Snapshot複本建立LUN的複本、或是使用適用於UNIX的NetApp建立裝置項目時、系統會自動在UNIX中建立裝置項目。刪除使用SnapDrive 適用於UNIX的Snapshot複本的LUN裝置和LUN複製、可能會導致UNIX中的裝置過時。
+
+刪除過時的裝置是終端使用者的責任、必須由UNIX管理員執行。

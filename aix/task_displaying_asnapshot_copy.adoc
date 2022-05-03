@@ -1,0 +1,148 @@
+---
+permalink: aix/task_displaying_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, display, snapshot, copy 
+summary: 命令SnapDrive Isfsnap show或list會顯示建立Snapshot複本的儲存系統名稱、主機名稱、日期和時間等。 
+---
+= 顯示Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+命令「SnapDrive flexsnap show」或「list」會顯示建立Snapshot複本的儲存系統名稱、主機名稱、日期和時間等。
+
+.步驟
+. 輸入下列命令語法以顯示Snapshot複本：
++
+‘*快照顯示[-snapname]_long快照名稱_[_snap名稱_...] SnapDrive [-verbosed]*
+
+
+
+此作業至少會顯示下列有關Snapshot複本的資訊：
+
+* 建立Snapshot複本的儲存系統名稱
+* 執行Snapshot複本的主機名稱
+* 儲存系統上LUN的路徑
+* 建立Snapshot複本的日期與時間
+* Snapshot複本的名稱
+* Snapshot複本中包含的磁碟群組名稱
+
+
+*範例*：以下是「SnapDrive 不知道的show命令：
+
+[listing]
+----
+# snapdrive snap show -snapname toaster:/vol/vol2:snapA snapX snapY
+
+# snapdrive snap show -verbose toaster:/vol/vol2:snapA /vol/vol3:snapB snapC
+
+# snapdrive snap show toaster:/vol/vol2:snapA
+
+# snapdrive snap list -dg dg1 dg2
+----
+*範例*：此範例使用萬用字元來顯示特定磁碟區上可用Snapshot複本的相關資訊：
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/vol1:*
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:sss1 DBserver Mar 12
+16:19 dg1
+toaster:/vol/vol1:testdg DBserver Mar 12
+15:35 dg1
+toaster:/vol/vol1:t1 DBserver Mar 10
+18:06 dg1
+toaster:/vol/vol1:hp_1 HPserver Mar 8
+19:01 vg01
+toaster:/vol/vol1:r3 DBserver Mar 8
+13:39 rdg1
+toaster:/vol/vol1:r1 DBserver Mar 8
+13:20 rdg1
+toaster:/vol/vol1:snap2 DBserver Mar 8
+11:51 rdg1toaster:/vol/vol1:snap_p1 DBserver
+Mar 8 10:18 rdg1
+----
+*範例*：在此範例中、在AIX主機的命令列中使用「-verbose」選項：
+
+[listing]
+----
+# snapdrive snap list betty:/vol/vol1:testsnap -v
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+betty:/vol/vol1:testsnap aix198-75 Jul 31
+10:43 test1_SdDg
+host OS: AIX 3 5
+snapshot name: testsnap
+Volume Manager: aixlvm 5.3
+disk group: test1_SdDg
+host volume: test1_SdHv
+file system: test1_SdHv file system type: jfs2
+mountpoint:
+/mnt/test1
+lun path dev paths
+-------------------------------------------------------
+betty:/vol/vol1/aix198-75_luntest1_SdLun /dev/hdisk32
+----
+*範例*：此範例包含有關AIX主機上的Snapshot複本訊息、這些快照複本並非以SnapDrive 適用於UNIX的版本建立：
+
+[listing]
+----
+# snapdrive snap show -filer toaster
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:hourly.0 non-snapdrive snapshot
+toaster:/vol/vol1:hourly.0 non-snapdrive snapshot
+toaster:/vol/vol1:snap1 DBserver1 Oct 01 13:42 dg1
+dg2
+toaster:/vol/vol1:snap2 DBserver2 Oct 10 13:40
+DBdg/hvol1
+toaster:/vol/vol1:snap3 DBserver3 Oct 31 13:45
+DBdg
+----
+此範例使用「SnapDrive show」命令和「verbose」選項、在AIX主機上顯示以LVM為基礎的檔案系統的Snapshot複本：
+
+[listing]
+----
+# snapdrive snap show -v -fs /mnt/check_submit/csdg2/hv3_0
+snapname host date snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:mysnapshot sales-aix Aug 24 10:55 csdg2
+host OS: AIX 1 5
+snapshot name: mysnapshot
+Volume Manager: aixlvm 5.1
+disk group: csdg2
+host volume: csdg2_log
+host volume: csdg2_hv3_0
+file system: csdg2_hv3_0 file system type: jfs2 mountpoint:
+/mnt/check_submit/csdg2/hv3_0
+lun path dev paths
+-------------------------------------------------------
+spinel:/vol/vol1/check_submit_aix-4 /dev/hdisk4
+----
+*範例*：下列範例使用萬用字元：
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/volX:*
+# snapdrive snap show -v toaster:/vol/volX:DB1*
+filer1:/vol/volY:DB2*
+# snapdrive snap show toaster:/vol/vol2:mysnap* /vol/vol2:yoursnap*
+hersnap*
+# snapdrive snap show toaster:/vol/volX:*
+----
+*範例*：在此範例中、萬用字元的使用無效、因為萬用字元位於名稱中間、而非置於結尾：
+
+[listing]
+----
+# snap show toaster:/vol/vol1:my*snap
+----

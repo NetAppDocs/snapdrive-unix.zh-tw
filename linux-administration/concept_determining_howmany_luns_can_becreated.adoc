@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/concept_determining_howmany_luns_can_becreated.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, limit 
+summary: UNIX版的支援功能可讓您決定在主機上建立多少LUN、而不會超過限制。SnapDrive 
+---
+= 確定可以建立多少LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能可讓您決定在主機上建立多少LUN、而不會超過限制。SnapDrive
+
+您可以使用「SnapDrive 效能分析檢查LUN」命令來判斷此值。
+
+在Linux主機上、此命令會檢查現有的/sg檔案、以判斷有多少檔案未使用。

@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_contents_of_the_recovery_log.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, recovery, log, system, support 
+summary: 恢復日誌可協助您追蹤系統狀態不一致的原因。當某些作業停止運作時、適用於UNIX的會產生此檔案。SnapDrive 
+---
+= 恢復日誌的內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+恢復日誌可協助您追蹤系統狀態不一致的原因。當某些作業停止運作時、適用於UNIX的會產生此檔案。SnapDrive
+
+如果您按Ctrl-C停止SnapDrive UNIX的支援、或是在作業期間主機或儲存系統故障、系統可能無法自動恢復。
+
+在任何可能使系統處於不一致狀態的作業期間SnapDrive 、若中斷、UNIX版將資訊寫入恢復記錄檔。如果發生問題、您可以將此檔案傳送給NetApp技術支援部門、以便他們協助您恢復系統狀態。
+
+恢復日誌公用程式會維護作業期間所發出命令的記錄。每個命令都會標示operation_index（唯一識別所執行作業的數字）、接著是日期/時間戳記和訊息文字。

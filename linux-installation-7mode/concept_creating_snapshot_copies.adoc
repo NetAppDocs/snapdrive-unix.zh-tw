@@ -1,0 +1,20 @@
+---
+permalink: linux-installation-7mode/concept_creating_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, create 
+summary: 以獨立產品的形式部署的UNIX使用NetApp Snapshot技術、可讓您建立及管理主機資料的Snapshot複本。SnapDrive您可以使用Snapshot複本還原資料。 
+---
+= 建立Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以獨立產品的形式部署的UNIX使用NetApp Snapshot技術、可讓您建立及管理主機資料的Snapshot複本。SnapDrive您可以使用Snapshot複本還原資料。
+
+*相關資訊*
+
+xref:task_creating_a_snapshot_copy.adoc[建立Snapshot複本]
+
+xref:task_verifying_the_snapshot_copy.adoc[驗證Snapshot複本]

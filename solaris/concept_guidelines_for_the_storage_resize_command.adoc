@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_guidelines_for_the_storage_resize_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, resize, command 
+summary: 當您使用SnapDrive 「fresize storage resize」命令時、您需要遵守幾項準則。 
+---
+= 儲存設備大小調整命令的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您使用「SnapDrive 物件儲存設備大小調整」命令時、您需要遵守幾項準則。
+
+* 儲存設備的大小調整作業只能增加儲存設備的大小。您無法使用它來減少實體的大小。
+* 所有LUN必須位於同一個儲存系統磁碟區中。
+* 調整大小作業不支援直接在邏輯主機磁碟區、或位於邏輯主機磁碟區或LUN上的檔案系統上執行。在這種情況下、您必須使用LVM命令來調整儲存設備的大小。
+* 您無法調整LUN的大小；您必須使用「-addlun」選項來新增LUN。
+* 「物件儲存設備大小調整」命令可從叢集中的任何節點執行。SnapDrive
+* 「物件儲存設備大小調整」命令不支援「-DEVICETYPE」選項。SnapDrive
+

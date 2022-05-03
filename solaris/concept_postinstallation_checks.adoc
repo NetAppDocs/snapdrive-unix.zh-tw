@@ -1,0 +1,43 @@
+---
+permalink: solaris/concept_postinstallation_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, post, install, check 
+summary: 安裝完成後、您必須執行幾項工作、以確保SnapDrive 成功安裝適用於UNIX的整套功能。 
+---
+= 執行安裝後檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝完成後、您必須執行幾項工作、以確保SnapDrive 成功安裝適用於UNIX的整套功能。
+
+. 確認安裝程式已在您的主機上安裝所有必要的檔案。
+. 確認「snapdrive.conf」檔案中的組態變數設定正確。
++
+對於大部分的變數、預設值應適用。
+
+. 提供SnapDrive 適用於UNIX的功能、並提供目前的儲存系統登入資訊。
++
+當您設定儲存系統時、系統會提供使用者登入資訊。適用於UNIX的解決方案需要此登入資訊才能與儲存系統搭配使用。SnapDrive
+
+. 若要使用角色型存取控制（RBAC）、請在「snapdrive.conf」檔案中設定「_RBAC方法=DFM」變數。
++
+根據預設、SnapDrive 適用於UNIX及更新版本的版本使用root認證來存取儲存系統。未開啟RBAC功能。
+
+. 若要使用HTTPS與儲存系統和精靈服務進行安全連線、請在「snapdrive.conf」檔案中設定「_use-https-to -SDU-daemon=on_」。
++
+
+NOTE: 適用於UNIX及更新版本的支援HTTPS以進行精靈通訊。SnapDrive依預設、此選項設為「關」。
+
+. 在中安裝SnapDrive 供UNIX使用的伺服器憑證
++
+如「snapdrive.conf」檔案中所指定的「du-daem-Certificate path=/opt/NTAPsnapdrive/SnapDrive．pem」路徑。
+
+. 執行下列命令、變更SnapDrive UNIX版的預設密碼：
++
+快照的passwd*
+
+. 請查看「/var/log/sdconfine.out」中已安裝組態元件的詳細資料。
+

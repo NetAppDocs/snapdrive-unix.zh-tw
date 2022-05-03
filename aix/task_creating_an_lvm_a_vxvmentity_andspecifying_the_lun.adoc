@@ -1,0 +1,59 @@
+---
+permalink: aix/task_creating_an_lvm_a_vxvmentity_andspecifying_the_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, lun, specify, create 
+summary: 您可以建立檔案系統、邏輯磁碟區或磁碟群組等主機實體、並指定其一部分所建立的LUN。 
+---
+= 建立LVM實體並指定LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立檔案系統、邏輯磁碟區或磁碟群組等主機實體、並指定其一部分所建立的LUN。
+
+.步驟
+. 在命令列輸入下列命令：
++
+hy* SnapDrive fest_-lun _long lun_name_[_lun_name ..._]-lunsize _size_[-igroup _ig_name_[_ig_name..._]][{-Reserve |-noreserve }]*
+
++
+此範例會根據您的主機、使用檔案系統建立檔案系統/mnt/acctfs。它會在儲存系統acctFiler上設定三個LUN。每個LUN為10 GB：
+
++
+hes*# SnapDrive feststorage create -FS /mnt/acctfs -fstype JFS2 -LUN acctfiler:/vol/vol1/lunb lunc -lunsize 10g*
+
++
+[listing]
+----
+LUN acctfiler:/vol/vol1/lunA ... created
+LUN acctfiler:/vol/vol1/lunB ... created
+LUN acctfiler:/vol/vol1/lunC ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- acctfiler:/vol/vol1/lunA => hdisk2
+- acctfiler:/vol/vol1/lunB => hdisk3
+- acctfiler:/vol/vol1/lunC => hdisk4
+disk group acctfs_SdDg created
+host volume acctfs_SdHv created
+file system /mnt/acctfs created
+----
++
+[listing]
+----
+LUN acctfiler:/vol/vol1/lunA ... created
+LUN acctfiler:/vol/vol1/lunB ... created
+LUN acctfiler:/vol/vol1/lunC ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- acctfiler:/vol/vol1/lunA => /dev/vx/rdmp/c4t0d3s2
+- acctfiler:/vol/vol1/lunB => /dev/vx/rdmp/c4t0d7s2
+- acctfiler:/vol/vol1/lunC => /dev/vx/rdmp/c4t0d8s2
+disk group acctfsvg created
+host volume acctfshv created
+file system /mnt/acctfs created
+----
+

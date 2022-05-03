@@ -1,0 +1,27 @@
+---
+permalink: solaris/task_deleting_a_data_interface_entry_of_a_management_interface.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, data, interface, management, entry 
+summary: 您可以使用SnapDrive 下列命令、刪除與NFS環境中特定管理介面相關聯的資料介面項目：show config delete -mgmtpath命令。 
+---
+= 刪除管理介面的資料介面項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive show config DELETE -mgmtpath」命令、刪除NFS環境中與特定管理介面相關聯的資料介面項目。
+
+.步驟
+. 在CLI中輸入下列命令：
++
+`* SnapDrive 《*組態刪除-mgmtpath _data_interface_*》
+
++
+[listing]
+----
+#snapdrive config delete –mgmtpath f3050-197-91
+Deleted configuration for appliance: f3050-197-91
+----
+

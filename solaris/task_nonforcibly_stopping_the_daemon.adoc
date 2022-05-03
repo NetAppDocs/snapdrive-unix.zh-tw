@@ -1,0 +1,23 @@
+---
+permalink: solaris/task_nonforcibly_stopping_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stopp, daemon, nonforcibly, command 
+summary: 如果SnapDrive 您的UNIX版組態檔已變更、您必須停止精靈、才能使組態檔變更生效。在精靈停止並重新啟動之後、組態檔中的變更會生效。非強制停止精靈會允許所有佇列的命令完成執行。收到停止要求後、不會執行任何新命令。 
+---
+= 不強制停止精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果SnapDrive 您的UNIX版組態檔已變更、您必須停止精靈、才能使組態檔變更生效。在精靈停止並重新啟動之後、組態檔中的變更會生效。非強制停止精靈會允許所有佇列的命令完成執行。收到停止要求後、不會執行任何新命令。
+
+您必須以root使用者的身分登入。
+
+.步驟
+. 輸入下列命令以不強制停止精靈：
++
+快照停止*
+
+

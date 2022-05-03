@@ -1,0 +1,16 @@
+---
+permalink: linux-installation-cmode/index.html 
+sidebar: sidebar 
+keywords: guide, documentation, installation, setup, linux, clustered, data, ontap 
+summary: 說明在SnapDrive Linux環境中部署含叢集Data ONTAP 式功能的UNIX版的功能、需要執行的初始工作。 
+---
+= 適用於叢集Data ONTAP 式更新的Linux®安裝與設定指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南說明在SnapDrive Linux環境中部署採用叢集Data ONTAP 式功能的適用UNIX的32位元版本時、所需執行的初始工作。
+
+主題包括如何安裝及設定產品、以及如何備份資料庫。

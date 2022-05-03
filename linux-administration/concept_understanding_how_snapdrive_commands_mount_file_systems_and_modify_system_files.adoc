@@ -1,0 +1,44 @@
+---
+permalink: linux-administration/concept_understanding_how_snapdrive_commands_mount_file_systems_and_modify_system_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, mount, file, modify, unmount, name 
+summary: 某些SnapDrive 適用於UNIX的指令可導致掛載或卸載檔案系統。當命令執行掛載檔案系統的作業時、SnapDrive 適用於UNIX的功能會將檔案系統名稱新增至主機平台的標準系統檔案。如果某個作業卸載檔案系統、SnapDrive 則適用於UNIX的解決方法會從系統檔案中移除名稱。這不應造成問題、但知道何時修改系統檔案是很有用的。 
+---
+= 有時會安裝或卸載檔案系統、並修改系統檔案SnapDrive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+某些SnapDrive 適用於UNIX的指令可導致掛載或卸載檔案系統。當命令執行掛載檔案系統的作業時、SnapDrive 適用於UNIX的功能會將檔案系統名稱新增至主機平台的標準系統檔案。如果某個作業卸載檔案系統、SnapDrive 則適用於UNIX的解決方法會從系統檔案中移除名稱。這不應造成問題、但知道何時修改系統檔案是很有用的。
+
+系統檔案的名稱會因主機平台而異。下表列出主機平台及其系統檔案。
+
+|===
+| *主機* | *系統檔案* 
+
+
+ a| 
+Linux
+ a| 
+"etc/stb"
+
+|===
+下列任一命令均可掛載檔案系統：
+
+* 《還原快照》SnapDrive
+* 《鏈接》SnapDrive
+* 《倉儲創作》SnapDrive
+* 《支援主機連線》SnapDrive
+* 《鏈接儲存設備》SnapDrive
+
+
+下列命令會執行可卸載檔案系統的作業：
+
+* 《還原快照》SnapDrive
+* 《不中斷連線》SnapDrive
+* 《不中斷儲存連線》SnapDrive
+* 《不儲存設備刪除》SnapDrive
+* 《支援主機中斷連線》SnapDrive
+

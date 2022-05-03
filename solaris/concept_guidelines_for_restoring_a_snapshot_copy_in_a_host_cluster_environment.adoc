@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_guidelines_for_restoring_a_snapshot_copy_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, host, restore 
+summary: 還原Snapshot複本時、請遵循相關準則。 
+---
+= 在主機叢集環境中還原Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原Snapshot複本時、請遵循相關準則。
+
+* 可以從主機叢集中的任何節點執行「SnapDrive 支援快照還原」命令。
+* 檔案系統或磁碟群組必須在主機叢集中的所有節點之間共享（如果它們是在線上）。
+* 如果有任何LUN對應至主機叢集外部的節點、則共用檔案系統或磁碟群組上的Snapshot還原作業會失敗。確保共享LUN均未對應至主機叢集外部的節點。
+* Snapshot建立作業可在專屬檔案系統或磁碟群組上執行、但若要在共用模式中還原Snapshot複本、您必須確保檔案系統或磁碟群組不存在於主機叢集中任何節點的專屬模式中。否則SnapDrive 、UNIX版的不適用功能就會造成錯誤。
+* 如果主機叢集中不存在檔案系統或磁碟群組、SnapDrive 則適用於UNIX的功能會從Snapshot複本建立LUN、將其對應至主機叢集中的所有節點、並啟動磁碟群組和檔案系統。將LUN對應至主機叢集中的所有節點之後、Veritas叢集Volume Manager會重新整理主機叢集中所有節點之間的LUN資訊。如果在叢集節點中的CVM執行個體之間重新整理LUN資訊之前嘗試啟動磁碟群組、則Snapshot還原作業可能會失敗。若要重新整理CVM、您必須重新發出「SnapDrive 還原功能」命令。
+* 只有在符合下列條件時、才能在主機叢集外部的節點上建立Snapshot複本、並在叢集中進行還原與共用：
++
+** 檔案系統或磁碟群組不存在於主機叢集中任何節點的專屬模式中。
+** LUN對主機叢集外部的節點不可見。
+
+
+* 您無法在單一Snapshot還原作業中還原共享和專用系統上的Snapshot複本。
+* 如果SnapDrive 在使用「-DEVICETYPE」專屬選項的情況下、或在共享磁碟群組或檔案系統上未指定「-DEVICETYPE」選項的情況下、「for SnapDrive UNIX」會警示您連線至多個節點的LUN已還原。
+* 如果在建立Snapshot複本和Snapshot複本還原之間變更磁碟群組組態、SnapDrive 則適用於UNIX的功能會提醒您組態已變更。
+

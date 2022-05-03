@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_thin_provisioning_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, thin, provisioning 
+summary: 利用UNIX版的精簡配置功能SnapDrive 、使用者可以擁有比儲存系統實際可用的更多主機儲存空間。 
+---
+= 以適用於UNIX的SnapDrive 方式進行精簡配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用UNIX版的精簡配置功能SnapDrive 、使用者可以擁有比儲存系統實際可用的更多主機儲存空間。
+
+在UNIX版中、您無法設定部分保留值、也無法與自動刪除和自動調整大小等功能整合。SnapDrive Data ONTAP這些功能可與適用於UNIX的不安全搭配使用；不過、如果發生自動刪除或自動調整大小事件、則無法察覺到適用於UNIX的功能。Data ONTAP SnapDrive SnapDrive
+
+*相關資訊*
+
+http://www.netapp.com/us/media/tr-3483.pdf["NetApp技術報告3483：NetApp SAN或IP SAN企業環境中的精簡配置"]

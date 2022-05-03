@@ -1,0 +1,16 @@
+---
+permalink: linux-installation-7mode/index.html 
+sidebar: sidebar 
+keywords: guide, documentation, installation, setup, linux, ontap, 7-mode 
+summary: 說明在SnapDrive Linux環境中以7-Mode運作的Data ONTAP 方式部署支援VMware的UNIX的功能所需執行的初始工作。 
+---
+= Linux®的安裝與設定指南Data ONTAP 、適用於7-Mode的執行功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南說明在SnapDrive Linux環境中以Data ONTAP 7-Mode運作的方式部署支援VMware的支援功能、以利執行的初始工作。
+
+主題包括如何安裝及設定產品、以及如何備份資料庫。

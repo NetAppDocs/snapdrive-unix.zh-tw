@@ -1,0 +1,14 @@
+---
+permalink: aix/concept_multipathing_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipathing 
+summary: 適用於UNIX的支援多重路徑。SnapDriveUNIX版不支援使用mknod和（或）rendev命令建立的裝置別名。SnapDrive 
+---
+= UNIX的多重路徑SnapDrive 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援多重路徑。SnapDriveUNIX版不支援使用「mknod」和（或）「rendev"命令建立的裝置別名。SnapDrive

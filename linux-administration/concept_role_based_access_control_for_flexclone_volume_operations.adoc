@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/concept_role_based_access_control_for_flexclone_volume_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, role, access, control, rbac, flexcone, volume, manager, operations, storage 
+summary: 如果Operations Manager已設定系統、Operations Manager管理員必須授予您執行FlexClone磁碟區儲存作業所需的功能。 
+---
+= FlexClone Volume作業的角色型存取控制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果Operations Manager已設定系統、Operations Manager管理員必須授予您執行FlexClone磁碟區儲存作業所需的功能。
+
+*不受限制的FlexClone Volume *：您必須具備下列功能、才能在不受限制的FlexClone Volume上執行儲存作業：
+
+* 對於「nap連線」、您必須在父磁碟區上具有「.ed snapshot、Un限制Clone」功能。
+* 對於「nap中斷連線」、您必須在FlexClone磁碟區上具有「DitroyUnclonedClone」功能。
+
+
+*受限FlexClone Volume *：您必須具備下列功能、才能在受限的FlexClone Volume上執行儲存作業：
+
+* 對於「nap連線」、您必須在父磁碟區上具有「.edsnapshot .Clone」功能。
+* 對於「nap中斷連線」、您必須在父磁碟區上具有「.edsnapshot .Clone」功能。
+
+
+若要在「網路快照連線」作業期間分割FlexClone磁碟區、請在父磁碟區上使用「.Data Storage.Write」存取功能。
+
+若要在「nap中斷連線」期間對分割的FlexClone磁碟區執行儲存作業、您必須在分割磁碟區複製上具有「.Storage。刪除」功能。

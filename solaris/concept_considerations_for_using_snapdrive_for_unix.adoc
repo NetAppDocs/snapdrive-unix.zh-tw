@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_considerations_for_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, considerations 
+summary: 您必須瞭解使用SnapDrive 適用於UNIX的各種考量。 
+---
+= 使用適用於UNIX的SnapDrive 考量事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解使用SnapDrive 適用於UNIX的各種考量。
+
+* 您必須使用空間保留設定的預設值、以供SnapDrive 由UNIX版的任何LUN使用。
+* 在FC和iSCSI組態中、儲存系統上的「組態快照保留」為每個磁碟區的零百分比。
+* 將所有連接至同一主機的LUN、放在專屬儲存系統磁碟區上、只能由該主機存取。
+* 如果使用Snapshot複本、則無法使用儲存系統磁碟區上的整個空間來儲存LUN。
++
+裝載LUN的儲存系統磁碟區應至少為儲存系統磁碟區上所有LUN的兩倍大小。
+
+* 使用「/vol/vol0」（根Volume）來管理儲存系統。Data ONTAP
++
+請勿使用此磁碟區來儲存資料。如果您已將任何其他磁碟區（「/vol/vol0」除外）設定為根磁碟區來管理儲存系統、請勿使用它來儲存資料。
+
+

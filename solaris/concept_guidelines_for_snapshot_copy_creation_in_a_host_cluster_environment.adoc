@@ -1,0 +1,21 @@
+---
+permalink: solaris/concept_guidelines_for_snapshot_copy_creation_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, create, host, cluster 
+summary: 在某些環境中支援使用SnapDrive 支援UNIX的Snapshot複本建立、但在某些環境中則不支援。請參閱準則以瞭解更多資訊。 
+---
+= 在主機叢集環境中建立Snapshot複本的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些環境中支援使用SnapDrive 支援UNIX的Snapshot複本建立、但在某些環境中則不支援。請參閱準則以瞭解更多資訊。
+
+* 適用於UNIX的支援可建立Snapshot複本、複製與Veritas SFRAC 4.1環境中的主機叢集合作夥伴共享的磁碟群組和檔案系統。SnapDrive
+* Snapshot建立作業可從主機叢集中的任何節點叫用。
+* 在此作業中指定的多個檔案系統和磁碟群組應具有相同的範圍：也就是所有的都應該共用、或全部都應該是專屬的。
+* 不支援叢集範圍共用模式的NFS檔案系統、但支援在主機叢集節點中處於專用模式的NFS檔案系統。
+* 原始LUN不支援檔案系統。
+

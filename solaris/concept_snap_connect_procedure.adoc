@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_snap_connect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect 
+summary: SnapConnect程序適用於Data ONTAP 不含更新版本的版本、並說明SnapConnect的操作步驟。 
+---
+= SnapConnect程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapConnect程序適用於Data ONTAP 不含更新版本的版本、並說明SnapConnect的操作步驟。
+
+下列步驟說明SnapConnect程序：
+
+. UNIX版從SnapConnect CLI取得檔案規格名稱和Snapshot名稱。SnapDrive然後找出快照所在的原始儲存系統磁碟區。
+. 適用於UNIX的解決方案可根據CLI組態選項、為儲存系統實體選擇適當的複製方法。SnapDrive
++
+
+NOTE: 如果指定了CLI選項、它會永遠覆寫「sfapdrive.conf」檔案選項。
+
++
+.. 如果在CLI中指定了「-clone lunclone」選項、或在「snapdrive.conf」檔案中指定了「shan clone-method=lunclone」選項、SnapDrive 則針對UNIX、將會從指定的快照在同一個磁碟區中建立LUN實體複本。
+.. 如果在CLI中指定了「-clone unreonust限制」選項、或在「snapdrive.conf」檔案中指定「shan clone-method=unreonust」選項、SnapDrive UNIX版的for UNIX會從指定的Snapshot建立或重新使用All功能的FlexClone。
+.. 如果在CLI中指定了「-clone optimal」選項、或在「snapdrive.conf」檔案中指定「shan clone-method=optal」選項、SnapDrive 則UNIX版的支援功能會根據儲存系統組態、在受限的FlexClone與LUN複製之間自動選擇。
+
+
+
+
+
+NOTE: 根據預設、SnapDrive 由UNIX的支援所建立的複本是備份複本。

@@ -1,0 +1,45 @@
+---
+permalink: linux-administration/concept_migrating_to_new_vserver_name.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vserver, name, migrate, host, operations 
+summary: 如果您已從舊的Vserver移轉至新的Vserver、則必須確定主機系統上已設定新的Vserver名稱、以便在SnapDrive Vserver上執行任何的任何功能性更新作業。 
+---
+= 移轉至新的Vserver名稱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已從舊的Vserver移轉至新的Vserver、則必須確定主機系統上已設定新的Vserver名稱、以便在SnapDrive Vserver上執行任何的任何功能性更新作業。
+
+每當您移轉至新的Vserver名稱時、必須在主機系統上執行下列步驟：
+
+.步驟
+. 刪除使用下列命令設定的舊Vserver名稱：
++
+hy* SnapDrive 《*》、刪除_applie_name_*》
+
++
+舊設定的Vserver名稱會從主機系統中移除。
+
+. 使用下列命令刪除指派給舊設定Vserver的連接埠集：
++
+《* SnapDrive 》-《*》-《*》-《*刪除_檔案名稱_》（_filername..._]*）
+
+. 使用下列命令設定新的Vserver名稱：
++
+hy* SnapDrive 組態集_vsadmin檔案名稱_[_filername..._]*
+
+. 使用下列命令指派連接埠集：
++
+hy* SnapDrive 《*》鏡像集add _portSet_name_ filername [_filername..._]*》
+
+. 使用下列命令移轉新的Vserver名稱：「* SnapDrive 」「*」「*」「config移轉集」「_old_entrynew_entry_*」
+
+
+移轉到新的Vserver之後、您就可以在SnapDrive 主機系統中執行這個新的Vserver名稱的功能。
+
+*相關資訊*
+
+xref:task_migrating_from_old_host_name_to_new_host_name.adoc[從舊儲存系統移轉至新儲存系統]

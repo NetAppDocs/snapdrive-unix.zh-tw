@@ -1,0 +1,128 @@
+---
+permalink: aix/reference_stack_requirements.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stack, requirement 
+summary: UNIX版的支援功能需要主機作業系統、主機檔案系統、NFS、Volume Manager、FC或iSCSI主機公用程式、儲存系統授權、更新軟體、更新軟體及網際網路傳輸協定（IP）存取。SnapDrive ONTAP MultiStoreUNIX版的某些堆疊需求也必須滿足。SnapDrive 
+---
+= 堆疊需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版的支援功能需要主機作業系統、主機檔案系統、NFS、Volume Manager、FC或iSCSI主機公用程式、儲存系統授權、整套軟體、整套軟體、以及網際網路傳輸協定（IP）存取。SnapDrive ONTAP MultiStoreUNIX版的某些堆疊需求也必須滿足。SnapDrive
+
+
+
+== 主機端實體
+
+以下是主機端實體清單：
+
+* 主機作業系統
+* Volume管理程式
+* 檔案系統
+* AIX主機公用程式
+
+
+
+
+== UNIX堆疊適用SnapDrive
+
+您必須在「snapdrive.conf」檔案中輸入「_multipath-type_'、「_fstype_」、「_default-transport」和「_vmtype_」變數的可接受值、如在對照表堆疊中所提供。您必須確認輸入的值已安裝並在主機系統中執行。
+
+|===
+| 主機平台 | 預設傳輸類型 | 多重路徑類型 | FSType | vmtype 
+
+
+ a| 
+AIX
+ a| 
+FCP
+ a| 
+無
+ a| 
+JFS2
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+無
+ a| 
+JFS
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+nativempio
+ a| 
+JFS2
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+nativempio
+ a| 
+JFS
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+DMP
+ a| 
+VxFS
+ a| 
+VxVM
+
+|===
+* 如果您有FCP和iSCSI儲存堆疊、SnapDrive 則不支援FCP儲存堆疊。
++
+不支援適用於AIX的iSCSI儲存堆疊。SnapDrive
+
+* 已安裝主機作業系統和適用於AIX的適當修補程式。
+* 適用於AIX的Volume Manager是LVM或VxVVM。
+* 主機公用程式安裝在AIX中
++
+例如、如果多重路徑搭配SnapDrive 搭配AIX主機的UNIX版使用、您就必須設定該主機的AIX主機公用程式所需的功能。
+
+* 您的儲存系統上安裝了此軟體。ONTAP
+* 儲存系統上安裝了用來設定vFiler單元的軟體。MultiStore
+* 主機與儲存系統之間可存取網際網路傳輸協定（IP）。
+
+
+NetApp會持續修改主機公用程式和元件。您可以使用互通性對照表來追蹤此變更、其中包含在SAN環境中使用NetApp產品的最新資訊。
+
+儲存系統授權與MultiStore 不含任何資訊的授權構成儲存系統實體。
+
+
+
+== 儲存系統授權要求
+
+* FC、iSCSI或NFS授權、視您的組態而定
+* FlexClone授權
+* 儲存系統上的一份不含授權SnapRestore
+
+
+*相關資訊*
+
+xref:concept_unable_to_select_a_storage_stack.adoc[無法選取儲存堆疊]
+
+xref:concept_when_to_use_the_snapdrive_configuration_wizard.adoc[組態精靈SnapDrive]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp互通性"]

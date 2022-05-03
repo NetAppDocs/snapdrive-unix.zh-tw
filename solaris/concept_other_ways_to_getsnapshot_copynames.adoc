@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_other_ways_to_getsnapshot_copynames.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, copy, name, snapshot 
+summary: 使用SnapDrive 「Isfsnap清單」命令來顯示Snapshot複本名稱。 
+---
+= 取得Snapshot複本名稱的其他方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用「SnapDrive Isfsnap清單」命令來顯示Snapshot複本名稱。
+
+另一種取得Snapshot複本名稱的方法是登入儲存系統、然後在SnapDrive 該處使用「Snaplist」命令。此命令會顯示Snapshot複本的名稱。
+
+
+NOTE: 「flexsnap show」命令相當於儲存系統「flexsnap list」命令。SnapDrive SnapDrive

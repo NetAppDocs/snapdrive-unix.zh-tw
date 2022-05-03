@@ -1,0 +1,45 @@
+---
+permalink: aix/concept_disconnecting_a_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, file, specification, filespec 
+summary: 您可以中斷檔案規格的連線。下列範例說明如何完成此作業。 
+---
+= 中斷檔案規格的連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以中斷檔案規格的連線。下列範例說明如何完成此作業。
+
+以下是/mnt/fs1_0'的配置。
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1_0 -capabilities
+raw device: /dev/sde1   mount point: /mnt/fs_1_0 (persistent) fstype jfs2
+allowed operations: all
+
+device filename    adapter  path    size    proto   state   clone         lun path                                                         backing snapshot
+----------------   -------  ----    ----    -----   -----   -----         --------                                                         ----------------
+/dev/sde              -      P      100m    iscsi   online  flex-clone    homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1    vol1:snap2
+----
+下列輸出顯示如何中斷檔案系統的連線：「/mnt/fs_1_0」：
+
+[listing]
+----
+#snapdrive snap disconnect -fs /mnt/fs_1_0
+ delete file system /mnt/fs_1_0
+- fs /mnt/fs_1_0 ... deleted
+         - LUN homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1 ... disconnected
+         - deleting volume clone ... homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot  done
+----
+在中斷檔案系統的連線之後、SnapDrive 如果符合下列條件、UNIX版的支援也會刪除複製的磁碟區「napdrive_vol1_0_volvol_clone _from _snap2_snapshot」：
+
+* 磁碟區中沒有對應的LUN
+* 不存在新的LUN
+* 不存在新的Snapshot複本
+
+
+*刪除SnapDrive 並非由針對UNIX*所建立的FlexClone：SnapDrive 適用於UNIX的不允許刪除非由其所建立的FlexClone。

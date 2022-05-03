@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_connecting_existingluns_with_sharedresources.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, lun, shared, resources 
+summary: 如果將新節點新增至使用共用磁碟群組或檔案系統的主機叢集組態、您必須遵循不同的語法。 
+---
+= 將現有LUN與共享資源連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果將新節點新增至使用共用磁碟群組或檔案系統的主機叢集組態、您必須遵循不同的語法。
+
+hy* SnapDrive 實體儲存設備連接-FS _file_spec_-LUN _long LUN名稱_[LUN_name...] [-mnttops options（選項）]*

@@ -1,0 +1,14 @@
+---
+permalink: linux-administration/concept_multipath_setup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipath, steup, host, hba, driver, lvm, multipath 
+summary: 如果主機設定完成、Linux MPIO就能運作。主機設定大致分為HBA設定、HBA驅動程式參數設定、多重路徑設定、LVM設定及SnapDrive UNIX版的支援。 
+---
+= 多重路徑設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果主機設定完成、Linux MPIO就能運作。主機設定大致分為HBA設定、HBA驅動程式參數設定、多重路徑設定、LVM設定及SnapDrive UNIX版的支援。

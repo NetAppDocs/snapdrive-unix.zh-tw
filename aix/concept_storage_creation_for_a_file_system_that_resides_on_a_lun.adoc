@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_storage_creation_for_a_file_system_that_resides_on_a_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, lun, file, system 
+summary: 如果您使用SnapDrive UNIX版的支援功能來建立直接位於LUN上的檔案系統、SnapDrive 則UNIX版的支援功能會建立及對應LUN、然後在不涉及主機LVM的情況下建立及掛載檔案系統。 
+---
+= 為位於LUN上的檔案系統建立儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用SnapDrive UNIX版的支援功能來建立直接位於LUN上的檔案系統、SnapDrive 則UNIX版的支援功能會建立及對應LUN、然後在不涉及主機LVM的情況下建立及掛載檔案系統。
+
+
+NOTE: 當主機的根檔案系統具有唯讀權限時、不支援UNIX作業的支援。SnapDrive

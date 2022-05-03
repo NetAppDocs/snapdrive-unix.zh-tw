@@ -1,0 +1,14 @@
+---
+permalink: solaris/concept_removing_a_node_from_a_host_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, remove, node, host, cluster 
+summary: 若要從主機叢集移除新節點、請遵循《Veritas Cluster Server Installation Guide for Solaris》（適用於Solaris的Veritas叢集伺服器安裝指南）中的指示。設定LLT和GAB之後、您必須使用SnapDrive 「停止儲存」命令、取消對應主機叢集中所有共享儲存實體的所有LUN。 
+---
+= 從主機叢集移除節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要從主機叢集移除新節點、請依照《_ Veritas Cluster Server Installation Guide for Solaris》（適用於Solaris的Veritas叢集伺服器安裝指南）中的指示進行。_在設定LLT和GAB之後、您必須使用「SnapDrive 停止儲存中斷連線」命令、取消對應主機叢集中所有共用儲存實體的所有LUN。

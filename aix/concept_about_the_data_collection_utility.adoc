@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_about_the_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, collection, utility 
+summary: 適用於UNIX的支援中心提供資料收集公用程式（SnapDrive、DC）、可收集有關適用於UNIX的診斷資訊、更新組態檢查程式、以及系統設定。SnapDrive SnapDrive SnapDrive 
+---
+= 關於資料收集公用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX版提供資料收集公用程式（「snapdrive.DC」）、可收集有關UNIX版的診斷資訊、支援哪些組態檢查程式、以及您的系統設定。SnapDrive SnapDrive SnapDrive
+
+執行NetApp診斷公用程式、並將SnapDrive UNIX版的還原記錄檔複製到特殊目錄、即可達成此目的。然後建立包含此資訊的壓縮檔案、您可以將此資訊傳送給NetApp技術支援部門進行分析。
+
+在UNIX版的發行版中、實作了「dump」和「-dumpall」選項。SnapDrivedump選項會收集SnapDrive 第一個記錄檔的the flexdcommand、而「-dumpall」選項會收集SnapDrive 所有的flexdcommand記錄。當您使用「-dump」或「-dumpall」選項執行SnapDrive 支援功能時、會產生「snapdrive.DC」、並列出壓縮檔案的位置。tar檔案會收集SnapDrive 所有的資訊、您可以解壓縮程式、並從個別位置擷取檔案。
+
+這個「傾印」或「垃圾桶」選項適用於SnapDrive 下列指令：「SnapDrive 不儲存秀」、SnapDrive 「不儲存創造」、SnapDrive 「不儲存刪除」、「SnapDrive 不完整的建立」、SnapDrive 「不完整的連結」、 「不中斷連線」、「不中斷恢復」、「不中斷複製」、「不中斷複製」等作業。SnapDrive SnapDrive SnapDrive SnapDrive
+
+
+NOTE: 它不會複製內含儲存系統登入資訊的檔案。也不會進行任何組態變更。

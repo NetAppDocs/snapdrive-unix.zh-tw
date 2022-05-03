@@ -1,0 +1,20 @@
+---
+permalink: aix/reference_unable_to_install_snapdrive_for_unix_patches_on_aix_by_default.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, patch, default 
+summary: 根據預設、您無法SnapDrive 使用系統管理介面工具（Smit）在AIX上安裝適用於UNIX的修補程式版本。 
+---
+= 缺省情況下無法在SnapDrive AIX上安裝適用於UNIX的修補程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據預設、您無法SnapDrive 使用系統管理介面工具（Smit）在AIX上安裝適用於UNIX的修補程式版本。
+
+
+
+== 因應措施
+
+安裝SnapDrive 適用於AIX的UNIX修補程式版本時、請務必在Smit中選取「Overwrite」（覆寫）選項。

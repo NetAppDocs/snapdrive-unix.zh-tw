@@ -1,0 +1,31 @@
+---
+permalink: solaris/task_migrating_from_old_host_name_to_new_host_name.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, migrate, old, new, storage, system 
+summary: 您可以使用SnapDrive 下列命令、從舊儲存系統移轉至新的儲存系統：移轉之後、您可以SnapDrive 使用新的儲存系統、在主機系統中執行所有的功能不全操作。 
+---
+= 從舊儲存系統移轉至新儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「SnapDrive show config migrate set」命令、從舊儲存系統移轉至新的儲存系統。移轉之後、您可以SnapDrive 使用新的儲存系統、在主機系統中執行所有的功能不全操作。
+
+.步驟
+. 輸入下列命令：
++
+hy* SnapDrive 《*組態移轉集_old_storage系統名稱new_storage系統名稱_*》
+
+
+
+以下範例顯示您可以從舊的儲存系統「tuffleskin」移轉至新的儲存系統「roaster」。
+
+[listing]
+----
+snapdrive config migrate set tuffleskin roaster
+----
+*相關資訊*
+
+xref:concept_migrating_to_new_vserver_name.adoc[移轉至新的Vserver名稱]

@@ -1,0 +1,28 @@
+---
+permalink: aix/concept_checks_that_can_be_overridden_by_the_user.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, check, override, user 
+summary: 在執行Volume型SnapRestore 的功能之前、SnapDrive 針對UNIX執行一些檢查、讓使用者可以使用-force選項來置換。這些檢查是必要的、以便SnapRestore 安全使用Volume型的功能。 
+---
+= 可由使用者覆寫的檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行Volume型SnapRestore 的功能之前、SnapDrive 針對UNIX執行一些檢查、讓使用者可以使用「-force」選項來置換。這些檢查是必要的、以便SnapRestore 安全使用Volume型的功能。
+
+建議您遵循系統執行的各種檢查、但您可以使用「-force」選項來覆寫這些檢查。
+
+您可以覆寫下列SnapDrive 適用於UNIX的功能、以便進行大量SnapRestore 的功能檢查：
+
+* UNIX版會檢查Snapshot複本中的LUN是否不一致當機。SnapDrive如果在Snapshot複本中發現應用程式LUN不一致、就會發出警告。
+* UNIX版的測試顯示、在執行Snapshot複本之後、作用中磁碟區中是否有其他LUN。SnapDrive如果for UNIX找到其他LUN、它會警告您作用中磁碟區中的其他LUN將會遺失。SnapDrive
+* 適用於UNIX的檢查是否有新的Snapshot複本。SnapDrive這些新的Snapshot複本無法還原且遺失。
+* UNIX版會檢查Volume中的一般檔案（從本機主機可見的檔案）SnapDrive 。
+* 適用於UNIX的NFS匯出檢查。SnapDrive
+* 適用於UNIX的CIFS共用檢查。SnapDrive
+
+
+如果Snapshot複本是使用SnapDrive 適用於UNIX或更早版本的版本、則無法SnapRestore 執行上述清單中的前兩項檢查。如果您已提供「-force」選項、則在Volume型SnapRestore 執行期間、系統會顯示一則提示訊息、以過度執行這些檢查並繼續進行。

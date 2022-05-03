@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/concept_support_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, vserver, storage, lif, data 
+summary: 適用於UNIX的支援Vserver。SnapDriveVserver是一款安全的虛擬儲存伺服器、可支援多種傳輸協定和統一化儲存設備。Vserver包含資料磁碟區和一或多個LIF、用於將資料提供給用戶端。 
+---
+= 支援Vserver
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於UNIX的支援Vserver。SnapDriveVserver是一款安全的虛擬儲存伺服器、可支援多種傳輸協定和統一化儲存設備。Vserver包含資料磁碟區和一或多個LIF、用於將資料提供給用戶端。
+
+Vserver會安全地隔離共享的虛擬化資料儲存設備和網路、並將其顯示為用戶端的單一專屬伺服器。每個Vserver都有獨立的系統管理員驗證網域、可由Vserver管理員獨立管理。
+
+每個Vserver的磁碟區都是透過連接點進行關聯、並掛載於連接路徑上。每個磁碟區的檔案系統似乎都會掛載在交會處。Vserver的根磁碟區位於命名空間階層的最上層、其他磁碟區則會掛載到Vserver的根磁碟區、以擴充全域命名空間。Vserver的資料磁碟區包含檔案和LUN。
+
+* 您可以使用SnapDrive UNIX版的功能、在Vserver上執行儲存資源配置、Snapshot複製作業及組態作業。
+* 應用程式資料不會儲存在Vserver的根Volume中。
+* 如果Vserver的根目錄是qtree、則不支援Snapshot複製作業。
+* 在Vserver上建立的每個Volume都必須掛載在交會路徑上。
+
+
+*相關資訊*
+
+link:concept_configuration_information_for_vserver_environment.adoc["Vserver的組態資訊"]
+
+link:task_verifying_login_information_for_vserver.adoc["正在驗證Vserver的登入資訊"]
+
+link:task_specifying_login_information_for_vserver.adoc["指定Vserver的登入資訊"]
+
+link:task_deleting_a_user_for_a_vserver.adoc["從Vserver刪除使用者"]
+
+link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["《軟件安裝指南》（英文）ONTAP"]

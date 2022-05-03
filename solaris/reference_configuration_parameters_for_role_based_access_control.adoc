@@ -1,0 +1,68 @@
+---
+permalink: solaris/reference_configuration_parameters_for_role_based_access_control.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, variable, rbac, access, control, role 
+summary: 您必須在SnapDrive .conf檔案中設定與角色型存取控制相關的各種組態變數。 
+---
+= 角色型存取控制的組態變數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在「snapdrive.conf」檔案中、設定與角色型存取控制相關的各種組態變數。
+
+|===
+| 變動 | 說明 
+
+
+ a| 
+h_contact-http-dfm-port = 8088_'
+ a| 
+指定用於與Operations Manager主控台伺服器通訊的HTTP連接埠。預設值為8088。
+
+
+
+ a| 
+「contact-SSL-DFM-port = 8488_」
+ a| 
+指定用於與Operations Manager主控台伺服器通訊的SSL連接埠。預設值為8488。
+
+
+
+ a| 
+「_RBAC方法= DFM」
+ a| 
+指定存取控制方法。可能的值包括「原生」和「dFM」。
+
+如果該值為「原生」、則儲存在「/vol/vol0/sdprbac/sdhost-name.prbac」中的存取控制檔案將用於存取檢查。
+
+如果該值設為「dFM」、則營運經理主控台是必備條件。在這種情況SnapDrive 下、UNIX版的支援中心會將存取檢查傳送至Operations Manager主控台。
+
+
+
+ a| 
+「_RBAC快取=開啟」
+ a| 
+適用於UNIX的可維護存取檢查查詢的快取及對應結果。SnapDrive僅當所有已設定的Operations Manager主控台伺服器都停機時、UNIX版的適用對象才會使用此快取。SnapDrive
+
+您可以將此值設為「On（開啟）」以啟用快取、或設為「Off（關閉）」以停用快取。預設值為「Off」（關）、您可以將SnapDrive UNIX的支援功能設定為使用Operations Manager主控台、並將「RBAC方法」組態變數設定為「dFM」。
+
+
+
+ a| 
+「_RBAC快取快取逾時」
+ a| 
+指定RBAC快取逾時期間、僅適用於啟用「_RBAC快取」的情況。預設值為「24小時」。
+
+僅當所有已設定的Operations Manager主控台伺服器都停機時、UNIX版的適用對象才會使用此快取。SnapDrive
+
+
+
+ a| 
+「_use-https-to - dfm=on_」
+ a| 
+此變數可讓您將SnapDrive UNIX的支援設定為在與Operations Manager主控台通訊時使用SSL加密（HTTPS）。預設值為「開啟」。
+
+|===

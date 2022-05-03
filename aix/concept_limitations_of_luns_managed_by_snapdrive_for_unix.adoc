@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, lun, managed 
+summary: 使用SnapDrive NetApp時、您必須瞭解LUN的相關限制。 
+---
+= 由SnapDrive 功能不完善的LUN管理限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用SnapDrive NetApp時、您必須瞭解LUN的相關限制。
+
+* 由無法管理的LUN SnapDrive 不能作為開機磁碟或系統磁碟。
+* 不支援LUN和Snapshot複本名稱的長格式中的分號（：）SnapDrive 。
++
+在長Snapshot複本名稱的元件之間、或是在LUN的儲存系統名稱與儲存系統磁碟區名稱之間、可以使用結號。例如、「快照：/vol/vol1:snap1」是典型的長快照名稱、而「快照：/vol/vol1/luna」則是典型的長LUN名稱。
+
+

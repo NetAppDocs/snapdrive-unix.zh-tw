@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_guidelines_for_thestorage_connectcommand.html 
+sidebar: sidebar 
+keywords: guidelines, snap, snapdrive, storage, connect, command 
+summary: 您需要遵守幾項準則、才能使用SnapDrive 「flexfstorage connect」命令。 
+---
+= 儲存設備連線命令的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要遵守幾項準則才能使用「SnapDrive fuse storage connect」命令。
+
+包含LVM實體的儲存設備有特殊需求。若要使用「SnapDrive 支援儲存設備連線」命令來連接LVM實體、您必須建立儲存設備、使儲存階層中的每個實體都只有一個下一個實體的執行個體。例如、您可以使用「SnapDrive 支援儲存設備連線」命令、將一個磁碟群組（DG1）與一個主機磁碟區（hostvol1）和一個檔案系統（fs1）的儲存階層連線。但是、您無法使用「SnapDrive 支援儲存設備連線」命令、將具有一個磁碟群組（DG1）的階層架構與兩個主機磁碟區（hostvol1和hostvol2）和兩個檔案系統（fs1和fs2）連線。

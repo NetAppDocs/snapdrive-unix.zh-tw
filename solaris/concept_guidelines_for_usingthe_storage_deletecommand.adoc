@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_guidelines_for_usingthe_storage_deletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command 
+summary: 針對UNIX、在使用的某些功能上、使用了「僅限使用者使用」這個指令。SnapDrive SnapDrive 
+---
+= 使用儲存設備刪除命令的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+《不保存刪除》命令在UNIX版的《不適用》中有一些限制。SnapDrive SnapDrive
+
+* 當您刪除檔案系統時、SnapDrive 適用於UNIX的解決方法一律會移除檔案系統的掛載點。
+* 如果您使用「-LUN」選項來指定LUN的名稱、而該LUN是主機磁碟群組或檔案系統的成員、SnapDrive 則「fuse storage delete」命令會失敗。
+* 如果您使用「-LUN」選項來指定主機上多重路徑軟體未發現的LUN名稱、則「SnapDrive show storage DELETE」命令會失敗。
++
+例如、在Solaris主機上、LUN必須受到DMP控制。換句話說、LUN必須具有對應的「/dev/vx/dmp」裝置。
+
+

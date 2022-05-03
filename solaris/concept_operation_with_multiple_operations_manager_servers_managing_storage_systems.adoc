@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_operation_with_multiple_operations_manager_servers_managing_storage_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, console, server, storage, manage, multiple 
+summary: 下列輸出顯示當儲存系統由多個Operations Manager主控台管理時、您會收到的錯誤訊息。 
+---
+= 與管理儲存系統的多部Operations Manager主控台伺服器一起運作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下列輸出顯示當儲存系統由多個Operations Manager主控台管理時、您會收到的錯誤訊息。
+
+[listing]
+----
+[root]# snapdrive storage create -lun storage_array1:/vol/vol1/lun5 lun6 -lun storage_array2:/vol/vol1/lun2 -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user unix_host\root on Operations Manager server ops_mngr_server1
+SD.Storage.Write access denied on volume storage_array2:/vol/vol1 for user unix_host\root on Operations Manager server ops_mngr_server2
+----
+儲存空間_array1由ops_mngr_server1管理、而儲存空間_array2則由ops_mngr_server2管理。UNIX/host的系統管理員無權在儲存空間_array1和儲存空間_array2上建立檔案支援。在上述SnapDrive 範例中、適用於UNIX的功能可顯示Operations Manager主控台、用以判斷存取權。
