@@ -20,6 +20,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_about_the_data_collection_utility.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_about_the_data_collection_utility.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -34,7 +41,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_about_the_data_collection_utility.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_access_control_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -55,7 +62,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_access_control_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_access_permissions_on_a_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -76,13 +83,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_access_permissions_on_a_storage_system.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_after_rebooting_the_host_os_and_cluster_services_fail_to_start.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -91,6 +91,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_aix_mpio_cfmode_support_limited_sdu.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_application_consistentsnapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -111,7 +118,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_application_consistentsnapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_audit_recovery_and_trace_logging_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -132,14 +139,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_audit_recovery_and_trace_logging_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_autodetection_does_not_work_with_mpio_setup_for_an_fs_created_over_a_raw_lun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_autodetection_does_not_work_with_mpio_setup_for_an_fs_created_over_a_raw_lun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_automatic_detection_of_host_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -160,7 +167,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_automatic_detection_of_host_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_automatic_storage_system_update_on_operations_manager.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -181,7 +188,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_automatic_storage_system_update_on_operations_manager.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_available_access_control_levels.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -202,7 +209,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_available_access_control_levels.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_benefits_of_flexclone_volumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -223,7 +230,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_benefits_of_flexclone_volumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_changing_the_defaults_for_the_audit_logs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -244,14 +251,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_changing_the_defaults_for_the_audit_logs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_checking_host_information.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_checking_host_information.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_checks_that_can_be_overridden_by_the_user.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -272,13 +279,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_checks_that_can_be_overridden_by_the_user.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_clustered_data_ontap_features_available_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -287,6 +287,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_clustering_message_appears_during_snap.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_collecting_information_needed_by_snapdrive_for_unix_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -307,7 +314,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_collecting_information_needed_by_snapdrive_for_unix_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_reference.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -328,7 +335,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_reference.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnecting_a_filesystem_created_on_alun_from_the_host.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -349,7 +356,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnecting_a_filesystem_created_on_alun_from_the_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnectingluns_and_storageentities_from_thehost.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -370,7 +377,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnectingluns_and_storageentities_from_thehost.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnectingluns_from_the_host.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -391,7 +398,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_for_disconnectingluns_from_the_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_to_increase_the_sizeof_the_storage.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -412,7 +419,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_syntax_to_increase_the_sizeof_the_storage.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todelete_snapshotcopies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -433,7 +440,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todelete_snapshotcopies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todisplay_availablestorage.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -454,7 +461,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todisplay_availablestorage.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todisplay_snapshotcopy_information.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -475,7 +482,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_todisplay_snapshotcopy_information.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_torename_a_snapshotcopy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -496,7 +503,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_torename_a_snapshotcopy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_torestore_snapshotcopies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -517,7 +524,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_command_to_use_torestore_snapshotcopies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_commands_appear_blocked_commands_appear_blocked.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -538,7 +545,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_commands_appear_blocked_commands_appear_blocked.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_common_error_messages.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -559,7 +566,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_common_error_messages.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_files_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -573,7 +580,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_files_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_information_for_vserver_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -594,7 +601,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_information_for_vserver_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_information_in_snapdrive_for_unix_for_guest_os.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -608,7 +615,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_information_in_snapdrive_for_unix_for_guest_os.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_options_and_their_default_values.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -629,7 +636,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuration_options_and_their_default_values.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuring_igroups.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -650,7 +657,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuring_igroups.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuring_sd_admin_in_operations_manager.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -671,14 +678,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_configuring_sd_admin_in_operations_manager.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_a_single_storage_entity_on_a_storage_system_or_storage_system_ha_pair.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_a_single_storage_entity_on_a_storage_system_or_storage_system_ha_pair.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_existingluns_with_sharedresources.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -699,7 +706,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_existingluns_with_sharedresources.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_lunswith_disk_groups_host_volumes_andfile_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -720,7 +727,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_lunswith_disk_groups_host_volumes_andfile_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_multiple_storage_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -741,7 +748,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_multiple_storage_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_a_single_filespec_in_a_lun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -762,14 +769,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_a_single_filespec_in_a_lun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_connecting_to_a_snapshot_copy_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_connecting_to_a_snapshot_copy_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_asnapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -790,7 +797,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_asnapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_multiple_filespecs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -811,7 +818,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connecting_to_multiple_filespecs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connectingsnapshot_copies_onmirrored_storagesystems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -832,7 +839,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_connectingsnapshot_copies_onmirrored_storagesystems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_network_file_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -846,7 +853,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_network_file_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_supporting_vfiler_unit.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -867,7 +874,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_supporting_vfiler_unit.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_using_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -888,7 +895,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_using_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_using_volume_based_snaprestore.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -909,7 +916,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_for_using_volume_based_snaprestore.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_forrestoring_asnapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -930,7 +937,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_forrestoring_asnapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_forstorage_operations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -951,7 +958,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_forstorage_operations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_when_working_with_snapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -972,7 +979,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_considerations_when_working_with_snapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_an_audit_log_file.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -993,7 +1000,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_an_audit_log_file.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1014,7 +1021,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_the_recovery_log.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1035,7 +1042,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_contents_of_the_recovery_log.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_crash_consistency_with_data_ontap_7_2_and_later.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1056,7 +1063,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_crash_consistency_with_data_ontap_7_2_and_later.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_crash_consistent_snapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1077,14 +1084,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_crash_consistent_snapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_creating_a_file_system_directly_on_a_lun_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_creating_a_file_system_directly_on_a_lun_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_creating_snapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1098,7 +1105,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_creating_snapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_creating_snapshotcopies_of_unrelatedentities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1119,7 +1126,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_creating_snapshotcopies_of_unrelatedentities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_data_collection_utility.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1140,14 +1147,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_data_collection_utility.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_data_disappears_when_you_add_luns_to_a_volume_group.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_data_disappears_when_you_add_luns_to_a_volume_group.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_default_values_for_the_recovery_logs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1168,7 +1175,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_default_values_for_the_recovery_logs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_default_vaules_for_the_trace_log_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1189,7 +1196,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_default_vaules_for_the_trace_log_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_deleting_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1210,14 +1217,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_deleting_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_deleting_luns_with_exported_disk_groups_on_linux_lvm_2_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_deleting_luns_with_exported_disk_groups_on_linux_lvm_2_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_deleting_storage_using_a_wizard.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1238,7 +1245,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_deleting_storage_using_a_wizard.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_determining_howmany_luns_can_becreated.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1252,7 +1259,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_determining_howmany_luns_can_becreated.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_diagnostic_files_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1266,14 +1273,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_diagnostic_files_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disable_a_node_ora_cluster_from_usingshared_resources.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disable_a_node_ora_cluster_from_usingshared_resources.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disconnecting_a_filespec.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1294,7 +1301,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disconnecting_a_filespec.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disconnecting_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1315,7 +1322,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_disconnecting_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_discrepancy_in_the_error_code_message.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1336,7 +1343,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_discrepancy_in_the_error_code_message.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_displayingsnapshot_copies_of_a_storage_system_volume.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1357,7 +1364,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_displayingsnapshot_copies_of_a_storage_system_volume.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_displayingsnapshot_copiesresiding_on_astorage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1378,14 +1385,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_displayingsnapshot_copiesresiding_on_astorage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_error_loading_the_usr_lib_libqlsdm_so_in_hba_loadlibrary.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_error_loading_the_usr_lib_libqlsdm_so_in_hba_loadlibrary.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_error_message_format.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1406,7 +1413,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_error_message_format.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_error_message_locations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1427,7 +1434,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_error_message_locations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_example_of_an_autosupport_message.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1448,7 +1455,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_example_of_an_autosupport_message.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_executables_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1462,7 +1469,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_executables_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_executing_the_data_collection_utility.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1483,7 +1490,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_executing_the_data_collection_utility.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_fc_and_iscsi_host_utilities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1497,7 +1504,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_fc_and_iscsi_host_utilities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_fc_or_iscsi_configuration_checks.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1511,7 +1518,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_fc_or_iscsi_configuration_checks.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_features_supported_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1525,7 +1532,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_features_supported_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_files_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1539,7 +1546,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_files_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_flexclone_volumes_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1554,13 +1561,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_flexclone_volumes_in_snapdrive_for_unix.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_flexclone_volumes_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1630,6 +1630,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_the_storage_resize_command.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_guidelines_for_the_storage_resize_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -1644,7 +1651,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_the_storage_resize_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thesnapdrive_storagedisconnectcommand.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1665,7 +1672,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thesnapdrive_storagedisconnectcommand.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thestorage_connectcommand.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1686,7 +1693,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thestorage_connectcommand.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thestorage_createoperation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1707,14 +1714,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_thestorage_createoperation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_using_the_disconnect_command_in_a_host_cluster_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_using_the_disconnect_command_in_a_host_cluster_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_usingthe_storage_deletecommand.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1735,7 +1742,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_for_usingthe_storage_deletecommand.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forconnectingsnapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1756,7 +1763,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forconnectingsnapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordeleting_snapshotcopies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1777,7 +1784,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordeleting_snapshotcopies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordisconnectingsnapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1798,7 +1805,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordisconnectingsnapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordisconnectingsnapshot_copies_for_nfs_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1819,7 +1826,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_fordisconnectingsnapshot_copies_for_nfs_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forrenaming_snapshotcopies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1840,7 +1847,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forrenaming_snapshotcopies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forsnapshot_copycreation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1861,13 +1868,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_guidelines_forsnapshot_copycreation.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_hba_setup.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -1876,6 +1876,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_host_cluster_environment_for_snapdrive_for_unix.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_host_filespec_information_for_a_particular_volume.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1896,7 +1903,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_host_filespec_information_for_a_particular_volume.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_host_preparation_for_installing_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1910,7 +1917,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_host_preparation_for_installing_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_hostvolumes_and_filesystem_resize_operation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1931,14 +1938,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_hostvolumes_and_filesystem_resize_operation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_snapdrive_for_unix_works_on_host_clustered_unix_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_snapdrive_for_unix_works_on_host_clustered_unix_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_snapdrive_forunix_usesautosupport.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1959,7 +1966,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_snapdrive_forunix_usesautosupport.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_the_snapdrivesnap_connect_command_works.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -1980,7 +1987,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_the_snapdrivesnap_connect_command_works.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_to_configure_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2001,7 +2008,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_to_configure_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_to_manage_snapshot_copies_of_lvm_vxvm_raw_devices_and_nfs_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2022,7 +2029,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_how_to_manage_snapshot_copies_of_lvm_vxvm_raw_devices_and_nfs_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_increase_in_storage_size_using_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2043,7 +2050,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_increase_in_storage_size_using_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_information_about_luns_mapped_to_local_or_remote_hosts.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2064,7 +2071,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_information_about_luns_mapped_to_local_or_remote_hosts.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2085,7 +2092,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapcreate_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2106,7 +2113,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapcreate_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapdelete_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2127,7 +2134,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapdelete_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapdisconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2148,7 +2155,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapdisconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snaprestore_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2169,7 +2176,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snaprestore_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapshow_or_list_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2190,7 +2197,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_snapshow_or_list_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_storageconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2211,7 +2218,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_storageconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_storageresize_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2232,7 +2239,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_informationrequired_forusing_the_snapdrive_storageresize_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_for_nfs_file_or_directory_trees.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2253,7 +2260,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_for_nfs_file_or_directory_trees.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2274,7 +2281,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_of_rdm_luns_managed_by_snapdrive.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2288,7 +2295,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_limitations_of_rdm_luns_managed_by_snapdrive.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_log_file_rotation_settings.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2309,7 +2316,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_log_file_rotation_settings.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_login_information_for_storage_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2330,7 +2337,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_login_information_for_storage_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_login_information_for_vserver.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2351,14 +2358,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_login_information_for_vserver.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_lun_discovery_fails_because_of_iscsi_daemon_limitation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_lun_discovery_fails_because_of_iscsi_daemon_limitation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_lun_names_in_san_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2379,7 +2386,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_lun_names_in_san_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_management_of_lvm_and_raw_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2400,7 +2407,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_management_of_lvm_and_raw_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_snapshot_copy_using_a_wizard.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2421,7 +2428,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_snapshot_copy_using_a_wizard.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_storage_using_a_wizard.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2442,7 +2449,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_storage_using_a_wizard.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_volume_migration_using_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2463,7 +2470,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_managing_volume_migration_using_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_mandatory_checks_for_volume_based_snaprestore.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2484,7 +2491,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_mandatory_checks_for_volume_based_snaprestore.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_manual_pages_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2498,7 +2505,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_manual_pages_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_forcreating_storage.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2519,7 +2526,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_forcreating_storage.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_fordisconnectingstorage.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2540,7 +2547,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_fordisconnectingstorage.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_fordisplaying_storageinformation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2561,7 +2568,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_methods_fordisplaying_storageinformation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_migrating_to_new_vserver_name.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2582,7 +2589,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_migrating_to_new_vserver_name.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_mixed_environments_of_san_and_nfs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2603,7 +2610,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_mixed_environments_of_san_and_nfs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multipath_access_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2618,13 +2625,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_multipath_access_in_snapdrive_for_unix.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multipath_access_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2652,6 +2652,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multiple_operations_manager_servers.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_multiple_operations_manager_servers.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -2666,7 +2673,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multiple_operations_manager_servers.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multiple_subnet_configuration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2687,7 +2694,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_multiple_subnet_configuration.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_nfs_configuration_checks.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2701,7 +2708,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_nfs_configuration_checks.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operating_system_limits_on_open_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2722,7 +2729,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operating_system_limits_on_open_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_a_single_filespec_on_a_single_storage_object.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2743,7 +2750,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_a_single_filespec_on_a_single_storage_object.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_a_single_filespec_on_multiple_storage_objects.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2764,7 +2771,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_a_single_filespec_on_multiple_storage_objects.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_filespec_and_storage_objects.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2785,7 +2792,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_filespec_and_storage_objects.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_operations_manager_servers_managing_storage_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2806,7 +2813,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_operations_manager_servers_managing_storage_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_storage_objects.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2827,7 +2834,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operation_with_multiple_storage_objects.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_manager_unavailable.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2848,7 +2855,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_manager_unavailable.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_performed_on_stand_alone_unix_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2862,7 +2869,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_performed_on_stand_alone_unix_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_performed_using_wizards.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2883,14 +2890,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_performed_using_wizards.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_supported_on_host_clustered_unix_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_operations_supported_on_host_clustered_unix_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_other_ways_to_getsnapshot_copynames.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2911,7 +2918,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_other_ways_to_getsnapshot_copynames.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_postinstallation_checks.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2925,7 +2932,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_postinstallation_checks.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_preparation_for_installing_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2939,7 +2946,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_preparation_for_installing_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_prerequisites_for_using_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2953,7 +2960,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_prerequisites_for_using_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_provisioning_storage.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2967,7 +2974,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_provisioning_storage.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_pure_nfs_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -2988,7 +2995,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_pure_nfs_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_rbac_and_storage_operation_examples.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3009,7 +3016,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_rbac_and_storage_operation_examples.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reason_to_refresh_the_dmp_paths.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3023,7 +3030,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reason_to_refresh_the_dmp_paths.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reasons_to_deletesnapshotcopies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3044,14 +3051,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reasons_to_deletesnapshotcopies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_removing_a_node_from_a_host_cluster.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_removing_a_node_from_a_host_cluster.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_renaming_asnapshot_copy_thatspans_storage_systems_orvolumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3072,7 +3079,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_renaming_asnapshot_copy_thatspans_storage_systems_orvolumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_requirements_for_storage_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3086,7 +3093,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_requirements_for_storage_systems.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reset_the_snap_reserve_option.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3094,13 +3101,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_reset_the_snap_reserve_option.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_reset_the_snap_reserve_option.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3121,6 +3121,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_a_snapshot_copy.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_restoring_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -3135,7 +3142,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_asnapshot_copy_froma_different_host.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3156,7 +3163,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_asnapshot_copy_froma_different_host.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_multiple_storage_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3177,7 +3184,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_multiple_storage_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_snapshotcopies_ona_destination_storagesystem.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3198,7 +3205,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_restoring_snapshotcopies_ona_destination_storagesystem.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_configuration_on_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3219,7 +3226,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_configuration_on_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_for_flexclone_volume_operations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3240,7 +3247,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_for_flexclone_volume_operations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3261,14 +3268,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_role_based_access_control_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_san_filespec_created_with_solaris_volume_manager_svm_using_iscsi_does_not_automount.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_san_filespec_created_with_solaris_volume_manager_svm_using_iscsi_does_not_automount.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_secure_daemon_communication_using_https.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3289,7 +3296,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_secure_daemon_communication_using_https.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_security_considerations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3310,7 +3317,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_security_considerations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_security_featuresprovided_bysnapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3331,14 +3338,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_security_featuresprovided_bysnapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snap_connect_operation_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snap_connect_operation_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_connect_procedure.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3359,7 +3366,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_connect_procedure.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_disconnect_procedure.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3380,13 +3387,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_disconnect_procedure.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snap_management_operation_fails_in_rhel_or_oel_5.x_due_to_an_issue_with_umount_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -3395,6 +3395,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_restore_command_fails_to_mount_the_file_system.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_restore_operation_fails_nfsv3_and_nfsv4_versions_enabled_in_host_and_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3415,7 +3422,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snap_restore_operation_fails_nfsv3_and_nfsv4_versions_enabled_in_host_and_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_commands_and_capabilities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3436,14 +3443,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_commands_and_capabilities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_commands_fails_when_the_transport_protocol_connectivity_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_commands_fails_when_the_transport_protocol_connectivity_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3464,13 +3471,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_errors_out_if_libgcc_s_so_1_is_not_properly_installed.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -3479,6 +3479,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_fails_to_add_newly_mapped_luns_in_rhel_6_6_and_rhel_7.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_and_operations_manager_interaction.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3499,7 +3506,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_and_operations_manager_interaction.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_and_raw_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3520,7 +3527,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_and_raw_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_command_displays_could_not_check_access_error.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3541,7 +3548,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_command_displays_could_not_check_access_error.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_commands_fail_when_there_is_a_customized_ld_library_path.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3562,7 +3569,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_commands_fail_when_there_is_a_customized_ld_library_path.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_configuration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3583,13 +3590,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_configuration.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_does_not_show_supported_file_system_types_for_storage_create_operation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -3598,6 +3598,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_for_unix_faces_issue_after_sles_upgrade_from_version_10_to_11.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_incorrectly_interprets_the_dollar_sign_symbol.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3618,7 +3625,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_incorrectly_interprets_the_dollar_sign_symbol.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_installation_and_upgrade.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3632,7 +3639,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_installation_and_upgrade.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_operations_on_flexclone_volumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3653,7 +3660,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_operations_on_flexclone_volumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_options_keywords_and_arguments.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3674,7 +3681,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_options_keywords_and_arguments.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_overview.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3688,7 +3695,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_overview.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3709,7 +3716,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_reports_an_error_if_iscsi_is_not_running.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3730,7 +3737,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_reports_an_error_if_iscsi_is_not_running.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_security.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3751,14 +3758,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_for_unix_security.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_limitations_for_data_ontap_operating_in_cluster_mode.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_limitations_for_data_ontap_operating_in_cluster_mode.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_operations_fail_in_multiple_subnet_configuration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3779,7 +3786,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_operations_fail_in_multiple_subnet_configuration.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_storage_create_command_fails_when_multiple_san_paths_are_present.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3800,13 +3807,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrive_storage_create_command_fails_when_multiple_san_paths_are_present.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/concept_snapdrive_storage_show_command_returns_incorrect_path_if_volume_deleted_without_unmount.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -3815,6 +3815,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapdrive_storage_show_command_returns_incorrect_path_if_volume_deleted_without_unmount.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrived_start_command_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3835,7 +3842,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrived_start_command_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrived_stop_or_snapdrived_start_command_hangs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3856,14 +3863,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapdrived_stop_or_snapdrived_start_command_hangs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snaprestore_and_snapconnect_operations_do_not_work_in_linux_after_multipathing_migration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snaprestore_and_snapconnect_operations_do_not_work_in_linux_after_multipathing_migration.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_connectand_snapshotrestore_operations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3884,7 +3891,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_connectand_snapshotrestore_operations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copies_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3905,7 +3912,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copies_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copies_information_display.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3926,7 +3933,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copies_information_display.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copiesthat_span_storagesystems_orvolumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3947,7 +3954,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copiesthat_span_storagesystems_orvolumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copy_operations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3968,7 +3975,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copy_operations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copy_rename.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -3989,7 +3996,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_copy_rename.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_create_and_delete_operation_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4010,13 +4017,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_snapshot_create_and_delete_operation_fails.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_snapshot_restore_operation_fails_to_restore_file_system_on_raw_lun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -4025,6 +4025,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_some_commands_are_delayed_when_the_storage_cluster_is_in_failover_mode.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_space_reservation_with_a_flexclone_volume.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4045,7 +4052,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_space_reservation_with_a_flexclone_volume.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_splitting_the_flexclone_volume.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4066,7 +4073,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_splitting_the_flexclone_volume.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_splitting_the_volume_or_lun_clone_operations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4087,7 +4094,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_splitting_the_volume_or_lun_clone_operations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_stale_devices_in_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4108,7 +4115,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_stale_devices_in_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_standard_exit_status_values.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4129,14 +4136,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_standard_exit_status_values.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_connect_operation_fails_lun_created_on_storage_system_using_lun_create.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_connect_operation_fails_lun_created_on_storage_system_using_lun_create.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_creation_for_a_file_system_that_resides_on_a_lun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4157,7 +4164,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_creation_for_a_file_system_that_resides_on_a_lun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_creation_for_lvm_vxvm_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4178,7 +4185,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_creation_for_lvm_vxvm_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_provisioning_for_rdm_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4192,7 +4199,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_provisioning_for_rdm_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_provisioning_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4213,7 +4220,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_provisioning_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_checks.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4227,7 +4234,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_checks.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_partner_ip_address_or_interface_name_confirmation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4241,7 +4248,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_partner_ip_address_or_interface_name_confirmation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_volume_preparation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4255,7 +4262,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storage_system_volume_preparation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storagecreation_with_snapdrive_forunix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4276,7 +4283,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storagecreation_with_snapdrive_forunix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storageoperations_acrossmultiple_storagesystem_volumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4297,7 +4304,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storageoperations_acrossmultiple_storagesystem_volumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storageprovisioning_withsnapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4318,7 +4325,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_storageprovisioning_withsnapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_summary_of_the_snapdrive_for_unix_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4339,7 +4346,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_summary_of_the_snapdrive_for_unix_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_datamotion_for_vfiler.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4360,13 +4367,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_datamotion_for_vfiler.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_guest_operating_systems.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -4375,6 +4375,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_support_for_partitioned_or_non_partitioned_devices_in_rhel_and_suse.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_storage_system_rename.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4395,7 +4402,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_storage_system_rename.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_volume_migration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4416,7 +4423,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_volume_migration.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_vserver.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4437,7 +4444,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_support_for_vserver.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_supported_fc_iscsi_or_nfs_configurations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4458,14 +4465,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_supported_fc_iscsi_or_nfs_configurations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_supported_partition_devices.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_supported_partition_devices.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_tasks_performed_by_snapdrive_dc.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4486,7 +4493,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_tasks_performed_by_snapdrive_dc.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_snapdrive_for_unix_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4507,7 +4514,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_snapdrive_for_unix_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storageconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4528,7 +4535,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storageconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storagedeletecommand.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4549,7 +4556,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storagedeletecommand.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storagedisconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4570,7 +4577,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_the_storagedisconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_thin_provisioning_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4591,7 +4598,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_thin_provisioning_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_thin_provisioning_in_snapdrive_for_unix_overview.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4612,7 +4619,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_thin_provisioning_in_snapdrive_for_unix_overview.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_troubleshooting.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4633,7 +4640,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_troubleshooting.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_types_of_flexclone_volumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4654,7 +4661,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_types_of_flexclone_volumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_types_of_logs.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4675,7 +4682,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_types_of_logs.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_create_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4696,7 +4703,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_create_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_restore_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4717,7 +4724,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_restore_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_select_a_storage_stack.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4738,7 +4745,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_select_a_storage_stack.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_start_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4759,7 +4766,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_start_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_start_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4780,7 +4787,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_unable_to_start_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_understanding_error_messages.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4801,7 +4808,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_understanding_error_messages.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_understanding_how_snapdrive_commands_mount_file_systems_and_modify_system_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4822,14 +4829,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_understanding_how_snapdrive_commands_mount_file_systems_and_modify_system_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_uninstall_files_installed_by_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_uninstall_files_installed_by_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_user_name_formats_for_access_check_with_operations_manager.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4850,7 +4857,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_user_name_formats_for_access_check_with_operations_manager.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_consistency_group_snapshots_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4871,7 +4878,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_consistency_group_snapshots_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_port_set_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4892,7 +4899,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_port_set_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_selective_lun_map_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4913,7 +4920,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_selective_lun_map_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_the_snapshotdisconnectoperation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4934,7 +4941,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_using_the_snapshotdisconnectoperation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_verification_of_storage_system_readiness_and_licenses.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4948,7 +4955,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_verification_of_storage_system_readiness_and_licenses.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_verify_that_the_hosts_are_ready.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4962,7 +4969,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_verify_that_the_hosts_are_ready.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_verifying_supported_configurations_using_configuration_checker_tool.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -4976,14 +4983,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/concept_verifying_supported_configurations_using_configuration_checker_tool.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snap_restore_operation_fails_in_slave_node.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snap_restore_operation_fails_in_slave_node.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5004,7 +5011,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_check_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5025,7 +5032,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_check_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5046,7 +5053,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_for_space_reservation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5067,7 +5074,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_based_snaprestore_for_space_reservation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_managers_on_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5088,7 +5095,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_managers_on_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_optimization_in_an_fc_or_iscsi_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5102,7 +5109,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_volume_optimization_in_an_fc_or_iscsi_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_access_control_settings_are.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5123,7 +5130,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_access_control_settings_are.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_autosupport_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5144,7 +5151,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_autosupport_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_configuration_checker_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5158,7 +5165,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_configuration_checker_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_flexclone_volumes_are.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5179,7 +5186,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_flexclone_volumes_are.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_rbac_in_snapdrive_for_unix_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5200,7 +5207,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_rbac_in_snapdrive_for_unix_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_for_unix_does_when_you_upgrade_your_current_version.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5214,7 +5221,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_for_unix_does_when_you_upgrade_your_current_version.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_for_unix_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5228,7 +5235,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_for_unix_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_wizard_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5249,7 +5256,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapdrive_wizard_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapshot_operations_are_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5270,7 +5277,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_snapshot_operations_are_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_configuration_wizard_does.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5291,7 +5298,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_configuration_wizard_does.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_snapdrive_conf_file_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5312,7 +5319,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_snapdrive_conf_file_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_trace_log_file_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5333,7 +5340,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_trace_log_file_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_web_service_and_daemon_are.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5354,7 +5361,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_the_web_service_and_daemon_are.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_volume_based_snaprestore_is.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5375,7 +5382,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_what_volume_based_snaprestore_is.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_when_to_use_the_snapdrive_configuration_wizard.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5396,14 +5403,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/concept_when_to_use_the_snapdrive_configuration_wizard.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5417,13 +5417,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -5431,35 +5424,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_reference_copyright.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/delete_reference_copyright.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_reference_copyright.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/delete_reference_copyright.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5473,28 +5445,28 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5508,28 +5480,28 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5543,7 +5515,42 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_collecting_information_needed_by_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5564,7 +5571,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_collecting_information_needed_by_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_arguments.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5585,7 +5592,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_arguments.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_keywords.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5606,7 +5613,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_keywords.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_options.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5627,7 +5634,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_line_options.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_summary.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5648,7 +5655,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_command_summary.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_configuration_command_lines.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5669,7 +5676,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_configuration_command_lines.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_configuration_parameters_for_role_based_access_control.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5690,7 +5697,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_configuration_parameters_for_role_based_access_control.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_deployment_workflow.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5704,7 +5711,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_deployment_workflow.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_error_message_values.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5725,7 +5732,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_error_message_values.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_examples_of_using_snapdrive_dc.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5746,7 +5753,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_examples_of_using_snapdrive_dc.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_exit_status_values.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5767,7 +5774,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_exit_status_values.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_general_notes_about_the_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5788,7 +5795,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_general_notes_about_the_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_host_side_command_lines.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5809,7 +5816,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_host_side_command_lines.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_for_the_storagecreate_operation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5830,7 +5837,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_for_the_storagecreate_operation.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_forusing_the_snapdrive_storagedelete_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5851,7 +5858,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_forusing_the_snapdrive_storagedelete_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_forusing_the_snapdrive_storagedisconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5872,14 +5879,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_informationrequired_forusing_the_snapdrive_storagedisconnect_command.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/reference_legal_notices.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/reference_legal_notices.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_limitations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5900,7 +5907,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_limitations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_linux_host_requirements.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5914,14 +5921,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_linux_host_requirements.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/reference_new_in_this_release.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/reference_new_in_this_release.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_preconfigured_roles_for_ease_of_user_role_configuration.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5942,7 +5949,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_preconfigured_roles_for_ease_of_user_role_configuration.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_product_overview.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5963,7 +5970,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_product_overview.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_rules_for_keywords.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -5984,7 +5991,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_rules_for_keywords.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_sample_error_message.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6005,7 +6012,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_sample_error_message.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_script_example.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6026,7 +6033,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_script_example.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapdrive_for_unix_does_not_accept_environment_variables_set_using_command_shells.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6047,7 +6054,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapdrive_for_unix_does_not_accept_environment_variables_set_using_command_shells.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapdrive_for_unix_does_not_automatically_delete_stale_devices_in_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6068,14 +6075,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapdrive_for_unix_does_not_automatically_delete_stale_devices_in_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/reference_snapdrive_for_unix_operations_fails_improper_multipath_settings_aliased_devices_used.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/reference_snapdrive_for_unix_operations_fails_improper_multipath_settings_aliased_devices_used.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_snapdrive_licensing.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6089,7 +6096,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_snapdrive_licensing.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapshot_operation_command_lines.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6110,7 +6117,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_snapshot_operation_command_lines.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_some_configuration_commands.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6131,7 +6138,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_some_configuration_commands.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_stack_requirements.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6152,14 +6159,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_stack_requirements.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_storage_disconnect_of_disk_group_fails.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_storage_disconnect_of_disk_group_fails.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_storage_provisioning_command_lines.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6180,7 +6187,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_storage_provisioning_command_lines.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_supported_configurations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6194,14 +6201,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_supported_configurations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/reference_unable_to_install_snapdrive_for_unix_patches_on_aix_by_default.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/reference_unable_to_install_snapdrive_for_unix_patches_on_aix_by_default.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_understanding_exit_status_values_of_error_messages.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6222,7 +6229,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_understanding_exit_status_values_of_error_messages.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_using_exit_status_values.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6243,7 +6250,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/reference_using_exit_status_values.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_where_to_go_next.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6251,13 +6258,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/reference_where_to_go_next.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/reference_where_to_go_next.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6273,12 +6273,19 @@
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix//search.html</loc>
       
-      <lastmod>2022-05-03T11:25:59+00:00</lastmod>
+      <lastmod>2022-07-19T15:09:23+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_a_node_to_a_host_cluster.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_a_port_set_in_snapdrive.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6299,7 +6306,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_a_port_set_in_snapdrive.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_host_entries_for_new_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6313,7 +6320,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_host_entries_for_new_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_igroup.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6334,7 +6341,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_igroup.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_sd_hostname_to_storage_system_using_cli.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6355,7 +6362,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_sd_hostname_to_storage_system_using_cli.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_sd_hostname_to_the_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6376,7 +6383,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_adding_sd_hostname_to_the_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_capturing_a_consistency_group_snapshot.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6397,7 +6404,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_capturing_a_consistency_group_snapshot.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_changing_asnapshot_copyname.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6418,7 +6425,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_changing_asnapshot_copyname.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_changing_the_default_daemon_password.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6439,7 +6446,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_changing_the_default_daemon_password.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_checking_the_status_of_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6460,7 +6467,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_checking_the_status_of_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_checking_version_of_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6481,7 +6488,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_checking_version_of_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_a_new_storage_system_name_to_a_host_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6502,7 +6509,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_a_new_storage_system_name_to_a_host_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_management_and_data_interfaces_for_a_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6523,7 +6530,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_management_and_data_interfaces_for_a_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_sd_admin_using_cli.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6544,7 +6551,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_sd_admin_using_cli.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_user_credentials_on_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6565,7 +6572,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_user_credentials_on_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_virtual_storage_console_in_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6579,7 +6586,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_configuring_virtual_storage_console_in_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_connecting_linux_host_to_the_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6593,7 +6600,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_connecting_linux_host_to_the_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_to_asnapshot_copy_ofstorage_entitiesother_than_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6614,7 +6621,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_to_asnapshot_copy_ofstorage_entitiesother_than_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_to_asnapshot_copy_thatcontains_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6635,7 +6642,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_to_asnapshot_copy_thatcontains_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_tosnapshot_copies_ofshared_storageentities_other_thanluns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6656,7 +6663,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_connecting_tosnapshot_copies_ofshared_storageentities_other_thanluns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_considerations_for_provisioning_rdm_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6670,7 +6677,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_considerations_for_provisioning_rdm_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_a_filesystem_on_a_lunand_setting_up_thelun_automatically.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6691,7 +6698,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_a_filesystem_on_a_lunand_setting_up_thelun_automatically.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_a_filesystem_on_a_lunand_specifying_thelun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6712,7 +6719,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_a_filesystem_on_a_lunand_specifying_thelun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_creating_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6726,7 +6733,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_creating_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_an_lvm_a_vxvm_entity_and_settingup_the_lunautomatically.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6747,7 +6754,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_an_lvm_a_vxvm_entity_and_settingup_the_lunautomatically.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_an_lvm_a_vxvmentity_andspecifying_the_lun.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6768,7 +6775,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_an_lvm_a_vxvmentity_andspecifying_the_lun.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_asnapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6789,7 +6796,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_asnapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_lunswithout_hostentities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6810,13 +6817,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_creating_lunswithout_hostentities.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/task_decompressing_the_downloaded_software.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -6825,6 +6825,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_decompressing_the_software_package_you_downloaded.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_data_interface_entry_of_a_management_interface.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6845,7 +6852,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_data_interface_entry_of_a_management_interface.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_snapshotcopy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6866,7 +6873,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_snapshotcopy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_storage_system_entry.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6887,7 +6894,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_storage_system_entry.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_user_for_a_vserver.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6908,7 +6915,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_user_for_a_vserver.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_user_login_for_a_virtual_storage_console.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6922,7 +6929,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_user_login_for_a_virtual_storage_console.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_userlogin_for_a_storagesystem.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6943,7 +6950,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_a_userlogin_for_a_storagesystem.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_igroup.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6964,7 +6971,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_deleting_igroup.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disabling_consistency_group_snapshots.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -6985,7 +6992,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disabling_consistency_group_snapshots.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copieswith_shared_storageentities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7006,7 +7013,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copieswith_shared_storageentities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copy_withluns_and_nostorage_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7027,7 +7034,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copy_withluns_and_nostorage_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copy_withstorage_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7048,7 +7055,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_disconnectingsnapshot_copy_withstorage_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_displaying_asnapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7069,7 +7076,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_displaying_asnapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_and_disabling_log_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7090,7 +7097,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_and_disabling_log_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_multipathing.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7111,7 +7118,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_multipathing.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_thin_provisioning_for_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7132,7 +7139,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_thin_provisioning_for_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_thin_provisioning_for_nfs_entities.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7153,7 +7160,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_enabling_thin_provisioning_for_nfs_entities.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_to_split_a_lun_clone.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7174,7 +7181,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_to_split_a_lun_clone.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_to_split_a_volume_clone.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7195,7 +7202,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_to_split_a_volume_clone.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_using_a_snapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7216,7 +7223,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_estimating_the_storage_space_using_a_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_forcibly_stopping_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7237,7 +7244,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_forcibly_stopping_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_forcing_daemon_restart.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7258,7 +7265,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_forcing_daemon_restart.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_generating_ca_signed_certificate.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7279,7 +7286,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_generating_ca_signed_certificate.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_generating_self_signed_certificates.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7300,7 +7307,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_generating_self_signed_certificates.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_guidelines_fordisplayingsnapshot_copies.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7321,7 +7328,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_guidelines_fordisplayingsnapshot_copies.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_hosts_preparation_for_adding_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7335,7 +7342,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_hosts_preparation_for_adding_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_identifying_the_installed_components.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7349,14 +7356,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_identifying_the_installed_components.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_importing_data_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_importing_data_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7377,7 +7377,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_importing_data_files.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_importing_data_files.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7391,14 +7391,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_installing_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_installing_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_installing_snapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_installing_snapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7419,6 +7419,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_migrating_from_old_host_name_to_new_host_name.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/task_migrating_from_old_host_name_to_new_host_name.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -7433,7 +7440,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_migrating_from_old_host_name_to_new_host_name.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_mounting_a_flexvol_volume_fails_in_nfs_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7454,7 +7461,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_mounting_a_flexvol_volume_fails_in_nfs_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_nonforcibly_stopping_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7475,7 +7482,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_nonforcibly_stopping_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_performing_post_installation_tasks.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7489,7 +7496,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_performing_post_installation_tasks.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_preparing_for_deployment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7503,7 +7510,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_preparing_for_deployment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_provisioning_rdm_luns.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7517,7 +7524,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_provisioning_rdm_luns.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_provisioning_volumes.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7531,14 +7538,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_provisioning_volumes.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_receiving_error_iscsi64_snapdrive_0001_666_fatal_error.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_receiving_error_iscsi64_snapdrive_0001_666_fatal_error.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_recieving_error_does_not_look_snapdrive_generated.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7559,7 +7566,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_recieving_error_does_not_look_snapdrive_generated.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_removing_a_port_set_from_snapdrive.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7580,7 +7587,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_removing_a_port_set_from_snapdrive.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_resetting_the_snap_reserve_option_by_using_filerview.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7594,7 +7601,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_resetting_the_snap_reserve_option_by_using_filerview.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_resetting_the_snap_reserve_option_on_the_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7608,7 +7615,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_resetting_the_snap_reserve_option_on_the_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_restarting_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7629,7 +7636,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_restarting_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_restoring_asnapshot_copy.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7650,7 +7657,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_restoring_asnapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_up_access_control_permission.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7671,13 +7678,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_up_access_control_permission.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_up_an_sfrac_i_o_fencing_environment_on_a_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -7686,6 +7686,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_setting_up_hba_driver_parameter.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_up_http.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7706,14 +7713,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_up_http.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_setting_up_multipathing.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_setting_up_multipathing.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_values_in_the_snapdrive_conf_file.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7734,7 +7741,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_setting_values_in_the_snapdrive_conf_file.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7755,7 +7762,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7776,7 +7783,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information_for_virtual_storage_console.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7790,7 +7797,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information_for_virtual_storage_console.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information_for_vserver.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7811,7 +7818,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_specifying_login_information_for_vserver.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_starting_the_snapdrive_for_unix_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7832,7 +7839,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_starting_the_snapdrive_for_unix_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_starting_the_volume_or_lun_clone_split_start.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7853,7 +7860,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_starting_the_volume_or_lun_clone_split_start.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_steps_to_cleanup_the_mapped_rdm_luns_in_the_guest_os_or_esx_server.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7867,7 +7874,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_steps_to_cleanup_the_mapped_rdm_luns_in_the_guest_os_or_esx_server.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_stopping_the_clone_and_lun_clone_split.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7888,7 +7895,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_stopping_the_clone_and_lun_clone_split.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_stopping_the_daemon.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7909,7 +7916,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_stopping_the_daemon.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_tips_for_usingthe_storage_disconnect_command.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7930,13 +7937,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_tips_for_usingthe_storage_disconnect_command.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_uninstalling_snapdrive_for_unix_from_a_solaris_host.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -7945,6 +7945,13 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/aix/task_uninstalling_snapdrive_for_unix_from_an_aix_host.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_login_information_for_vserver.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7965,7 +7972,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_login_information_for_vserver.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_storagesystem_user_namesassociated_withsnapdrive_for_unix.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -7986,7 +7993,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_storagesystem_user_namesassociated_withsnapdrive_for_unix.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_supported_configurations_using_configuration_checker_tool.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8000,21 +8007,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_supported_configurations_using_configuration_checker_tool.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_that_the_guest_is_ready.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_installation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8028,7 +8021,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_snapshot_copy.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_installation.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8036,6 +8029,20 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-7mode/task_verifying_the_snapshot_copy.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_snapshot_copy.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_the_status_of_clone_split.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8056,14 +8063,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_the_status_of_clone_split.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_supported_configurations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_the_supported_configurations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8084,7 +8084,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_the_supported_configurations.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-installation-cmode/task_verifying_the_supported_configurations.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8098,6 +8098,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_virtual_storage_console.html</loc>
+      
+      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_verifying_virtual_storage_console.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
@@ -8105,7 +8112,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_verifying_virtual_storage_console.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_all_the_data_interfaces_of_a_management_interface.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8126,7 +8133,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_all_the_data_interfaces_of_a_management_interface.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_access_control_permission.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8147,7 +8154,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_access_control_permission.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_igroups.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8168,7 +8175,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_igroups.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_port_set.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8189,7 +8196,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_port_set.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8210,7 +8217,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_list_of_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_migrated_new_storage_system.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8231,7 +8238,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_migrated_new_storage_system.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_result_of_a_clone_split_using_filespec.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       
@@ -8246,13 +8253,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/task_viewing_the_result_of_a_clone_split_using_filespec.html</loc>
-      
-      <lastmod>2022-05-03T11:25:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snapdrive-unix/solaris/task_viewing_the_result_of_a_clone_split_using_filespec.html</loc>
       
       <lastmod>2022-05-03T11:25:41+00:00</lastmod>
       

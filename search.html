@@ -242,35 +242,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">繁體中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapdrive-unix/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapdrive-unix//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapdrive-unix//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapdrive-unix//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapdrive-unix//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapdrive-unix//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/snapdrive-unix//search.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapdrive-unix//search.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapdrive-unix//search.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapdrive-unix//search.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapdrive-unix//search.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -314,7 +306,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
@@ -324,7 +316,7 @@
         
         
         <a target="_blank" href="/zh-tw/snapdrive-unix/pdfs/fullsite-sidebar/適用於UNIX_5_3_2文件SnapDrive.pdf" >
-          <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+          <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>此文件網站（PDF 格式）</a>
 
 
 
@@ -341,7 +333,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/安裝及設定適用於叢集Data_ONTAP_式的Linux_for叢集式功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             安裝及設定適用於叢集Data ONTAP 式的Linux for叢集式功能
           </a>
           
@@ -361,7 +353,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備部署.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備部署
           </a>
           
@@ -371,8 +363,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -392,7 +382,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/安裝SnapDrive_適用於UNIX的.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             安裝SnapDrive 適用於UNIX的
           </a>
           
@@ -400,8 +390,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -421,7 +409,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用組態檢查工具來驗證Linux主機組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用組態檢查工具來驗證Linux主機組態
           </a>
           
@@ -429,8 +417,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -450,7 +436,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/資源配置儲存設備.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             資源配置儲存設備
           </a>
           
@@ -458,8 +444,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -481,7 +465,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/建立Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             建立Snapshot複本
           </a>
           
@@ -489,8 +473,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -500,8 +482,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -521,7 +501,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Linux的安裝與設定Data_ONTAP__以7種模式運作.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Linux的安裝與設定Data ONTAP 、以7種模式運作
           </a>
           
@@ -541,7 +521,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備部署.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備部署
           </a>
           
@@ -551,8 +531,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -572,7 +550,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/安裝SnapDrive_適用於UNIX的.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             安裝SnapDrive 適用於UNIX的
           </a>
           
@@ -580,8 +558,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -601,7 +577,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用組態檢查工具來驗證Linux主機組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用組態檢查工具來驗證Linux主機組態
           </a>
           
@@ -609,8 +585,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -630,7 +604,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/資源配置儲存設備.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             資源配置儲存設備
           </a>
           
@@ -638,8 +612,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -661,7 +633,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/建立Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             建立Snapshot複本
           </a>
           
@@ -669,8 +641,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -680,8 +650,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -701,7 +669,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Linux系統管理.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Linux系統管理
           </a>
           
@@ -717,7 +685,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/產品總覽.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             產品總覽
           </a>
           
@@ -739,14 +707,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援Volume移轉.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援Volume移轉
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -770,7 +736,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/管理LVM和原始實體.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             管理LVM和原始實體
           </a>
           
@@ -778,8 +744,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -811,8 +775,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -834,7 +796,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭SnapDrive_解適用於UNIX精靈的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭SnapDrive 解適用於UNIX精靈的功能
           </a>
           
@@ -858,7 +820,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/停止精靈.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             停止精靈
           </a>
           
@@ -866,8 +828,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -885,8 +845,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -906,7 +864,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援儲存系統重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援儲存系統重新命名
           </a>
           
@@ -920,8 +878,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -941,7 +897,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX組態SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX組態SnapDrive
           </a>
           
@@ -957,7 +913,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定SnapDrive 適用於UNIX的功能
           </a>
           
@@ -977,8 +933,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -998,7 +952,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX_for來賓作業系統的組態資訊SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX for來賓作業系統的組態資訊SnapDrive
           </a>
           
@@ -1010,8 +964,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1031,7 +983,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Vserver的組態資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Vserver的組態資訊
           </a>
           
@@ -1043,8 +995,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1064,7 +1014,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/主機準備新增LUN.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             主機準備新增LUN
           </a>
           
@@ -1074,8 +1024,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1095,7 +1043,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的稽核_恢復及追蹤記錄SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的稽核、恢復及追蹤記錄SnapDrive
           </a>
           
@@ -1125,14 +1073,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/追蹤記錄檔的內容.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             追蹤記錄檔的內容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1140,8 +1086,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1161,7 +1105,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是呢AutoSupport.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是呢AutoSupport
           </a>
           
@@ -1171,8 +1115,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1192,7 +1134,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援SnapDrive_UNIX的多重路徑存取.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援SnapDrive UNIX的多重路徑存取
           </a>
           
@@ -1210,7 +1152,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/多重路徑設定.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             多重路徑設定
           </a>
           
@@ -1222,8 +1164,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1231,8 +1171,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1252,7 +1190,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以適用於UNIX的SnapDrive_方式進行精簡配置.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以適用於UNIX的SnapDrive 方式進行精簡配置
           </a>
           
@@ -1260,8 +1198,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1281,7 +1217,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/多個子網路組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             多個子網路組態
           </a>
           
@@ -1297,8 +1233,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1320,7 +1254,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是資訊精靈SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是資訊精靈SnapDrive
           </a>
           
@@ -1332,8 +1266,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1353,7 +1285,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用SnapDrive_UNIX版的連接埠集.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用SnapDrive UNIX版的連接埠集
           </a>
           
@@ -1365,8 +1297,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1386,7 +1316,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定igroup.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定igroup
           </a>
           
@@ -1396,8 +1326,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1419,7 +1347,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的FlexClone_Volume_SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的FlexClone Volume SnapDrive
           </a>
           
@@ -1441,7 +1369,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於FlexClone磁碟區上的UNIX作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於FlexClone磁碟區上的UNIX作業SnapDrive
           </a>
           
@@ -1461,8 +1389,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1470,8 +1396,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1479,8 +1403,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1500,7 +1422,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX的安全功能SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX的安全功能SnapDrive
           </a>
           
@@ -1518,7 +1440,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的存取控制SnapDrive
           </a>
           
@@ -1530,8 +1452,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1551,7 +1471,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存系統的登入資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存系統的登入資訊
           </a>
           
@@ -1561,8 +1481,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1572,8 +1490,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1593,7 +1509,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以角色為基礎的UNIX存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以角色為基礎的UNIX存取控制SnapDrive
           </a>
           
@@ -1613,7 +1529,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX版的不適用功能組態中設定角色型存取控制.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX版的不適用功能組態中設定角色型存取控制
           </a>
           
@@ -1629,14 +1545,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在Operations_Manager主控台設定SD_admin.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在Operations Manager主控台設定SD-admin
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1656,14 +1570,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/將SD_HostName新增至儲存系統.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             將SD-HostName新增至儲存系統
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1677,8 +1589,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1708,7 +1618,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/RBAC與儲存作業範例.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC與儲存作業範例
           </a>
           
@@ -1722,8 +1632,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1731,8 +1639,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1752,7 +1658,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX儲存資源配置SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX儲存資源配置SnapDrive
           </a>
           
@@ -1768,7 +1674,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的儲存作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的儲存作業SnapDrive
           </a>
           
@@ -1780,8 +1686,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1801,7 +1705,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX的解決方法建立儲存設備SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX的解決方法建立儲存設備SnapDrive
           </a>
           
@@ -1827,14 +1731,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Red_Hat_Enterprise_Linux_RHEL_和SUSE_Linux_Enterprise_Server_SLES_中的儲存分割配置.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Red Hat Enterprise Linux（RHEL）和SUSE Linux Enterprise Server（SLES）中的儲存分割配置
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1852,8 +1754,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1873,14 +1773,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/用於顯示可用儲存設備的命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             用於顯示可用儲存設備的命令
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1900,7 +1798,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX版的功能提升儲存規模SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX版的功能提升儲存規模SnapDrive
           </a>
           
@@ -1912,8 +1810,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1933,7 +1829,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_connect命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect命令
           </a>
           
@@ -1945,8 +1841,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1966,7 +1860,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存中斷連線命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存中斷連線命令
           </a>
           
@@ -1984,8 +1878,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2005,7 +1897,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_DELETE命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage DELETE命令
           </a>
           
@@ -2013,8 +1905,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2022,8 +1912,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2043,7 +1931,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX的不適用環境中建立及使用Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX的不適用環境中建立及使用Snapshot複本
           </a>
           
@@ -2059,14 +1947,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是Snapshot作業SnapDrive_是UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是Snapshot作業SnapDrive 是UNIX的功能
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2086,7 +1972,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複製作業.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複製作業
           </a>
           
@@ -2102,7 +1988,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/損毀一致的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             損毀一致的Snapshot複本
           </a>
           
@@ -2114,8 +2000,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2135,8 +2019,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2156,7 +2038,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/快照複本資訊隨即顯示.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             快照複本資訊隨即顯示
           </a>
           
@@ -2174,8 +2056,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2195,7 +2075,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複本重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複本重新命名
           </a>
           
@@ -2207,8 +2087,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2228,7 +2106,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             還原Snapshot複本
           </a>
           
@@ -2246,14 +2124,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在目的地儲存系統上還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在目的地儲存系統上還原Snapshot複本
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2281,7 +2157,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Volume型SnapRestore_的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Volume型SnapRestore 的功能
           </a>
           
@@ -2301,8 +2177,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2310,8 +2184,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2331,7 +2203,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連線至Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連線至Snapshot複本
           </a>
           
@@ -2349,14 +2221,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連接鏡射儲存系統上的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連接鏡射儲存系統上的Snapshot複本
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2376,8 +2246,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2397,7 +2265,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/分割磁碟區複製或LUN複製.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             分割磁碟區複製或LUN複製
           </a>
           
@@ -2415,8 +2283,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2436,7 +2302,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/刪除Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             刪除Snapshot複本
           </a>
           
@@ -2450,8 +2316,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2471,7 +2335,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本的連線.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本的連線
           </a>
           
@@ -2489,14 +2353,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本連線的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本連線的準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2512,8 +2374,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2521,8 +2381,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2542,7 +2400,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/資料收集公用程式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             資料收集公用程式
           </a>
           
@@ -2554,8 +2412,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2575,7 +2431,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/疑難排解.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解
           </a>
           
@@ -2591,7 +2447,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭解錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭解錯誤訊息
           </a>
           
@@ -2609,14 +2465,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/錯誤訊息格式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             錯誤訊息格式
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2624,8 +2478,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2645,7 +2497,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/常見錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             常見錯誤訊息
           </a>
           
@@ -2655,8 +2507,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2718,7 +2568,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/標準結束狀態值.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             標準結束狀態值
           </a>
           
@@ -2730,8 +2580,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2785,8 +2633,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2806,7 +2652,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令參考資料.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令參考資料
           </a>
           
@@ -2822,7 +2668,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/收集SnapDrive_UNIX命令所需的資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             收集SnapDrive UNIX命令所需的資訊
           </a>
           
@@ -2830,8 +2676,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2851,7 +2695,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX命令的摘要SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX命令的摘要SnapDrive
           </a>
           
@@ -2867,7 +2711,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令摘要.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令摘要
           </a>
           
@@ -2879,8 +2723,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2900,7 +2742,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX選項_關鍵字及引數SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX選項、關鍵字及引數SnapDrive
           </a>
           
@@ -2912,8 +2754,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2921,8 +2761,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2930,8 +2768,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2939,8 +2775,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2960,7 +2794,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Solaris安裝與管理.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Solaris安裝與管理
           </a>
           
@@ -2976,7 +2810,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版概述SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版概述SnapDrive
           </a>
           
@@ -3010,7 +2844,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/管理VxVM_原始實體.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             管理VxVM/原始實體
           </a>
           
@@ -3018,8 +2852,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3059,14 +2891,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援Volume移轉.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援Volume移轉
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -3084,8 +2914,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3105,7 +2933,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備安裝SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備安裝SnapDrive 適用於UNIX的功能
           </a>
           
@@ -3121,7 +2949,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/硬體與軟體組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             硬體與軟體組態
           </a>
           
@@ -3129,8 +2957,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3150,7 +2976,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備儲存系統.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備儲存系統
           </a>
           
@@ -3176,7 +3002,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/重設SnapReserve選項.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             重設SnapReserve選項
           </a>
           
@@ -3184,8 +3010,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3193,8 +3017,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3214,7 +3036,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/主機準備安裝SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             主機準備安裝SnapDrive 適用於UNIX的功能
           </a>
           
@@ -3222,8 +3044,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3243,7 +3063,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/客用作業系統準備好安裝SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             客用作業系統準備好安裝SnapDrive 適用於UNIX的功能
           </a>
           
@@ -3251,8 +3071,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3260,8 +3078,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3281,7 +3097,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/安裝或升級SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             安裝或升級SnapDrive 適用於UNIX的功能
           </a>
           
@@ -3313,7 +3129,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/由適用於UNIX的文件SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             由適用於UNIX的文件SnapDrive
           </a>
           
@@ -3327,8 +3143,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3338,8 +3152,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3359,7 +3171,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭SnapDrive_解適用於UNIX精靈的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭SnapDrive 解適用於UNIX精靈的功能
           </a>
           
@@ -3383,7 +3195,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/停止精靈.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             停止精靈
           </a>
           
@@ -3391,8 +3203,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3410,8 +3220,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3431,7 +3239,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/驗證支援的組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             驗證支援的組態
           </a>
           
@@ -3441,8 +3249,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3462,7 +3268,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援儲存系統重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援儲存系統重新命名
           </a>
           
@@ -3476,8 +3282,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3497,7 +3301,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用SnapDrive_UNIX版的連接埠集.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用SnapDrive UNIX版的連接埠集
           </a>
           
@@ -3509,8 +3313,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3530,7 +3332,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定igroup.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定igroup
           </a>
           
@@ -3540,8 +3342,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3563,7 +3363,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX組態SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX組態SnapDrive
           </a>
           
@@ -3579,7 +3379,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定SnapDrive 適用於UNIX的功能
           </a>
           
@@ -3599,8 +3399,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3620,7 +3418,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX_for來賓作業系統的組態資訊SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX for來賓作業系統的組態資訊SnapDrive
           </a>
           
@@ -3632,8 +3430,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3653,7 +3449,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Vserver的組態資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Vserver的組態資訊
           </a>
           
@@ -3665,8 +3461,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3686,7 +3480,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/主機準備新增LUN.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             主機準備新增LUN
           </a>
           
@@ -3694,8 +3488,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3715,7 +3507,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的稽核_恢復及追蹤記錄SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的稽核、恢復及追蹤記錄SnapDrive
           </a>
           
@@ -3745,14 +3537,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/追蹤記錄檔的內容.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             追蹤記錄檔的內容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -3760,8 +3550,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3781,7 +3569,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是呢AutoSupport.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是呢AutoSupport
           </a>
           
@@ -3791,8 +3579,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3812,7 +3598,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援SnapDrive_UNIX的多重路徑存取.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援SnapDrive UNIX的多重路徑存取
           </a>
           
@@ -3820,8 +3606,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3841,7 +3625,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以適用於UNIX的SnapDrive_方式進行精簡配置.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以適用於UNIX的SnapDrive 方式進行精簡配置
           </a>
           
@@ -3849,8 +3633,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3870,7 +3652,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/多個子網路組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             多個子網路組態
           </a>
           
@@ -3886,8 +3668,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3909,7 +3689,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是資訊精靈SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是資訊精靈SnapDrive
           </a>
           
@@ -3921,8 +3701,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3930,8 +3708,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3951,7 +3727,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX的安全功能SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX的安全功能SnapDrive
           </a>
           
@@ -3969,7 +3745,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的存取控制SnapDrive
           </a>
           
@@ -3981,8 +3757,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4002,7 +3776,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存系統的登入資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存系統的登入資訊
           </a>
           
@@ -4012,8 +3786,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4023,8 +3795,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4044,7 +3814,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以角色為基礎的UNIX存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以角色為基礎的UNIX存取控制SnapDrive
           </a>
           
@@ -4064,7 +3834,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX版的不適用功能組態中設定角色型存取控制.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX版的不適用功能組態中設定角色型存取控制
           </a>
           
@@ -4080,14 +3850,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在Operations_Manager主控台設定SD_admin.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在Operations Manager主控台設定SD-admin
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4107,14 +3875,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/將SD_HostName新增至儲存系統.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             將SD-HostName新增至儲存系統
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4128,8 +3894,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4159,7 +3923,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/RBAC與儲存作業範例.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC與儲存作業範例
           </a>
           
@@ -4173,8 +3937,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4182,8 +3944,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4203,7 +3963,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的FlexClone_Volume_SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的FlexClone Volume SnapDrive
           </a>
           
@@ -4225,7 +3985,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於FlexClone磁碟區上的UNIX作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於FlexClone磁碟區上的UNIX作業SnapDrive
           </a>
           
@@ -4245,8 +4005,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4254,8 +4012,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4275,7 +4031,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX儲存資源配置SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX儲存資源配置SnapDrive
           </a>
           
@@ -4291,7 +4047,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的儲存作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的儲存作業SnapDrive
           </a>
           
@@ -4303,8 +4059,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4324,7 +4078,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX的解決方法建立儲存設備SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX的解決方法建立儲存設備SnapDrive
           </a>
           
@@ -4342,14 +4096,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存設備建立作業準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存設備建立作業準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4373,8 +4125,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4394,14 +4144,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/用於顯示可用儲存設備的命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             用於顯示可用儲存設備的命令
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4421,7 +4169,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX版的功能提升儲存規模SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX版的功能提升儲存規模SnapDrive
           </a>
           
@@ -4433,8 +4181,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4454,7 +4200,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_connect命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect命令
           </a>
           
@@ -4468,8 +4214,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4489,7 +4233,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存中斷連線命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存中斷連線命令
           </a>
           
@@ -4507,14 +4251,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/關於停止儲存指令的準則SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             關於停止儲存指令的準則SnapDrive
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4534,8 +4276,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4555,7 +4295,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_DELETE命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage DELETE命令
           </a>
           
@@ -4571,14 +4311,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用儲存設備刪除命令的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用儲存設備刪除命令的準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4588,8 +4326,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4597,8 +4333,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4618,7 +4352,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX的不適用環境中建立及使用Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX的不適用環境中建立及使用Snapshot複本
           </a>
           
@@ -4634,14 +4368,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是Snapshot作業SnapDrive_是UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是Snapshot作業SnapDrive 是UNIX的功能
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4661,7 +4393,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複製作業.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複製作業
           </a>
           
@@ -4677,7 +4409,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/損毀一致的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             損毀一致的Snapshot複本
           </a>
           
@@ -4689,8 +4421,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4716,14 +4446,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/建立Snapshot複本的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             建立Snapshot複本的準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4735,8 +4463,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4756,7 +4482,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/快照複本資訊隨即顯示.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             快照複本資訊隨即顯示
           </a>
           
@@ -4774,8 +4500,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4795,7 +4519,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複本重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複本重新命名
           </a>
           
@@ -4807,8 +4531,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4828,7 +4550,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             還原Snapshot複本
           </a>
           
@@ -4846,7 +4568,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在目的地儲存系統上還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在目的地儲存系統上還原Snapshot複本
           </a>
           
@@ -4856,8 +4578,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4885,7 +4605,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Volume型SnapRestore_的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Volume型SnapRestore 的功能
           </a>
           
@@ -4905,8 +4625,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4914,8 +4632,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4935,7 +4651,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連線至Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連線至Snapshot複本
           </a>
           
@@ -4953,7 +4669,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連接鏡射儲存系統上的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連接鏡射儲存系統上的Snapshot複本
           </a>
           
@@ -4961,8 +4677,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4984,14 +4698,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連接Snapshot複本的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連接Snapshot複本的準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5007,8 +4719,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5028,7 +4738,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/分割磁碟區複製或LUN複製.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             分割磁碟區複製或LUN複製
           </a>
           
@@ -5046,8 +4756,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5067,7 +4775,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/刪除Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             刪除Snapshot複本
           </a>
           
@@ -5081,8 +4789,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5102,7 +4808,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本的連線.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本的連線
           </a>
           
@@ -5120,7 +4826,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本連線的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本連線的準則
           </a>
           
@@ -5128,8 +4834,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5145,8 +4849,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5154,8 +4856,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5175,7 +4875,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/資料收集公用程式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             資料收集公用程式
           </a>
           
@@ -5187,8 +4887,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5208,7 +4906,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/疑難排解.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解
           </a>
           
@@ -5224,7 +4922,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭解錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭解錯誤訊息
           </a>
           
@@ -5242,14 +4940,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/錯誤訊息格式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             錯誤訊息格式
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5257,8 +4953,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5278,7 +4972,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/常見錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             常見錯誤訊息
           </a>
           
@@ -5288,8 +4982,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5333,7 +5025,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/標準結束狀態值.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             標準結束狀態值
           </a>
           
@@ -5345,8 +5037,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5398,8 +5088,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5419,7 +5107,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令參考資料.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令參考資料
           </a>
           
@@ -5435,7 +5123,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/收集SnapDrive_UNIX命令所需的資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             收集SnapDrive UNIX命令所需的資訊
           </a>
           
@@ -5443,8 +5131,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5464,7 +5150,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX命令的摘要SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX命令的摘要SnapDrive
           </a>
           
@@ -5480,7 +5166,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令摘要.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令摘要
           </a>
           
@@ -5492,8 +5178,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5513,7 +5197,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX選項_關鍵字及引數SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX選項、關鍵字及引數SnapDrive
           </a>
           
@@ -5525,8 +5209,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5534,8 +5216,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5543,8 +5223,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5552,8 +5230,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5573,7 +5249,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/IBM_AIX的安裝與管理.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             IBM AIX的安裝與管理
           </a>
           
@@ -5589,7 +5265,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版概述SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版概述SnapDrive
           </a>
           
@@ -5617,7 +5293,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/管理LVM和原始實體.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             管理LVM和原始實體
           </a>
           
@@ -5625,8 +5301,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5664,14 +5338,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援Volume移轉.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援Volume移轉
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5689,8 +5361,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5710,7 +5380,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備安裝SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備安裝SnapDrive 適用於UNIX的功能
           </a>
           
@@ -5726,7 +5396,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/硬體與軟體組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             硬體與軟體組態
           </a>
           
@@ -5734,8 +5404,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5755,7 +5423,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/準備儲存系統.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             準備儲存系統
           </a>
           
@@ -5781,7 +5449,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/重設SnapReserve選項.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             重設SnapReserve選項
           </a>
           
@@ -5789,8 +5457,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5798,8 +5464,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5819,7 +5483,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/主機準備安裝SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             主機準備安裝SnapDrive 適用於UNIX的功能
           </a>
           
@@ -5827,8 +5491,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5836,8 +5498,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5857,7 +5517,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/安裝或升級SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             安裝或升級SnapDrive 適用於UNIX的功能
           </a>
           
@@ -5881,7 +5541,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/由適用於UNIX的文件SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             由適用於UNIX的文件SnapDrive
           </a>
           
@@ -5893,8 +5553,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5904,8 +5562,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5925,7 +5581,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭SnapDrive_解適用於UNIX精靈的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭SnapDrive 解適用於UNIX精靈的功能
           </a>
           
@@ -5949,7 +5605,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/停止精靈.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             停止精靈
           </a>
           
@@ -5957,8 +5613,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5976,8 +5630,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5997,7 +5649,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/驗證支援的組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             驗證支援的組態
           </a>
           
@@ -6007,8 +5659,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6028,7 +5678,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援儲存系統重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援儲存系統重新命名
           </a>
           
@@ -6042,8 +5692,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6063,7 +5711,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/使用SnapDrive_UNIX版的連接埠集.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             使用SnapDrive UNIX版的連接埠集
           </a>
           
@@ -6075,8 +5723,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6096,7 +5742,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定igroup.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定igroup
           </a>
           
@@ -6106,8 +5752,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6129,7 +5773,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX組態SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX組態SnapDrive
           </a>
           
@@ -6145,7 +5789,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/設定SnapDrive_適用於UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             設定SnapDrive 適用於UNIX的功能
           </a>
           
@@ -6165,8 +5809,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6186,7 +5828,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Vserver的組態資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Vserver的組態資訊
           </a>
           
@@ -6198,8 +5840,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6219,7 +5859,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的稽核_恢復及追蹤記錄SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的稽核、恢復及追蹤記錄SnapDrive
           </a>
           
@@ -6249,14 +5889,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/追蹤記錄檔的內容.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             追蹤記錄檔的內容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6264,8 +5902,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6285,7 +5921,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是呢AutoSupport.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是呢AutoSupport
           </a>
           
@@ -6295,8 +5931,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6316,7 +5950,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/支援SnapDrive_UNIX的多重路徑存取.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             支援SnapDrive UNIX的多重路徑存取
           </a>
           
@@ -6324,8 +5958,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6345,7 +5977,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以適用於UNIX的SnapDrive_方式進行精簡配置.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以適用於UNIX的SnapDrive 方式進行精簡配置
           </a>
           
@@ -6353,8 +5985,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6374,7 +6004,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/多個子網路組態.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             多個子網路組態
           </a>
           
@@ -6390,8 +6020,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6413,7 +6041,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是資訊精靈SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是資訊精靈SnapDrive
           </a>
           
@@ -6425,8 +6053,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6434,8 +6060,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6455,7 +6079,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX的安全功能SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX的安全功能SnapDrive
           </a>
           
@@ -6473,7 +6097,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX版的存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX版的存取控制SnapDrive
           </a>
           
@@ -6485,8 +6109,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6506,7 +6128,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存系統的登入資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存系統的登入資訊
           </a>
           
@@ -6516,8 +6138,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6527,8 +6147,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6548,7 +6166,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/以角色為基礎的UNIX存取控制SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             以角色為基礎的UNIX存取控制SnapDrive
           </a>
           
@@ -6568,7 +6186,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX版的不適用功能組態中設定角色型存取控制.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX版的不適用功能組態中設定角色型存取控制
           </a>
           
@@ -6584,14 +6202,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在Operations_Manager主控台設定SD_admin.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在Operations Manager主控台設定SD-admin
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6611,14 +6227,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/將SD_HostName新增至儲存系統.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             將SD-HostName新增至儲存系統
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6632,8 +6246,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6663,7 +6275,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/RBAC與儲存作業範例.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC與儲存作業範例
           </a>
           
@@ -6677,8 +6289,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6686,8 +6296,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6707,7 +6315,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的FlexClone_Volume_SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的FlexClone Volume SnapDrive
           </a>
           
@@ -6729,7 +6337,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於FlexClone磁碟區上的UNIX作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於FlexClone磁碟區上的UNIX作業SnapDrive
           </a>
           
@@ -6749,8 +6357,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6758,8 +6364,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6779,7 +6383,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX儲存資源配置SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX儲存資源配置SnapDrive
           </a>
           
@@ -6795,7 +6399,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX的儲存作業SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX的儲存作業SnapDrive
           </a>
           
@@ -6803,8 +6407,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6824,7 +6426,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX的解決方法建立儲存設備SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX的解決方法建立儲存設備SnapDrive
           </a>
           
@@ -6848,8 +6450,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6869,14 +6469,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/用於顯示可用儲存設備的命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             用於顯示可用儲存設備的命令
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6896,7 +6494,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/利用UNIX版的功能提升儲存規模SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             利用UNIX版的功能提升儲存規模SnapDrive
           </a>
           
@@ -6908,8 +6506,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6929,7 +6525,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_connect命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect命令
           </a>
           
@@ -6941,8 +6537,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6962,7 +6556,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/儲存中斷連線命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             儲存中斷連線命令
           </a>
           
@@ -6980,8 +6574,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7001,7 +6593,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/storage_DELETE命令.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage DELETE命令
           </a>
           
@@ -7009,8 +6601,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7018,8 +6608,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7039,7 +6627,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在SnapDrive_UNIX的不適用環境中建立及使用Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在SnapDrive UNIX的不適用環境中建立及使用Snapshot複本
           </a>
           
@@ -7055,14 +6643,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/什麼是Snapshot作業SnapDrive_是UNIX的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             什麼是Snapshot作業SnapDrive 是UNIX的功能
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7082,7 +6668,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複製作業.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複製作業
           </a>
           
@@ -7098,7 +6684,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/損毀一致的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             損毀一致的Snapshot複本
           </a>
           
@@ -7110,8 +6696,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7131,8 +6715,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7152,7 +6734,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/快照複本資訊隨即顯示.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             快照複本資訊隨即顯示
           </a>
           
@@ -7170,8 +6752,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7191,7 +6771,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Snapshot複本重新命名.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot複本重新命名
           </a>
           
@@ -7203,8 +6783,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7224,7 +6802,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             還原Snapshot複本
           </a>
           
@@ -7242,14 +6820,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/在目的地儲存系統上還原Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             在目的地儲存系統上還原Snapshot複本
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7277,7 +6853,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/Volume型SnapRestore_的功能.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Volume型SnapRestore 的功能
           </a>
           
@@ -7297,8 +6873,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7306,8 +6880,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7327,7 +6899,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連線至Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連線至Snapshot複本
           </a>
           
@@ -7345,14 +6917,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/連接鏡射儲存系統上的Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             連接鏡射儲存系統上的Snapshot複本
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7372,8 +6942,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7393,7 +6961,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/分割磁碟區複製或LUN複製.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             分割磁碟區複製或LUN複製
           </a>
           
@@ -7411,8 +6979,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7432,7 +6998,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/刪除Snapshot複本.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             刪除Snapshot複本
           </a>
           
@@ -7446,8 +7012,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7467,7 +7031,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本的連線.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本的連線
           </a>
           
@@ -7485,14 +7049,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/中斷Snapshot複本連線的準則.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             中斷Snapshot複本連線的準則
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7508,8 +7070,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7517,8 +7077,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7538,7 +7096,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/資料收集公用程式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             資料收集公用程式
           </a>
           
@@ -7550,8 +7108,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7571,7 +7127,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/疑難排解.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解
           </a>
           
@@ -7587,7 +7143,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/瞭解錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             瞭解錯誤訊息
           </a>
           
@@ -7605,14 +7161,12 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/錯誤訊息格式.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             錯誤訊息格式
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7620,8 +7174,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7641,7 +7193,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/常見錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             常見錯誤訊息
           </a>
           
@@ -7651,8 +7203,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7688,7 +7238,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/標準結束狀態值.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             標準結束狀態值
           </a>
           
@@ -7700,8 +7250,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7751,8 +7299,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7772,7 +7318,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令參考資料.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令參考資料
           </a>
           
@@ -7788,7 +7334,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/收集SnapDrive_UNIX命令所需的資訊.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             收集SnapDrive UNIX命令所需的資訊
           </a>
           
@@ -7796,8 +7342,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7817,7 +7361,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/UNIX命令的摘要SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX命令的摘要SnapDrive
           </a>
           
@@ -7833,7 +7377,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/命令摘要.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             命令摘要
           </a>
           
@@ -7845,8 +7389,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7866,7 +7408,7 @@
               href="/zh-tw/snapdrive-unix/pdfs/sidebar/適用於UNIX選項_關鍵字及引數SnapDrive.pdf" 
             
           >
-            <img src="/zh-tw/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             適用於UNIX選項、關鍵字及引數SnapDrive
           </a>
           
@@ -7878,8 +7420,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7887,8 +7427,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7896,8 +7434,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7905,21 +7441,18 @@
   
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/zh-tw/snapdrive-unix/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/zh-tw/snapdrive-unix/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -7952,7 +7485,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapdrive-unix/index.html">
         主頁
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapdrive-unix/releasenotes.html">
@@ -10573,6 +10106,8 @@
   data-did-you-mean="搜尋 {suggestion}。" 
   data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
   data-results-found="找到 {hitCount} 筆結果"
+  data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+  data-error-reset="Reset Search"
   data-sk-es-pf-indexes=""
   data-flavor=""></div>
   <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
@@ -10602,16 +10137,16 @@
               <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a class="ot-sdk-show-settings">cookie-settings</a>
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
             </li>
           </ul>
         </div>
@@ -10729,7 +10264,9 @@
     </script>
     <script src='/zh-tw/snapdrive-unix/js/www-ntap.js'></script>
     <script src='/zh-tw/snapdrive-unix/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/snapdrive-unix/js/sidebar.js'></script>
   </body><script>
+    /*
       if(hasParameter(window.location.search,'q')) {
         var queryString = decodeURI(getParameter(window.location.search, 'q'));
         document.getElementsByClassName("sk-search-box__text")[0].setAttribute("value", queryString);
@@ -10752,4 +10289,5 @@
         param = param || "";
         return (searchString.indexOf("?"+param+"=") != -1 || searchString.indexOf("&"+param+"=") != -1);
       }
+      */
   </script></html>
