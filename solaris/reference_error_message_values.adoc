@@ -1092,6 +1092,7 @@ UNIX版使用root儲存系統（檔案管理器）Volume上的「shdhostname.prb
 *附註：*
 
 +
+[]
 ====
 *** 如果您沒有「shd-hostname.prbac」檔案、請在儲存系統中修改「shdsgeneric.prbac」檔案。
 *** 如果您同時擁有「shd-hostname.prbac"和「shdgeneric.prbac」檔案、則只能在儲存系統的「shdhostname.prbac"檔案中修改設定。
