@@ -11,7 +11,7 @@ summary: 若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機
 
 
 [role="lead"]
-若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）
+若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）。
 
 * 您必須將包含磁碟區的集合體指派給SVM Aggregate清單、才能執行SnapDrive 適用於UNIX作業的功能。
 * 您必須建立一或多個SVM、才能從叢集提供資料。
@@ -30,10 +30,11 @@ hy* SnapDrive fssconfig set -cserver _csadmin_name cserver_name_*
 
 . 在資料SVM上建立使用者：
 +
-「* SnapDrive 組態集*」
+`*snapdrive config set vsadmin_name _Vserver_name_*`
 
 +
-vsadmin_name vserver_name_`
+
+NOTE: `_Vserver_name_` 為SVM的名稱、必須對應至管理LIF IP位址。
 
 . 驗證SVM是否已在SnapDrive 適用於UNIX的SVM中設定：
 +

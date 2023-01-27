@@ -6,7 +6,6 @@
   <block id="c5c5e3b41ee271d63ef42d6b16d8063e" category="image-alt">SDU部署工作流程cmode</block>
   <block id="61e0e72bb0fbf4da3b5a5aed31611da7" category="summary">若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vservers\）</block>
   <block id="0329c2655eaf5f4c57b9c57897b1186b" category="doc">將Linux主機連線至儲存系統</block>
-  <block id="d74dad33e2cb07d06b1b4554532c02ea" category="paragraph">若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）</block>
   <block id="9c3bfbb4258153b74c0020a62e4cd796" category="list-text">您必須將包含磁碟區的集合體指派給SVM Aggregate清單、才能執行SnapDrive 適用於UNIX作業的功能。</block>
   <block id="eb384912c3be9db5d6660d46264838ed" category="list-text">您必須建立一或多個SVM、才能從叢集提供資料。</block>
   <block id="57aec4ff903084462b15d55ca74af37d" category="paragraph">SVM管理邏輯介面（LIF）的IP位址必須與SVM名稱對應、無論是在網域名稱服務（DNS）或是在「/etc/hosts」檔案中。</block>
@@ -16,7 +15,6 @@
   <block id="dfdb2046a90a16a55d367932ee482619" category="paragraph">如果您執行ONTAP 的是版本不含更新版本的版本、請跳過此步驟。</block>
   <block id="624dd461537c07029c019223bd1ea847" category="list-text">在資料SVM上建立使用者：</block>
   <block id="25d72b461e3683f9ab10d775fcdcff58" category="paragraph">「* SnapDrive 組態集*」</block>
-  <block id="da65dcd12ae47b1bf7ffe137ca8e3c26" category="paragraph">vsadmin_name vserver_name_`</block>
   <block id="6c36362c418d90842a961aeae5857ea5" category="list-text">驗證SVM是否已在SnapDrive 適用於UNIX的SVM中設定：</block>
   <block id="438fba983b1b082b57344eeb2e0639bc" category="paragraph">‘* SnapDrive 組態清單*’</block>
   <block id="651306054b05d1f189f40b4e67b7b862" category="paragraph">命令會列出叢集管理伺服器和資料SVM的使用者名稱和IP位址。</block>
@@ -6000,4 +5998,7 @@
   <block id="f8627092c31ff43a006814ef7cf773a5" category="sidebar">Linux系統管理</block>
   <block id="42bd37a4c5629f76f268e0de7f45570f" category="sidebar">Solaris安裝與管理</block>
   <block id="80dd8a6d27a4c1b305d26c223c52a9a7" category="sidebar">IBM AIX的安裝與管理</block>
+  <block id="45f4423b7c470ea0d04be6d812ad5996" category="paragraph">若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）。</block>
+  <block id="00930ba81ea27b6c62845d08e0500327" category="paragraph"><block ref="7affedb2caa000166a46aed3d9bd1a06" prefix="" category="inline-code"></block></block>
+  <block id="1483ad74a09b4a3124c82e285d93ae63" category="admonition"><block ref="992dacfc30bbe144d7e60d29d7bbd430" prefix="" category="inline-code"></block> 為SVM的名稱、必須對應至管理LIF IP位址。</block>
 </blocks>
