@@ -3637,7 +3637,6 @@
   <block id="464731ea68043c5dbd4b1a2255e0ddc9" category="summary">利用UNIX版的精簡配置功能SnapDrive 、使用者可以擁有比儲存系統實際可用的更多主機儲存空間。</block>
   <block id="b5e25c86b8fc4729491227e86c44097c" category="paragraph">在UNIX版中、您無法設定部分保留值、也無法與自動刪除和自動調整大小等功能整合。SnapDrive Data ONTAP這些功能可與適用於UNIX的不安全搭配使用；不過、如果發生自動刪除或自動調整大小事件、則無法察覺到適用於UNIX的功能。Data ONTAP SnapDrive SnapDrive</block>
   <block id="0fbd8971220ee7d0340edcc5aa07a5c0" category="inline-link">NetApp技術報告3483：NetApp SAN或IP SAN企業環境中的精簡配置</block>
-  <block id="d067ada9dffcf5d06f760689bd642d06" category="paragraph"><block ref="d067ada9dffcf5d06f760689bd642d06" category="inline-link-rx"></block></block>
   <block id="4b9f12c3370b87228a8c006964ca7f31" category="summary">連線至Snapshot複本時、請遵循準則。</block>
   <block id="1fe13870a7ba2b230fe1520f3d0daa91" category="doc">連接Snapshot複本的準則</block>
   <block id="067f22c76940db379bbb2c2097c0cda5" category="list-text">「Snapsnap Connect」命令僅適用於以適用於UNIX的Snapshot 4.2建立的Snapshot複本。SnapDrive SnapDrive</block>
@@ -6001,4 +6000,5 @@
   <block id="45f4423b7c470ea0d04be6d812ad5996" category="paragraph">若要成功SnapDrive 執行UNIX作業、您必須設定儲存虛擬機器（SVM、先前稱為Vserver）。</block>
   <block id="00930ba81ea27b6c62845d08e0500327" category="paragraph"><block ref="7affedb2caa000166a46aed3d9bd1a06" prefix="" category="inline-code"></block></block>
   <block id="1483ad74a09b4a3124c82e285d93ae63" category="admonition"><block ref="992dacfc30bbe144d7e60d29d7bbd430" prefix="" category="inline-code"></block> 為SVM的名稱、必須對應至管理LIF IP位址。</block>
+  <block id="2a7e0c5b8e814e03c21799cbb69f2d18" category="paragraph"><block ref="2a7e0c5b8e814e03c21799cbb69f2d18" category="inline-link-rx"></block></block>
 </blocks>
