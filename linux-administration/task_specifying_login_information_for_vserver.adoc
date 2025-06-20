@@ -20,8 +20,6 @@ summary: 您必須指定Vserver的使用者登入資訊。視您在設定Vserver
 +
 ** 「_user_name_」是您第一次設定Vserver時所指定的使用者名稱。預設使用者為vsadmin。「_filername_」是Vserver名稱。
 ** 如果所有Vserver都具有相同的使用者登入或密碼、則可使用「_filer_name_」在單一命令列輸入多個Vserver。您必須輸入至少一個Vserver名稱。
-
-
 +
 [listing]
 ----
@@ -29,4 +27,6 @@ summary: 您必須指定Vserver的使用者登入資訊。視您在設定Vserver
 Password for vsadmin:
 Retype password:
 ----
+
+
 
